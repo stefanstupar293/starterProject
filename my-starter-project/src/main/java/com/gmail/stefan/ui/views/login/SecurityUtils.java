@@ -1,0 +1,73 @@
+package com.gmail.stefan.ui.views.login;
+
+import java.math.BigInteger;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
+import java.sql.Date;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Base64;
+import java.util.List;
+
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.PBEKeySpec;
+
+
+
+
+import com.gmail.stefan.ui.views.login.AppUtils;
+import com.gmail.stefan.ui.views.login.AppUser;
+import com.gmail.stefan.ui.views.login.AppUserWeb;
+
+import com.vaadin.flow.component.UI;
+import com.vaadin.flow.server.VaadinSession;
+
+public class SecurityUtils {	
+			
+	
+	
+	
+	
+	
+	public static AppUserWeb getLoggedInUser() {
+		return getLoggedInUser(null);
+	}
+	
+	public static AppUserWeb getLoggedInUser(UI ui) {
+		
+		VaadinSession session = ui!=null && ui.getSession()!=null ? 
+				ui.getSession() :  VaadinSession.getCurrent();
+		if(session != null){
+			return (AppUserWeb) session.getAttribute(AppUser.class);
+		}
+		return null;
+	}
+	
+	public static Long getLoggedInUserId() {
+		if(getLoggedInUser()!=null){
+			return getLoggedInUser().getId();
+		}
+		return null;
+	}
+	
+	
+	
+	
+	public static void loginUser(AppUser user) {
+		VaadinSession.getCurrent().setAttribute(AppUser.class, user);
+	}
+	
+	public static void logoutUser() {
+		AppUtils.setNavigationHref(null);
+		UI.getCurrent().getPage().executeJs("location.assign('login')");
+		
+		if(VaadinSession.getCurrent() != null) {
+			
+			VaadinSession.getCurrent().close();
+			loginUser(null);
+			
+		}
+	}
+	
+}

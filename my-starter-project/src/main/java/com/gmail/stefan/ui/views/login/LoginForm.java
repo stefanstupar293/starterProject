@@ -1,0 +1,60 @@
+package com.gmail.stefan.ui.views.login;
+
+
+import com.vaadin.flow.component.Tag;
+import com.vaadin.flow.component.dependency.JsModule;
+import com.vaadin.flow.component.polymertemplate.Id;
+import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
+import com.vaadin.flow.component.textfield.Autocomplete;
+import com.vaadin.flow.component.textfield.PasswordField;
+import com.vaadin.flow.component.textfield.TextField;
+import com.vaadin.flow.i18n.LocaleChangeEvent;
+import com.vaadin.flow.i18n.LocaleChangeObserver;
+import com.vaadin.flow.templatemodel.TemplateModel;
+
+/**
+ * This class is used to integrate login-form.html into a Flow application.
+ */
+@Tag("login-form")
+//@HtmlImport("frontend://src/views/login/login-form.html")
+//@JsModule("./src/views/login/login-form.js")
+public class LoginForm extends PolymerTemplate<LoginForm.LoginFormModel> implements LocaleChangeObserver{
+
+	private static final long serialVersionUID = -7559153405683140380L;
+
+	@Id("usernameInput")
+	private TextField username;
+	
+	@Id("passInput")
+	private PasswordField passInput;
+	
+    /**
+     * Creates a new LoginForm.
+     */
+    public LoginForm() {
+    	username.setAutocomplete(Autocomplete.USERNAME);
+    	passInput.setAutocomplete(Autocomplete.NEW_PASSWORD);
+    }
+    
+    public Credentials getCredentials() {
+    	Credentials c = new Credentials();
+    	c.setEmail(username.getValue());
+    	c.setPassword(passInput.getValue());
+    	return c;
+    }
+
+    /**
+     * This model binds properties between LoginForm and login-form.html
+     */
+    public interface LoginFormModel extends TemplateModel {
+        // Add setters and getters for template properties here.
+    }
+
+	@Override
+	public void localeChange(LocaleChangeEvent arg0) {
+		username.setPlaceholder( getTranslation("email") );
+		passInput.setPlaceholder( getTranslation("password") );
+	}
+
+    
+}

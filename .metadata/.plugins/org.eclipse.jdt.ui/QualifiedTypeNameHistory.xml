@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.gmail.stefan.ui.views.testlist.TestList"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.ui.views.reviewslist.ReviewEditorDialog"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.ui.views.testlist.UsersList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.backend.Users"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.backend.StaticData"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.ui.common.AbstractEditorDialog.Operation"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.backend.UserService"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.ui.views.beveragelist.BeverageList"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.backend.BeverageService"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.backend.User"/>
+<fullyQualifiedTypeName name="java.util.Objects"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.backend.Beverage"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.AppUser"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.router.BeforeEnterObserver"/>
+<fullyQualifiedTypeName name="java.nio.file.AccessDeniedException"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.Pages"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.Pages.Title"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="com.helger.commons.string.util.StringScanner"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.server.DependencyFilter"/>
+<fullyQualifiedTypeName name="com.mnocompany.smspay.ui.utils.constants.Pages.Link"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.Pages.Link"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.component.dependency.JsModule"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.component.dependency.JavaScript"/>
+</qualifiedTypeNameHistroy>

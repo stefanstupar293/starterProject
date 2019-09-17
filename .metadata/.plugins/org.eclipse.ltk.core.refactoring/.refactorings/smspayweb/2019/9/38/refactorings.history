@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;Login&apos;&#x0D;&#x0A;- Original project: &apos;smspayweb&apos;&#x0D;&#x0A;- Destination element: &apos;Login&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     login-buttons-bar.html&#x0D;&#x0A;     login-form.html" description="Copy files" element1="src/main/webapp/frontend/src/views/login/login-buttons-bar.html" element2="src/main/webapp/frontend/src/views/login/login-form.html" files="2" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1568639590714" target="/my-starter-project/frontend/src/views/Login" units="0" version="1.0"/>
+</session>

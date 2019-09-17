@@ -1,0 +1,215 @@
+package com.gmail.stefan.ui.views.login;
+
+
+import java.time.LocalDateTime;
+import java.util.Locale;
+import java.util.stream.Collectors;
+
+//import com.mnocompany.smspay.backend.exceptions.AccessDeniedException;
+//import com.mnocompany.smspay.backend.model.AppUser;
+//import com.mnocompany.smspay.backend.model.AppUserWeb;
+//import com.mnocompany.smspay.backend.model.AppUserWebStatus;
+//import com.mnocompany.smspay.backend.services.LogServices;
+//import com.mnocompany.smspay.backend.utils.SecurityUtils;
+//
+//import com.mnocompany.smspay.ui.entities.Credentials;
+//import com.mnocompany.smspay.ui.utils.AppUtils;
+//import com.mnocompany.smspay.ui.utils.EnvironmentConfig;
+//import com.mnocompany.smspay.ui.utils.constants.Pages;
+import com.gmail.stefan.ui.views.login.AppUser;
+import com.gmail.stefan.ui.views.login.AppUserWeb;
+import com.gmail.stefan.ui.views.login.AppUserWebServices;
+import com.gmail.stefan.ui.views.login.AppUserWebStatus;
+import com.gmail.stefan.ui.views.login.SecurityUtils;
+import com.gmail.stefan.ui.views.login.Pages;
+import com.gmail.stefan.ui.MainLayout;
+import com.gmail.stefan.ui.views.login.AppUtils;
+
+
+import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.Key;
+import com.vaadin.flow.component.Tag;
+import com.vaadin.flow.component.UI;
+import com.vaadin.flow.component.dependency.HtmlImport;
+import com.vaadin.flow.component.dialog.Dialog;
+import com.vaadin.flow.component.html.Div;
+import com.vaadin.flow.component.html.H2;
+import com.vaadin.flow.component.html.Paragraph;
+import com.vaadin.flow.component.notification.Notification.Position;
+import com.vaadin.flow.component.polymertemplate.Id;
+import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
+import com.vaadin.flow.i18n.LocaleChangeObserver;
+import com.vaadin.flow.router.BeforeEnterEvent;
+import com.vaadin.flow.router.BeforeEnterObserver;
+import com.vaadin.flow.router.Route;
+import com.vaadin.flow.server.PageConfigurator;
+import com.vaadin.flow.server.VaadinSession;
+import com.vaadin.flow.server.WebBrowser;
+import com.vaadin.flow.shared.Registration;
+import com.vaadin.flow.templatemodel.TemplateModel;
+
+
+@HtmlImport("frontend://src/views/login/login-view.html")
+@Route(value = Pages.Link.LOGIN)
+//@RouteAlias(value = "")
+@Tag("login-view")
+public class LoginView  extends PolymerTemplate<LoginView.LoginViewModel> implements  BeforeEnterObserver {
+	
+	@Id("content")
+	private Div content;
+	@Id("buttonBar")
+	private LoginButtonsBar buttonBar;			// done
+	
+	@Id("title")
+	private H2 title;
+
+	@Id("errorText")
+	private Paragraph errorText;
+
+	@Id("errorContent")
+	private Div errorContent;
+	
+	@Id("register-success")
+	private Div registerSuccess;
+	@Id("register-succ-text")
+	private Paragraph registerSuccText;
+	
+	
+	private AppUserWebServices userService; // done
+	
+	enum DISPLAY_VIEW{
+		
+		LOGIN
+	}
+	
+	DISPLAY_VIEW displayView;
+	
+	
+public LoginView() {
+    	
+    	
+		
+    	initForLogin();
+    	
+    	userService = new AppUserWebServices();
+    	
+//    	initFooter();
+    	
+    	
+    	
+    }
+
+public void initForLogin() {
+	
+	showErrorMessage(false, null);
+	
+	this.displayView = DISPLAY_VIEW.LOGIN;   //
+	
+	LoginForm loginForm = new LoginForm();
+	content.removeAll();
+	content.add(loginForm);
+	
+	buttonBar.getBtnForget().setVisible(true);
+	
+	buttonBar.getBtnSubmit().addClickShortcut(Key.ENTER);
+	
+	
+	
+}
+
+
+
+public interface LoginViewModel extends TemplateModel {
+    // Add setters and getters for template properties here.
+	void setLoginInfoText(String text);
+}
+
+private boolean logIn(Credentials credentials) throws Exception{
+	AppUserWeb user = userService.getAppUserByCredentialsMock(credentials);
+//	AppUserWeb user = userService.getAppUserByCredentials(credentials.getEmail(), credentials.getPassword());
+	if(user != null) {
+		if(AppUserWebStatus.ACTIVE.equals(user.getStatus())) {
+			
+			WebBrowser wb = VaadinSession.getCurrent().getBrowser();
+			user.setLastLoginIpv4(wb.getAddress()); //IP address
+			user.setLastLogin(LocalDateTime.now()); //last login time
+			
+			
+			
+//			LogServices.getInstance().logWebUserLoggedIn(user, wb); 
+			
+			initAppForUser(user);																		//HERE
+		} else {
+			showErrorMessage(true, getTranslation("login.error.account.notActive"));
+		}
+	} else {
+		showErrorMessage(true, getTranslation("login.error.credentials"));
+	}
+	return user != null;
+}
+
+
+private void initAppForUser(AppUserWeb user) throws Exception{
+	
+	SecurityUtils.loginUser(user);
+	System.out.println("LOGIN - User id: " + user.getId() + ", email: " + user.getEmail() 
+			 + " on: " + LocalDateTime.now());
+	changeToMainLayout();																				//MOVE IT
+}
+
+
+
+
+private void changeToMainLayout() {
+	MainLayout main = (MainLayout) AppUtils.getRouterLayout();
+	if(main == null) {
+		main = new MainLayout();
+	} 
+	main.initMain(null);
+}
+
+@Override
+public void beforeEnter(BeforeEnterEvent event) { 													// before enter check
+	
+
+	
+	for (Component c : UI.getCurrent().getChildren().collect(Collectors.toList())) {
+		if (c instanceof Dialog)
+			((Dialog) (c)).close();
+	}
+	
+	AppUser user = SecurityUtils.getLoggedInUser(); 												// create new App user in Security Utils or similar un/admin pass/admin
+	
+	String href = event.getLocation().getFirstSegment();
+	
+	if(href.isEmpty()) {
+		if(user != null) {																			//add user
+			//if user is logged in redirect to main page
+			changeToMainLayout();
+		} else {
+			//if no user, set url to login
+//			AppUtils.goToLoginPage();
+			event.rerouteTo(Pages.Link.LOGIN);
+		}
+	}
+	
+	if(user != null && Pages.Link.LOGIN.equals(href)) {
+		changeToMainLayout();
+	}
+	
+	if(user == null) {
+		//if no user set but trying to go to some specified page, remember that page and go to login
+		if(!Pages.Link.LOGIN.equals(href)) {
+			AppUtils.setNavigationHref(href);
+			AppUtils.goToLoginPage();
+		}
+	}
+}
+private void showErrorMessage(boolean show, String message) {
+	
+    errorContent.getElement().getStyle().set("display", show ? "flex" : "none");
+    
+    errorText.setText(message);
+}
+
+}

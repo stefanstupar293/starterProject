@@ -1,0 +1,470 @@
+package com.mnocompany.smspay.ui;
+
+import java.time.LocalDateTime;
+import java.util.Locale;
+import java.util.stream.Collectors;
+
+import javax.mail.MessagingException;
+
+import com.google.common.base.Strings;
+import com.mnocompany.smspay.backend.exceptions.AccessDeniedException;
+import com.mnocompany.smspay.backend.model.AppUser;
+import com.mnocompany.smspay.backend.model.AppUserWeb;
+import com.mnocompany.smspay.backend.model.AppUserWebStatus;
+import com.mnocompany.smspay.backend.model.Company;
+import com.mnocompany.smspay.backend.model.Role;
+import com.mnocompany.smspay.backend.services.AppUserWebServices;
+import com.mnocompany.smspay.backend.services.CompanyServices;
+import com.mnocompany.smspay.backend.services.EmailServices;
+import com.mnocompany.smspay.backend.services.LogServices;
+import com.mnocompany.smspay.backend.utils.SecurityUtils;
+import com.mnocompany.smspay.ui.components.ForgotPasswordForm;
+import com.mnocompany.smspay.ui.components.LoginForm;
+import com.mnocompany.smspay.ui.components.UserCompanyForm;
+import com.mnocompany.smspay.ui.entities.Credentials;
+import com.mnocompany.smspay.ui.events.AppUserWebEvents;
+import com.mnocompany.smspay.ui.utils.AppEventBus;
+import com.mnocompany.smspay.ui.utils.AppUtils;
+import com.mnocompany.smspay.ui.utils.EnvironmentConfig;
+import com.mnocompany.smspay.ui.utils.Notification;
+import com.mnocompany.smspay.ui.utils.TranslationProvider;
+import com.mnocompany.smspay.ui.utils.constants.Pages;
+import com.mnocompany.smspay.ui.views.LoginButtonsBar;
+import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.Key;
+import com.vaadin.flow.component.Tag;
+import com.vaadin.flow.component.UI;
+import com.vaadin.flow.component.dependency.HtmlImport;
+import com.vaadin.flow.component.dialog.Dialog;
+import com.vaadin.flow.component.html.Div;
+import com.vaadin.flow.component.html.H2;
+import com.vaadin.flow.component.html.Paragraph;
+import com.vaadin.flow.component.notification.Notification.Position;
+import com.vaadin.flow.component.polymertemplate.Id;
+import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
+import com.vaadin.flow.data.binder.ValueContext;
+import com.vaadin.flow.data.validator.EmailValidator;
+import com.vaadin.flow.i18n.LocaleChangeEvent;
+import com.vaadin.flow.i18n.LocaleChangeObserver;
+import com.vaadin.flow.router.BeforeEnterEvent;
+import com.vaadin.flow.router.BeforeEnterObserver;
+import com.vaadin.flow.router.Route;
+import com.vaadin.flow.server.InitialPageSettings;
+import com.vaadin.flow.server.PageConfigurator;
+import com.vaadin.flow.server.VaadinSession;
+import com.vaadin.flow.server.WebBrowser;
+import com.vaadin.flow.shared.Registration;
+import com.vaadin.flow.templatemodel.TemplateModel;
+
+/**
+ * This class is used to integrate login-view.html into a Flow application.
+ */
+@HtmlImport("frontend://src/views/login/login-view.html")
+@Route(value = Pages.Link.LOGIN)
+//@RouteAlias(value = "")
+@Tag("login-view")
+public class LoginView extends PolymerTemplate<LoginView.LoginViewModel> implements PageConfigurator, BeforeEnterObserver, LocaleChangeObserver {			//LoginView 
+	
+	private static final long serialVersionUID = 4976210572632428310L;
+	
+	@Id("content")
+	private Div content;
+	@Id("buttonBar")
+	private LoginButtonsBar buttonBar;
+	
+	@Id("title")
+	private H2 title;
+
+	@Id("errorText")
+	private Paragraph errorText;
+
+	@Id("errorContent")
+	private Div errorContent;
+	
+	@Id("register-success")
+	private Div registerSuccess;
+	@Id("register-succ-text")
+	private Paragraph registerSuccText;
+	
+	private Registration btnSwitchRegistration;
+	private Registration btnSubmitRegistration;
+	
+	private AppUserWebServices userService;
+	
+	enum DISPLAY_VIEW{
+		
+		LOGIN,
+		REGISTRATION,
+		FORGOT_PASSWORD
+		
+	}	
+	DISPLAY_VIEW displayView;
+	
+    /**
+     * Creates a new LoginView.
+     */
+    public LoginView() {
+    	
+    	VaadinSession.getCurrent().setLocale(Locale.ENGLISH); //TODO remove after new languages placed
+		VaadinSession.getCurrent().getSession().setAttribute("locale", TranslationProvider.LOCALE_EN);
+		
+    	initForLogin();
+    	
+    	userService = new AppUserWebServices();
+    	
+//    	initFooter();
+    	
+    	//forgot password 
+    	buttonBar.getBtnForget().addClickListener(e->{
+    		initForForgotPassword();
+    	});
+    	
+    }
+ //TODO: back footer (language select) and terms and conditions once when available content
+//    private void initFooter() {
+//    	//try to read and set locale if set manually before
+////    	Locale loc = (Locale) VaadinSession.getCurrent().getSession().getAttribute("locale");
+////    	if(loc!=null)VaadinSession.getCurrent().setLocale(loc);
+//
+//       	//TODO remove fixed EN locale when allow multi language
+//		VaadinSession.getCurrent().setLocale(TranslationProvider.LOCALE_EN);
+//		VaadinSession.getCurrent().getSession().setAttribute("locale", TranslationProvider.LOCALE_EN);
+//
+//    	footer.setVisible(false);
+//    	btnLangEN.addClickListener(e->{
+//
+//    		VaadinSession.getCurrent().setLocale(TranslationProvider.LOCALE_EN);
+//    		VaadinSession.getCurrent().getSession().setAttribute("locale", TranslationProvider.LOCALE_EN);
+//    	});
+//
+//    	btnLangSR.addClickListener(e->{
+//
+//    		VaadinSession.getCurrent().setLocale(TranslationProvider.LOCALE_RS);
+//    		VaadinSession.getCurrent().getSession().setAttribute("locale", TranslationProvider.LOCALE_RS);
+//    	});
+//    }
+    
+    public void initForLogin() {
+    	
+    	showErrorMessage(false, null);
+    	showSuccessfulRegistration(false, null);
+    	
+    	this.displayView = DISPLAY_VIEW.LOGIN;
+    	
+    	LoginForm loginForm = new LoginForm();
+    	content.removeAll();
+    	content.add(loginForm);
+    	
+    	
+    	if(btnSwitchRegistration != null) btnSwitchRegistration.remove(); 
+    	btnSwitchRegistration = buttonBar.getBtnSwitch().addClickListener(e -> {
+    		initForRegister();
+    	});
+    	
+    	
+    	if(btnSubmitRegistration != null) btnSubmitRegistration.remove();
+    	btnSubmitRegistration = buttonBar.getBtnSubmit().addClickListener(e -> {
+    		Credentials c = loginForm.getCredentials();
+    		try {
+				logIn(c);
+			} catch (Exception ex) {
+				ex.printStackTrace();
+				Notification.showError(ex.getMessage(), 2000, Position.BOTTOM_CENTER);
+			}
+    	});
+    	
+    	buttonBar.getBtnForget().setVisible(true);
+    	
+    	buttonBar.getBtnSubmit().addClickShortcut(Key.ENTER);
+    	
+    	refreshTranslations();
+    	
+    }
+    
+	public void initForRegister() {
+		
+		showErrorMessage(false, null);
+		showSuccessfulRegistration(false, null);
+    	
+    	this.displayView = DISPLAY_VIEW.REGISTRATION;
+    	
+//    	UserForm registerForm = new UserForm();
+    	UserCompanyForm registerForm = new UserCompanyForm();
+    	content.removeAll();
+    	content.add(registerForm);
+    	AppUserWeb newUser = new AppUserWeb();
+    	newUser.setRole(Role.SERVICE_CLIENT);
+    	registerForm.init(newUser);
+    	
+    	if(btnSwitchRegistration != null) btnSwitchRegistration.remove();
+    	btnSwitchRegistration = buttonBar.getBtnSwitch().addClickListener(e -> initForLogin());
+    	
+    	if(btnSubmitRegistration != null) btnSubmitRegistration.remove();
+    	btnSubmitRegistration = buttonBar.getBtnSubmit().addClickListener(e -> {
+    		AppUserWeb user = registerForm.getUser(true);
+    		if(user != null) {
+    			register(user);
+    		}
+    	});
+    	
+    	buttonBar.getBtnForget().setVisible(false);
+    	
+    	refreshTranslations();
+    }
+    
+    public void initForForgotPassword() {
+    	
+    	showErrorMessage(false, null);
+    	showSuccessfulRegistration(false, null);
+    	
+    	this.displayView = DISPLAY_VIEW.FORGOT_PASSWORD;
+    	
+    	ForgotPasswordForm forgotPassForm = new ForgotPasswordForm();
+    	content.removeAll();
+    	content.add(forgotPassForm);
+    	
+    	if(btnSwitchRegistration != null) btnSwitchRegistration.remove();
+    	btnSwitchRegistration = buttonBar.getBtnSwitch().addClickListener(e -> initForLogin());
+    	
+    	if(btnSubmitRegistration != null) btnSubmitRegistration.remove();
+    	btnSubmitRegistration = buttonBar.getBtnSubmit().addClickListener(e -> {
+
+    		String email = forgotPassForm.getEmail().getValue().trim();
+    		
+    		if(Strings.isNullOrEmpty(email)) {
+    			
+    			showErrorMessage(true, getTranslation("password.forgot.email.error.empty"));
+    			
+    			return;
+    		}
+    		//validate format
+    		else if(new EmailValidator("invalid email").apply(email, new ValueContext()).isError()) {
+    			
+    			showErrorMessage(true, getTranslation("password.forgot.email.error.format"));
+    			
+    			return;
+    		}
+    		
+    		//check if exists app user mob
+    		AppUserWeb appUserWeb = userService.getAppUserByEmail(email,AppUserWebStatus.ACTIVE);
+    		
+    		if(appUserWeb!=null) {
+    			
+    			showErrorMessage(false, null);
+
+    			try {
+    				
+    				userService.sendPasswordResetLinkToUser(email);
+					
+				} catch (MessagingException me) {
+					me.printStackTrace();
+				} catch (Exception ex) {
+					ex.printStackTrace();
+				}
+    			
+    			Notification.showSuccess("Email with link for password recovery sent", 2000, Position.BOTTOM_CENTER);
+    			
+    			buttonBar.getBtnSwitch().click();
+    			
+    		}else showErrorMessage(true, "Email for password recovery not found");
+    		
+    		
+    	});
+    	
+    	buttonBar.getBtnForget().setVisible(false);
+    	
+    	refreshTranslations();
+    	
+    }
+    
+    private boolean logIn(Credentials credentials) throws Exception{
+//    	AppUserWeb user = userService.getAppUserByCredentialsMock(credentials);
+    	AppUserWeb user = userService.getAppUserByCredentials(credentials.getEmail(), credentials.getPassword());
+    	if(user != null) {
+    		if(AppUserWebStatus.ACTIVE.equals(user.getStatus())) {
+    			
+    			WebBrowser wb = VaadinSession.getCurrent().getBrowser();
+    			user.setLastLoginIpv4(wb.getAddress()); //IP address
+    			user.setLastLogin(LocalDateTime.now()); //last login time
+    			
+    			userService.store(null,user);
+    			
+    			LogServices.getInstance().logWebUserLoggedIn(user, wb); 
+    																									// HERE
+    			initAppForUser(user);
+    		} else {
+    			showErrorMessage(true, getTranslation("login.error.account.notActive"));
+    		}
+    	} else {
+    		showErrorMessage(true, getTranslation("login.error.credentials"));
+    	}
+    	return user != null;
+    }
+
+	/**
+	 * Register new user as Client Portal user. Verify if user with email already exiting. <br/>
+	 * Send welcome mail after success registration.
+	 *
+	 * @param user
+	 */
+	private void register(AppUserWeb user) {
+
+		//check if user exist by email
+
+		AppUserWeb u = AppUserWebServices.getInstance().getAppUserByEmail(user.getEmail(),AppUserWebStatus.ACTIVE);
+		if (u!=null && u.isUserActive()) {
+			Notification.showError(getTranslation("registration.mail.error.exists"), 5000, Position.MIDDLE);
+			return;
+		}
+
+    	Company company = new CompanyServices().create(user.getCompany());
+    	if(company == null || company.getId() == null) {
+    		Notification.showError("Something went wrong", 5000, Position.MIDDLE);
+    		return;
+    	}
+    	
+    	user.setCompanyId(company.getId());
+    	user.setCompany(company);
+    	user.setStatus(AppUserWebStatus.PENDING);
+    	
+    	user = new AppUserWebServices().store(null,user);
+    	if(user == null || user.getId() == null) {
+    		Notification.showError("Something went wrong", 5000, Position.MIDDLE);
+    		return;
+    	} else {
+
+    		new EmailServices().sendMailSuccessfulRegistration(user);
+    		showSuccessfulRegistration(true, user);
+    		AppEventBus.postGlobal(new AppUserWebEvents.Registrated(user));
+//    		Notification.showSuccess("Successfuly registered", 3000, Position.MIDDLE);
+
+    	}
+    }
+    
+    private void initAppForUser(AppUserWeb user) throws Exception{
+    	
+    	if(EnvironmentConfig.DEPLOY_APP_FLAVOR==EnvironmentConfig.DEPLOY_MOB_SMSPROFIT)throw new Exception("Not allowed for this deploy flavor");
+    	
+    	SecurityUtils.loginUser(user);
+    	System.out.println("LOGIN - User id: " + user.getId() + ", email: " + user.getEmail() 
+    			+ " company: " + user.getCompanyId() + " on: " + LocalDateTime.now());
+		changeToMainLayout();																				//MOVE IT
+    }
+    
+    private void changeToMainLayout() {
+    	MainLayout main = (MainLayout) AppUtils.getRouterLayout();
+		if(main == null) {
+			main = new MainLayout();
+		} 
+		main.initMain(null);
+    }
+
+    /**
+     * This model binds properties between LoginView and login-view.html
+     */
+    public interface LoginViewModel extends TemplateModel {
+        // Add setters and getters for template properties here.
+    	void setLoginInfoText(String text);
+    }
+
+	@Override
+	public void beforeEnter(BeforeEnterEvent event) { 													// before enter check
+		
+		if(EnvironmentConfig.DEPLOY_APP_FLAVOR==EnvironmentConfig.DEPLOY_MOB_SMSPROFIT)
+			event.rerouteToError(AccessDeniedException.class);
+		
+		for (Component c : UI.getCurrent().getChildren().collect(Collectors.toList())) {
+			if (c instanceof Dialog)
+				((Dialog) (c)).close();
+		}
+		
+		AppUser user = SecurityUtils.getLoggedInUser();
+		
+		String href = event.getLocation().getFirstSegment();
+		
+		if(href.isEmpty()) {
+			if(user != null) {
+				//if user is logged in redirect to main page
+				changeToMainLayout();
+			} else {
+				//if no user, set url to login
+//				AppUtils.goToLoginPage();
+				event.rerouteTo(Pages.Link.LOGIN);
+			}
+		}
+		
+		if(user != null && Pages.Link.LOGIN.equals(href)) {
+			changeToMainLayout();
+		}
+		
+		if(user == null) {
+			//if no user set but trying to go to some specified page, remember that page and go to login
+			if(!Pages.Link.LOGIN.equals(href)) {
+				AppUtils.setNavigationHref(href);
+				AppUtils.goToLoginPage();
+			}
+		}
+	}
+
+	@Override
+	public void localeChange(LocaleChangeEvent arg0) {
+		getModel().setLoginInfoText(getTranslation("login.infoText"));//
+		refreshTranslations();
+	}
+	
+	@Override
+    public void configurePage(InitialPageSettings settings) {
+        settings.addMetaTag("apple-mobile-web-app-capable", "yes");
+        settings.addMetaTag("apple-mobile-web-app-status-bar-style", "black");
+        
+//        if(EnvironmentConfig.IS_PRODUCTION)settings.addInlineWithContents(".v-system-error{display: none !important;}", 
+//        		InitialPageSettings.WrapMode.STYLESHEET);
+        
+//        settings.addLink("shortcut icon", "icons/favicon.ico");
+        settings.addFavIcon("icon", "icons/icon.png", "192x192");
+    }
+    
+
+	private void refreshTranslations() {
+		if(DISPLAY_VIEW.LOGIN.equals(displayView)) {
+			title.setText(getTranslation("login"));
+	    	
+	    	buttonBar.getBtnSwitch().getElement().setText(getTranslation("register"));
+	    	buttonBar.getBtnSubmit().getElement().setText(getTranslation("login.submit"));
+	    	buttonBar.getBtnForget().setText(getTranslation("password.forgot"));
+	    	
+		}else if(DISPLAY_VIEW.REGISTRATION.equals(displayView)) {
+			
+			title.setText(getTranslation("registration.getStarted"));
+			
+			buttonBar.getBtnSwitch().getElement().setText(getTranslation("login.back"));
+			buttonBar.getBtnSubmit().getElement().setText(getTranslation("register"));
+			
+		}else if(DISPLAY_VIEW.FORGOT_PASSWORD.equals(displayView)) {
+			
+			title.setText(getTranslation("password.forgot.email.enter"));
+			
+			buttonBar.getBtnSwitch().getElement().setText(getTranslation("login.back"));
+			buttonBar.getBtnSubmit().getElement().setText(getTranslation("password.forgot.send"));
+		}
+		
+	}    
+	
+	private void showSuccessfulRegistration(boolean show, AppUserWeb user) {
+		content.removeAll();
+		buttonBar.getElement().getStyle().set("display", !show ? "flex" : "none");
+		registerSuccess.getElement().getStyle().set("display", show ? "flex" : "none");
+		registerSuccText.setText(getTranslation("registration.success") + 
+				". " + getTranslation("registration.thankYou") + ". " + getTranslation("registration.mail.check"));
+	}
+	
+	private void showErrorMessage(boolean show, String message) {
+		
+	    errorContent.getElement().getStyle().set("display", show ? "flex" : "none");
+	    
+	    errorText.setText(message);
+	    
+			
+	}
+	
+}
