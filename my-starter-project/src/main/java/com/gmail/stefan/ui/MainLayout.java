@@ -44,12 +44,12 @@ import com.gmail.stefan.ui.views.categorieslist.CategoriesList;
 import com.gmail.stefan.ui.views.reviewslist.ReviewsList;
 import com.gmail.stefan.ui.views.testlist.UsersList;
 
-import com.gmail.stefan.ui.views.login.Pages;
-import com.gmail.stefan.ui.views.login.AppUser;
-import com.gmail.stefan.ui.views.login.LoginView;
-import com.gmail.stefan.ui.views.login.SecurityUtils;
-import com.gmail.stefan.ui.views.login.AppUtils;
-import com.gmail.stefan.ui.views.login.PageInfo;
+//import com.gmail.stefan.ui.views.login.Pages;
+//import com.gmail.stefan.ui.views.login.AppUser;
+//import com.gmail.stefan.ui.views.login.LoginView;
+//import com.gmail.stefan.ui.views.login.SecurityUtils;
+//import com.gmail.stefan.ui.views.login.AppUtils;
+//import com.gmail.stefan.ui.views.login.PageInfo;
 
 
 
@@ -66,7 +66,7 @@ public class MainLayout extends Div implements RouterLayout, PageConfigurator, B
 
 	public String navigationTarget;
 	
-	List<PageInfo> pages = new ArrayList<>();
+//	List<PageInfo> pages = new ArrayList<>();
 	
     public MainLayout() {
         H2 title = new H2("Beverage Buddy");
@@ -99,22 +99,22 @@ public class MainLayout extends Div implements RouterLayout, PageConfigurator, B
 
         addClassName("main-layout");				
         
-        initPages();																											// init ?!
+//        initPages();																											// init ?!
     }
     
     
     
-    private void initPages() {
-    
-    	pages = new ArrayList<>();
-    	
-    	pages.add(new PageInfo(Pages.Link.REVIEWS, "reviews", Pages.Title.REVIEWS));
-    	pages.add(new PageInfo(Pages.Link.CATEGORIES, "categories", Pages.Title.CATEGORIES));
-    	pages.add(new PageInfo(Pages.Link.USERS, "users", Pages.Title.USERS));
-    	pages.add(new PageInfo(Pages.Link.BEVERAGES, "beverages", Pages.Title.BEVERAGES));
-    	
-    	 if(pages!=null && !pages.isEmpty())pages.add(new PageInfo(Pages.Link.LOGOUT, "arrow-right", Pages.Title.LOGOUT));
-    }
+//    private void initPages() {
+//    
+//    	pages = new ArrayList<>();
+//    	
+//    	pages.add(new PageInfo(Pages.Link.REVIEWS, "reviews", Pages.Title.REVIEWS));
+//    	pages.add(new PageInfo(Pages.Link.CATEGORIES, "categories", Pages.Title.CATEGORIES));
+//    	pages.add(new PageInfo(Pages.Link.USERS, "users", Pages.Title.USERS));
+//    	pages.add(new PageInfo(Pages.Link.BEVERAGES, "beverages", Pages.Title.BEVERAGES));
+//    	
+//    	 if(pages!=null && !pages.isEmpty())pages.add(new PageInfo(Pages.Link.LOGOUT, "arrow-right", Pages.Title.LOGOUT));
+//    }
     
     
     
@@ -128,14 +128,14 @@ public class MainLayout extends Div implements RouterLayout, PageConfigurator, B
         settings.addMetaTag("apple-mobile-web-app-status-bar-style", "black");
     }
 
-	public void initMain(String pageLink) {
-		String navLink = AppUtils.getNavigationHref() != null ? AppUtils.getNavigationHref().toString() : null;
-		pageLink = pageLink != null ? pageLink : navLink;
-		String pageFromList = pages != null && !pages.isEmpty() ? pages.get(0).getLink() : getFirstPageForLoggedInUser().getLink();
-		AppUtils.goToPage(pageLink != null && !pageLink.equals(Pages.Link.LOGIN) && !pageLink.equals("") ? pageLink : pageFromList, getUI().orElse(null));
-		
-		
-	}
+//	public void initMain(String pageLink) {
+//		String navLink = AppUtils.getNavigationHref() != null ? AppUtils.getNavigationHref().toString() : null;
+//		pageLink = pageLink != null ? pageLink : navLink;
+//		String pageFromList = pages != null && !pages.isEmpty() ? pages.get(0).getLink() : getFirstPageForLoggedInUser().getLink();
+//		AppUtils.goToPage(pageLink != null && !pageLink.equals(Pages.Link.LOGIN) && !pageLink.equals("") ? pageLink : pageFromList, getUI().orElse(null));
+//		
+//		
+//	}
 
 	
 	
@@ -150,16 +150,16 @@ public class MainLayout extends Div implements RouterLayout, PageConfigurator, B
 		
 //		AppUtils.getRouterLayout().checkIsLoggedInAsUserOperator(event);
 		
-		AppUser user = SecurityUtils.getLoggedInUser();
-		
-		String href = event.getLocation().getFirstSegment();
-		String fullPath = event.getLocation().getPath(); 
-		navigationTarget = href;
-		
-		if(user == null) {
-			AppUtils.setNavigationHref(fullPath);
-			event.rerouteTo(LoginView.class);
-		} else {
+//		AppUser user = SecurityUtils.getLoggedInUser();
+//		
+//		String href = event.getLocation().getFirstSegment();
+//		String fullPath = event.getLocation().getPath(); 
+//		navigationTarget = href;
+//		
+//		if(user == null) {
+//			AppUtils.setNavigationHref(fullPath);
+//			event.rerouteTo(LoginView.class);
+//		} else {
 //			if(Strings.isNullOrEmpty(href)) {
 //				AppUtils.goToPage(getFirstPageForLoggedInUser().getLink(), getUI().orElse(null));
 //			}else if(!SecurityUtils.isPageAllowedForLoggedinUser(href)){
@@ -168,15 +168,15 @@ public class MainLayout extends Div implements RouterLayout, PageConfigurator, B
 //				event.rerouteToError(AccessDeniedException.class);
 //			}
 		}
-	}
-	
-	//return as home page for logged in user
-	public PageInfo getFirstPageForLoggedInUser() {														// set Pages
-			
-		if(pages==null || pages.isEmpty())initPages();
-		
-		if(SecurityUtils.getLoggedInUser()!=null && pages!=null && !pages.isEmpty()) 
-			return pages.get(0);
-		return null;
-	}
+//	}
+//	
+//	//return as home page for logged in user
+//	public PageInfo getFirstPageForLoggedInUser() {														// set Pages
+//			
+//		if(pages==null || pages.isEmpty())initPages();
+//		
+//		if(SecurityUtils.getLoggedInUser()!=null && pages!=null && !pages.isEmpty()) 
+//			return pages.get(0);
+//		return null;
+//	}
 }

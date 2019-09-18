@@ -1,0 +1,24 @@
+package com.gmail.stefan.ui.views.login;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.router.BeforeEnterEvent;
+import com.vaadin.flow.router.BeforeEnterObserver;
+
+
+
+public class Login extends VerticalLayout implements BeforeEnterObserver {
+
+	
+	TextField = unID;
+	PasswordField = passID;
+	Button = btnLogin;
+	Button = bntCancel;
+		
+	@Override
+	public void beforeEnter(BeforeEnterEvent event) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+	
+}

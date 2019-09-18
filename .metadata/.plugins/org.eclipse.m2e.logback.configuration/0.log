@@ -13617,3 +13617,256 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact mysql:mysql-c
 2019-09-17 13:17:10,270 [Worker-60: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
 2019-09-17 13:17:10,272 [Worker-60: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2019-09-17 13:17:10,273 [Worker-60: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 14:09:08,050 [Worker-65: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 14:09:08,052 [Worker-65: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-17 14:09:08,056 [Worker-65: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 14:09:08,057 [Worker-65: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 14:09:11,376 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 14:09:11,376 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-17 14:09:11,378 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 14:09:11,379 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 14:09:13,353 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 14:09:13,354 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-17 14:09:13,355 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 14:09:13,356 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 14:25:09,454 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 14:25:09,455 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-17 14:25:09,456 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 14:25:09,457 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 14:25:11,590 [Worker-74: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 14:25:11,591 [Worker-74: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-17 14:25:11,592 [Worker-74: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 14:25:11,593 [Worker-74: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 14:25:17,616 [Worker-72: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 14:25:17,617 [Worker-72: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-17 14:25:17,618 [Worker-72: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 14:25:17,618 [Worker-72: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 14:25:20,040 [Worker-75: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 14:25:20,041 [Worker-75: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-17 14:25:20,043 [Worker-75: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 14:25:20,044 [Worker-75: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 14:25:31,939 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 14:25:31,940 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-17 14:25:31,942 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 14:25:31,942 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 16:11:24,441 [Worker-82: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 16:11:24,443 [Worker-82: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-17 16:11:24,445 [Worker-82: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 16:11:24,446 [Worker-82: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 16:12:49,932 [Worker-82: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 16:12:49,933 [Worker-82: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-17 16:12:49,934 [Worker-82: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 16:12:49,934 [Worker-82: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 16:13:02,736 [Worker-75: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 16:13:02,737 [Worker-75: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-17 16:13:02,738 [Worker-75: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 16:13:02,738 [Worker-75: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 16:13:23,509 [Worker-81: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 16:13:23,510 [Worker-81: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-17 16:13:23,511 [Worker-81: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 16:13:23,511 [Worker-81: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 16:52:54,316 [Worker-89: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 16:52:54,316 [Worker-89: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-17 16:52:54,317 [Worker-89: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 16:52:54,318 [Worker-89: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 16:53:08,066 [Worker-91: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 16:53:08,067 [Worker-91: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-17 16:53:08,068 [Worker-91: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 16:53:08,068 [Worker-91: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 16:53:18,594 [Worker-80: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 16:53:18,595 [Worker-80: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-17 16:53:18,596 [Worker-80: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 16:53:18,597 [Worker-80: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 17:09:29,977 [Worker-99: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:09:29,979 [Worker-99: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-17 17:09:29,981 [Worker-99: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:09:29,982 [Worker-99: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 17:09:36,227 [Worker-99: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:09:36,228 [Worker-99: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-17 17:09:36,230 [Worker-99: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:09:36,231 [Worker-99: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 17:10:09,538 [Worker-99: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:10:09,539 [Worker-99: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-17 17:10:09,539 [Worker-99: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:10:09,540 [Worker-99: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 17:10:11,101 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:10:11,103 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-17 17:10:11,105 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:10:11,106 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 17:10:54,374 [Worker-98: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:10:54,375 [Worker-98: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-17 17:10:54,378 [Worker-98: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:10:54,379 [Worker-98: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 17:11:53,769 [Worker-97: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:11:53,770 [Worker-97: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-17 17:11:53,772 [Worker-97: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:11:53,772 [Worker-97: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 17:12:19,782 [Worker-102: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:12:19,784 [Worker-102: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-17 17:12:19,790 [Worker-102: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:12:19,791 [Worker-102: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 17:12:24,667 [Worker-98: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:12:24,682 [Worker-98: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-17 17:12:24,688 [Worker-98: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:12:24,689 [Worker-98: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 17:12:35,018 [Worker-97: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:12:35,020 [Worker-97: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-17 17:12:35,022 [Worker-97: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:12:35,023 [Worker-97: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 17:12:50,189 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:12:50,191 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-17 17:12:50,193 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:12:50,193 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 17:13:04,651 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:13:04,652 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-17 17:13:04,653 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:13:04,654 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 17:13:53,244 [Worker-98: Launching Executing clean in C__Users_Stefan_Desktop_my-starter-project2_my-starter-project] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project
+2019-09-17 17:13:53,245 [Worker-98: Launching Executing clean in C__Users_Stefan_Desktop_my-starter-project2_my-starter-project] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean
+2019-09-17 17:13:53,245 [Worker-98: Launching Executing clean in C__Users_Stefan_Desktop_my-starter-project2_my-starter-project] WARN  o.e.m.i.l.MavenLaunchExtensionsSupport - Unknown or unsupported source locator org.eclipse.jdt.internal.launching.sourcelookup.advanced.AdvancedSourceLookupDirector
+2019-09-17 17:13:59,927 [Worker-97: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:13:59,928 [Worker-97: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-17 17:13:59,933 [Worker-97: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:13:59,933 [Worker-97: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 17:13:59,933 [Worker-97: Building workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of my-starter-project
+2019-09-17 17:13:59,933 [Worker-97: Building workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for my-starter-project
+2019-09-17 17:13:59,944 [Worker-97: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:14:02,662 [Worker-99: Launching Executing install in C__Users_Stefan_Desktop_my-starter-project2_my-starter-project] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project
+2019-09-17 17:14:02,662 [Worker-99: Launching Executing install in C__Users_Stefan_Desktop_my-starter-project2_my-starter-project] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2019-09-17 17:14:02,662 [Worker-99: Launching Executing install in C__Users_Stefan_Desktop_my-starter-project2_my-starter-project] WARN  o.e.m.i.l.MavenLaunchExtensionsSupport - Unknown or unsupported source locator org.eclipse.jdt.internal.launching.sourcelookup.advanced.AdvancedSourceLookupDirector
+2019-09-17 17:14:18,676 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:14:18,677 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-17 17:14:18,679 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:14:18,680 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 17:14:22,347 [Worker-93: Launching my-starter-project (2)] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project
+2019-09-17 17:14:22,347 [Worker-93: Launching my-starter-project (2)] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B compile
+2019-09-17 17:14:22,347 [Worker-93: Launching my-starter-project (2)] WARN  o.e.m.i.l.MavenLaunchExtensionsSupport - Unknown or unsupported source locator org.eclipse.jdt.internal.launching.sourcelookup.advanced.AdvancedSourceLookupDirector
+2019-09-17 17:15:57,035 [Worker-97: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:15:57,035 [Worker-97: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-17 17:15:57,037 [Worker-97: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:15:57,037 [Worker-97: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 17:16:28,628 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-09-17 17:16:55,409 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:16:55,414 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-17 17:16:55,421 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:16:55,421 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 17:18:59,763 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:18:59,766 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-17 17:18:59,767 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:18:59,768 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 17:25:33,374 [Worker-19: Launching Executing clean in C__Users_Stefan_Desktop_my-starter-project2_my-starter-project] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project
+2019-09-17 17:25:33,375 [Worker-19: Launching Executing clean in C__Users_Stefan_Desktop_my-starter-project2_my-starter-project] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean
+2019-09-17 17:25:33,375 [Worker-19: Launching Executing clean in C__Users_Stefan_Desktop_my-starter-project2_my-starter-project] WARN  o.e.m.i.l.MavenLaunchExtensionsSupport - Unknown or unsupported source locator org.eclipse.jdt.internal.launching.sourcelookup.advanced.AdvancedSourceLookupDirector
+2019-09-17 17:25:37,846 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:25:37,850 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-17 17:25:37,859 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:25:37,859 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 17:25:54,736 [Worker-24: Launching Executing clean in C__Users_Stefan_Desktop_my-starter-project2_my-starter-project] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project
+2019-09-17 17:25:54,736 [Worker-24: Launching Executing clean in C__Users_Stefan_Desktop_my-starter-project2_my-starter-project] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean
+2019-09-17 17:25:54,736 [Worker-24: Launching Executing clean in C__Users_Stefan_Desktop_my-starter-project2_my-starter-project] WARN  o.e.m.i.l.MavenLaunchExtensionsSupport - Unknown or unsupported source locator org.eclipse.jdt.internal.launching.sourcelookup.advanced.AdvancedSourceLookupDirector
+2019-09-17 17:26:00,311 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:26:00,312 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-17 17:26:00,316 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:26:00,316 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 17:26:00,318 [Worker-24: Building workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of my-starter-project
+2019-09-17 17:26:00,319 [Worker-24: Building workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for my-starter-project
+2019-09-17 17:26:00,337 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:26:05,618 [Worker-23: Launching Executing install in C__Users_Stefan_Desktop_my-starter-project2_my-starter-project] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project
+2019-09-17 17:26:05,618 [Worker-23: Launching Executing install in C__Users_Stefan_Desktop_my-starter-project2_my-starter-project] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2019-09-17 17:26:05,618 [Worker-23: Launching Executing install in C__Users_Stefan_Desktop_my-starter-project2_my-starter-project] WARN  o.e.m.i.l.MavenLaunchExtensionsSupport - Unknown or unsupported source locator org.eclipse.jdt.internal.launching.sourcelookup.advanced.AdvancedSourceLookupDirector
+2019-09-17 17:26:19,356 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:26:19,357 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-17 17:26:19,359 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:26:19,360 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 17:26:29,474 [Worker-19: Launching my-starter-project (2)] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project
+2019-09-17 17:26:29,477 [Worker-19: Launching my-starter-project (2)] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B compile
+2019-09-17 17:26:29,477 [Worker-19: Launching my-starter-project (2)] WARN  o.e.m.i.l.MavenLaunchExtensionsSupport - Unknown or unsupported source locator org.eclipse.jdt.internal.launching.sourcelookup.advanced.AdvancedSourceLookupDirector
+2019-09-17 17:26:48,867 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:26:48,868 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-17 17:26:48,871 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:26:48,871 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 17:40:28,441 [Worker-29: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:40:28,443 [Worker-29: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-17 17:40:28,446 [Worker-29: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:40:28,446 [Worker-29: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-17 17:41:39,625 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:41:39,626 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-17 17:41:39,628 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-17 17:41:39,628 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-18 09:38:17,703 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-09-18 09:38:22,937 [Worker-11: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 09:38:22,944 [Worker-11: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-18 09:38:22,953 [Worker-11: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 09:38:22,953 [Worker-11: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-18 09:40:34,313 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 09:40:34,321 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-18 09:40:34,324 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 09:40:34,324 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-18 09:40:41,979 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 09:40:41,980 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-18 09:40:41,982 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 09:40:41,982 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-18 09:42:09,236 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 09:42:09,237 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-18 09:42:09,240 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 09:42:09,240 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-18 09:49:16,217 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 09:49:16,218 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-18 09:49:16,221 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 09:49:16,221 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-18 10:30:47,126 [Worker-31: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 10:30:47,128 [Worker-31: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-18 10:30:47,130 [Worker-31: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 10:30:47,130 [Worker-31: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-18 10:30:54,685 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 10:30:54,686 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-18 10:30:54,688 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 10:30:54,689 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-18 10:31:06,552 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 10:31:06,553 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-18 10:31:06,556 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 10:31:06,556 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-18 11:35:31,569 [Worker-53: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 11:35:31,571 [Worker-53: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-18 11:35:31,573 [Worker-53: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 11:35:31,574 [Worker-53: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-18 11:46:02,081 [Worker-58: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 11:46:02,083 [Worker-58: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-18 11:46:02,085 [Worker-58: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 11:46:02,085 [Worker-58: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-18 12:14:45,674 [Worker-70: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 12:14:45,675 [Worker-70: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-18 12:14:45,677 [Worker-70: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 12:14:45,677 [Worker-70: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-18 13:44:09,362 [Worker-81: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 13:44:09,363 [Worker-81: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-18 13:44:09,365 [Worker-81: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 13:44:09,365 [Worker-81: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-18 13:56:11,880 [Worker-87: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 13:56:11,881 [Worker-87: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-18 13:56:11,883 [Worker-87: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 13:56:11,883 [Worker-87: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-18 13:56:35,303 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 13:56:35,304 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-18 13:56:35,306 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 13:56:35,306 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-18 13:57:08,109 [Worker-86: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 13:57:08,110 [Worker-86: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-18 13:57:08,111 [Worker-86: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 13:57:08,111 [Worker-86: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-18 14:57:52,325 [Worker-103: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 14:57:52,327 [Worker-103: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-18 14:57:52,331 [Worker-103: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 14:57:52,332 [Worker-103: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-18 16:26:34,353 [Worker-119: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 16:26:34,355 [Worker-119: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-18 16:26:34,358 [Worker-119: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 16:26:34,358 [Worker-119: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-18 16:31:25,468 [Worker-124: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.gmail.stefan:my-starter-project:2.0-SNAPSHOT @ C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\pom.xml.
+2019-09-18 16:31:30,128 [Worker-124: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 16:31:30,131 [Worker-124: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-18 16:31:30,133 [Worker-124: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-18 16:31:30,134 [Worker-124: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Stefan\Desktop\my-starter-project2\my-starter-project\src\test\resources
+2019-09-18 16:31:30,136 [Worker-124: Building workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of my-starter-project
+2019-09-18 16:31:30,137 [Worker-124: Building workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for my-starter-project
+2019-09-18 16:31:30,144 [Worker-124: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.

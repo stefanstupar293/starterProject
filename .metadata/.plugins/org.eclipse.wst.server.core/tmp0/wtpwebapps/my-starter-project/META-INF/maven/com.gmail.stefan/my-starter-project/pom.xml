@@ -96,7 +96,13 @@
 				<scope>import</scope>
 				<version>${vaadin.version}</version>
 			</dependency>
+			 <dependency>
+				  <groupId>com.vaadin</groupId>
+				  <artifactId>vaadin-core</artifactId>
+			</dependency>
 		</dependencies>
+		
+		
 	</dependencyManagement>
 
 	<dependencies>

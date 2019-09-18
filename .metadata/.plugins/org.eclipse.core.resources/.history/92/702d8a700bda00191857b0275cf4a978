@@ -1,0 +1,76 @@
+package com.gmail.stefan.ui.views.login;
+import java.awt.Panel;
+
+import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.formlayout.FormLayout;
+import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.polymertemplate.Id;
+import com.vaadin.flow.component.textfield.PasswordField;
+import com.vaadin.flow.component.textfield.TextField;
+import com.vaadin.flow.router.BeforeEnterEvent;
+import com.vaadin.flow.router.BeforeEnterObserver;
+
+
+
+
+public class Login extends VerticalLayout implements BeforeEnterObserver {
+
+	@Id ("email")
+	private TextField email; 
+	@Id ("password")
+	private PasswordField password;
+	@Id ("login")
+	private Button login;
+	@Id ("cancel")
+	private Button cancel;
+	
+	
+		
+	
+	
+	public Login () {
+		
+		// UI elements
+		email = new TextField ("email");
+		password = new PasswordField ("password");
+		
+		
+		//Button horizontal layout
+		HorizontalLayout HLayout = new HorizontalLayout();
+		
+		// UI elements buttons
+		login = new Button ("login");
+		
+		cancel = new Button ("cancel");
+		
+		HLayout.addComponentAsFirst(login);
+		HLayout.addComponentAsFirst(cancel);
+		
+		HLayout.setSpacing(true);
+		
+		//Form Layout
+		FormLayout formLayout = new FormLayout(email, password, HLayout);
+		
+		// Panel
+		Panel loginPanel = new Panel ("123", FormLayout);
+		
+		
+		// Add Component 
+		
+		addComponentAsFirst (email);
+		addComponentAsFirst (password);
+		addComponentAsFirst (login);
+		addComponentAsFirst (cancel);
+		
+	}
+
+	
+	@Override
+	public void beforeEnter(BeforeEnterEvent event) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+}
