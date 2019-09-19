@@ -1,0 +1,29 @@
+import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
+import '@vaadin/vaadin-login/src/vaadin-login-form.js';
+
+class LoginTest extends PolymerElement {
+
+    static get template() {
+        return html`
+<style include="shared-styles">
+                :host {
+                    display: block;
+                    height: 100%;
+                }
+            </style>
+<vaadin-login-form no-forgot-password></vaadin-login-form>
+`;
+    }
+
+    static get is() {
+        return 'login-test';
+    }
+
+    static get properties() {
+        return {
+            // Declare your properties here.
+        };
+    }
+}
+
+customElements.define(LoginTest.is, LoginTest);

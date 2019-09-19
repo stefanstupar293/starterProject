@@ -1,0 +1,28 @@
+import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
+
+class LoginDesign extends PolymerElement {
+
+    static get template() {
+        return html`
+<style include="shared-styles">
+                :host {
+                    display: block;
+                    height: 100%;
+                }
+            </style>
+
+`;
+    }
+
+    static get is() {
+        return 'login-design';
+    }
+
+    static get properties() {
+        return {
+            // Declare your properties here.
+        };
+    }
+}
+
+customElements.define(LoginDesign.is, LoginDesign);

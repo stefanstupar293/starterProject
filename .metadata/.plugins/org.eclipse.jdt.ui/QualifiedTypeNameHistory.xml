@@ -16,7 +16,6 @@
 <fullyQualifiedTypeName name="java.util.Objects"/>
 <fullyQualifiedTypeName name="com.gmail.stefan.backend.Beverage"/>
 <fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.AppUser"/>
-<fullyQualifiedTypeName name="com.vaadin.flow.router.BeforeEnterObserver"/>
 <fullyQualifiedTypeName name="java.nio.file.AccessDeniedException"/>
 <fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.Pages"/>
 <fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.Pages.Title"/>
@@ -27,4 +26,16 @@
 <fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.Pages.Link"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.dependency.JsModule"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.dependency.JavaScript"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.VerticalLayout"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.component.textfield.TextField"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.component.polymertemplate.Id"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.component.textfield.PasswordField"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.component.button.Button"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.HorizontalLayout"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.component.formlayout.FormLayout"/>
+<fullyQualifiedTypeName name="java.awt.Panel"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.component.textfield.EmailField"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.component.login.LoginForm"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.ui.MainLayout"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.router.BeforeEnterObserver"/>
 </qualifiedTypeNameHistroy>
