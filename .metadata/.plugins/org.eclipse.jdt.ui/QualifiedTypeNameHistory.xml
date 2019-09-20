@@ -37,5 +37,10 @@
 <fullyQualifiedTypeName name="com.vaadin.flow.component.textfield.EmailField"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.login.LoginForm"/>
 <fullyQualifiedTypeName name="com.gmail.stefan.ui.MainLayout"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.Credencials"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.Credentials"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.component.textfield.Autocomplete"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.router.BeforeEnterObserver"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.router.BeforeEnterEvent"/>
 </qualifiedTypeNameHistroy>

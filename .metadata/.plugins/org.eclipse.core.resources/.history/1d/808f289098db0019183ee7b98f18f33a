@@ -1,0 +1,4 @@
+alwaysUseUtf8=true
+eclipse.preferences.version=1
+serverAddress=localhost
+serverPort=5467

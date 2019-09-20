@@ -24,3 +24,16 @@
 1568901021448	Delete element
 1568901146001	Delete element
 1568905706866	Delete element
+1568972015025	Move compilation unit
+1568972114440	Move elements
+1568972137067	Rename package 'com.gmail.stefan.ui.views.testlist.Login'
+1568972150091	Rename package 'com.gmail.stefan.ui.views.Login'
+1568972157417	Move elements
+1568972161186	Delete element
+1568972192038	Delete element
+1568972339935	Encapsulate field 'email'
+1568972344398	Encapsulate field 'password'
+1568972854773	Rename type 'Credencials'
+1568988416553	Rename compilation unit 'AppUserWebServices.java'
+1568989150008	Rename type 'AppServices'
+1568990783252	Delete element

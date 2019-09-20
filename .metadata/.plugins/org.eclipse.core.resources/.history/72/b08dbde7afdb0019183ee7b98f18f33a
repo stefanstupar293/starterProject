@@ -1,0 +1,4 @@
+package com.gmail.stefan.ui.views.login;
+
+import java.io.Serializable;
+
