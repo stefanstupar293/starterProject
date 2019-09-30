@@ -51,7 +51,7 @@ import com.vaadin.flow.templatemodel.TemplateModel;
  *
  * Implemented using a simple template.
  */
-@Route(value = "", layout = MainLayout.class)
+@Route(value = "reviews-list", layout = MainLayout.class)
 @PageTitle("Review List")
 @Tag("reviews-list")
 @JsModule("./src/views/reviewslist/reviews-list.js")

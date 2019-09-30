@@ -4,6 +4,7 @@ import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.html.H2;
+import com.vaadin.flow.component.login.LoginForm;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.polymertemplate.Id;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
@@ -12,16 +13,22 @@ import com.vaadin.flow.component.textfield.PasswordField;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.BeforeEnterEvent;
 import com.vaadin.flow.router.BeforeEnterObserver;
+import com.vaadin.flow.router.PageTitle;
+import com.vaadin.flow.router.Route;
 import com.vaadin.flow.templatemodel.TemplateModel;
+import com.gmail.stefan.ui.MainLayout;
 import com.gmail.stefan.ui.views.login.Credentials;
-import com.mnocompany.smspay.ui.LoginView.DISPLAY_VIEW;
-import com.mnocompany.smspay.ui.components.LoginForm;
+//import com.mnocompany.smspay.ui.LoginView.DISPLAY_VIEW;
+//import com.mnocompany.smspay.ui.components.LoginForm;
 /**
  * A Designer generated component for the login-test template.
  *
  * Designer will add and remove fields with @Id mappings but
  * does not overwrite or otherwise change this file.
  */
+
+@Route(value = "", layout = MainLayout.class)
+@PageTitle("Login")
 @Tag("login-test")
 @JsModule("./src/views/login/login-test.js")
 public class LoginTest extends PolymerTemplate<LoginTest.LoginTestModel> implements BeforeEnterObserver {
@@ -42,9 +49,9 @@ public class LoginTest extends PolymerTemplate<LoginTest.LoginTestModel> impleme
 	
 	enum DISPLAY_VIEW{
 		
-		LOGIN,
-		REGISTRATION,
-		FORGOT_PASSWORD
+		LOGIN
+//		REGISTRATION,
+//		FORGOT_PASSWORD
 		
 	}	
 	DISPLAY_VIEW displayView;
@@ -60,8 +67,8 @@ public class LoginTest extends PolymerTemplate<LoginTest.LoginTestModel> impleme
     	initForLogin();
     	
     	LoginForm loginForm = new LoginForm();
-    	content.removeAll();
-    	content.add(loginForm);
+//    	content.removeAll();
+//    	content.add(loginForm);
     	
     }
     
@@ -89,13 +96,6 @@ public class LoginTest extends PolymerTemplate<LoginTest.LoginTestModel> impleme
 		// TODO Auto-generated method stub
 		
 	}
-    
-    
-    
-    
-    
-    
-    
     
     
     

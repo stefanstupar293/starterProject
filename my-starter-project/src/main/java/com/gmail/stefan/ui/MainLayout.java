@@ -71,6 +71,10 @@ public class MainLayout extends Div implements RouterLayout, PageConfigurator, B
     public MainLayout() {
         H2 title = new H2("Beverage Buddy");
         title.addClassName("main-layout__title");
+        
+//        RouterLink login = new RouterLink();
+//        login.add(new Icon(VaadinIcon.LOCK), new Text("Login"));
+//        login.addClassName("main-layout__nav-item");
 
         RouterLink reviews = new RouterLink(null, ReviewsList.class);
         reviews.add(new Icon(VaadinIcon.LIST), new Text("Reviews"));
@@ -152,8 +156,6 @@ public class MainLayout extends Div implements RouterLayout, PageConfigurator, B
 		
 //		AppUser user = SecurityUtils.getLoggedInUser();
 //		
-//		String href = event.getLocation().getFirstSegment();
-//		String fullPath = event.getLocation().getPath(); 
 //		navigationTarget = href;
 //		
 //		if(user == null) {
