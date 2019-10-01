@@ -15,15 +15,18 @@
  */
 package com.gmail.stefan.ui;
 
-import com.vaadin.flow.component.Component;
+import com.gmail.stefan.ui.views.beveragelist.BeverageList;
+import com.gmail.stefan.ui.views.categorieslist.CategoriesList;
+import com.gmail.stefan.ui.views.login.LoginTest;
+import com.gmail.stefan.ui.views.reviewslist.ReviewsList;
+import com.gmail.stefan.ui.views.testlist.UsersList;
 import com.vaadin.flow.component.Text;
-import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.dependency.CssImport;
-import com.vaadin.flow.component.dialog.Dialog;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.icon.VaadinIcon;
+import com.vaadin.flow.component.menubar.MenuBar;
 import com.vaadin.flow.component.page.Viewport;
 import com.vaadin.flow.router.BeforeEnterEvent;
 import com.vaadin.flow.router.BeforeEnterObserver;
@@ -33,23 +36,7 @@ import com.vaadin.flow.router.RouterLink;
 import com.vaadin.flow.server.InitialPageSettings;
 import com.vaadin.flow.server.PWA;
 import com.vaadin.flow.server.PageConfigurator;
-
-import java.nio.file.AccessDeniedException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
-
-import com.gmail.stefan.ui.views.beveragelist.BeverageList;
-import com.gmail.stefan.ui.views.categorieslist.CategoriesList;
-import com.gmail.stefan.ui.views.reviewslist.ReviewsList;
-import com.gmail.stefan.ui.views.testlist.UsersList;
-
-//import com.gmail.stefan.ui.views.login.Pages;
-//import com.gmail.stefan.ui.views.login.AppUser;
-//import com.gmail.stefan.ui.views.login.LoginView;
-//import com.gmail.stefan.ui.views.login.SecurityUtils;
-//import com.gmail.stefan.ui.views.login.AppUtils;
-//import com.gmail.stefan.ui.views.login.PageInfo;
+import com.vaadin.flow.server.VaadinSession;
 
 
 
@@ -64,6 +51,10 @@ import com.gmail.stefan.ui.views.testlist.UsersList;
 
 public class MainLayout extends Div implements RouterLayout, PageConfigurator, BeforeEnterObserver {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 571498875689969135L;
 	public String navigationTarget;
 	
 //	List<PageInfo> pages = new ArrayList<>();
@@ -93,8 +84,14 @@ public class MainLayout extends Div implements RouterLayout, PageConfigurator, B
         RouterLink users = new RouterLink(null, UsersList.class);
         users.add(new Icon(VaadinIcon.USER), new Text("Users"));
         users.addClassName("main-layout__nav-item");
+        
+        RouterLink login = new RouterLink(null, LoginTest.class);
+        login.add(new Icon(VaadinIcon.SAFE_LOCK), new Text("Login"));
+        login.addClassName("main-layout__nav-item");
+//        MainLayout.getMenu().setVisible(false);
+        
 
-        Div navigation = new Div(reviews, categories, users, beverages);
+        Div navigation = new Div(reviews, categories, users, beverages, login);
         navigation.addClassName("main-layout__nav");
 
         Div header = new Div(title, navigation);
@@ -145,15 +142,22 @@ public class MainLayout extends Div implements RouterLayout, PageConfigurator, B
 	
 	@Override
 	public void beforeEnter(BeforeEnterEvent event) {
+		
+		
+//		if(VaadinSession.getCurrent().getAttribute("userLoggedIn") == null) {												// if user logged in
+//			VaadinSession.getCurrent().setAttribute("intendedPath", event.getLocation().getPath());
+//			event.rerouteTo(LoginTest.class);
+//		}
+			
+		
+		
 		System.out.println("BeforeEnterEvent main");
 		//close all opened dialogs
-		for (Component c : UI.getCurrent().getChildren().collect(Collectors.toList())) {
-			if (c instanceof Dialog)
-				((Dialog) (c)).close();
-		}
-		
+//		for (Component c : UI.getCurrent().getChildren().collect(Collectors.toList())) {
+//			if (c instanceof Dialog)
+//				((Dialog) (c)).close();
+//		}
 //		AppUtils.getRouterLayout().checkIsLoggedInAsUserOperator(event);
-		
 //		AppUser user = SecurityUtils.getLoggedInUser();
 //		
 //		navigationTarget = href;

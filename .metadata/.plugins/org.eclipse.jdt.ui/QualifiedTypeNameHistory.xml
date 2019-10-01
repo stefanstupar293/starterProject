@@ -35,12 +35,16 @@
 <fullyQualifiedTypeName name="com.vaadin.flow.component.formlayout.FormLayout"/>
 <fullyQualifiedTypeName name="java.awt.Panel"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.textfield.EmailField"/>
-<fullyQualifiedTypeName name="com.vaadin.flow.component.login.LoginForm"/>
-<fullyQualifiedTypeName name="com.gmail.stefan.ui.MainLayout"/>
 <fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.Credencials"/>
 <fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.Credentials"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.textfield.Autocomplete"/>
 <fullyQualifiedTypeName name="java.io.Serializable"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.router.BeforeEnterObserver"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.router.BeforeEnterEvent"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.component.login.LoginForm"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.router.RouteAlias"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.LoginTest"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.server.VaadinSession"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.component.menubar.MenuBar"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.ui.MainLayout"/>
 </qualifiedTypeNameHistroy>
