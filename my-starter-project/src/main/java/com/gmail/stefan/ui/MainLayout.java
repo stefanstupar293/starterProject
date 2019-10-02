@@ -26,7 +26,6 @@ import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.icon.VaadinIcon;
-import com.vaadin.flow.component.menubar.MenuBar;
 import com.vaadin.flow.component.page.Viewport;
 import com.vaadin.flow.router.BeforeEnterEvent;
 import com.vaadin.flow.router.BeforeEnterObserver;
@@ -144,10 +143,10 @@ public class MainLayout extends Div implements RouterLayout, PageConfigurator, B
 	public void beforeEnter(BeforeEnterEvent event) {
 		
 		
-//		if(VaadinSession.getCurrent().getAttribute("userLoggedIn") == null) {												// if user logged in
-//			VaadinSession.getCurrent().setAttribute("intendedPath", event.getLocation().getPath());
-//			event.rerouteTo(LoginTest.class);
-//		}
+		if(VaadinSession.getCurrent().getAttribute("userLoggedIn") == null) {												// if user isn't logged in, deny application usage
+			VaadinSession.getCurrent().setAttribute("intendedPath", event.getLocation().getPath());
+			event.rerouteTo(LoginTest.class);
+		}
 			
 		
 		

@@ -22,7 +22,7 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouteAlias;
 import com.vaadin.flow.templatemodel.TemplateModel;
-import com.gmail.stefan.ui.MainLayout;
+//import com.gmail.stefan.ui.MainLayout;
 import com.gmail.stefan.ui.views.login.Credentials;
 //import com.mnocompany.smspay.ui.LoginView.DISPLAY_VIEW;
 //import com.mnocompany.smspay.ui.components.LoginForm;
@@ -33,7 +33,7 @@ import com.gmail.stefan.ui.views.login.Credentials;
  * does not overwrite or otherwise change this file.
  */
 
-@Route(value = "", layout = MainLayout.class)
+@Route(value = "")
 @RouteAlias("login")
 @PageTitle("Login")
 @Tag("login-test")
