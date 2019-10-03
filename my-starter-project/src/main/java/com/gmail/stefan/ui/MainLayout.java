@@ -18,6 +18,7 @@ package com.gmail.stefan.ui;
 import com.gmail.stefan.ui.views.beveragelist.BeverageList;
 import com.gmail.stefan.ui.views.categorieslist.CategoriesList;
 import com.gmail.stefan.ui.views.login.LoginTest;
+import com.gmail.stefan.ui.views.login.LogoutTest;
 import com.gmail.stefan.ui.views.reviewslist.ReviewsList;
 import com.gmail.stefan.ui.views.testlist.UsersList;
 import com.vaadin.flow.component.Text;
@@ -54,7 +55,7 @@ public class MainLayout extends Div implements RouterLayout, PageConfigurator, B
 	 * 
 	 */
 	private static final long serialVersionUID = 571498875689969135L;
-	public String navigationTarget;
+	public String navigationTarget; 
 	
 //	List<PageInfo> pages = new ArrayList<>();
 	
@@ -84,13 +85,17 @@ public class MainLayout extends Div implements RouterLayout, PageConfigurator, B
         users.add(new Icon(VaadinIcon.USER), new Text("Users"));
         users.addClassName("main-layout__nav-item");
         
-        RouterLink login = new RouterLink(null, LoginTest.class);
-        login.add(new Icon(VaadinIcon.SAFE_LOCK), new Text("Login"));
-        login.addClassName("main-layout__nav-item");
-//        MainLayout.getMenu().setVisible(false);
+//        RouterLink login = new RouterLink(null, LoginTest.class);						// logout
+//        login.add(new Icon(VaadinIcon.SIGN_OUT), new Text("Logout"));					// make new form for logout
+//        login.addClassName("main-layout__nav-item");
+
+        RouterLink logout = new RouterLink(null, LogoutTest.class);
+        logout.add(new Icon(VaadinIcon.SIGN_OUT), new Text("Logout"));
+        logout.addClassName("main-layout__nav-item");
+        
         
 
-        Div navigation = new Div(reviews, categories, users, beverages, login);
+        Div navigation = new Div(reviews, categories, users, beverages, logout);   		// "login" is temporary, should be changed to logout
         navigation.addClassName("main-layout__nav");
 
         Div header = new Div(title, navigation);

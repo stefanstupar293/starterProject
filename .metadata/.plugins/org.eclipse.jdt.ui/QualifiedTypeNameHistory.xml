@@ -44,7 +44,11 @@
 <fullyQualifiedTypeName name="com.vaadin.flow.component.login.LoginForm"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.router.RouteAlias"/>
 <fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.LoginTest"/>
-<fullyQualifiedTypeName name="com.vaadin.flow.server.VaadinSession"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.menubar.MenuBar"/>
 <fullyQualifiedTypeName name="com.gmail.stefan.ui.MainLayout"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.server.VaadinSession"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.component.UI"/>
+<fullyQualifiedTypeName name="java.util.Optional"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.router.Route"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.LogoutTest"/>
 </qualifiedTypeNameHistroy>

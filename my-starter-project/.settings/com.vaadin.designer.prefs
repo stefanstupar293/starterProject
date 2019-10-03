@@ -1,5 +1,5 @@
 defaultJavaCompanionFolder=src/main/java
-defaultTemplateFolder=frontend/src/views/login
+defaultTemplateFolder=frontend/src/views/logout
 eclipse.preferences.version=1
 serverAddress=192.168.153.28
 serverPort=3109
