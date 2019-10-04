@@ -95,7 +95,7 @@ public class MainLayout extends Div implements RouterLayout, PageConfigurator, B
         
         
 
-        Div navigation = new Div(reviews, categories, users, beverages, logout);   		//TODO "login" is temporary, should be changed to logout 
+        Div navigation = new Div(reviews, categories, users, beverages, logout);   		// "login" is temporary, should be changed to logout
         navigation.addClassName("main-layout__nav");
 
         Div header = new Div(title, navigation);
@@ -133,6 +133,14 @@ public class MainLayout extends Div implements RouterLayout, PageConfigurator, B
         settings.addMetaTag("apple-mobile-web-app-status-bar-style", "black");
     }
 
+//	public void initMain(String pageLink) {
+//		String navLink = AppUtils.getNavigationHref() != null ? AppUtils.getNavigationHref().toString() : null;
+//		pageLink = pageLink != null ? pageLink : navLink;
+//		String pageFromList = pages != null && !pages.isEmpty() ? pages.get(0).getLink() : getFirstPageForLoggedInUser().getLink();
+//		AppUtils.goToPage(pageLink != null && !pageLink.equals(Pages.Link.LOGIN) && !pageLink.equals("") ? pageLink : pageFromList, getUI().orElse(null));
+//		
+//		
+//	}
 
 	
 	
@@ -170,4 +178,15 @@ public class MainLayout extends Div implements RouterLayout, PageConfigurator, B
 //				event.rerouteToError(AccessDeniedException.class);
 //			}
 		}
+//	}
+//	
+//	//return as home page for logged in user
+//	public PageInfo getFirstPageForLoggedInUser() {														// set Pages
+//			
+//		if(pages==null || pages.isEmpty())initPages();
+//		
+//		if(SecurityUtils.getLoggedInUser()!=null && pages!=null && !pages.isEmpty()) 
+//			return pages.get(0);
+//		return null;
+//	}
 }

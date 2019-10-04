@@ -98,20 +98,14 @@ public class LoginTest extends PolymerTemplate<LoginTest.LoginTestModel> impleme
 	
 	public LoginTest() {
 		btnLogin.addClickListener(e -> {  
-			if (emailInput.getValue().contains("admin@mno.com") && passInput.getValue().contains("admin")) {
-				VaadinSession.getCurrent().setAttribute("userLoggedIn", true);
-				Object intendedPath = VaadinSession.getCurrent().getAttribute("intendedPath");
-				UI.getCurrent().navigate(Optional.ofNullable(intendedPath).map(Object::toString).orElse(""));
-				System.out.println("Login successful");
-			}
-			else {
-				System.out.println("Login error");
-			}
-			
+			VaadinSession.getCurrent().setAttribute("userLoggedIn", true);
+			Object intendedPath = VaadinSession.getCurrent().getAttribute("intendedPath");
+			UI.getCurrent().navigate(Optional.ofNullable(intendedPath).map(Object::toString).orElse(""));
+			System.out.println("Login successful");
 		});
 	}
 
-	public Login getLogin() {
+	public Login getCredentials() {
     	Login c = new Login();
     	c.setEmail(emailInput.getValue());
     	c.setPassword(passInput.getValue());
