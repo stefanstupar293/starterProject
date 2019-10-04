@@ -1,6 +1,7 @@
 package com.gmail.stefan.ui.views.login;
 import com.vaadin.flow.templatemodel.TemplateModel;
 
+import java.awt.Event;
 import java.util.Optional;
 
 import com.vaadin.flow.component.Tag;
@@ -50,15 +51,23 @@ public class LogoutTest extends PolymerTemplate<LogoutTest.LogoutTestModel> {
 	/**
      * Creates a new LogoutTest.
      */
-    public LogoutTest() {
+    public LogoutTest() { 
         // You can initialise any data required for the connected UI components here.
-    	btnLogout.addClickListener(e -> {
+    	btnLogout.addClickListener(e -> { 
 			VaadinSession.getCurrent().setAttribute("userLoggedIn", null);
 			Object intendedPath = VaadinSession.getCurrent().getAttribute("intendedPath");
 			UI.getCurrent().navigate(Optional.ofNullable(intendedPath).map(Object::toString).orElse(""));
+			System.out.println("Logged out");
 		});
+    	btnReturn.addClickListener(r -> {
+    		Object intendedPath = VaadinSession.getCurrent().getAttribute("intendedPath");
+    		UI.getCurrent().navigate(Optional.ofNullable(intendedPath).map(Object::toString).orElse(""));
+    		System.out.println("Returned to the app");
+    	});
     	
     }
+    
+    																		//TODO add return button which returns to Main View
 
     /**
      * This model binds properties between LogoutTest and logout-test
@@ -67,3 +76,4 @@ public class LogoutTest extends PolymerTemplate<LogoutTest.LogoutTestModel> {
         // Add setters and getters for template properties here.
     }
 }
+ 

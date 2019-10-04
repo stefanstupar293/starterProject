@@ -51,4 +51,6 @@
 <fullyQualifiedTypeName name="java.util.Optional"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.router.Route"/>
 <fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.LogoutTest"/>
+<fullyQualifiedTypeName name="java.awt.Event"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.AppUserServices"/>
 </qualifiedTypeNameHistroy>

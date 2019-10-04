@@ -10048,3 +10048,196 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.update.configurator 4 0 2019-10-03 16:30:20.784
 !MESSAGE Can't find bundle for base name feature, locale en_US
+
+!ENTRY org.eclipse.jdt.core 4 0 2019-10-03 16:54:04.877
+!MESSAGE Invalid ZIP archive: src/main/java/com/mnocompany/smspay/backend/restinterface/AppUserMobRest.java [in smspayweb]
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-03 17:08:16.804
+!MESSAGE Jetty stopped at http://null:0
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-03 17:08:16.806
+!MESSAGE Removed all models from server.
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-03 17:08:16.809
+!MESSAGE Jetty stopped at http://null:0
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-03 17:08:16.812
+!MESSAGE Removed all models from server.
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-03 17:08:16.815
+!MESSAGE Jetty stopped at http://null:0
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-03 17:08:16.837
+!MESSAGE Removed all models from server.
+!SESSION 2019-10-04 09:22:29.366 -----------------------------------------------
+eclipse.buildId=4.12.0.I20190605-1800
+java.version=1.8.0_221
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.core 1 0 2019-10-04 09:22:36.368
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 09:22:48.112
+!MESSAGE Schedule fetching all notifications
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 09:22:48.118
+!MESSAGE Schedule version update jobs
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 09:22:49.129
+!MESSAGE Fetching all notifications
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 09:22:49.131
+!MESSAGE Requesting user info (notification settings URL)
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 09:22:50.118
+!MESSAGE HTTP Response code :200
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 09:22:50.119
+!MESSAGE HTTP Response code :200
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 09:22:50.128
+!MESSAGE Parse notifications
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 09:22:50.134
+!MESSAGE Save JSON notifications content to cache file C:\Users\Stefan\Desktop\my-starter-project2\.metadata\.plugins\com.vaadin.integration.eclipse\notifications-cache.json
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-10-04 09:22:50.333
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Stefan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 09:22:50.562
+!MESSAGE BrowserCore initialized.
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 09:22:51.153
+!MESSAGE Schedule fetching new notifications
+
+!ENTRY org.eclipse.jdt.core 4 0 2019-10-04 09:23:18.993
+!MESSAGE Invalid ZIP archive: src/main/java/com/mnocompany/smspay/backend/restinterface/AppUserMobRest.java [in smspayweb]
+
+!ENTRY org.eclipse.jdt.core 4 0 2019-10-04 09:23:18.994
+!MESSAGE Invalid ZIP archive: src/main/java/com/mnocompany/smspay/backend/restinterface/AppUserMobRest.java [in smspayweb]
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 09:23:19.067
+!MESSAGE All vaadin 7+ projects : []
+
+!ENTRY org.eclipse.update.configurator 4 0 2019-10-04 09:23:50.183
+!MESSAGE Can't find bundle for base name feature, locale en_US
+
+!ENTRY org.apache.ivyde.eclipse 1 0 2019-10-04 09:24:13.705
+!MESSAGE starting IvyDE plugin
+
+!ENTRY org.apache.ivyde.eclipse 1 0 2019-10-04 09:24:13.726
+!MESSAGE IvyDE plugin started
+
+!ENTRY org.eclipse.jdt.core 4 0 2019-10-04 09:31:33.273
+!MESSAGE Invalid ZIP archive: src/main/java/com/mnocompany/smspay/backend/restinterface/AppUserMobRest.java [in smspayweb]
+
+!ENTRY org.eclipse.jdt.core 4 0 2019-10-04 13:09:25.276
+!MESSAGE Invalid ZIP archive: src/main/java/com/mnocompany/smspay/backend/restinterface/AppUserMobRest.java [in smspayweb]
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 13:22:51.210
+!MESSAGE Schedule fetching new notifications
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 13:22:51.215
+!MESSAGE Fetching all notifications
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 13:22:51.499
+!MESSAGE HTTP Response code :200
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 13:22:51.499
+!MESSAGE Parse notifications
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 13:22:51.502
+!MESSAGE Save JSON notifications content to cache file C:\Users\Stefan\Desktop\my-starter-project2\.metadata\.plugins\com.vaadin.integration.eclipse\notifications-cache.json
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 13:48:03.086
+!MESSAGE Jetty stopped at http://null:0
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 13:48:03.087
+!MESSAGE Removed all models from server.
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 13:48:03.089
+!MESSAGE Jetty stopped at http://null:0
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 13:48:03.090
+!MESSAGE Removed all models from server.
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 13:48:03.091
+!MESSAGE Jetty stopped at http://null:0
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 13:48:03.092
+!MESSAGE Removed all models from server.
+!SESSION 2019-10-04 13:48:05.713 -----------------------------------------------
+eclipse.buildId=4.12.0.I20190605-1800
+java.version=1.8.0_221
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.core 1 0 2019-10-04 13:48:11.380
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 13:48:23.059
+!MESSAGE Schedule fetching all notifications
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 13:48:23.065
+!MESSAGE Schedule version update jobs
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 13:48:23.981
+!MESSAGE Requesting user info (notification settings URL)
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 13:48:23.983
+!MESSAGE Fetching all notifications
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-10-04 13:48:24.451
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Stefan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 13:48:24.716
+!MESSAGE HTTP Response code :200
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 13:48:24.726
+!MESSAGE Parse notifications
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 13:48:24.730
+!MESSAGE HTTP Response code :200
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 13:48:24.736
+!MESSAGE Save JSON notifications content to cache file C:\Users\Stefan\Desktop\my-starter-project2\.metadata\.plugins\com.vaadin.integration.eclipse\notifications-cache.json
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 13:48:25.497
+!MESSAGE Schedule fetching new notifications
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 13:48:26.022
+!MESSAGE BrowserCore initialized.
+
+!ENTRY org.apache.ivyde.eclipse 1 0 2019-10-04 13:48:35.784
+!MESSAGE starting IvyDE plugin
+
+!ENTRY org.apache.ivyde.eclipse 1 0 2019-10-04 13:48:35.809
+!MESSAGE IvyDE plugin started
+
+!ENTRY org.eclipse.update.configurator 4 0 2019-10-04 13:48:40.900
+!MESSAGE Can't find bundle for base name feature, locale en_US
+
+!ENTRY org.eclipse.jdt.core 4 0 2019-10-04 13:48:54.027
+!MESSAGE Invalid ZIP archive: src/main/java/com/mnocompany/smspay/backend/restinterface/AppUserMobRest.java [in smspayweb]
+
+!ENTRY org.eclipse.jdt.core 4 0 2019-10-04 13:48:54.050
+!MESSAGE Invalid ZIP archive: src/main/java/com/mnocompany/smspay/backend/restinterface/AppUserMobRest.java [in smspayweb]
+
+!ENTRY com.vaadin.designer2 1 0 2019-10-04 13:48:54.102
+!MESSAGE All vaadin 7+ projects : []
+
+!ENTRY org.eclipse.jdt.core 4 0 2019-10-04 14:26:51.646
+!MESSAGE Invalid ZIP archive: src/main/java/com/mnocompany/smspay/backend/restinterface/AppUserMobRest.java [in smspayweb]

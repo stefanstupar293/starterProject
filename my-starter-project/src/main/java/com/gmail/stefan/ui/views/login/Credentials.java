@@ -9,9 +9,9 @@ public class Credentials implements Serializable {
 	 */
 	private static final long serialVersionUID = -4246399630637569782L;
 
-	private String email;
+	private String email = "admin@mno.com";
 	
-	private String password;
+	private String password = "admin";
 
 	public String getEmail() {
 		return email;

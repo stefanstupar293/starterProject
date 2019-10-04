@@ -26,6 +26,7 @@ import com.vaadin.flow.server.VaadinSession;
 import com.vaadin.flow.templatemodel.TemplateModel;
 //import com.mnocompany.smspay.ui.LoginView.DISPLAY_VIEW;
 //import com.mnocompany.smspay.ui.components.LoginForm;
+import com.gmail.stefan.ui.views.login.AppUserServices;
 /**
  * A Designer generated component for the login-test template.
  *
@@ -96,69 +97,13 @@ public class LoginTest extends PolymerTemplate<LoginTest.LoginTestModel> impleme
      */
 	
 	public LoginTest() {
-		btnLogin.addClickListener(e -> {
+		btnLogin.addClickListener(e -> {  
 			VaadinSession.getCurrent().setAttribute("userLoggedIn", true);
 			Object intendedPath = VaadinSession.getCurrent().getAttribute("intendedPath");
 			UI.getCurrent().navigate(Optional.ofNullable(intendedPath).map(Object::toString).orElse(""));
+			System.out.println("Login successful");
 		});
 	}
-	
-	
-	
-	
-//    public LoginTest() {
-//        // You can initialise any data required for the connected UI components here.
-//    	emailInput.setAutocomplete(Autocomplete.EMAIL);
-//    	passInput.setAutocomplete(Autocomplete.NEW_PASSWORD);
-//    	
-//    	btnLogin.addClickListener(
-//    	        (ComponentEventListener<ClickEvent<Button>>) buttonClickEvent -> doLogin(emailInput.getTitle(),
-//    	            passInput.getTitle()));
-////    	
-////    	initForLogin();
-////    	LoginForm loginForm = new LoginForm();
-////    	content.removeAll();
-////    	content.add(loginForm);
-////    	LoginForm component = new LoginForm();
-////    	component.addLoginListener(e -> {
-////    	    boolean isAuthenticated = authenticate(e);
-////    	    if (isAuthenticated) {
-////    	        navigateToMainPage();
-////    	    } else {
-////    	        component.setError(true);
-////    	    }
-////    	});
-//    	
-//    	
-//    	
-//    }
-//    
-//    private Object doLogin(String value, String value2) {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
-//
-//	private void authenticate(LoginEvent e) {
-//		// TODO Auto-generated method stub
-//    	if (emailInput.equals("admin@mno.com") && passInput.equals("admin")) {            // last modified
-//    		VaadinSession.getCurrent().setAttribute("userLoggedIn", true);;
-//    		
-//    	}
-//		VaadinSession.getCurrent().setAttribute("userLoggedIn", false);
-//		
-//		
-//		
-//	}
-//
-//	private void navigateToMainPage() {
-//		// TODO Auto-generated method stub
-//	}
-//
-//	private void initForLogin() {
-//		// TODO Auto-generated method stub
-////    	this.displayView = DISPLAY_VIEW.LOGIN;
-//    	
-//	}
 
 	public Credentials getCredentials() {
     	Credentials c = new Credentials();
