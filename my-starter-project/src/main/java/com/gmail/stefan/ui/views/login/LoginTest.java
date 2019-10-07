@@ -2,19 +2,14 @@ package com.gmail.stefan.ui.views.login;
 
 import java.util.Optional;
 
-import com.gmail.stefan.ui.views.reviewslist.ReviewsList;
-import com.vaadin.flow.component.ClickEvent;
-import com.vaadin.flow.component.ComponentEventListener;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.html.H2;
-import com.vaadin.flow.component.login.AbstractLogin.LoginEvent;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.polymertemplate.Id;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
-import com.vaadin.flow.component.textfield.Autocomplete;
 import com.vaadin.flow.component.textfield.PasswordField;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.BeforeEnterEvent;
@@ -24,9 +19,8 @@ import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouteAlias;
 import com.vaadin.flow.server.VaadinSession;
 import com.vaadin.flow.templatemodel.TemplateModel;
-//import com.mnocompany.smspay.ui.LoginView.DISPLAY_VIEW;
-//import com.mnocompany.smspay.ui.components.LoginForm;
-import com.gmail.stefan.ui.views.login.AppUserServices;
+import com.vaadin.flow.dom.Element;
+import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 /**
  * A Designer generated component for the login-test template.
  *
@@ -55,8 +49,7 @@ public class LoginTest extends PolymerTemplate<LoginTest.LoginTestModel> impleme
 		this.btnLogin = btnLogin;
 	}
 
-	@Id("vaadinVerticalLayout")
-	private VerticalLayout vaadinVerticalLayout;
+
 	@Id("h2")
 	private H2 h2;
 	@Id("emailInput")
@@ -91,14 +84,17 @@ public class LoginTest extends PolymerTemplate<LoginTest.LoginTestModel> impleme
 		LOGIN
 	}	
 	DISPLAY_VIEW displayView;
-	
+	@Id("div")
+	private Element div;
+	@Id("vaadinHorizontalLayout")
+	private HorizontalLayout vaadinHorizontalLayout;
 	/**
      * Creates a new LoginTest.
      */
 	
 	public LoginTest() {
 		btnLogin.addClickListener(e -> {  
-			if (emailInput.getValue().contains("admin@mno.com") && passInput.getValue().contains("admin")) {
+			if (emailInput.getValue().equals("admin@mno.com") && passInput.getValue().equals("admin")) {
 				VaadinSession.getCurrent().setAttribute("userLoggedIn", true);
 				Object intendedPath = VaadinSession.getCurrent().getAttribute("intendedPath");
 				UI.getCurrent().navigate(Optional.ofNullable(intendedPath).map(Object::toString).orElse(""));
@@ -109,6 +105,10 @@ public class LoginTest extends PolymerTemplate<LoginTest.LoginTestModel> impleme
 			}
 			
 		});
+		
+//		btnCancel.addClickListener(e -> {
+//			UI.getCurrent().getPage().open("http://www.mnocompany.com/");
+//		});
 	}
 
 	public Login getLogin() {

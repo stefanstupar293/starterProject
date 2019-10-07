@@ -1,7 +1,7 @@
 package com.gmail.stefan.ui.views.login;
 import com.vaadin.flow.templatemodel.TemplateModel;
 
-import java.awt.Event;
+
 import java.util.Optional;
 
 import com.vaadin.flow.component.Tag;
@@ -40,13 +40,15 @@ public class LogoutTest extends PolymerTemplate<LogoutTest.LogoutTestModel> {
 	private HorizontalLayout vaadinHorizontalLayout;
 	@Id("btnLogout")
 	private Button btnLogout;
-	@Id("vaadinHorizontalLayout1")
-	private HorizontalLayout vaadinHorizontalLayout1;
+	
 	@Id("btnReturn")
 	private Button btnReturn;
 
 	@Id("vaadinVerticalLayout")
 	private VerticalLayout vaadinVerticalLayout;
+
+	@Id("div")
+	private Element div;
 
 	/**
      * Creates a new LogoutTest.

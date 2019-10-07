@@ -15,15 +15,16 @@ class LogoutTest extends PolymerElement {
             </style>
 <vaadin-vertical-layout style="width: 100%; height: 100%; align-self: center;" id="vaadinVerticalLayout">
  <h2 id="h2" style="align-self: center">Are you sure you want to logout?</h2>
- <vaadin-horizontal-layout id="vaadinHorizontalLayout" style=" align-self: center;" content="Logout">
-  <vaadin-button id="btnLogout">
-   Logout
-  </vaadin-button>
-  <vaadin-horizontal-layout theme="spacing" id="vaadinHorizontalLayout1" style="width: 40px;"></vaadin-horizontal-layout>
-  <vaadin-button id="btnReturn" theme="raised primary">
-   Cancel
-  </vaadin-button>
- </vaadin-horizontal-layout>
+ <div id="div" style="width: 200px; align-self: center;">
+  <vaadin-horizontal-layout id="vaadinHorizontalLayout" style=" justify-content: space-evenly; " content="Logout">
+   <vaadin-button id="btnLogout">
+     Logout 
+   </vaadin-button>
+   <vaadin-button id="btnReturn" theme="raised primary">
+     Cancel 
+   </vaadin-button>
+  </vaadin-horizontal-layout>
+ </div>
 </vaadin-vertical-layout>
 `;
     }
