@@ -2,6 +2,8 @@ package com.gmail.stefan.ui.views.login;
 
 import java.util.Optional;
 
+import com.vaadin.flow.component.Key;
+import com.vaadin.flow.component.Shortcuts;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
@@ -88,6 +90,7 @@ public class LoginTest extends PolymerTemplate<LoginTest.LoginTestModel> impleme
 	private Element div;
 	@Id("vaadinHorizontalLayout")
 	private HorizontalLayout vaadinHorizontalLayout;
+
 	/**
      * Creates a new LoginTest.
      */
@@ -105,6 +108,7 @@ public class LoginTest extends PolymerTemplate<LoginTest.LoginTestModel> impleme
 			}
 			
 		});
+		btnLogin.addClickShortcut(Key.ENTER);
 		
 //		btnCancel.addClickListener(e -> {
 //			UI.getCurrent().getPage().open("http://www.mnocompany.com/");
