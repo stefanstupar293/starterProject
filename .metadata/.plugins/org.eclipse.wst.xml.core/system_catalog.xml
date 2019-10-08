@@ -201,8 +201,8 @@
   <uri name="http://www.w3.org/TR/xmldsig-core/xmldsig-core-schema.xsd" uri="jar:file:/C:/Users/Stefan/eclipse/jee-2019-06/eclipse/../../../.p2/pool/plugins/org.eclipse.wst.standard.schemas_1.0.800.v201901071922.jar!/xsd/xmldsig-core-schema.xsd"/>
   <system systemId="http://www.w3.org/2001/xml.xsd" uri="jar:file:/C:/Users/Stefan/eclipse/jee-2019-06/eclipse/../../../.p2/pool/plugins/org.eclipse.xsd_2.16.0.v20190321-1341.jar!/cache/www.w3.org/2001/xml.xsd"/>
   <uri name="http://www.w3.org/2001/XMLSchema" uri="jar:file:/C:/Users/Stefan/eclipse/jee-2019-06/eclipse/../../../.p2/pool/plugins/org.eclipse.xsd_2.16.0.v20190321-1341.jar!/cache/www.w3.org/2001/XMLSchema.xsd"/>
-  <uri id="org.w3c.xinclude" name="http://www.w3.org/2001/XInclude" uri="jar:file:/C:/Users/Stefan/eclipse/jee-2019-06/eclipse/../../../.p2/pool/plugins/org.eclipse.wst.xsl.core_1.2.0.v201903222120.jar!/xslt-schemas/xinclude.xsd"/>
   <uri name="http://ant.apache.org/ivy/schemas/ivy.xsd" uri="file:/C:/Users/Stefan/eclipse/jee-2019-06/eclipse/../../../.p2/pool/plugins/org.apache.ivyde.eclipse_2.2.0.final-201311091524-RELEASE/xsd/ivy.xsd"/>
-  <system systemId="http://update.zeroturnaround.com/jrebel/rebel-2_1.xsd" uri="jar:file:/C:/Users/Stefan/eclipse/jee-2019-06/eclipse/../../../.p2/pool/plugins/org.zeroturnaround.eclipse_2019.1.6.RELEASE.jar!/xsd/rebel-2_1.xsd"/>
-  <system systemId="http://update.zeroturnaround.com/jrebel/rebel-2_2.xsd" uri="jar:file:/C:/Users/Stefan/eclipse/jee-2019-06/eclipse/../../../.p2/pool/plugins/org.zeroturnaround.eclipse_2019.1.6.RELEASE.jar!/xsd/rebel-2_2.xsd"/>
+  <uri id="org.w3c.xinclude" name="http://www.w3.org/2001/XInclude" uri="jar:file:/C:/Users/Stefan/eclipse/jee-2019-06/eclipse/../../../.p2/pool/plugins/org.eclipse.wst.xsl.core_1.2.100.v201907231732.jar!/xslt-schemas/xinclude.xsd"/>
+  <system systemId="http://update.zeroturnaround.com/jrebel/rebel-2_1.xsd" uri="jar:file:/C:/Users/Stefan/eclipse/jee-2019-06/eclipse/../../../.p2/pool/plugins/org.zeroturnaround.eclipse_2019.2.0.RELEASE.jar!/xsd/rebel-2_1.xsd"/>
+  <system systemId="http://update.zeroturnaround.com/jrebel/rebel-2_2.xsd" uri="jar:file:/C:/Users/Stefan/eclipse/jee-2019-06/eclipse/../../../.p2/pool/plugins/org.zeroturnaround.eclipse_2019.2.0.RELEASE.jar!/xsd/rebel-2_2.xsd"/>
 </catalog>
