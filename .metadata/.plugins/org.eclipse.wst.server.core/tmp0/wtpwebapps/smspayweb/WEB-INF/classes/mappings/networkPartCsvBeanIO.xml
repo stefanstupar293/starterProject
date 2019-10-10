@@ -1,0 +1,26 @@
+<beanio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.beanio.org/2012/03"
+        xsi:schemaLocation="http://www.beanio.org/2012/03 http://www.beanio.org/2012/03/mapping.xsd">
+
+    <stream name="networkPartStream" format="csv">
+        <parser>
+            <property name="delimiter" value=";"/>
+            <property name="alwaysQuote" value="true"/>
+            <property name="unquotedQuotesAllowed" value="false"/>
+        </parser>
+        <record name="networkPart_header" order="1" class="com.mnocompany.smspay.backend.model.mccmnc.NetworkPart" minOccurs="1" maxOccurs="1">
+            <field name="id" ignore="true" literal="Id" />
+            <field name="networkId" ignore="true" literal="NetworkId"/>
+            <field name="mnc" ignore="true" literal="MNC"/>
+            <field name="tapCode" ignore="true"  literal="TAPCode"/>
+        </record>
+        <record name="networkPart" order="2" class="com.mnocompany.smspay.backend.model.mccmnc.NetworkPart" minOccurs="0" maxOccurs="unbounded">
+            <field name="id" />
+            <field name="networkId" rid="true" regex="^[0-9]*$"/>
+            <field name="mnc" rid="true" regex="^[0-9]*$"/>
+            <field name="tapCode" />
+        </record>
+
+    </stream>
+
+</beanio>

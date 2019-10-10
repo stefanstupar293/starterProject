@@ -1,0 +1,68 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/vaadin-grid/src/vaadin-grid.html">
+<link rel="import" href="../../bower_components/vaadin-text-field/src/vaadin-text-field.html">
+<link rel="import" href="zero-content.html">
+
+
+
+
+<dom-module id="countries-networks-grid">
+    <template>
+<style include="shared-styles">
+      
+      :host {
+         display: block;
+         width: 100%; 
+	     height: 100%;
+      }
+      
+      .content{
+	     width: 100%; 
+	     height: 100%;
+      	 text-align: -webkit-right;
+      }
+      
+      #search-filter{
+      	 width: calc(100% - var(--lumo-space-s)); 
+      }
+      
+      #grid{
+      	 height: calc(100% - var(--lumo-size-l));
+      }
+      
+      .country-name{
+     	font-weight: 400;
+   		color: var(--lumo-secondary-text-color);
+   		cursor: pointer;
+      }
+      
+      .country-name:hover {
+		 color: var(--lumo-primary-text-color);
+	  }
+      
+  </style>
+<div class="content">
+ <vaadin-text-field placeholder="Countries and online networks" id="search-filter" theme="small"></vaadin-text-field>
+ <vaadin-grid id="grid" theme="rows-height-small small compact rounded-rows-grid compact no-header">
+  <vaadin-grid id="grid" theme=""></vaadin-grid>
+  <vaadin-grid id="grid" theme=""></vaadin-grid>
+  <vaadin-grid id="grid" theme=""></vaadin-grid>
+  <vaadin-grid id="grid" theme=""></vaadin-grid>
+  <zero-content id="zeroContent"></zero-content>
+ </vaadin-grid>
+</div>
+</template>
+    <script>
+        class CountriesNetworksGrid extends Polymer.Element {
+            static get is() {
+                return 'countries-networks-grid';
+            }
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(CountriesNetworksGrid.is, CountriesNetworksGrid);
+    </script>
+</dom-module>

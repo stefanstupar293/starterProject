@@ -1,0 +1,32 @@
+//package com.gmail.stefan.backend.dbservices;
+//
+//import java.io.Serializable;
+//import java.util.List;
+//
+//import org.sql2o.Query;
+//import org.sql2o.*;
+//
+//import com.google.common.base.Strings;
+//
+//
+//public class ConnectionDBServices extends DBServices implements Sql2oService<Connection>, Serializable {
+//
+//	private static final long serialVersionUID = 8279726105085635713L;
+//	
+//	/**
+//	 * 
+//	 * @param connectionId, can't be null
+//	 * @return Connection with given id
+//	 */
+//	public Connection getConnection(Long connectionId) {
+//		if(connectionId == null) throw new NullPointerException("Connection id can't be null");
+//		
+//		String sql = " select * from connection ";
+//
+//		try (org.sql2o.Connection con = sql2o.open()) {
+//			return con.createQuery(sql).throwOnMappingFailure(false)
+//					.addParameter("connectionId", connectionId)
+//					.executeAndFetchFirst(Connection.class);
+//		}
+//	}
+//}

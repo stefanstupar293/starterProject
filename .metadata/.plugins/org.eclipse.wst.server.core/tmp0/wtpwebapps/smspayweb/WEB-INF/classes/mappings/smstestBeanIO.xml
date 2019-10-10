@@ -1,0 +1,119 @@
+<beanio xmlns="http://www.beanio.org/2012/03" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.beanio.org/2012/03 http://www.beanio.org/2012/03/mapping.xsd">
+   
+  <stream name="smstest" format="csv">
+
+	  <typeHandler name="dateTimeTypeHandler" class="com.mnocompany.smspay.backend.converters.beanio.LocalDateTimeTypeHandler" />
+
+	  <record name="header" minOccurs="1" maxOccurs="1" class="com.mnocompany.smspay.backend.model.SmsTest">
+		  <field name="id" literal="ID"/>
+		  <field name="mccMnc" literal="MCCMNC" />
+		  <field name="mccMncPorted" literal="Ported from"/>
+		  <field name="phone" literal="Phone" />
+		  <field name="sender" literal="Sender" />
+		  <field name="deliveredSender" literal="Delivered sender" />
+		  <field name="messageId" literal="Message ID" />
+		  <field name="text" literal="Text" />
+		  <field name="deliveredText" literal="Delivered text" />
+		  <field name="createdOn" literal="Created on (UTC)" typeHandler="dateTimeTypeHandler"/>
+		  <field name="sentTime" literal="Sent time (UTC)" typeHandler="dateTimeTypeHandler"/>
+		  <field name="scn" literal="SMSC" />
+		  <field name="supplierTitle" literal="Supplier" />
+		  <field name="receiptTime" literal="Receipt time (UTC)" typeHandler="dateTimeTypeHandler"/>
+		  <field name="receiptDelay" literal="Receipt delay [ms]" />
+		  <field name="receiptStatus" literal="Receipt status" />
+		  <field name="deliveredTime" literal="DLR time (UTC)" typeHandler="dateTimeTypeHandler"/>
+		  <field name="dlrDelay" literal="DLR delay [ms]" />
+		  <field name="dlrStatus"  literal="DLR status" />
+		  <field name="name"  literal="Batch name" />
+		  <field name="userAccount"  literal="User" />
+		  <field name="smscMessageId"  literal="Smsc Message ID" />
+		  <field name="pdu"  literal="PDU" />
+		  <field name="udhTag"  literal="UDH Tag" />
+		  <field name="udhValue"  literal="UDH Value" />
+
+	  </record>
+
+	<record name="record" class="com.mnocompany.smspay.backend.model.SmsTest" minOccurs="0">
+		<field name="id" />
+	    <field name="mccMnc" />
+	    <field name="mccMncPorted" />
+		<field name="phone" />
+		<field name="sender"/>
+	    <field name="deliveredSender" />
+		<field name="messageId" />
+	    <field name="text" />
+	    <field name="deliveredText" />
+	    <field name="createdOn" typeHandler="dateTimeTypeHandler"/>
+	    <field name="sentTime"   typeHandler="dateTimeTypeHandler"/>
+	    <field name="scn" />
+	    <field name="supplierTitle" />
+		<field name="receiptTime" typeHandler="dateTimeTypeHandler"/>
+		<field name="receiptDelay" />
+		<field name="receiptStatus"  />
+	    <field name="deliveredTime" typeHandler="dateTimeTypeHandler"/>
+		<field name="dlrDelay" />
+		<field name="dlrStatus"  />
+		<field name="name"   />
+		<field name="userAccount" />
+		<field name="smscMessageId" />
+		<field name="pdu" />
+		<field name="udhTag"/>
+		<field name="udhValue"/>
+
+	</record>
+		
+
+	
+  </stream>
+
+
+	<stream name="smstest-manual" format="csv">
+
+		<typeHandler name="dateTimeTypeHandler" class="com.mnocompany.smspay.backend.converters.beanio.LocalDateTimeTypeHandler" />
+
+		<record name="header" minOccurs="1" maxOccurs="1" class="com.mnocompany.smspay.backend.model.SmsTest">
+			<field name="id" literal="ID"/>
+			<field name="mccMnc" literal="MCCMNC" />
+			<field name="mccMncPorted" literal="Ported from"/>
+			<field name="phone" literal="Phone" />
+			<field name="deliveredSender" literal="Delivered sender" />
+			<field name="messageId" literal="Message ID" />
+			<field name="deliveredText" literal="Delivered text" />
+			<field name="createdOn" literal="Created on (UTC)" typeHandler="dateTimeTypeHandler"/>
+			<field name="scn" literal="SMSC" />
+			<field name="receiptTime" literal="Receipt time (UTC)" typeHandler="dateTimeTypeHandler"/>
+			<field name="receiptDelay" literal="Receipt delay [ms]" />
+			<field name="receiptStatus" literal="Receipt status" />
+			<field name="userAccount"  literal="User" />
+			<field name="pdu"  literal="PDU" />
+			<field name="udhTag"  literal="UDH Tag" />
+		    <field name="udhValue"  literal="UDH Value" />
+
+		</record>
+
+		<record name="record" class="com.mnocompany.smspay.backend.model.SmsTest" minOccurs="0">
+			<field name="id" />
+			<field name="mccMnc" />
+			<field name="mccMncPorted" />
+			<field name="phone"  />
+			<field name="deliveredSender" />
+			<field name="messageId" />
+			<field name="deliveredText" />
+			<field name="createdOn" typeHandler="dateTimeTypeHandler"/>
+			<field name="scn" />
+			<field name="receiptTime" typeHandler="dateTimeTypeHandler"/>
+			<field name="receiptDelay" />
+			<field name="receiptStatus"  />
+			<field name="userAccount"   />
+			<field name="pdu"  />
+			<field name="udhTag"/>
+			<field name="udhValue"/>
+		</record>
+
+
+
+	</stream>
+
+</beanio>

@@ -1,0 +1,104 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/vaadin-text-field/src/vaadin-text-field.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../../bower_components/vaadin-icons/vaadin-icons.html">
+<link rel="import" href="../../bower_components/vaadin-grid/src/vaadin-grid.html">
+<link rel="import" href="zero-content.html">
+
+
+
+
+<dom-module id="phone-number-different-by-imsi-country">
+    <template>
+<style include="shared-styles lumo-badge">
+
+        :host {
+            width: 100%;
+            height: 100%;
+            text-align: -webkit-right;
+         }
+            #search-filter {
+               flex-grow: 2;
+            }
+      
+            #download{
+               flex-grow: 0;
+      
+            }
+            #grid{
+      	       height: 213px;
+      	       display: flex;
+      	      
+                
+            }
+             #content{
+              display: flex;
+              min-width: 100%;
+              max-width: 100%;
+		     font-weight: 500;
+	
+				
+             }
+             a{
+        
+     	      min-width: calc(var(--lumo-button-size) * 2);
+	          height: var(--lumo-button-size);
+	          box-sizing: border-box;
+	          font-family: var(--lumo-font-family);
+	          font-weight: 500;
+	       
+	           background-color: var(--_lumo-button-background-color, var(--lumo-contrast-5pct));
+	          border-radius: var(--lumo-border-radius);
+	          color: var(--_lumo-button-color, var(--lumo-primary-text-color));
+	    
+	          min-width: 32px;
+              padding: 0px var(--lumo-space-xs);
+             margin: var(--lumo-space-xs);
+               }
+      
+
+            .msisdn-column {
+                font-weight: 500;
+                color: var(--lumo-primary-text-color);
+                cursor: pointer;
+				font-size: 13px;
+				display: inline-block;
+				line-height: 1.2;
+				width: 70px;
+				
+			 }
+			
+			.img-flags {
+            	padding: 0.35px 5px 0px 0px;
+            }
+			 
+          
+        </style>
+<div id="content">
+<span id="title"></span>
+ <vaadin-text-field id="search-filter" placeholder="IMSI country prefix wrong MSISDN" theme="small"></vaadin-text-field>
+ <a  id="download"><iron-icon icon="lumo:download"></iron-icon></a>
+   </div>
+    <div>
+ <vaadin-grid  id="grid" theme="small rounded-rows-grid compact no-header rows-height-medium"></vaadin-grid>
+ <zero-content id="zeroContent"></zero-content>
+ </div>
+</template>
+
+    <script>
+        class PhoneNumberDifferentByImsiCountry extends Polymer.Element {
+            static get is() {
+                return 'phone-number-different-by-imsi-country';
+            }
+
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+
+        customElements.define(PhoneNumberDifferentByImsiCountry.is, PhoneNumberDifferentByImsiCountry);
+    </script>
+
+</dom-module>

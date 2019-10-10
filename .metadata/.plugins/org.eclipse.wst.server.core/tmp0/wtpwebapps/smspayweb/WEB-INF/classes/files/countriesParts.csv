@@ -1,0 +1,234 @@
+Id;IsoAlpha2;IsoAlpha3;Name;Region;CountryCode;MCC
+1;US;USA;United States of America;Americas;1;310
+2;RU;RUS;Russia;Europe;7;250
+3;EG;EGY;Egypt;Africa;20;602
+4;ZA;ZAF;South Africa;Africa;27;655
+5;GR;GRC;Greece;Europe;30;202
+6;NL;NLD;Netherlands;Europe;31;204
+7;BE;BEL;Belgium;Europe;32;206
+8;FR;FRA;France;Europe;33;208
+9;ES;ESP;Spain;Europe;34;214
+10;HU;HUN;Hungary;Europe;36;216
+11;IT;ITA;Italy;Europe;39;222
+12;RO;ROU;Romania;Europe;40;226
+13;CH;CHE;Switzerland;Europe;41;228
+14;AT;AUT;Austria;Europe;43;232
+15;GB;GBR;United Kingdom;Europe;44;234
+16;DK;DNK;Denmark;Europe;45;238
+17;SE;SWE;Sweden;Europe;46;240
+18;NO;NOR;Norway;Europe;47;242
+19;PL;POL;Poland;Europe;48;260
+20;DE;DEU;Germany;Europe;49;262
+21;PE;PER;Peru;Americas;51;716
+22;MX;MEX;Mexico;Americas;52;334
+23;CU;CUB;Cuba;Americas;53;368
+24;AR;ARG;Argentina;Americas;54;722
+25;BR;BRA;Brazil;Americas;55;724
+26;CL;CHL;Chile;Americas;56;730
+27;CO;COL;Colombia;Americas;57;732
+28;VE;VEN;Venezuela;Americas;58;734
+29;MY;MYS;Malaysia;Asia;60;502
+30;AU;AUS;Australia;Oceania;61;505
+31;ID;IDN;Indonesia;Asia;62;510
+32;PH;PHL;Philippines;Asia;63;515
+33;NZ;NZL;New Zealand;Oceania;64;530
+34;SG;SGP;Singapore;Asia;65;525
+35;TH;THA;Thailand;Asia;66;520
+36;KZ;KAZ;Kazakhstan;Asia;7;401
+37;JP;JPN;Japan;Asia;81;440
+38;KR;KOR;South Korea;Asia;82;450
+39;VN;VNM;Vietnam;Asia;84;452
+40;CN;CHN;China;Asia;86;460
+41;TR;TUR;Turkey;Asia;90;286
+42;IN;IND;India;Asia;91;404
+43;PK;PAK;Pakistan;Asia;92;410
+44;AF;AFG;Afghanistan;Asia;93;412
+45;LK;LKA;Sri Lanka;Asia;94;413
+46;MM;MMR;Myanmar;Asia;95;414
+47;IR;IRN;Iran;Asia;98;432
+48;SS;SSD;South Sudan;Africa;211;659
+49;MA;MAR;Morocco;Africa;212;604
+50;DZ;DZA;Algeria;Africa;213;603
+51;TN;TUN;Tunisia;Africa;216;605
+52;LY;LBY;Libya;Africa;218;606
+53;GM;GMB;Gambia;Africa;220;607
+54;SN;SEN;Senegal;Africa;221;608
+55;MR;MRT;Mauritania;Africa;222;609
+56;ML;MLI;Mali;Africa;223;610
+57;GN;GIN;Guinea;Africa;224;611
+58;CI;CIV;Ivory Coast;Africa;225;612
+59;BF;BFA;Burkina Faso;Africa;226;613
+60;NE;NER;Niger;Africa;227;614
+61;TG;TGO;Togo;Africa;228;615
+62;BJ;BEN;Benin;Africa;229;616
+63;MU;MUS;Mauritius;Africa;230;617
+64;LR;LBR;Liberia;Africa;231;618
+65;SL;SLE;Sierra Leone;Africa;232;619
+66;GH;GHA;Ghana;Africa;233;620
+67;NG;NGA;Nigeria;Africa;234;621
+68;TD;TCD;Chad;Africa;235;622
+69;CF;CAF;Central African Republic;Africa;236;623
+70;CM;CMR;Cameroon;Africa;237;624
+71;CV;CPV;Cape Verde;Africa;238;625
+72;ST;STP;Sao Tome and Principe;Africa;239;626
+73;GQ;GNQ;Equatorial Guinea;Africa;240;627
+74;GA;GAB;Gabon;Africa;241;628
+75;CG;COG;Republic of the Congo;Africa;242;629
+76;CD;COD;Democratic Republic of the Congo;Africa;243;630
+77;AO;AGO;Angola;Africa;244;631
+78;GW;GNB;Guinea-Bissau;Africa;245;632
+79;SC;SYC;Seychelles;Africa;248;633
+80;SD;SDN;Sudan;Africa;249;634
+81;RW;RWA;Rwanda;Africa;250;635
+82;ET;ETH;Ethiopia;Africa;251;636
+83;SO;SOM;Somalia;Africa;252;637
+84;DJ;DJI;Djibouti;Africa;253;638
+85;KE;KEN;Kenya;Africa;254;639
+86;TZ;TZA;Tanzania;Africa;255;640
+87;UG;UGA;Uganda;Africa;256;641
+88;BI;BDI;Burundi;Africa;257;642
+89;MZ;MOZ;Mozambique;Africa;258;643
+90;ZM;ZMB;Zambia;Africa;260;645
+91;MG;MDG;Madagascar;Africa;261;646
+93;ZW;ZWE;Zimbabwe;Africa;263;648
+94;NA;NAM;Namibia;Africa;264;649
+95;MW;MWI;Malawi;Africa;265;650
+96;LS;LSO;Lesotho;Africa;266;651
+97;BW;BWA;Botswana;Africa;267;652
+98;SZ;SWZ;Swaziland;Africa;268;653
+99;KM;COM;Comoros;Africa;269;654
+100;ER;ERI;Eritrea;Africa;291;657
+101;AW;ABW;Aruba;Americas;297;363
+102;FO;FRO;Faroe Islands;Europe;298;288
+103;GL;GRL;Greenland;Americas;299;290
+104;GI;GIB;Gibraltar;Europe;350;266
+105;PT;PRT;Portugal;Europe;351;268
+106;LU;LUX;Luxembourg;Europe;352;270
+107;IE;IRL;Ireland;Europe;353;272
+108;IS;ISL;Iceland;Europe;354;274
+109;AL;ALB;Albania;Europe;355;276
+110;MT;MLT;Malta;Europe;356;278
+111;CY;CYP;Cyprus;Europe;357;280
+112;FI;FIN;Finland;Europe;358;244
+113;BG;BGR;Bulgaria;Europe;359;284
+114;LT;LTU;Lithuania;Europe;370;246
+115;LV;LVA;Latvia;Europe;371;247
+116;EE;EST;Estonia;Europe;372;248
+117;MD;MDA;Moldova;Europe;373;259
+118;AM;ARM;Armenia;Asia;374;283
+119;BY;BLR;Belarus;Europe;375;257
+120;AD;AND;Andorra;Europe;376;213
+121;MC;MCO;Monaco;Europe;377;212
+122;SM;SMR;San Marino;Europe;378;292
+123;UA;UKR;Ukraine;Europe;380;255
+124;RS;SRB;Serbia;Europe;381;220
+125;ME;MNE;Montenegro;Europe;382;297
+126;HR;HRV;Croatia;Europe;385;219
+127;SI;SVN;Slovenia;Europe;386;293
+128;BA;BIH;Bosnia and Herzegovina;Europe;387;218
+129;MK;MKD;Macedonia;Europe;389;294
+130;CZ;CZE;Czech Republic;Europe;420;230
+131;SK;SVK;Slovakia;Europe;421;231
+132;LI;LIE;Liechtenstein;Europe;423;295
+133;FK;FLK;Falkland Islands (Malvinas);Americas;500;750
+134;BZ;BLZ;Belize;Americas;501;702
+135;GT;GTM;Guatemala;Americas;502;704
+136;SV;SLV;El Salvador;Americas;503;706
+137;HN;HND;Honduras;Americas;504;708
+138;NI;NIC;Nicaragua;Americas;505;710
+139;CR;CRI;Costa Rica;Americas;506;712
+140;PA;PAN;Panama;Americas;507;714
+141;HT;HTI;Haiti;Americas;509;372
+142;GP;GLP;Guadeloupe & Martinique;Americas;590;340
+143;BO;BOL;Bolivia;Americas;591;736
+144;GY;GUY;Guyana;Americas;592;738
+145;EC;ECU;Ecuador;Americas;593;740
+146;GF;GUF;French Guiana;Americas;594;742
+147;PY;PRY;Paraguay;Americas;595;744
+149;SR;SUR;Suriname;Americas;597;746
+150;UY;URY;Uruguay;Americas;598;748
+151;TL;TLS;Timor-Leste;Asia;670;514
+152;BN;BRN;Brunei;Asia;673;528
+153;NR;NRU;Nauru;Oceania;674;536
+154;PG;PNG;Papua New Guinea;Oceania;675;537
+155;TO;TON;Tonga;Oceania;676;539
+156;VU;VUT;Vanuatu;Oceania;678;541
+157;FJ;FJI;Fiji;Oceania;679;542
+158;CK;COK;Cook Islands;Oceania;682;548
+159;WS;WSM;Samoa;Oceania;685;549
+160;NC;NCL;New Caledonia;Oceania;687;546
+161;PF;PYF;French Polynesia;Oceania;689;547
+162;KP;PRK;North Korea;Asia;850;467
+163;HK;HKG;Hong Kong;Asia;852;454
+164;MO;MAC;Macao;Asia;853;455
+165;KH;KHM;Cambodia;Asia;855;456
+166;LA;LAO;Laos;Asia;856;457
+167;BD;BGD;Bangladesh;Asia;880;470
+168;TW;TWN;Taiwan;Asia;886;466
+169;MV;MDV;Maldives;Asia;960;472
+170;LB;LBN;Lebanon;Asia;961;415
+171;JO;JOR;Jordan;Asia;962;416
+172;SY;SYR;Syria;Asia;963;417
+173;IQ;IRQ;Iraq;Asia;964;418
+174;KW;KWT;Kuwait;Asia;965;419
+175;SA;SAU;Saudi Arabia;Asia;966;420
+176;YE;YEM;Yemen;Asia;967;421
+177;OM;OMN;Oman;Asia;968;422
+178;AE;ARE;United Arab Emirates;Asia;971;424
+179;IL;ISR;Israel;Asia;972;425
+180;BH;BHR;Bahrain;Asia;973;426
+181;QA;QAT;Qatar;Asia;974;427
+182;BT;BTN;Bhutan;Asia;975;402
+183;MN;MNG;Mongolia;Asia;976;428
+184;NP;NPL;Nepal;Asia;977;429
+185;TJ;TJK;Tajikistan;Asia;992;436
+186;TM;TKM;Turkmenistan;Asia;993;438
+187;AZ;AZE;Azerbaijan;Asia;994;400
+188;GE;GEO;Georgia;Asia;995;282
+189;KG;KGZ;Kyrgyzstan;Asia;996;437
+190;UZ;UZB;Uzbekistan;Asia;998;434
+191;BS;BHS;Bahamas;Americas;1242;364
+192;BB;BRB;Barbados;Americas;1246;342
+193;AI;AIA;Anguilla;Americas;1264;365
+194;AG;ATG;Antigua and Barbuda;Americas;1268;344
+195;KY;CYM;Cayman Islands;Americas;1345;346
+196;BM;BMU;Bermuda;Americas;1441;350
+197;GD;GRD;Grenada;Americas;1473;352
+198;TC;TCA;Turks and Caicos Islands;Americas;1649;376
+199;MS;MSR;Montserrat;Americas;1664;354
+200;GU;GUM;Guam;Oceania;1671;535
+201;LC;LCA;Saint Lucia;Americas;1758;358
+202;DM;DMA;Dominica;Americas;1767;366
+203;VC;VCT;Saint Vincent and the Grenadines;Americas;1784;360
+204;PR;PRI;Puerto Rico;Americas;1787;330
+205;DO;DOM;Dominican Republic;Americas;1809;370
+206;TT;TTO;Trinidad and Tobago;Americas;1868;374
+207;KN;KNA;Saint Kitts and Nevis;Americas;1869;356
+208;JM;JAM;Jamaica;Americas;1876;338
+210;CA;CAN;Canada;Americas;1;302
+211;DG;DGA;Diego Garcia;Africa;246;995
+212;IN;IND;India;Asia;91;405
+213;AN;ANT;Netherlands Antilles;Americas;599;362
+214;SB;SLB;Solomon Islands;Oceania;677;540
+215;US;USA;United States of America;Americas;1;311
+216;VG;VGB;British Virgin Islands;Americas;1284;348
+217;VI;VIR;US Virgin Islands;Americas;1340;332
+225;GU;GUM;Guam;Oceania;1671;310
+226;PS;PSE;State of Palestine;Asia;970;425
+227;RE;REU;Réunion;Africa;262;647
+228;GB;GBR;United Kingdom;Europe;44;235
+229;SH;SHN;Saint Helena, Ascension and Tristan;Africa;290;658
+230;YT;MYT;Mayotte;Africa;262;647
+231;AS;ASM;American Samoa;Oceania;1684;544
+232;FM;FSM;Federated States of Micronesia;Oceania;691;550
+233;KI;KIR;Kiribati;Oceania;686;545
+234;PW;PLW;Palau;Oceania;680;552
+235;TV;TUV;Tuvalu;Oceania;688;553
+236;NU;NIU;Niue;Oceania;683;555
+237;MH;MHL;Marshall Islands;Oceania;692;551
+238;AB;ABK;Abkhazia;Asia;7940;289
+239;PM;SPM;Saint Pierre and Miquelon;Americas;508;308
+240;US;USA;United States of America;Americas;1;312
+241;US;USA;United States of America;Americas;1;316
+242;WF;WLF;Wallis and Futuna;Oceania;681;543
+243;XK;UNK;Kosovo;Europe;383;221

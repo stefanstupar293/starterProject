@@ -1,0 +1,65 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/vaadin-button/src/vaadin-button.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+
+
+
+
+
+<dom-module id="scheduler-grid-actions">
+    <template>
+<style>
+
+	:host{
+		display: flex;
+		/* justify-content: center; */
+	}
+	
+	vaadin-button{
+		padding: 0 var(--lumo-space-xs);
+		margin: 0 var(--lumo-space-xs);
+		min-width: var(--lumo-size-m);
+	}
+	
+	.orange {
+		color: orange;
+	}
+
+</style>
+<vaadin-button id="play" theme=" small success">
+ <iron-icon icon="vaadin:play"></iron-icon>
+ <vaadin-horizontal-layout></vaadin-horizontal-layout>
+</vaadin-button>
+<vaadin-button id="pause" theme=" small" class="orange">
+ <iron-icon icon="vaadin:pause"></iron-icon>
+</vaadin-button>
+<vaadin-button id="stop" theme=" small error">
+ <iron-icon icon="vaadin:stop"></iron-icon>
+</vaadin-button>
+<vaadin-button id="delete" theme=" small error">
+ <iron-icon icon="vaadin:trash"></iron-icon>
+</vaadin-button>
+<vaadin-button id="edit" theme=" small">
+ <iron-icon icon="vaadin:edit"></iron-icon>
+</vaadin-button>
+<vaadin-button id="info" theme=" small">
+ <iron-icon icon="vaadin:info-circle-o"></iron-icon>
+</vaadin-button>
+<vaadin-button id="tests" theme=" small">
+ <iron-icon icon="vaadin:list-ul"></iron-icon>
+</vaadin-button>
+</template>
+    <script>
+        class SchedulerGridActions extends Polymer.Element {
+            static get is() {
+                return 'scheduler-grid-actions';
+            }
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(SchedulerGridActions.is, SchedulerGridActions);
+    </script>
+</dom-module>

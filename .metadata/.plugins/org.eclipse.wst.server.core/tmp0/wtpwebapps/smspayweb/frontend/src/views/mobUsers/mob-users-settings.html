@@ -1,0 +1,175 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/vaadin-form-layout/src/vaadin-form-layout.html">
+<link rel="import" href="../../../bower_components/vaadin-form-layout/src/vaadin-form-item.html">
+<link rel="import" href="../../../bower_components/vaadin-button/src/vaadin-button.html">
+<link rel="import" href="../../components/label-with-help.html">
+<link rel="import" href="../../../bower_components/vaadin-ordered-layout/src/vaadin-vertical-layout.html">
+<link rel="import" href="../../components/settings-mcc-management.html">
+<link rel="import" href="../../../bower_components/vaadin-ordered-layout/src/vaadin-horizontal-layout.html">
+
+
+
+<dom-module id="mob-users-settings">
+    <template>
+<style include="shared-styles">
+
+    :host {
+        height: 100%;
+		display: flex;
+		justify-content: center;
+	}
+	
+	h2{
+		margin-bottom: 0;
+	}
+	
+	 .inner-content {
+     	height: auto;
+	    border-radius: 4px;
+	    max-width: 550px;
+	    min-width: 320px;
+	    background-color: #fff;
+	    padding: var(--lumo-size-xs) var(--lumo-size-s);
+	    padding-top: var(--lumo-space-s);
+	    margin: var(--lumo-space-m);
+	    box-shadow: 0 0 0 1px var(--lumo-shade-5pct), 0 2px 5px 0 var(--lumo-shade-10pct);
+    }
+         
+	#content {
+	    height: 100%;
+		display: flex;
+	    flex-wrap: wrap;
+	    justify-content: center;
+	    overflow-y: auto;
+	}
+	
+	.tertiary-text {
+    	color: var(--lumo-tertiary-text-color);
+    }
+
+	vaadin-form-layout{
+		margin-bottom: var(--lumo-space-m);
+	}
+
+    vaadin-form-item {
+        flex-flow:column;
+        --vaadin-form-item-label-width: 18em;
+        --vaadin-form-item-row-spacing: -0.9em;
+    }
+    
+    vaadin-form-item #content {
+    	width: 100%;
+    }
+    
+    vaadin-form-item > * {
+    	width: 100%;
+    }
+
+	.actions-wrapper {
+		width: 100%;
+		text-align: right;
+	}
+	
+	.value-span-item {
+		padding-right: var(--lumo-space-m);
+		padding-left: var(--lumo-space-s);
+    	font-weight: 500;
+    	flex: 1;
+	}
+	
+	.item-form-wrap {
+		display: flex;
+    	align-items: center;
+	}
+   
+    
+    @media (max-height: 450px) {
+        
+    }
+
+    @media (min-width: 750px) and (min-height: 450px) {
+      
+    }
+            
+  </style>
+<div id="content">
+ <div class="inner-content">
+  <div id="titleHolderAmounts">
+   <h2 id="titleAmounts">Mob users settings</h2>
+  </div>
+  <vaadin-form-layout class="with-text-fields" id="formLayoutAmounts"></vaadin-form-layout>
+  <div class="actions-wrapper">
+   <vaadin-button id="updateSettings">
+     Update settings 
+   </vaadin-button>
+  </div>
+ </div>
+ <div class="inner-content">
+  <div id="titleHolderSmstest">
+   <h2 id="titleSmstest">System sms settings</h2>
+  </div>
+  <vaadin-form-layout class="with-text-fields" id="formLayoutSmstest"></vaadin-form-layout>
+  <div class="actions-wrapper">
+   <vaadin-button id="updateSmstest">
+     Update settings 
+   </vaadin-button>
+  </div>
+  <div id="layoutConn"></div>
+ </div>
+ <div class="inner-content">
+  <div>
+   <h2 id="ip-caption">Country MNC settings</h2>
+   <settings-mcc-management id="settings-mcc"></settings-mcc-management>
+  </div>
+ </div>
+ <div class="inner-content">
+  <div id="titleHolderDiagnostics">
+   <h2 id="titleDiagnostics">Handsets diagnostics</h2>
+  </div>
+  <vaadin-button id="showServerMap">
+    Show map 
+  </vaadin-button>
+  <vaadin-button id="refreshMap" theme="error">
+    Refresh map 
+  </vaadin-button>
+  <vaadin-button id="flushAllToDB" theme="error">
+    Flush all to DB 
+  </vaadin-button>
+  <vaadin-vertical-layout theme="">
+   <label-with-help label-text="count sms left (0)" id="count24hSms" tooltip-content="Flush 24h sms sending"></label-with-help>
+   <vaadin-horizontal-layout theme="spacing">
+    <a href="" id="export24HandsetSlots">
+     <vaadin-button>
+      Download list
+     </vaadin-button>
+    </a>
+
+    <a href="" id="exportNetworkCoverage" title="Download CSV with curret available networks and test scenarious. Contains fields:  MCC-MNC, Country, Network name, Ported from">
+     <vaadin-button>
+      Download network coverage
+     </vaadin-button>
+    </a>
+
+    <vaadin-button id="send24hSms">
+      Send 24h SMS 
+    </vaadin-button>
+   </vaadin-horizontal-layout>
+  </vaadin-vertical-layout>
+ </div>
+ <vaadin-confirm-dialog></vaadin-confirm-dialog>
+</div>
+</template>
+    <script>
+        class MobUsersSettings extends Polymer.Element {
+            static get is() {
+                return 'mob-users-settings';
+            }
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(MobUsersSettings.is, MobUsersSettings);
+    </script>
+</dom-module>

@@ -1,0 +1,641 @@
+<!--
+  ~ Copyright 2000-2017 Vaadin Ltd.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License"); you may not
+  ~ use this file except in compliance with the License. You may obtain a copy of
+  ~ the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+  ~ WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+  ~ License for the specific language governing permissions and limitations under
+  ~ the License.
+  -->
+
+<link rel="import" href="../bower_components/vaadin-lumo-styles/color.html">
+<link rel="import" href="../bower_components/vaadin-lumo-styles/typography.html">
+<link rel="import" href="../bower_components/vaadin-lumo-styles/badge.html">
+
+
+<!--  START OVERRIDE VAADIN COMPONENTS -->
+<dom-module id="smspay-iron-icon" theme-for="iron-icon">
+  <template>
+    <style>
+      :host([theme~="small"]) {
+      	width: 60%;
+      }
+      :host([theme~="medium"]) {
+      	width: 80%;
+      }
+    </style>
+  </template>
+</dom-module>
+
+<dom-module id="smspay-date-picker" theme-for="vaadin-date-picker">
+  <template>
+    <style>
+      :host([theme~="small"]) [part="text-field"] {
+      	font-size: var(--lumo-font-size-s);
+    	--lumo-text-field-size: var(--lumo-size-s);
+      }
+      :host([theme~="no-clear"]) [part="clear-button"] {
+      	display:none !important
+      }
+      
+      
+    </style>
+  </template>
+</dom-module>
+
+
+<dom-module id="smspay-text-field" theme-for="vaadin-text-field">
+    <template>
+        <style>
+            :host([theme="left"]) [part="input-field"] {
+                border-radius: var(--lumo-border-radius) 0px 0px var(--lumo-border-radius);
+            }
+            :host([theme="right"]) [part="input-field"] {
+                border-radius: 0px var(--lumo-border-radius) var(--lumo-border-radius) 0px;
+            }
+            :host([theme="middle"]) [part="input-field"] {
+                border-radius: 0px;
+            }
+
+            :host([theme="scroll"]) [part="input-field"] {
+                overflow: auto;
+            }
+            
+            :host([theme~="no-right-border-radius"]) [part="input-field"] {
+		      	border-top-right-radius: 0;
+		      	border-bottom-right-radius: 0;
+		      	 
+		    }
+		    
+		    :host([theme~="no-left-border-radius"]) [part="input-field"] {
+		      	border-top-left-radius: 0;
+		      	border-bottom-left-radius: 0;
+		      	 
+		    }
+
+        </style>
+    </template>
+</dom-module>
+
+<dom-module id="smspay-combobox" theme-for="vaadin-combo-box">
+  <template>
+    <style>
+      :host([theme~="small"]) [part="text-field"] {
+      	font-size: var(--lumo-font-size-s);
+    	--lumo-text-field-size: var(--lumo-size-s);
+      }
+      :host([theme~="no-clear"]) [part="clear-button"] {
+      	display:none !important
+      }
+     
+      
+    </style>
+  </template>
+</dom-module>
+
+<dom-module id="smspay-combobox-overlay" theme-for="vaadin-combo-box-overlay">
+    <template>
+      <style>
+        :host([theme="wide-overlay"]) [part="overlay"] {
+          min-width: 260px;
+        }
+
+        :host([theme="wide-overlay-l"]) [part="overlay"] {
+            min-width: 360px;
+        }
+      </style>
+    </template>
+  </dom-module>
+
+
+<dom-module id="smspay-text-area" theme-for="vaadin-text-area">
+  <template>
+    <style>
+   
+      :host([theme="scroll"]) [part="value"] {
+      	overflow: auto;
+      	min-height: -webkit-fill-available !important;
+      	height: auto !important;
+      }	
+      	
+    </style>
+  </template>
+</dom-module>
+
+<dom-module id="smspay-button" theme-for="vaadin-button">
+  <template>
+    <style>
+   
+      :host([theme~="small"])  {
+      	min-width: 32px;
+    	padding: 0px var(--lumo-space-xs);
+    	margin: var(--lumo-space-xs);
+    	font-size: var(--lumo-font-size-xs);
+		--lumo-button-size: var(--lumo-size-s);
+      }	
+      
+      :host(.multiline-button) [part="label"] {
+         word-break: break-word;
+         word-wrap: break-word;
+         white-space: normal;
+	  }
+      	
+    </style>
+  </template>
+</dom-module>
+
+<dom-module id="smspay-form-item" theme-for="vaadin-form-item">
+  <template>
+    <style>
+   	  :host([theme~="full-width"]) {
+   		width: 100%;
+   	  }
+      :host([theme~="full-width"]) #content {
+      	width: 100%;
+      }	
+      	
+    </style>
+  </template>
+</dom-module>
+
+<!-- Themes for dialogs -->
+<dom-module id="smspay-dialog-overlay-theme" theme-for="vaadin-dialog-overlay">
+  <template>
+    <style>
+      :host {
+        padding: var(--lumo-space-xs);
+        max-height: 90vh;
+      }
+
+      [part="overlay"] {
+        display: flex;
+        animation: none !important;
+        min-width: 300px;
+        outline: none;
+        overflow: hidden;
+      }
+
+      [part="content"] {
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+      }
+
+      @media (max-width: 600px), (max-height: 600px) {
+        :host([theme]) {
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          padding: 0;
+        }
+
+        :host([theme]) [part="overlay"] {
+            flex: 1;
+            width: 100%;
+            min-height: 100vh;
+            border-radius: 0 !important;
+            padding: 0;
+        }
+      }
+
+      /* we need explicitly set height for wrappers inside dialog-flow */
+      [part="content"] ::slotted(flow-component-renderer) {
+        height: 100%;
+      }
+    </style>
+  </template>
+</dom-module>
+
+<!-- Theme for the vaadin-grid -->
+<dom-module id="smspay-grid-theme" theme-for="vaadin-grid">
+  <template>
+    <style>
+      
+      /* NO HEADER */
+     :host([theme~="no-header"]) #header [part~="row"]:first-child{
+     	display: none;
+     }
+     
+     /* if has filters */
+     :host([theme~="no-header"]) [part~="header-cell"]{
+     	margin-left: 0 !important;
+     	margin-right: 0 !important;
+     	
+     }
+     
+     :host([theme~="no-header"]) [part="row"]:last-child [part~="header-cell"]{
+     	border-top: none !important;
+     }
+     
+
+     :host([theme~="small"]) [part~="cell"] ::slotted(vaadin-grid-cell-content) {
+		font-size: var(--lumo-font-size-s);
+	 }
+	 
+	 :host([theme~="rounded-rows-grid"]){
+	 	  background: transparent;
+          border: none !important; 
+	 }
+	 
+	 
+	 :host([theme~="rounded-rows-grid"]) [part~="header-cell"]{
+          padding: 0 1px !important;
+          background: #f3f5f7;
+          color: var(--lumo-secondary-text-color);
+          font-weight: 500;
+          border-top: none !important;
+	 }
+	 
+	 :host([theme~="rounded-rows-grid"]) [part="row"]:last-child [part~="header-cell"]{
+	 	  border-bottom-color: transparent !important;
+	 	  border-right: none;
+	 }
+	 
+	 :host([overflow~="top"]) [part="row"]:last-child [part~="header-cell"] {
+	      border-bottom-color: var(--_lumo-grid-border-color) !important;
+	 }
+	 
+	 :host([theme~="rounded-rows-grid"]) [part~="header-cell"]:first-child{
+	 	  margin-left: 8px;
+	 }
+	 
+	 :host([theme~="rounded-rows-grid"]) [part~="header-cell"]:last-child{
+	 	  margin-right: 8px;
+	 	    
+	 }
+	 
+	 :host([theme~="rounded-rows-grid"]) [part="row"]:only-child [part~="header-cell"]{
+	 	  border-top: none !important;
+	 }
+	 
+	 :host([theme~="rounded-rows-grid"]) [part~="body-cell"] {
+          padding: 0 1px ;
+          margin: 3px 0; 
+          overflow: hidden;
+          text-overflow: ellipsis;
+          background: var(--lumo-base-color);
+          
+     }
+     
+     :host([theme~="rounded-rows-grid"]) [part~="cell"]:not([part~="header-cell"]){
+     	border-top: 1px solid var(--_lumo-grid-secondary-border-color) !important;
+    	border-bottom: 1px solid var(--_lumo-grid-secondary-border-color) ;
+    	border-right: 1px solid var(--_lumo-grid-secondary-border-color) ;
+    	min-height: var(--lumo-size-l) !important;
+     }
+	 
+	 :host([theme~="rounded-rows-grid"]) [part~="body-cell"]:first-child{
+	 
+        margin-left: 8px; 
+	  	border-left: 1px solid var(--_lumo-grid-secondary-border-color);
+        border-top-left-radius: 6px;
+    	border-bottom-left-radius: 6px;
+	 
+	 }
+	 
+	 :host([theme~="rounded-rows-grid"]) [part~="body-cell"]:last-child{
+	  	margin-right: 8px;
+	  	border-right: 1px solid var(--_lumo-grid-secondary-border-color);
+	  	border-top-right-radius: 6px;
+    	border-bottom-right-radius: 6px;
+	 }
+	 
+	 [part~="resize-handle"]::before{
+	 	width: 16px;
+	 }
+	 
+	 
+     /* MULTISELECT GRID NARROW FIRST COLUMN WITH CHECK BOX */
+	 :host([theme~="narrow-selection-column"]) [part~="cell"]:first-child{
+	 	  text-overflow: initial; 
+	 	  width: var(--lumo-size-m) !important;
+	 }
+	 
+	  :host([theme~="narrow-selection-column"]) [part~="cell"]:first-child ::slotted(vaadin-grid-cell-content){
+	 	  text-overflow: initial; 
+	 	  width: var(--lumo-size-m) !important;
+	 }
+     
+     
+     /* GRID SIDE PADDING WIDE FROM SCROLLER */
+     :host([theme~="grid-side-padding-wide"]) [part~="header-cell"]:first-child,
+     :host([theme~="grid-side-padding-wide"]) [part~="body-cell"]:first-child{
+	 	  margin-left: var(--lumo-space-l) ;
+	 }
+	 
+	 :host([theme~="grid-side-padding-wide"]) [part~="header-cell"]:last-child,
+	 :host([theme~="grid-side-padding-wide"]) [part~="body-cell"]:last-child{
+	 	  margin-right: var(--lumo-space-l) ;
+	 	    
+	 }
+	 
+	 :host([theme~="no-background"]),
+	 :host([theme~="no-background"]) [part~="header-cell"]:last-child,
+	 :host([theme~="no-background"]) [part~="body-cell"]:last-child{
+	 	  background: none  ;
+	 	  border: none;
+	 }
+	 
+	 /* Footer style */
+	
+	:host([theme~="no-footer"]) #footer {
+     	display: none;
+     }
+     
+	 :host([theme~="small"]) [part~="cell"] ::slotted(vaadin-grid-cell-content) {
+		font-size: var(--lumo-font-size-s);
+	 }
+	 :host([theme~="rounded-rows-grid"]){
+	 	  background: transparent;
+         /* border: none !important; */
+	 }
+	 
+	 
+	 :host([theme~="rounded-rows-grid"]) [part~="footer-cell"]{
+          padding: 0 1px !important;
+          background: #f5f5f5;
+          color: var(--lumo-secondary-text-color);
+          font-weight: 500;
+          border-top: none !important; 
+	 }
+	 
+	 :host([theme~="rounded-rows-grid"]) [part="row"]:last-child [part~="footer-cell"]{
+	 	  border-bottom-color: transparent !important;
+	 	/* border-right: none; */
+	 }
+	
+	 
+	 :host([theme~="rounded-rows-grid"]) [part~="footer-cell"]:first-child{
+	 	  margin-left: 8px;
+	 }
+	 
+	 :host([theme~="rounded-rows-grid"]) [part~="footer-cell"]:last-child{
+	 	  margin-right: 8px;
+	 	    
+	 }
+	 
+	 :host([theme~="rounded-rows-grid"]) [part="row"]:only-child [part~="footer-cell"]{
+	 	 /* border-top: none !important; */
+	 }
+	 
+	 :host([theme~="rounded-rows-grid"]) [part~="body-cell"] {
+          padding: 0 1px ;
+          margin: 3px 0; 
+          overflow: hidden;
+          text-overflow: ellipsis;
+          background: var(--lumo-base-color);
+          
+     }
+     
+     :host([theme~="rounded-rows-grid"]) [part~="cell"]:not([part~="footer-cell"]){
+     	border-top: 1px solid var(--_lumo-grid-secondary-border-color) !important;
+    	border-bottom: 1px solid var(--_lumo-grid-secondary-border-color) ;
+    	border-right: 1px solid var(--_lumo-grid-secondary-border-color) ;
+    	min-height: var(--lumo-size-l) !important;
+     }
+	 
+	 :host([theme~="rounded-rows-grid"]) [part~="body-cell"]:first-child{
+	 
+        margin-left: 8px; 
+	  	border-left: 1px solid var(--_lumo-grid-secondary-border-color);
+        border-top-left-radius: 6px;
+    	border-bottom-left-radius: 6px;
+	 
+	 }
+	 
+	 :host([theme~="rounded-rows-grid"]) [part~="body-cell"]:last-child{
+	  	margin-right: 8px;
+	  	border-right: 1px solid var(--_lumo-grid-secondary-border-color);
+	  	border-top-right-radius: 6px;
+    	border-bottom-right-radius: 6px;
+	 }
+	 
+	 [part~="resize-handle"]::before{
+	 	width: 16px;
+	 }
+	 
+	 /* MULTISELECT GRID NARROW FIRST COLUMN WITH CHECK BOX */
+	 :host([theme~="narrow-selection-column"]) [part~="cell"]:first-child{
+	 	  text-overflow: initial; 
+	 	  width: var(--lumo-size-m) !important;
+	 }
+	 
+	  :host([theme~="narrow-selection-column"]) [part~="cell"]:first-child ::slotted(vaadin-grid-cell-content){
+	 	  text-overflow: initial; 
+	 	  width: var(--lumo-size-m) !important;
+	 }
+     
+     
+     /* GRID SIDE PADDING WIDE FROM SCROLLER */
+     :host([theme~="grid-side-padding-wide"]) [part~="footer-cell"]:first-child,
+     :host([theme~="grid-side-padding-wide"]) [part~="body-cell"]:first-child{
+	 	  margin-left: var(--lumo-space-l) ;
+	 }
+	 
+	 :host([theme~="grid-side-padding-wide"]) [part~="footer-cell"]:last-child,
+	 :host([theme~="grid-side-padding-wide"]) [part~="body-cell"]:last-child{
+	 	  margin-right: var(--lumo-space-l) ;
+	 	    
+	 }
+	 
+	 :host([theme~="no-background"]),
+	 :host([theme~="no-background"]) [part~="footer-cell"]:last-child,
+	 :host([theme~="no-background"]) [part~="body-cell"]:last-child{
+	 	  background: none  ;
+	 	  border: none;
+	 }
+	 
+	 /* ROWS HEIGHT */
+	 :host([theme~="rows-height-small"]) [part~="cell"]:not([part~="footer-cell"]){
+	 		min-height: var(--lumo-size-s) !important;
+	 }
+	 
+	 :host([theme~="rows-height-medium"]) [part~="cell"]:not([part~="footer-cell"]){
+	 		min-height: var(--lumo-size-m) !important;
+	 }
+	 
+    </style>
+  </template>
+ </dom-module>
+
+<!--  END OVERRIDE VAADIN COMPONENTS -->
+
+<dom-module id="shared-styles">
+    <template>
+        <style>
+            /* Stretch to fill the entire browser viewport while keeping the content constrained to
+            parent element max-width */
+            
+            .view-toolbar {
+                display: flex;
+                background-color: var(--lumo-base-color);
+                box-shadow: 0 1px 0 0 var(--lumo-contrast-10pct);
+                margin: 0 calc(-50vw + 50%);
+                padding: 8px calc(50vw - 50% + 16px);
+                position: relative;
+                z-index: 1;
+                flex: none;
+            }
+
+            .view-toolbar__search-field {
+                flex: auto;
+                min-width: 0;
+                margin-right: 16px;
+            }
+            .view-container {
+                flex: auto;
+            }
+            
+            .btn-logout{
+            	position: absolute;
+            	right: 0px;
+            	top: 0px;
+            	z-index: 1000;
+            }
+            
+            .btn-profile{
+            	position: absolute;
+            	right: 80px;
+            	top: 0px;
+            }
+            
+            .custom-text-style {
+            	vertical-align: middle;
+				font-family: var(--lumo-font-family);
+				font-size: var(--lumo-font-size-s);
+				font-weight: 500;
+				color: var(--lumo-contrast-60pct);
+         }
+         
+         .error-notification{
+         	background-color: red;
+         }
+         
+         .text-error-color-and-background {
+         	background-color: var(--lumo-error-color-10pct);
+			color: var(--lumo-error-text-color);
+         }
+         
+         .text-success-color-and-background {
+         	background-color: var(--lumo-success-color-10pct);
+			color: var(--lumo-success-text-color);
+         }
+         
+         .error-text{
+			font-size: var(--lumo-font-size-xs);
+	    	line-height: var(--lumo-line-height-xs);
+	    	color: var(--lumo-error-text-color);
+	    
+		  }
+         /* .icon-deleted {
+         	--
+         } */
+         
+         .non-visible {
+         	display: none !important;
+         }
+            
+        </style>
+    </template>
+</dom-module>
+
+<custom-style>
+    <style include="shared-styles lumo-color lumo-typography lumo-badge">
+        html {
+            --main-layout-header-height: 64px;
+            background-color: transparent !important;
+            --padding-all-mid: 6px;
+            height: 100vh;
+        }
+
+        body {
+            /* Avoid horizontal scrollbars, mainly on IE11 */
+            width: 100vw;
+            background-color: var(--lumo-contrast-5pct);
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .v-system-error{
+			display: none !important;
+		} 
+
+		vaadin-license-box{
+			display: none;
+		}
+
+        :host{
+		    font-family: var(--lumo-font-family);
+		    font-size: var(--lumo-font-size-m);
+		    line-height: var(--lumo-line-height-m);
+		    font-weight: 500;
+		    text-align: center;
+		    opacity: 1;
+		    color: var(--lumo-contrast-60pct);
+        }
+        
+        .main-layout {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .main-layout__footer-appversion {
+        	display: none;
+        	z-index: 1001;
+        }
+        
+        
+      	@media (max-width: 800px) {
+      	
+      		.v-loading-indicator{
+      			background-color: var(--lumo-contrast-60pct) !important;
+      		}
+      		
+      		
+         	.main-layout > *:last-child {
+				margin-top: 30px;
+			} 
+      	}
+         
+       	@media (max-width: 1000px) {
+	       
+         	.main-layout {
+            	flex-direction: column-reverse;
+        	}
+        	
+       	}
+
+        @media print {
+            /* A4 Portrait*/
+            @page {
+                size: A4 portrait;
+                margin: 10%;
+            }
+            body #pwa-ip {
+                display: none  !important;
+
+            }
+
+            body * {
+                box-shadow: none !important;
+            }
+        }
+
+    </style>
+
+
+</custom-style>

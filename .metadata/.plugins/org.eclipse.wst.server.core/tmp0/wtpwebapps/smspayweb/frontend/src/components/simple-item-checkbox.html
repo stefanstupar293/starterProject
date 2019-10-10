@@ -1,0 +1,64 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/vaadin-ordered-layout/src/vaadin-horizontal-layout.html">
+<link rel="import" href="../../bower_components/vaadin-button/src/vaadin-button.html">
+<link rel="import" href="../../bower_components/vaadin-checkbox/src/vaadin-checkbox.html">
+
+<dom-module id="simple-item-checkbox">
+    <template>
+<style>
+	:host{
+		font-size: 0.9em;
+		/* width: calc(100% - 2*var(--lumo-space-s)); */
+	}
+	.main{
+		width: 100%;
+		display: flex;
+		padding: 0px var(--lumo-space-s);
+	}
+	.caption{
+		flex: 2;
+	}
+	.remove-btn{
+		margin: 0px;
+		width: 21px;
+    	height: 21px;
+	}
+	.check{
+		width: 21px;
+	}
+	.check label span {
+		margin: 0px;
+	}
+	.spacing{
+		width: 8px;
+	}
+	.custom-hidden {
+		display: none !important;
+	}
+
+</style>
+<vaadin-horizontal-layout class="main" id="main">
+ <label id="caption" class="caption">Label</label>
+ <div class="spacing"></div>
+ <vaadin-button id="removeBtn" class="remove-btn" theme="error tertiary small">
+  <iron-icon icon="lumo:cross" slot="prefix"></iron-icon>
+ </vaadin-button>
+ <vaadin-checkbox id="check" class="check" aria-checked={{checked}}></vaadin-checkbox>
+</vaadin-horizontal-layout>
+</template>
+
+    <script>
+        class SimpleItemCheckbox extends Polymer.Element {
+            static get is() {
+                return 'simple-item-checkbox';
+            }
+
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(SimpleItemCheckbox.is, SimpleItemCheckbox);
+    </script>
+</dom-module>

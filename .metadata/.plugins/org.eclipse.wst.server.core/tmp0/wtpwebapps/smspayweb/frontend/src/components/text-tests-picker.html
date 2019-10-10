@@ -1,0 +1,123 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/vaadin-button/src/vaadin-button.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../../bower_components/vaadin-ordered-layout/src/vaadin-vertical-layout.html">
+<link rel="import" href="label-with-help.html">
+<script src="../js/gsm7.js"></script>
+
+<dom-module id="text-tests-picker">
+    <template>
+<style include="shared-styles">
+           :host {
+                height: auto;
+                width: 100%;
+                display: flex;
+            } 
+            
+           .main {
+				padding: 0px;
+		    	margin: 0px;
+		    	flex: 1;
+		    	height: 100%;
+			}
+            
+            #smstext-load-btn {
+			    color: var(--lumo-secondary-text-color) !important;
+			}
+	
+			#smstext-wrapper{
+				position:relative;
+				display: flex;
+				flex: 1;
+				width: 100%;
+				height: 100%;
+			}
+			
+			#smstext-area-span{
+				display: flex;
+				flex-direction: column;
+				margin-top: calc(-1 * var(--lumo-space-xs));
+				margin-right: calc(-1 * var(--lumo-space-xs));
+				align-items: flex-end;
+			}
+			
+			#smstext-area-span > vaadin-button {
+				height: var(--lumo-space-m);
+				padding: 0;
+				color: var(--lumo-secondary-text-color);
+			}
+			
+			.error-text{
+				font-size: var(--lumo-font-size-xs);
+		    	line-height: var(--lumo-line-height-xs);
+		    	color: var(--lumo-error-text-color);
+			}
+			
+			#smstext-load-btn{
+				width: var(--lumo-size-s);
+			}
+	
+			.caption{
+				font-family: var(--lumo-font-family);
+				font-size: 14px;
+				font-weight: 500;
+				position: relative;
+			}
+	
+			#sms-counter{
+				position: absolute;
+				bottom:calc(-1 * var(--lumo-space-xs));
+				right: var(--lumo-space-xs);
+				font-size: var(--lumo-font-size-xs);
+				color: var(--lumo-tertiary-text-color);
+			}
+			
+			vaadin-text-area{
+				width: 100%;
+				height: 100%;
+			}
+			
+        </style>
+<vaadin-vertical-layout class="main" id="message-wrapper">
+ <label-with-help id="textTemplateLabel" class="caption" label-text="Sms text"></label-with-help>
+ <div id="smstext-wrapper" class="smstext-wrapper">
+  <vaadin-text-area id="smstext" class="smstext" theme="small" value="{{smsTextValue}}" on-input="updateSmsCounter">
+   <span slot="suffix" id="smstext-area-span">
+    <vaadin-button id="smstext-load-btn" theme="tertiary contrast">
+     <iron-icon icon="vaadin:records"></iron-icon>
+    </vaadin-button>
+    <vaadin-button theme="tertiary contrast small" id="udh-btn">
+      UDH 
+    </vaadin-button></span>
+  </vaadin-text-area>
+  <span id="sms-counter">147/1</span>
+ </div>
+</vaadin-vertical-layout>
+</template>
+    <script>
+        class TextTestsPicker extends Polymer.Element {
+            static get is() {
+                return 'text-tests-picker';
+            }
+            static get properties() {
+                return {
+                	smsTextValue : String
+                };
+            }
+            
+            
+       		updateSmsCounter(){
+            	var vaadinServer = this.$server;
+            	var sms = UcmsGsm7Class();
+            	
+            	var info = sms.gsm_text_info(this.smsTextValue);
+            	
+				vaadinServer.setSmsCounterValues(info.gsm7_convertible, 
+					info.concatenated_sms, info.codepoints_used, info.codepoints_used_total, 
+						info.codepoints_per_sms_useable, info.codepoints_per_sms, codepoints_left)
+            }	
+            
+        }
+        customElements.define(TextTestsPicker.is, TextTestsPicker);
+    </script>
+</dom-module>

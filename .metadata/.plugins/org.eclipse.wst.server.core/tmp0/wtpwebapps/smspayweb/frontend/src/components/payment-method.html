@@ -1,0 +1,38 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="payment-method">
+    <template>
+<style include="shared-styles">
+            :host {
+                display: block;
+            }
+            
+            .content{
+            	/* display: flex; */
+            }
+            
+            span{
+                line-height: 1;
+    			padding: 1px 2px;
+    			display: block;
+            }
+        </style>
+<div class="content">
+ <img id="methodIcon">
+ <span id="address">abcmethodaddress@example.com</span>
+</div>
+</template>
+    <script>
+        class PaymentMethod extends Polymer.Element {
+            static get is() {
+                return 'payment-method';
+            }
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(PaymentMethod.is, PaymentMethod);
+    </script>
+</dom-module>

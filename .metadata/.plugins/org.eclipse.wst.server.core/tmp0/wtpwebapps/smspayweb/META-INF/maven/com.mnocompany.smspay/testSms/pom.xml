@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.mnocompany.smspay</groupId>
+    <artifactId>testSms</artifactId>
+    <name>Test SMS</name>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+    	<maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+
+        <vaadin.version>14.0.2</vaadin.version>
+    </properties>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>vaadin-prereleases</id>
+            <url>https://maven.vaadin.com/vaadin-prereleases</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <repositories>
+        <repository>
+            <id>vaadin-addons</id>
+            <url>http://maven.vaadin.com/vaadin-addons</url>
+        </repository>
+        <repository>
+            <id>vaadin-prereleases</id>
+            <url>https://maven.vaadin.com/vaadin-prereleases</url>
+        </repository>
+		<repository>
+			<id>sonatype-snapshots</id>
+			<name>Sonatype Snapshots</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+    </repositories>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.vaadin</groupId>
+                <artifactId>vaadin-bom</artifactId>
+                <type>pom</type>
+                <scope>import</scope>
+                <version>${vaadin.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>flow-server-compatibility-mode</artifactId>
+        </dependency>
+        <dependency>
+		    <groupId>com.vaadin</groupId>
+		    <artifactId>vaadin-confirm-dialog-flow</artifactId>
+		    </dependency>
+		<dependency>
+		    <groupId>com.vaadin</groupId>
+		    <artifactId>vaadin-board-flow</artifactId>
+		</dependency>
+		<dependency>
+  		  <groupId>com.vaadin</groupId>
+   		 <artifactId>vaadin-charts-flow</artifactId>
+		</dependency>
+
+        <!-- Added to provide logging output as Flow uses -->
+        <!-- the unbound SLF4J no-operation (NOP) logger implementation -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.9.2</version>
+            <type>jar</type>
+        </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+		<dependency>
+		    <groupId>com.google.code.gson</groupId>
+		    <artifactId>gson</artifactId>
+		    <version>2.8.5</version>
+		</dependency>
+        
+        
+        <!-- https://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-jaxrs -->
+		<dependency>
+		    <groupId>org.jboss.resteasy</groupId>
+		    <artifactId>resteasy-jaxrs</artifactId>
+		    <version>3.6.0.Final</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-servlet-initializer -->
+		<dependency>
+		    <groupId>org.jboss.resteasy</groupId>
+		    <artifactId>resteasy-servlet-initializer</artifactId>
+		    <version>3.6.0.Final</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-client -->
+		<dependency>
+		    <groupId>org.jboss.resteasy</groupId>
+		    <artifactId>resteasy-client</artifactId>
+		    <version>3.6.0.Final</version>
+		</dependency>
+		
+		
+		<!-- https://mvnrepository.com/artifact/org.sql2o/sql2o -->
+		<dependency>
+		    <groupId>org.sql2o</groupId>
+		    <artifactId>sql2o</artifactId>
+		    <version>1.6.0</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.auth0</groupId>
+		    <artifactId>java-jwt</artifactId>
+		    <version>3.4.0</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>commons-codec</groupId>
+		    <artifactId>commons-codec</artifactId>
+		    <version>1.11</version>
+		</dependency>
+		
+		<!-- iron-scroll-threshold component import  -->
+		<dependency>
+		   <groupId>org.webjars.bowergithub.polymerelements</groupId>
+		   <artifactId>iron-scroll-threshold</artifactId>
+		   <version>2.0.0</version>
+		</dependency>
+		
+		  <!-- Simple content switcher iron-pages -->
+		<dependency>
+		    <groupId>org.webjars.bowergithub.polymerelements</groupId>
+		    <artifactId>iron-pages</artifactId>
+		    <version>2.1.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.jsmpp</groupId>
+			<artifactId>jsmpp</artifactId>
+			<version>2.3.7</version>
+		</dependency>
+        
+        <!-- https://mvnrepository.com/artifact/org.apache.activemq/activemq-core -->
+		<dependency>
+		    <groupId>org.apache.activemq</groupId>
+		    <artifactId>activemq-core</artifactId>
+		    <version>5.7.0</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+		<dependency>
+		    <groupId>com.google.guava</groupId>
+		    <artifactId>guava</artifactId>
+		    <version>27.0-jre</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.bval/bval-jsr -->
+		<!--  needed for JSR 349 validation impl -->
+		<dependency>
+		    <groupId>org.apache.bval</groupId>
+		    <artifactId>bval-jsr</artifactId>
+		    <version>1.1.2</version>
+		</dependency>
+		
+		<!-- spinner -->
+		<dependency>
+		    <groupId>org.webjars.bowergithub.polymerelements</groupId>
+		    <artifactId>paper-spinner</artifactId>
+		    <version>2.1.0</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.mapdb/mapdb -->
+		<dependency>
+		    <groupId>org.mapdb</groupId>
+		    <artifactId>mapdb</artifactId>
+		    <version>3.0.7</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+		<dependency>
+		    <groupId>javax.mail</groupId>
+		    <artifactId>mail</artifactId>
+		    <version>1.5.0-b01</version>
+		</dependency>
+			<!-- https://mvnrepository.com/artifact/javax.mail/javax.mail-api -->
+	<!-- 	<dependency>
+		    <groupId>javax.mail</groupId>
+		    <artifactId>javax.mail-api</artifactId>
+		    <version>1.5.2</version>
+		</dependency>  -->
+		
+
+		
+		 <!-- <dependency>
+	        <groupId>com.zaxxer</groupId>
+	        <artifactId>HikariCP</artifactId>
+	        <version>3.1.0</version>
+    	</dependency> -->
+        
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>5.1.6</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.webjars.bowergithub.polymerelements/paper-tooltip -->
+		<!-- <dependency>
+		    <groupId>org.webjars.bowergithub.polymerelements</groupId>
+		    <artifactId>paper-tooltip</artifactId>
+		    <version>2.1.1</version>
+		</dependency> -->
+		
+		<dependency>
+		   <groupId>com.vaadin.componentfactory</groupId>
+		   <artifactId>tooltip</artifactId>
+		   <version>1.2.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+		<dependency>
+		    <groupId>org.junit.jupiter</groupId>
+		    <artifactId>junit-jupiter-api</artifactId>
+		    <version>5.3.2</version>
+		    <scope>test</scope>
+		</dependency>
+		
+		<!-- Vaadin Download button wrapper -->
+		<dependency>
+		   <groupId>org.vaadin.olli</groupId>
+		   <artifactId>file-download-wrapper</artifactId>
+		   <version>1.1.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjrt -->
+	 	<!-- <dependency>
+		    <groupId>org.aspectj</groupId>
+		    <artifactId>aspectjrt</artifactId>
+		    <version>1.8.5</version>
+		</dependency> -->
+		
+		<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+		<!-- <dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.8.5</version>
+		</dependency> -->
+
+		<dependency>
+		   <groupId>org.vaadin.olli</groupId>
+		   <artifactId>clipboardhelper</artifactId>
+		   <version>1.0.0</version>
+		</dependency>
+		
+		<!-- http client -->
+		<dependency>
+		  <groupId>com.squareup.okhttp3</groupId>
+		  <artifactId>okhttp</artifactId>
+		  <version>3.13.1</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.beanio/beanio for csv transformation-->
+		<dependency>
+		    <groupId>org.beanio</groupId>
+		    <artifactId>beanio</artifactId>
+		    <version>2.1.0</version>
+		</dependency>
+
+		<dependency>
+		   <groupId>org.vaadin.gatanaso</groupId>
+		   <artifactId>multiselect-combo-box-flow</artifactId>
+		   <version>0.1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.vaadin</groupId>
+			<artifactId>vaadin-grid-pro-flow</artifactId>
+		</dependency>
+
+<!--		<dependency>-->
+<!--			<groupId>io.swagger</groupId>-->
+<!--			<artifactId>swagger-core</artifactId>-->
+<!--			<scope>compile</scope>-->
+<!--			<version>1.5.3</version>-->
+<!--			<exclusions>-->
+<!--				<exclusion>-->
+<!--					<groupId>javax.ws.rs</groupId>-->
+<!--					<artifactId>jsr311-api</artifactId>-->
+<!--				</exclusion>-->
+<!--				<exclusion>-->
+<!--					<groupId>com.fasterxml.jackson.core</groupId>-->
+<!--    				<artifactId>jackson-annotations</artifactId>-->
+<!--				</exclusion>-->
+<!--			</exclusions>-->
+<!--		</dependency>-->
+
+<!--		<dependency>-->
+<!--			<groupId>io.swagger</groupId>-->
+<!--			<artifactId>swagger-codegen</artifactId>-->
+<!--			<version>2.4.4</version>-->
+<!--			<exclusions>-->
+<!--				<exclusion>-->
+<!--					<groupId>javax.mail</groupId>-->
+<!--      				<artifactId>mailapi</artifactId>-->
+<!--				</exclusion>-->
+<!--				&lt;!&ndash; <exclusion>-->
+<!--					<groupId>com.sun.mail</groupId>-->
+<!--    				<artifactId>javax.mail</artifactId>-->
+<!--				</exclusion>-->
+<!--				<exclusion>-->
+<!--					<groupId>javax.mail</groupId>-->
+<!--      				<artifactId>mail-api</artifactId>-->
+<!--				</exclusion>-->
+<!--				<exclusion>-->
+<!--					<groupId>javax.mail</groupId>-->
+<!--  					<artifactId>javax.mail-api</artifactId>-->
+<!--				</exclusion> &ndash;&gt;-->
+<!--			</exclusions>-->
+<!--		</dependency>-->
+
+
+
+		<dependency>
+			<groupId>io.swagger.core.v3</groupId>
+			<artifactId>swagger-jaxrs2</artifactId>
+			<scope>compile</scope>
+			<version>2.0.0</version>
+		</dependency>
+
+<!--		<dependency>-->
+<!--			<groupId>org.redisson</groupId>-->
+<!--			<artifactId>redisson</artifactId>-->
+<!--			<version>3.11.1</version>-->
+<!--		</dependency>-->
+
+	</dependencies>
+
+    <profiles>
+        <profile>
+            <id>production-mode</id>
+            <activation>
+                <property>
+                    <name>vaadin.productionMode</name>
+                </property>
+            </activation>
+
+            <properties>
+                <transpilation.output>${project.build.directory}/build</transpilation.output>
+            </properties>
+
+            <dependencies>
+                <dependency>
+                    <groupId>com.vaadin</groupId>
+                    <artifactId>flow-server-production-mode</artifactId>
+                </dependency>
+            </dependencies>
+
+
+
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.vaadin</groupId>
+                        <artifactId>vaadin-maven-plugin</artifactId>
+                        <version>${vaadin.version}</version>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>copy-production-files</goal>
+                                    <goal>package-for-production</goal>
+                                </goals>
+                                <configuration>
+                                    <transpileOutputDirectory>${transpilation.output}</transpileOutputDirectory>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-war-plugin</artifactId>
+                        <version>3.1.0</version>
+						  <configuration>
+							<webResources>
+								<resource>
+									<directory>${transpilation.output}</directory>
+								</resource>
+<!--								<resource>-->
+<!--									<directory>src/main/ebextensions</directory>-->
+<!--									<targetPath>.ebextensions</targetPath>-->
+<!--									<filtering>true</filtering>-->
+<!--								</resource>-->
+							</webResources>
+						</configuration>
+                    </plugin>
+                    <plugin>
+	                    <groupId>org.apache.maven.plugins</groupId>
+	                    <artifactId>maven-compiler-plugin</artifactId>
+	                    <version>3.3</version>
+	                    <configuration>
+	                        <encoding>${project.build.sourceEncoding}</encoding>
+	                    </configuration>
+	                </plugin>
+
+					<plugin>
+						<groupId>io.swagger.core.v3</groupId>
+						<artifactId>swagger-maven-plugin</artifactId>
+						<version>2.0.5</version>
+						<configuration>
+							<outputFileName>openapi</outputFileName>
+							<outputPath>${project.build.directory}</outputPath>
+							<outputFormat>JSON</outputFormat>
+							<resourcePackages>
+								<package>com.mnocompany.smspay.backend.restinterface</package>
+							</resourcePackages>
+							<!-- Read only annotated classes-->
+							<readAllResources>false</readAllResources>
+							<prettyPrint>true</prettyPrint>
+						</configuration>
+						<executions>
+							<execution>
+								<phase>compile</phase>
+								<goals>
+									<goal>resolve</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+
+
+					<!--<plugin>-->
+	                    <!--<groupId>org.codehaus.mojo</groupId>-->
+	                    <!--<artifactId>aspectj-maven-plugin</artifactId>-->
+	                    <!--<version>1.11</version>-->
+	                    <!--<configuration>-->
+
+					      <!--&lt;!&ndash; Avoid some optimizations that make debugger useless. &ndash;&gt;-->
+					      <!--<XnoInline>true</XnoInline>-->
+	                    <!--</configuration>-->
+	                    <!--<executions>-->
+	                        <!--<execution>-->
+	                            <!--<goals>-->
+	                                 <!--<goal>compile</goal>       &lt;!&ndash; use this goal to weave all your main classes &ndash;&gt;-->
+              						 <!--<goal>test-compile</goal>-->
+	                            <!--</goals>-->
+	                        <!--</execution>-->
+	                    <!--</executions>-->
+	                <!--</plugin>-->
+
+
+                    
+                    <!-- <plugin>
+				      <groupId>org.apache.maven.plugins</groupId>
+				      <artifactId>maven-shade-plugin</artifactId>
+				      <version>3.2.0</version>
+				      <configuration>
+				        <transformers>
+				          <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
+				        </transformers>
+				        Other configuration
+				      </configuration>
+				    </plugin> -->
+
+
+
+
+
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>

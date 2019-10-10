@@ -1,0 +1,82 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/vaadin-text-field/src/vaadin-text-field.html">
+<link rel="import" href="../../bower_components/vaadin-checkbox/src/vaadin-checkbox.html">
+<link rel="import" href="../../bower_components/vaadin-ordered-layout/src/vaadin-horizontal-layout.html">
+
+
+
+
+<dom-module id="topup-form">
+    <template>
+<style>
+	#main {
+		width: calc(100% - var(--lumo-space-s));
+		padding: var(--lumo-space-s);
+		display: flex;
+    	flex-direction: column;
+	}
+	#main > * {
+		width: 100%;
+	}
+	#credit-type-info {
+		font-size: var(--lumo-font-size-m);
+		font-family: var(--lumo-font-family);
+		color: var(--lumo-contrast-80pct);
+		font-weight: 500;
+	}
+	.price-text {
+		font-size: var(--lumo-font-size-m);
+		font-family: var(--lumo-font-family);
+		color: var(--lumo-contrast-60pct);
+	}
+	.price-selected {
+		color: var(--lumo-primary-text-color);
+	}
+	#prices-wrapper {
+		display: flex;
+    	flex-direction: column;
+		padding: 0 var(--lumo-space-s);
+	}
+	#info-holder {
+		margin: var(--lumo-space-m) 0;
+	}
+</style>
+<div style="width: 100%; height: 100%;" id="main">
+ <span id="credit-type-info">Credit type: Prepaid (Immediate)</span>
+ <div id="info-holder"></div>
+ <vaadin-horizontal-layout theme="spacing" id="cards-container"></vaadin-horizontal-layout>
+ <div id="custom-price-layout">
+  <div id="prices-wrapper">
+   <span id="special-price-info" class="price-text price-selected">Text</span>
+   <span id="price-basic" class="price-text"></span>
+   <span id="price-adv" class="price-text"></span>
+   <span id="price-pro" class="price-text"></span>
+  </div>
+  <div class="space-vertical"></div>
+  <label id="credit-caption">Label</label>
+  <vaadin-text-field id="credit-input"></vaadin-text-field>
+  <div class="space-vertical"></div>
+  <vaadin-checkbox id="cb-is-on-success">
+    Checkbox 
+  </vaadin-checkbox>
+  <span id="price-sum"></span>
+ </div>
+ <div class="space-vertical"></div>
+</div>
+</template>
+
+    <script>
+        class TopupForm extends Polymer.Element {
+            static get is() {
+                return 'topup-form';
+            }
+
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(TopupForm.is, TopupForm);
+    </script>
+</dom-module>

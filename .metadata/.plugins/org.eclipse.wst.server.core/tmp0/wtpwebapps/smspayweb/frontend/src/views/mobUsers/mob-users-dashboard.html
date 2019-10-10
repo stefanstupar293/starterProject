@@ -1,0 +1,174 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../styles/shared-styles.html">
+<link rel="import" href="../../../styles/sms-charts-theme.html">
+<link rel="import" href="../../../bower_components/vaadin-board/vaadin-board.html">
+<link rel="import" href="../../../bower_components/vaadin-board/vaadin-board-row.html">
+<link rel="import" href="../../components/dashboard-counter-label.html">
+<link rel="import" href="../../../bower_components/vaadin-charts/vaadin-chart.html">
+<link rel="import" href="../../components/world-map.html">
+<link rel="import" href="../../components/countries-networks-grid.html">
+<link rel="import" href="../../components/deleted-accounts-mob-grid.html">
+<link rel="import" href="../../components/msisdns-not-verified-grid.html">
+<link rel="import" href="../../components/archived-handsets-grid.html">
+<link rel="import" href="../../../bower_components/vaadin-charts/src/vaadin-chart.html">
+<link rel="import" href="../../components/phone-number-different-by-imsi-country.html">
+<link rel="import" href="../../components/email-not-verified-grid.html">
+<link rel="import" href="../../components/last-received-sms-grid.html">
+
+
+
+
+<dom-module id="mob-users-dashboard">
+    <template>
+<style include="shared-styles lumo-badge">
+      :host {
+        width: 100%;
+        -webkit-overflow-scrolling: touch;
+        overflow: auto;
+      }
+
+      .vaadin-board-cell {
+        padding: var(--lumo-space-s) var(--lumo-space-l);
+      }
+
+      *::-ms-backdrop,
+      .vaadin-board-cell {
+        padding: 0;
+      }
+
+      .column-chart {
+        box-shadow: 0 2px 5px 0 rgba(23, 68, 128, 0.1);
+        border-radius: 4px;
+        height: calc(40vh - 64px) !important;
+        min-height: 150px;
+      }
+
+      #yearlySalesGraph {
+        height: calc(30vh - 64px) !important;
+        min-height: 200px;
+      }
+
+      #monthlyProductSplit,
+      #ordersGrid {
+        border-radius: 4px;
+        box-shadow: 0 2px 5px 0 rgba(23, 68, 128, 0.1);
+        height: calc(40vh - 64px) !important;
+        min-height: 355px;
+      }
+      
+      .map-countries-wrapper{
+      	display: flex;
+      	flex-direction: row;
+      }
+      
+      .countries-grid{
+      	flex: 1;
+      }
+      
+      #world-map{
+      	 height: 50vh !important;
+      	 flex: 4;
+      }
+
+      vaadin-board-row.custom-board-row {
+        --vaadin-board-width-medium: 1440px;
+        --vaadin-board-width-small: 1024px;
+      }
+      
+      .row-countries-online-offline,
+      .transactions-per-days-wrapper{
+      	  display: none;
+      }
+      
+      
+     
+     
+      
+      @media (max-width: 1080px){
+     	.map-countries-wrapper{
+	      	flex-direction: column;
+	      	display: block;
+	      	min-height: 85vh;
+	    }
+	    
+	    .countries-grid{
+	    	max-height: 250px;
+	    }
+	    
+	    #world-map{
+      	    /* height: 30vh !important; */
+      	    min-height: 350px !important;
+        }
+     	
+      } 
+
+    </style>
+<vaadin-board>
+ <vaadin-board-row>
+  <dashboard-counter-label id="totalMobUsers" class="black">
+   <vaadin-chart id="onlineCountChart" class="counter"></vaadin-chart>
+  </dashboard-counter-label>
+  <dashboard-counter-label id="totalCountries" class="green"></dashboard-counter-label>
+  <dashboard-counter-label id="totalNetworks" class="red"></dashboard-counter-label>
+  <dashboard-counter-label id="requestedPayouts"></dashboard-counter-label>
+ </vaadin-board-row>
+ <vaadin-board-row>
+  <div class="vaadin-board-cell map-countries-wrapper">
+   <countries-networks-grid class="countries-grid" id="countriesNetworksGrid"></countries-networks-grid>
+   <world-map class="world-map" id="world-map"></world-map>
+  </div>
+ </vaadin-board-row>
+ <vaadin-board-row class="row-countries-online-offline">
+  <div class="vaadin-board-cell">
+   <vaadin-chart id="countriesOnlineOffline" class="column-chart"></vaadin-chart>
+  </div>
+ </vaadin-board-row>
+ <vaadin-board-row>
+  <div class="vaadin-board-cell">
+   <vaadin-chart id="payouts-per-days" class="column-chart"></vaadin-chart>
+  </div>
+  <div class="vaadin-board-cell transactions-per-days-wrapper">
+   <vaadin-chart id="transactionsPerDays" class="yearly-sales"></vaadin-chart>
+  </div>
+  <div class="vaadin-board-cell">
+   <vaadin-chart id="mobAppVersions" class="column-chart"></vaadin-chart>
+  </div>
+ </vaadin-board-row>
+ <vaadin-board-row>
+  <div class="vaadin-board-cell">
+   <deleted-accounts-mob-grid id="deletedAccountsMobGrid" ></deleted-accounts-mob-grid>
+  </div>
+  <div class="vaadin-board-cell">
+   <msisdns-not-verified-grid id="msisdnsNotVerifiedGrid" ></msisdns-not-verified-grid>
+  </div>
+  <div class="vaadin-board-cell">
+   <archived-handsets-grid id="archivedHandsetsGrid" ></archived-handsets-grid>
+  </div>
+  <div class="vaadin-board-cell">
+   <phone-number-different-by-imsi-country id="phoneNumDiffByImsiCountry" ></phone-number-different-by-imsi-country>
+  </div>
+ </vaadin-board-row>
+ <vaadin-board-row>
+  <div class="vaadin-board-cell">
+   <email-not-verified-grid id="emailNotVerifiedGrid" ></email-not-verified-grid>
+   </div>
+   <div class="vaadin-board-cell">
+   <last-received-sms-grid id="lastReceivedSmsGrid" ></last-received-sms-grid>
+  </div>
+ </vaadin-board-row>
+</vaadin-board>
+</template>
+    <script>
+        class MobUsersDashboard extends Polymer.Element {
+            static get is() {
+                return 'mob-users-dashboard';
+            }
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(MobUsersDashboard.is, MobUsersDashboard);
+    </script>
+</dom-module>

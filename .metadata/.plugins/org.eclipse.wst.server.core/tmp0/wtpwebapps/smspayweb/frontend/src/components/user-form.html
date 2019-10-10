@@ -1,0 +1,68 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/vaadin-form-layout/src/vaadin-form-layout.html">
+<link rel="import" href="../../bower_components/vaadin-form-layout/src/vaadin-form-item.html">
+<link rel="import" href="../../bower_components/vaadin-text-field/src/vaadin-text-field.html">
+<link rel="import" href="../../bower_components/vaadin-text-field/src/vaadin-password-field.html">
+<link rel="import" href="../../styles/shared-styles.html">
+
+
+
+
+
+<dom-module id="user-form">
+    <template>
+<style include="shared-styles">
+
+     /* :host{
+		padding: var(--lumo-space-m);
+		background-color: var(--lumo-base-color);
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+	vaadin-form-layout {
+        flex: auto;
+        overflow: auto;
+      }
+      
+    vaadin-form-layout  > vaadin-text-field,
+    vaadin-form-layout  > vaadin-password-field{
+	    padding-top: .25em;
+	    margin-bottom: .25em;
+	} */
+
+</style>
+<div>
+ <vaadin-form-layout>
+  <vaadin-text-field theme="small" id="fullname"></vaadin-text-field>
+  <vaadin-text-field theme="small" id="firstname"></vaadin-text-field>
+  <vaadin-text-field theme="small" id="lastname"></vaadin-text-field>
+  <vaadin-text-field theme="small" id="username" minlength="6" maxlength="40" required="true" error-message="Minimum is 6 chars"></vaadin-text-field>
+  <vaadin-text-field theme="small" id="email"></vaadin-text-field>
+  <vaadin-password-field id="password" theme="small"></vaadin-password-field>
+  <vaadin-password-field id="passwordConfirm" theme="small"></vaadin-password-field>
+  <vaadin-text-field theme="small" id="emailAlerts"></vaadin-text-field>
+  <vaadin-text-field theme="small" id="emailInvoices"></vaadin-text-field>
+  <vaadin-text-field theme="small" id="phone" pattern="[0-9]*" prevent-invalid-input=""></vaadin-text-field>
+  <vaadin-text-field theme="small" id="zip"></vaadin-text-field>
+  <vaadin-text-field theme="small" id="country"></vaadin-text-field>
+  <vaadin-text-field theme="small" id="city"></vaadin-text-field>
+  <vaadin-text-field theme="small" id="street"></vaadin-text-field>
+  <vaadin-text-field theme="small" id="limit"></vaadin-text-field>
+  <vaadin-text-field label="" placeholder="" id="createdOn" theme="small"></vaadin-text-field>
+ </vaadin-form-layout>
+</div>
+</template>
+    <script>
+        class UserForm extends Polymer.Element {
+            static get is() {
+                return 'user-form';
+            }
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(UserForm.is, UserForm);
+    </script>
+</dom-module>

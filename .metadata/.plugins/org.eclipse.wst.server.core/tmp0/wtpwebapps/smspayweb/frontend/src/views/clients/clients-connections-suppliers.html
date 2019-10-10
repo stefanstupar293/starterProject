@@ -1,0 +1,81 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="clients-connections.html">
+<link rel="import" href="clients-suppliers.html">
+
+<dom-module id="clients-connections-suppliers">
+    <template>
+<style include="shared-styles">
+
+     :host {
+         display: flex;
+     }
+     
+     
+     #content {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		width: 100%;
+		height: calc(100vh - ( 2 * var(--lumo-size-m)));
+		justify-content: space-around;
+		flex-wrap: wrap;
+		padding: var(--lumo-space-xs) var(--lumo-space-m);
+	}
+	
+	#content > * {
+		flex: 1;
+		margin: var(--lumo-space-s);
+		box-shadow: var(--lumo-box-shadow-s);
+		border-radius: var(--lumo-border-radius);
+		width: 100%;
+	}
+      
+     
+   	 @media (max-width: 1000px){
+        #content {
+			flex-direction: column;
+		}
+		
+		#content > * {
+			height: 50% !important;
+			margin: var(--lumo-space-s) 0;
+		}
+    }
+    
+    @media (max-width: 850px){
+        #content {
+			padding: 0 var(--lumo-space-s);
+		}
+		
+		#content > * {
+			height: 50% !important;
+			width: calc(100vw - var(--lumo-space-m));
+		}
+    }
+          
+          
+    </style>
+    
+<div id="content">
+ <div>
+  <clients-connections id="connections"></clients-connections>
+ </div>
+ <div>
+  <clients-suppliers id="suppliers"></clients-suppliers>
+ </div>
+</div>
+</template>
+    <script>
+        class ClientsConnectionsSuppliers extends Polymer.Element {
+            static get is() {
+                return 'clients-connections-suppliers';
+            }
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(ClientsConnectionsSuppliers.is, ClientsConnectionsSuppliers);
+    </script>
+</dom-module>

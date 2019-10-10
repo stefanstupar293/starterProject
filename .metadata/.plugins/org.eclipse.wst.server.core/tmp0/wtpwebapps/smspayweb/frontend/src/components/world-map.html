@@ -1,0 +1,289 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<script src="https://www.amcharts.com/lib/4/core.js"></script>
+<script src="https://www.amcharts.com/lib/4/maps.js"></script>
+<script src="https://www.amcharts.com/lib/4/geodata/worldHigh.js"></script>
+<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+<link rel="import" href="../../bower_components/vaadin-lumo-styles/badge.html">
+
+<dom-module id="world-map">
+    <template>
+<style include="shared-styles lumo-badge">
+       :host {
+          display: block;
+          width: 100%;
+ 		  height: 100%;
+ 		  
+ 		  position: relative;
+       }
+       
+        #container {
+		  width: 100%;
+		  height: 100%;
+	   }
+	   
+	    .main {
+		  width: 100%;
+		  height: 100%;
+		  
+	   }
+	   
+	   .tooltip-country-name{
+	   		font-weight: 600;
+	   		font-size: var(--lumo-font-size-s);
+	   		line-height: 1;
+	   }
+	   
+	    .tooltip-content{
+	   		font-size: var(--lumo-font-size-xs);
+	   		line-height: 1;
+	   		
+	   }
+	   
+	   .tooltip-content span{
+	   		display: block;
+	   }
+	   
+	   #legend{
+	   		position:absolute;
+	   		bottom: 42px;
+	   		left: 0;
+	   		display: flex;
+	   		flex-direction: column;
+	   		padding: var(--lumo-space-s);
+	   		/* background-color: var(--lumo-contrast-5pct); */
+	   }
+	   
+	   #legend span{
+	   		font-size: var(--lumo-font-size-xs);
+	   		font-weight: 500;
+	   		color: var(--lumo-tertiary-text-color);
+	   		margin: 0 var(--lumo-space-xs);
+	   }
+	   
+	   .coverage-color-full{
+	   		background-color: #39ad66 !important;
+	   } 
+	   
+	   .coverage-color-semi{
+	   		background-color: #e3a042 !important;
+	   }
+	   
+	   .coverage-color-no{
+	   		background-color: #ed4e5c !important;
+	   }
+          
+    </style>
+<div id="main" class="main">
+ <div id="container"></div>
+ <div id="legend">
+  <span title='All networks for country covered'>
+   <span class="coverage-color-full" theme="badge"></span>Full coverage</span>
+  <span title='Part of networks for country covered'>
+   <span class="coverage-color-semi" theme="badge"></span>Semi coverage</span>
+  <span title='No networks for country covered'>
+   <span class="coverage-color-no" theme="badge"></span>No coverage</span>
+ </div>
+</div>
+</template>
+    <script>
+        class WorldMap extends Polymer.Element {
+            static get is() {
+                return 'world-map';
+            }
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                    worldSeries: {
+			          type: Object
+			        },
+			        
+			        chart: {
+			          type: Object
+			        },
+                };
+            }
+            
+            ready(){
+            	super.ready();
+            	
+            	/**
+				 * ---------------------------------------
+				 * This demo was created using amCharts 4.
+				 * 
+				 * For more information visit:
+				 * https://www.amcharts.com/
+				 * 
+				 * Documentation is available at:
+				 * https://www.amcharts.com/docs/v4/
+				 * ---------------------------------------
+				 */
+				
+				// Themes begin
+				am4core.useTheme(am4themes_animated);
+				// Themes end
+				
+				// Create map instance
+				var chart = am4core.create(this.$.container, am4maps.MapChart);
+				
+				this.$.chart = chart;
+				
+				// Set map definition
+				chart.geodata = am4geodata_worldHigh;
+				
+				// Set projection
+				chart.projection = new am4maps.projections.Miller();
+				
+				// Export
+			    /* chart.exporting.menu = new am4core.ExportMenu(); */
+			
+			    // Zoom control
+			    chart.zoomControl = new am4maps.ZoomControl();
+			    
+			    /* chart.mouseWheelBehavior = "none"; */
+			    
+			    
+			    /* chart.tapToActivate = true;
+			    chart.tapTimeout = 2000; */
+			    
+			    /* chart.zoomDuration = 500; */
+			    
+			    /* chart.chartContainer.wheelable = false; */
+			    /* chart.chartContainer.togglable = true; */
+			    
+			    /* chart.zoomStep = 2; */ 
+			    
+			
+			    var homeButton = new am4core.Button();
+			    homeButton.events.on("hit", function() {
+			      chart.goHome();
+			    });
+			
+			    homeButton.icon = new am4core.Sprite();
+				homeButton.padding(7, 5, 7, 5);
+				homeButton.width = 30;
+				homeButton.icon.path = "M16,8 L14,8 L14,16 L10,16 L10,10 L6,10 L6,16 L2,16 L2,8 L0,8 L8,0 L16,8 Z M16,8";
+				homeButton.marginBottom = 10;
+				homeButton.parent = chart.zoomControl;
+				homeButton.insertBefore(chart.zoomControl.plusButton);
+			
+				// Center on the groups by default
+				/* chart.homeZoomLevel = 3.5;
+				chart.homeGeoPoint = { longitude: 10, latitude: 52 };  */
+				
+				// Series for World map
+				this.$.worldSeries = chart.series.push(new am4maps.MapPolygonSeries());
+				this.$.worldSeries.exclude = ["AQ"];
+				this.$.worldSeries.useGeodata = true;
+				
+				var polygonTemplate = this.$.worldSeries.mapPolygons.template;
+				/* polygonTemplate.tooltipText = "{name}\n{title}";  */
+				/* polygonTemplate.tooltipHTML = '<a class="tooltip-country-name" href="place handsets url">{name}</a><br/><span class="tooltip-content">{title}</span>'; */ 
+				polygonTemplate.tooltipHTML = '<span class="tooltip-country-name">{name}</span><br><span class="tooltip-content">{title}</span>'; 
+				
+				polygonTemplate.fill = chart.colors.getIndex(0);
+				polygonTemplate.nonScalingStroke = true;
+				
+				
+				polygonTemplate.propertyFields.fill = "fill";
+				
+				// Set up tooltips
+				this.$.worldSeries.calculateVisualCenter = true;
+				polygonTemplate.tooltipPosition = "fixed";
+				
+				this.$.worldSeries.tooltip.label.interactionsEnabled = true;
+				this.$.worldSeries.tooltip.pointerOrientation = "vertical";
+				this.$.worldSeries.tooltip.keepTargetHover = true;
+				
+				// Hover state
+				var hoverState = polygonTemplate.states.create("hover"); 
+				hoverState.properties.fill = am4core.color("#367B25");  
+				
+				/* chart.cursor.behavior = none; */
+				chart.chartContainer.wheelable = false; 
+				
+				/* document.body.onkeydown = function(event){
+				   
+				   var cmd_held = event.metaKey;
+				   var ctrl_held = event.ctrl;
+				
+				   if(cmd_held || ctrl_held) 
+				       console.log('KEY DOWN: '+ event.key);
+				       chart.chartContainer.wheelable = true; 
+				}; */
+				
+				/* document.body.onkeyup = function(event){
+				
+				   var key = event.key;
+				   
+				   if(key=='Meta' || key=='Control'){
+				       console.log('KEY UP: '+key );
+				       chart.chartContainer.wheelable = false; 
+				   }
+				};  */
+				
+            }
+            
+            fillData(countries){
+            
+            	if(countries){
+            	
+            		var worldSeries = this.$.worldSeries;
+            	
+            		var objArray = JSON.parse(countries);
+            		
+            		 /* this.$.worldSeries.data = JSON.parse(JSON.stringify(objArray)); */ 
+            		 
+            		 objArray.forEach(function(countryData) {
+            		 
+            		 	 console.log(countryData.title);
+            		 
+					  	 worldSeries.data.push(Object.assign( { 
+					  		"id": countryData.id, 
+					  		"name": countryData.name,
+					  		"title": countryData.titleHtml,
+					  		"fill": am4core.color(countryData.fillColor)
+					  	})); 
+					});
+            		 
+            		/* worldSeries.events.on("over", over);
+     				worldSeries.events.on("out", out);
+     				function over(ev) {
+     				  ev.target.mapPolygons.each(function(polygon) {
+     				    polygon.setState("highlight");
+     				  });
+     				}
+     				function out(ev) {
+     				  ev.target.mapPolygons.each(function(polygon) {
+     				    polygon.setState("default");
+     				  });
+     				} */
+					
+            	
+            	}; 
+            	
+	        	
+	        }
+	        
+	        zoomToCountry(countryId){
+	        	console.log('zomming to country '+countryId)
+	        	
+	        	if(countryId) {
+	        	
+	        		var country = this.$.worldSeries.getPolygonById(countryId);
+	        		this.$.chart.zoomToMapObject(country);
+	        		
+	        		/* country.alwaysShowTooltip = true; */
+	        		
+	        	}else {
+	        		this.$.chart.goHome();
+	        		this.$.worldSeries.isHover = true;
+	        		
+	        	}
+	        }
+            
+            
+        }
+        customElements.define(WorldMap.is, WorldMap);
+    </script>
+</dom-module>

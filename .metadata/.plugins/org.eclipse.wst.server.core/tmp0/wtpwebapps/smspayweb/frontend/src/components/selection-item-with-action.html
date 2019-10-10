@@ -1,0 +1,66 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/vaadin-button/src/vaadin-button.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+
+
+
+
+<dom-module id="selection-item-with-action">
+    <template>
+<style>
+	.main{
+	    width: -webkit-max-content;
+		padding-bottom: 2px;
+		margin: var(--lumo-space-xs);
+		border-radius: var(--lumo-border-radius);
+		border: 1px solid var(--lumo-contrast-20pct);
+		opacity: 0.8;
+		
+		background-color: #ff7a3a;
+    	color: #fff;
+    	
+    	height: 24px;
+    	display: initial;
+		
+	}
+	.caption{
+		padding-left: var(--lumo-space-xs);
+		font-family: var(--lumo-font-family);
+		font-size: 12px;
+		font-weight: 600;
+	}
+	.action{
+		margin: 0px;
+		width: 18px;
+    	height: 21px;
+	}
+	.action iron-icon {
+		margin-top: 2px;
+		padding-left: 2px;
+		color: #fff;
+	}
+	
+</style>
+<div class="main">
+ <label id="caption" class="caption">Item caption</label>
+ <vaadin-button id="action" class="action" theme="tertiary small">
+  <iron-icon icon="lumo:cross" slot="prefix"></iron-icon>
+ </vaadin-button>
+</div>
+</template>
+
+    <script>
+        class SelectionItemWithAction extends Polymer.Element {
+            static get is() {
+                return 'selection-item-with-action';
+            }
+
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(SelectionItemWithAction.is, SelectionItemWithAction);
+    </script>
+</dom-module>

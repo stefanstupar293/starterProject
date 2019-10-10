@@ -1,0 +1,58 @@
+package com.gmail.stefan.backend.dbservices;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
+
+import com.google.common.base.Strings;
+
+public class Todo extends AbstractEntity implements Serializable{
+
+	private static final long serialVersionUID = 8847869833091675347L;
+	
+	private String host;
+	// Real price * 100 as an int to avoid rounding errors
+//	@Min(value = , message = "{sms.price.limits}")
+//	@Max(value = 100000, message = "{bakery.price.limits}")
+	private String port;
+	private String login;
+	private String password;
+	private String throughput;
+	private String destinationTon;
+	private String systemType;
+	private String destinationNpi;
+	private String concetenationType;
+	private String sessionId;
+	private boolean enabled;
+	private Long appUserWebId;
+	private boolean deleted;
+	
+	transient private Long companyId; 
+	
+	private transient boolean tryToConnect;
+	
+	private transient List<Supplier> suppliers = new ArrayList<>();
+	private transient Supplier supplier;
+	
+	public Todo() {
+		super();
+	}
+
+	public Todo(SupplierConnectionFlat flat) {
+		id = flat.getConnectionId();
+		host = flat.getHost();
+		port = flat.getPort();
+		login = flat.getLogin();
+		password = flat.getPassword();
+		throughput = flat.getThroughput();
+		destinationTon = flat.getDestinationTon();
+		systemType = flat.getServiceType();
+		destinationNpi = flat.getDestinationNpi();
+		concetenationType = flat.getConcetenationType();
+		enabled = flat.isEnabled();
+		appUserWebId = flat.getAppUserWebId();
+		deleted = flat.isDeleted();
+	}
+}

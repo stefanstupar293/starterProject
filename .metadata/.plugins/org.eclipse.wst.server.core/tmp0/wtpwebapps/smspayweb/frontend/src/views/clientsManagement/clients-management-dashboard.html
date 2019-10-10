@@ -1,0 +1,63 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../styles/shared-styles.html">
+<link rel="import" href="../../../bower_components/vaadin-board/vaadin-board.html">
+<link rel="import" href="../../../bower_components/vaadin-board/vaadin-board-row.html">
+<link rel="import" href="../../components/dashboard-counter-label.html">
+<link rel="import" href="../../../bower_components/vaadin-charts/src/vaadin-chart.html">
+<link rel="import" href="../../../styles/sms-charts-theme.html">
+
+
+
+<dom-module id="clients-management-dashboard">
+    <template>
+<style include="shared-styles">
+	:host {
+        width: 100%;
+        -webkit-overflow-scrolling: touch;
+        overflow: auto;
+        flex: 1;
+      }
+	.vaadin-board-cell {
+        padding: var(--lumo-space-s);
+      }
+
+      *::-ms-backdrop,
+      .vaadin-board-cell {
+        padding: 0;
+      }
+       .column-chart {
+        box-shadow: 0 2px 5px 0 rgba(23, 68, 128, 0.1);
+        border-radius: 4px;
+        min-height: 220px;
+      }
+	
+</style>
+<vaadin-board>
+ <vaadin-board-row>
+  <dashboard-counter-label id="companies-counter"></dashboard-counter-label>
+  <dashboard-counter-label id="invoices-counter"></dashboard-counter-label>
+  <dashboard-counter-label id="issues-counter"></dashboard-counter-label>
+ </vaadin-board-row>
+ <vaadin-board-row>
+  <div class="vaadin-board-cell">
+   <vaadin-chart id="tests-chart" class="column-chart"></vaadin-chart>
+  </div>
+ </vaadin-board-row>
+</vaadin-board>
+</template>
+
+    <script>
+        class ClientsManagementDashboard extends Polymer.Element {
+            static get is() {
+                return 'clients-management-dashboard';
+            }
+
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(ClientsManagementDashboard.is, ClientsManagementDashboard);
+    </script>
+</dom-module>

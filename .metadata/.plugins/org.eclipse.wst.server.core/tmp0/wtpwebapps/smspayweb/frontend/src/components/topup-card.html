@@ -1,0 +1,68 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/vaadin-ordered-layout/src/vaadin-vertical-layout.html">
+
+
+
+
+<dom-module id="topup-card">
+    <template>
+<style include="shared-styles">
+            :host {
+                display: block;
+                border-radius: 4px;
+                min-width: 130px;
+            }
+            .secondary-text {
+            	font-size: var(--lumo-font-size-xs);
+            	text-align: center;
+            	font-weight: 500;
+            }
+            .main {
+            	background-color: var(--lumo-contrast-10pct);
+			    border-radius: 8px;
+			    padding: var(--lumo-space-m);
+			    justify-content: center;
+			    align-items: center;
+            }
+            .main:hover {
+            	background-color: var(--lumo-contrast-5pct);
+            }
+            /* .main:hover > *{
+            	color: var(--lumo-contrast-80pct);
+            } */
+            .main.selected:hover {
+            	background-color: var(--lumo-primary-color);
+            }
+            .main.selected:hover > *{
+            	color: var(--lumo-contrast-80pct);
+            }
+            .selected {
+            	background-color: var(--lumo-primary-color);
+            }
+            .selected > * {
+            	color: white;
+            }
+            
+        </style>
+<vaadin-vertical-layout style="width: 100%; height: 100%;" class="main" id="main">
+ <h3 id="main-caption">[[heading]]</h3>
+ <span id="secondary-text-1" class="secondary-text">[[textFirst]]</span>
+ <span id="secondary-text-2" class="secondary-text">[[textSecond]]</span>
+</vaadin-vertical-layout>
+</template>
+
+    <script>
+        class TopupCard extends Polymer.Element {
+            static get is() {
+                return 'topup-card';
+            }
+
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(TopupCard.is, TopupCard);
+    </script>
+</dom-module>

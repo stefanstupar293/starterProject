@@ -1,0 +1,85 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../styles/shared-styles.html">
+<link rel="import" href="mob-user-transactions.html">
+<link rel="import" href="../../../bower_components/vaadin-ordered-layout/src/vaadin-vertical-layout.html">
+<link rel="import" href="../../../bower_components/vaadin-tabs/src/vaadin-tabs.html">
+<link rel="import" href="../../../bower_components/vaadin-tabs/src/vaadin-tab.html">
+<link rel="import" href="../../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../../../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="mob-users-balance.html">
+<link rel="import" href="../../../bower_components/vaadin-button/src/vaadin-button.html">
+<link rel="import" href="mob-user-handset-details.html">
+<link rel="import" href="../clientsManagement/client-management-log-history.html">
+
+<dom-module id="mob-user-details">
+    <template>
+<style include="shared-styles">
+	:host{
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		width: 100%;
+		position:relative;
+	}
+	
+	.title{
+		margin-top: 0;	
+	}
+	
+	iron-pages{
+		width: 100%;
+	}
+	#tab {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+	page {
+	  width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+	}
+    
+    page mob-user-transactions {
+   	  width: 100%;
+    }
+   
+    page mob-users-balance {
+   	  width: 100%;
+    }
+    
+    page mob-user-handset-details {
+      width: 100%;
+      align-items: flex-start;
+    	
+    }
+   
+    .tabs{
+   	  margin: 0 18px;
+    }
+    
+</style>
+<div>
+ <h3 class="title" id="email">[[appUserMob.email]]</h3>
+ <vaadin-vertical-layout id="content">
+
+ </vaadin-vertical-layout>
+</div>
+</template>
+    <script>
+        class MobUserDetails extends Polymer.Element {
+            static get is() {
+                return 'mob-user-details';
+            }
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        
+        customElements.define(MobUserDetails.is, MobUserDetails);
+    </script>
+</dom-module>

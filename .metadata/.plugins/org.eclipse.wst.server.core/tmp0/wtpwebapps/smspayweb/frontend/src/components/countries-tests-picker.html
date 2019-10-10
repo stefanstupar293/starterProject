@@ -1,0 +1,126 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../styles/shared-styles.html">
+<link rel="import" href="../../bower_components/vaadin-button/src/vaadin-button.html">
+<link rel="import" href="../../bower_components/vaadin-grid/src/vaadin-grid.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../../bower_components/vaadin-ordered-layout/src/vaadin-vertical-layout.html">
+<link rel="import" href="../../bower_components/vaadin-ordered-layout/src/vaadin-horizontal-layout.html">
+<link rel="import" href="label-with-help.html">
+<link rel="import" href="../../bower_components/vaadin-checkbox/src/vaadin-checkbox.html">
+
+
+
+
+<dom-module id="countries-tests-picker">
+    <template>
+<style include="shared-styles lumo-badge">
+             :host {
+                 height: auto;
+                width: 100%;
+                display: flex;
+            }
+			
+			#mccmncGrid{
+				flex: 1;
+			}
+			
+			.error-text{
+				font-size: var(--lumo-font-size-xs);
+		    	line-height: var(--lumo-line-height-xs);
+		    	color: var(--lumo-error-text-color);
+		    
+			}
+			
+			.reload-ntw{
+				justify-content: flex-end;
+				margin: -5px 0px;
+                display: flex;
+			}
+
+			.main {
+				padding: 0px;
+		    	margin: 0px;
+		    	flex: 1;
+		    	height: auto;
+		    	width: 100%;
+			}
+			
+			.caption{
+				width: 100%;
+				font-family: var(--lumo-font-family);
+				font-size: 14px;
+				font-weight: 500;
+			}
+
+            .header-wrapper{
+                display: inline-flex;
+                width: 100%;
+
+            }
+            
+            .ported-wrapper{
+                display: block;
+                flex-direction: column;
+
+            }
+
+             .dialog-add-numbers{
+                 display: flex;
+                 flex-direction: column;
+                 min-width: 450px;
+             }
+			
+			vaadin-text-field{
+				width: 100%;
+				
+			}
+			
+			.counter-span {
+				
+				top:calc(var(--lumo-space-xs) + var(--lumo-space-s));
+				right: calc(var(--lumo-space-xs) + var(--lumo-space-s));
+				font-size: var(--lumo-font-size-xs);
+				
+			}
+			.filterPorted, .filterNotPorted{
+                font-family: var(--lumo-font-family);
+                font-size: var(--lumo-font-size-xxs);
+                padding-left: var(--lumo-space-s);
+
+			}
+			
+
+			
+			
+        </style>
+<vaadin-vertical-layout class="main" id="countries-wrapper">
+ <vaadin-horizontal-layout style="width:100%;">
+  <label-with-help class="caption" id="countries-caption" label-text="Networks"></label-with-help>
+  <div class="reload-ntw">
+   <a href="" id="a-export-networks">
+    <vaadin-button theme="tertiary small" aria-label="Download">
+     <iron-icon icon="lumo:download"></iron-icon>
+    </vaadin-button></a>
+   <vaadin-button id="btn-reload-ntw" theme="tertiary small" aria-label="Refresh">
+    <iron-icon icon="lumo:reload"></iron-icon>
+   </vaadin-button>
+  </div>
+ </vaadin-horizontal-layout>
+ <vaadin-grid id="mccmncGrid" theme="narrow-selection-column no-border no-row-borders compact wrap-cell-content small"></vaadin-grid>
+ <span id="countries-error-text" class="error-text">Text</span>
+</vaadin-vertical-layout>
+</template>
+    <script>
+        class CountriesTestsPicker extends Polymer.Element {
+            static get is() {
+                return 'countries-tests-picker';
+            }
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(CountriesTestsPicker.is, CountriesTestsPicker);
+    </script>
+</dom-module>

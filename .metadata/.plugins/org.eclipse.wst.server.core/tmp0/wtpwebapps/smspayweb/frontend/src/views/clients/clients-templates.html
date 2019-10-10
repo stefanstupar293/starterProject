@@ -1,0 +1,78 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../styles/shared-styles.html">
+<link rel="import" href="clients-templates-senders.html">
+<link rel="import" href="clients-templates-sms-text.html">
+
+<dom-module id="clients-templates">
+    <template>
+<style include="shared-styles">
+
+	:host {
+		display: flex;
+	}
+	
+	#content {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		width: 100%;
+		height: calc(100vh - ( 2 * var(--lumo-size-m)));
+		justify-content: space-around;
+		flex-wrap: wrap;
+		padding: var(--lumo-space-xs) var(--lumo-space-m);
+	}
+	
+	#content > * {
+		flex: 1;
+		margin: var(--lumo-space-s);
+		box-shadow: var(--lumo-box-shadow-s);
+		border-radius: var(--lumo-border-radius);
+		width: 100%;
+	}
+	
+	@media (max-width: 1000px){
+       #content {
+			flex-direction: column;
+		}
+		
+		#content > * {
+			height: 50% !important;
+			margin: var(--lumo-space-s) 0;
+		}
+    }
+    
+     @media (max-width: 850px){
+        #content {
+			padding: 0 var(--lumo-space-s);
+		}
+		
+		#content > * {
+			height: 50% !important;
+			width: calc(100vw - var(--lumo-space-m));
+		}
+    }
+
+</style>
+<div id="content">
+ <div>
+  <clients-templates-senders id="senders"></clients-templates-senders>
+ </div>
+ <div>
+  <clients-templates-sms-text id="sms-texts"></clients-templates-sms-text>
+ </div>
+</div>
+</template>
+    <script>
+        class ClientsTemplates extends Polymer.Element {
+            static get is() {
+                return 'clients-templates';
+            }
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(ClientsTemplates.is, ClientsTemplates);
+    </script>
+</dom-module>

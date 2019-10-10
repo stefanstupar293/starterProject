@@ -1,0 +1,79 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/vaadin-form-layout/src/vaadin-form-layout.html">
+<link rel="import" href="../../bower_components/vaadin-form-layout/src/vaadin-form-item.html">
+<link rel="import" href="form-buttons-bar.html">
+<link rel="import" href="label-with-help.html">
+<link rel="import" href="../../bower_components/vaadin-text-field/src/vaadin-text-field.html">
+
+
+
+
+<dom-module id="invoice-generation-form">
+    <template>
+<style include="shared-styles">
+            :host {
+            	height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            vaadin-form-layout {
+                display: flex;
+                flex-direction: column;
+            	flex: 1;
+                padding-bottom: var(--lumo-space-l);
+                padding-left: var(--lumo-space-m);
+            }
+
+            vaadin-form-item {
+                width: 100% !important;
+                display: flex;
+                flex-direction: column;
+                flex-flow: column;
+                --vaadin-form-item-label-width: 15em;
+                margin: 0px !important;
+            }
+            vaadin-form-item .input {
+                width: 100%;
+            }
+        </style>
+<h3 id="header-text">Heading 3</h3>
+<vaadin-form-layout>
+ <vaadin-form-item label-position="top">
+  <label-with-help slot="label" id="credit-label"></label-with-help>
+  <vaadin-text-field id="credit-field"></vaadin-text-field>
+ </vaadin-form-item>
+ <vaadin-form-item label-position="top">
+  <label-with-help slot="label" id="price-one-label"></label-with-help>
+  <vaadin-text-field id="price-one-field">
+   <div slot="prefix">
+     $ 
+   </div>
+  </vaadin-text-field>
+ </vaadin-form-item>
+ <vaadin-form-item label-position="top">
+  <label-with-help slot="label" id="price-sum-label"></label-with-help>
+  <label id="price-sum-text">Label</label>
+ </vaadin-form-item>
+ <vaadin-form-item label-position="top">
+  <label-with-help slot="label" id="period-label"></label-with-help>
+  <label id="period-text">Label</label>
+ </vaadin-form-item>
+</vaadin-form-layout>
+<form-buttons-bar id="actions"></form-buttons-bar>
+</template>
+
+    <script>
+        class InvoiceGenerationForm extends Polymer.Element {
+            static get is() {
+                return 'invoice-generation-form';
+            }
+
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(InvoiceGenerationForm.is, InvoiceGenerationForm);
+    </script>
+</dom-module>

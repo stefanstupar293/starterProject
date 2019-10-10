@@ -1,0 +1,71 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/vaadin-form-layout/src/vaadin-form-item.html">
+<link rel="import" href="../../bower_components/vaadin-text-field/src/vaadin-text-field.html">
+<link rel="import" href="form-buttons-bar.html">
+<link rel="import" href="../../bower_components/vaadin-text-field/src/vaadin-text-area.html">
+
+
+
+
+<dom-module id="simple-email-form">
+    <template>
+<style include="shared-styles">
+            :host {
+                display: flex;
+                flex-direction: column;
+                overflow: auto;
+            }
+            
+            :host > * {
+            	width: 100%;
+            	overflow: auto;
+            }
+            
+            #title {
+            	font-family: var(--lumo-font-family);
+			    font-size: var(--lumo-font-size-l);
+			    font-weight: 500;
+			    color: var(--lumo-contrast-60pct);
+            }
+            
+            #form {
+            	display: flex;
+            	flex-direction: column;
+            	flex: 1;
+            	width: calc(100% - 2*var(--lumo-space-m));
+            	padding: var(--lumo-space-xs);
+            	width: 300px;
+            	overflow: auto;
+            }
+            
+            #form > * {
+            	max-width: 600px;
+            	padding-bottom: var(--lumo-space-xs);
+            	overflow: auto;
+            }
+            
+        </style>
+<span id="title">Send email</span>
+<div id="form">
+ <vaadin-text-field label="Email to:" placeholder="Add email" id="email"></vaadin-text-field>
+ <vaadin-text-field label="Subject text" placeholder="Enter subject text" id="subject"></vaadin-text-field>
+ <vaadin-text-area label="Write a description" placeholder="Add detailed explanation" id="messageText" name="messageText"></vaadin-text-area>
+</div>
+<form-buttons-bar id="actions"></form-buttons-bar>
+</template>
+
+    <script>
+        class SimpleEmailForm extends Polymer.Element {
+            static get is() {
+                return 'simple-email-form';
+            }
+
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(SimpleEmailForm.is, SimpleEmailForm);
+    </script>
+</dom-module>

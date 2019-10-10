@@ -1,0 +1,361 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="scheduler-form.html">
+<link rel="import" href="testing-form.html">
+<link rel="import" href="../../bower_components/vaadin-button/src/vaadin-button.html">
+<link rel="import" href="../../styles/shared-styles.html">
+<link rel="import" href="../../bower_components/vaadin-ordered-layout/src/vaadin-horizontal-layout.html">
+<link rel="import" href="../../bower_components/vaadin-ordered-layout/src/vaadin-vertical-layout.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="label-with-help.html">
+<link rel="import" href="../../bower_components/vaadin-text-field/src/vaadin-text-field.html">
+
+<dom-module id="tests-with-scheduler-form">
+    <template>
+<style>
+
+	:host{
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+	}
+	
+	.caption{
+		font-family: var(--lumo-font-family);
+		font-size: 14px;
+		font-weight: 500;
+	}
+	
+	#create-wrapper{
+		
+		display: flex;
+		flex-direction: column;
+    	height: 100%;
+	}
+	
+	
+	#schedule-wrapper{
+		height: 100%;
+		display: flex;
+		flex-direction: row;
+    	
+    	
+	}
+	
+	.scheduler-form-wrapper{
+		background-color: var(--lumo-base-color); 
+		overflow: auto;
+		box-shadow: 0px 1px 1px 1px #dadada;
+		border-radius: 4px;
+		margin: var(--lumo-space-xs);
+		padding: var(--lumo-space-s);
+		flex: 3;
+	}
+	
+	#scheduler-form{
+		width: 100%;
+	}
+	
+	
+	.header-wrapper{
+	    overflow-y: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		box-shadow: var(--lumo-box-shadow-s);
+    	border-radius: var(--lumo-border-radius);
+    	background-color: var(--lumo-base-color);
+    	padding: var(--lumo-space-xs) var(--lumo-space-s);
+    	margin: var(--lumo-space-xs);
+    	flex: 1;
+    	min-width: calc(4 * var(--lumo-size-xl));
+	}
+	
+	.testing-form-wrapper{
+		overflow: auto;
+		height: 100%; 
+		display: flex;
+	}
+	
+	
+	.test-actions{
+		display: flex;
+		justify-content: flex-end;
+		flex-wrap: wrap;
+	}
+	
+	.test-actions > *{
+		margin:  var(--lumo-space-xs);
+	}
+	
+	
+	.title-wrapper{
+		display: flex;
+		flex-direction:column;
+		align-items: center;
+	}
+	
+	.form-caption {
+		font-family: var(--lumo-font-family);
+		font-size: 16px;
+		font-weight: 500;
+		color: var(--lumo-primary-color);
+	}
+	
+	.form-caption:hover{
+		cursor: pointer;
+	}
+	
+	.schedule-header-info-wrapper{
+		flex: 1;
+		text-align: center;
+	} 
+	
+	.info-text-wrapper{
+		flex: 1;
+		padding: 0 var(--lumo-space-s);
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.tests-info-run-title{
+		margin:  0;
+	}
+	
+	#info-test-num-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	#test-name-wrap {
+		width: 200px;
+	}
+	
+	#test-name-wrap > * {
+		width: 100%;
+	}
+
+	.info-text{
+		font-size: calc(11px + 0.4vh);
+		text-align: center;
+		font-weight: 500;	
+		color: var(--lumo-tertiary-text-color);
+		white-space: pre-wrap;
+		margin: var(--lumo-space-xs) ;
+		line-height: 1.3;
+		align-self: center;
+	} 
+	
+	.info-tests-number{
+		margin: 0 var(--lumo-space-s);
+		line-height: 1.2;
+	} 
+	
+	
+	.error-text{
+		font-size: var(--lumo-font-size-xs);
+    	line-height: var(--lumo-line-height-xs);
+    	color: var(--lumo-error-text-color);
+	}
+	
+	.error-10pct {
+      	background-color: var(--lumo-error-color-10pct);
+      	color: var(--lumo-error-text-color);
+      	padding: 0 var(--lumo-space-xs) ;
+      	border-radius: var(--lumo-border-radius);
+    }
+    
+    .primary-10pct {
+      	background-color: var(--lumo-primary-color-10pct);
+      	color: var(--lumo-primary-text-color);
+      	padding: 0 var(--lumo-space-xs) ;
+      	border-radius: var(--lumo-border-radius);
+      
+    }
+    
+    /* RESPONSIVE */
+	@media (max-width: 1000px){
+		.testing-form-wrapper{
+			flex-direction: column-reverse;
+	 	}
+	 	
+	 	#schedule-wrapper{
+	 		flex-direction: column-reverse;
+	 	}
+	 	
+	 	.header-wrapper{
+	 		display: inline-block;
+	 		min-height: 76px;
+	 		overflow: hidden;
+	 		position: relative;
+	 	}
+	 	
+	 	#schedule-wrapper .header-wrapper{
+	 		min-height: 30px;
+	 	}
+	 	
+	 	.title-wrapper{
+	 		display: inline-block;
+	 		position: absolute;
+	 		top: 0;
+	 		
+	 	}
+	 	
+	 	.header-wrapper vaadin-button{
+	 		height: var(--lumo-size-s);
+	 		min-width: calc(var(--lumo-button-size) * 2);
+	 		padding: 0 var(--lumo-space-xs);
+	 	} 
+	 	
+	 	#btnInfoTestsRun{
+	 		height: var(--lumo-size-xs) ;
+	 		margin: 0;
+	 		padding: 0 var(--lumo-space-xs);
+		    line-height: 1; 
+	 	}
+	 	
+	 	#test-name-wrap{
+	 		position:absolute;
+	 		bottom: 0;
+	 		left: var(--lumo-space-s);
+	 		width: 45%;
+	 	} 
+	 	
+	 	#tf-test-name{
+	 		padding-top: 0;
+	 	}
+	 	
+	 	.info-text-wrapper{
+			position:absolute;
+	 		top: var(--lumo-space-xs);
+	 		right:0;
+	 	}
+	 	
+	 	.info-text{
+	 		display: none;
+	 	}
+	 	
+	 	.info-tests-number{
+	 		margin-right: 0;
+	 	}
+	 	
+	 	.test-actions{
+	 		position:absolute;
+	 		bottom: 0;
+	 		right: var(--lumo-space-xs);
+	 	} 
+	 	
+	}
+	
+	 @media (max-width: 640px){
+	 
+	    .header-wrapper{
+	    	padding-top: 0;
+	    }
+    
+	 	.tests-info-run-title{
+	 		font-size: var(--lumo-font-size-xs) ;
+	 		line-height: 1.3;
+	 	}
+	 	
+	 	.info-text-wrapper{
+	 		width: 100%;
+	 		min-height: 32px;
+	 		padding-left: 0;
+	 		align-items: flex-end;
+	 		justify-content: space-between !important;
+	 		position: relative;
+	 	}
+	 	
+	 	.info-tests-number{
+	 		line-height: 1;
+	 		margin-left: var(--lumo-space-xs);
+	 	}
+	 	
+	 	#btnInfoTestsRun{
+	 		height: var(--lumo-space-l) ;
+	 		margin: 0;
+	 		padding: 0 var(--lumo-space-xs);
+		    line-height: 1; 
+	 	}
+    }
+    
+    
+</style>
+<div id="create-wrapper">
+ <div class="testing-form-wrapper" id="testingFormWrapper">
+  <testing-form id="test-form"></testing-form>
+  <div class="header-wrapper" id="createSummaryWrapper">
+   <div class="title-wrapper" id="titleCreateWrapper">
+    <span id="form-caption" class="form-caption">Create new test</span>
+   </div>
+   <div class="info-text-wrapper" id="infoTextWrapper">
+    <div id="info-test-num-wrap">
+     <span id="testsToRunTitle" class="tests-info-run-title">Number of tests to run</span>
+     <h3 id="infoTestsNumber" class="info-tests-number">0</h3>
+    </div>
+    <span id="info-text" class="info-text">Summary info calculation</span>
+    <vaadin-button theme="icon small" aria-label="Last test" id="btnInfoTestsRun">
+      Show last test 
+     <iron-icon icon="lumo:error"></iron-icon>
+    </vaadin-button>
+   </div>
+   <div id="test-name-wrap">
+    <label-with-help id="test-name-caption" class="caption"></label-with-help>
+    <vaadin-text-field id="tf-test-name" theme="small"></vaadin-text-field>
+   </div>
+   <div id="test-actions" class="test-actions" theme="spacing">
+    <vaadin-button id="btn-new-test" theme="primary">
+      New test 
+    </vaadin-button>
+    <vaadin-button theme="primary success" id="run-btn" class="run-btn">
+      Run 
+    </vaadin-button>
+    <vaadin-button theme="primary" id="schedule-btn" class="schedule-btn">
+      Schedule 
+    </vaadin-button>
+   </div>
+  </div>
+ </div>
+</div>
+<div id="schedule-wrapper">
+ <div class="scheduler-form-wrapper" id="scheduler-form-wrapper">
+  <scheduler-form id="scheduler-form"></scheduler-form>
+ </div>
+ <div class="header-wrapper">
+  <span class="form-caption" id="form-caption-sheduler">Schedule</span>
+  <div class="schedule-header-info-wrapper">
+   <span id="scheduler-error-text" class="error-text">Number of tasks for schedule:</span>
+   <span id="scheduler-info-text" class="info-text">[[taskCount]]</span>
+  </div>
+  <vaadin-horizontal-layout id="scheduler-actions" class="test-actions" theme="spacing">
+   <vaadin-button theme="secondary" id="back">
+     Back 
+   </vaadin-button>
+   <vaadin-button theme="secondary error" id="cancel" class="run-btn">
+     Cancel 
+   </vaadin-button>
+   <vaadin-button theme="primary success" id="save-schedule-btn" class="schedule-btn">
+     Save 
+   </vaadin-button>
+  </vaadin-horizontal-layout>
+ </div>
+</div>
+</template>
+    <script>
+        class TestsWithSchedulerForm extends Polymer.Element {
+            static get is() {
+                return 'tests-with-scheduler-form';
+            }
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(TestsWithSchedulerForm.is, TestsWithSchedulerForm);
+    </script>
+</dom-module>

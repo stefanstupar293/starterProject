@@ -1,0 +1,51 @@
+<beanio xmlns="http://www.beanio.org/2012/03" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.beanio.org/2012/03 http://www.beanio.org/2012/03/mapping.xsd">
+   
+  <stream name="countries" format="csv">
+	<parser>
+      <property name="delimiter" value=";" />
+	  <property name="unquotedQuotesAllowed" value="true" />
+    </parser>
+	
+	<record name="network" class="com.mnocompany.smspay.backend.model.mccmnc.Network" minOccurs="0">
+		<field name="id" />
+		<field name="name"/>	
+	    <field name="operator" />
+		<field name="primaryMNC" rid="true" regex="^[0-9]*$"/>		
+		<field name="countryId" rid="true" regex="^[0-9]*$"/>   
+    </record>
+		
+    <record name="country" class="com.mnocompany.smspay.backend.model.mccmnc.Country" minOccurs="0">
+		<field name="id" />
+		<field name="isoAlpha2" rid="true" regex="^[A-z]{2}$" />	
+	    <field name="isoAlpha3"  rid="true" regex="^[A-z]{3}$" />
+		<field name="name" />		
+		<field name="region"/>
+		<field name="countryCode"/>		
+		<field name="mcc" rid="true" regex="^[0-9]{3}$"/>   
+    </record>
+	
+	<record name="networkPrefix" class="com.mnocompany.smspay.backend.model.mccmnc.NetworkPrefix">
+		<field name="id" />
+		<field name="prefix"/>	
+	    <field name="mcc"  rid="true" regex="^[0-9]{3}$" />
+		<field name="mnc" rid="true" regex="^[0-9]*$"/>		
+		<field name="countryIsoAlpha2" rid="true" regex="^[A-z]{2}$"/>
+		<field name="networkName"/>		
+		<field name="fullName"/>   
+		<field name="location"/> 
+		<field name="countryCode" /> 
+		<field name="ndc"/> 
+    </record>
+	
+	<record name="networkPart" class="com.mnocompany.smspay.backend.model.mccmnc.NetworkPart">
+		<field name="id" />
+		<field name="networkId" rid="true" regex="^[0-9]*$"/>	
+	    <field name="mnc" rid="true" regex="^[0-9]*$"/>
+		<field name="tapCode" />		
+    </record>
+	
+  </stream>
+
+</beanio>

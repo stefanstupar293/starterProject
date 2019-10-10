@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beanio xmlns="http://www.beanio.org/2012/03" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.beanio.org/2012/03 http://www.beanio.org/2012/03/mapping.xsd">
+   
+  <stream name="AppUserMobStream" format="csv">
+
+  <typeHandler  name="handlerLocalDateTime" class="com.mnocompany.smspay.backend.converters.beanio.LocalDateTimeTypeHandler" />
+ 
+	 <record name="header" minOccurs="1" maxOccurs="1" class="com.mnocompany.smspay.backend.model.AppUserMob">
+
+	   <field name="email" literal="Email" />
+	   <field name="statusTime" literal="Status Time"  typeHandler="handlerLocalDateTime"/>
+	
+	  </record>
+	  
+	  
+     <record name="details" class="com.mnocompany.smspay.backend.model.AppUserMob" minOccurs="0">
+     
+		<field name="email" />
+	   <field name="statusTime" typeHandler="handlerLocalDateTime"/>
+	 
+	</record>
+  </stream>
+
+
+</beanio>

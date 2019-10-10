@@ -1,0 +1,162 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="user-form.html">
+<link rel="import" href="company-form.html">
+<link rel="import" href="../../bower_components/vaadin-button/src/vaadin-button.html">
+<link rel="import" href="../../bower_components/vaadin-combo-box/src/vaadin-combo-box.html">
+<link rel="import" href="../../bower_components/vaadin-text-field/src/vaadin-text-field.html">
+<link rel="import" href="../../bower_components/vaadin-lumo-styles/badge.html">
+<link rel="import" href="../../styles/shared-styles.html">
+<link rel="import" href="label-with-help.html">
+<link rel="import" href="form-buttons-bar.html">
+<link rel="import" href="../../bower_components/vaadin-form-layout/src/vaadin-form-item.html">
+<link rel="import" href="subscription-management.html">
+
+
+
+
+
+
+<dom-module id="client-profile-company-details">
+    <template>
+<style include="shared-styles lumo-badge">
+            :host {
+                display: block;
+            }
+            #main {
+            	width: 100%;
+   	 			height: 100%;
+                display: flex;
+    			flex-direction: column;
+            }
+            #forms-wrapper {
+            	display: flex;
+            	flex-direction: row;
+            	flex-wrap: wrap;
+            	justify-content: space-between;
+            	flex: 1;
+            	overflow-y: auto;
+            }
+            .container-column {
+            	flex: 1;
+            	max-width: 300px;
+    			padding: var(--lumo-space-m);
+    			display: block;
+            }
+            .form {
+            	width: calc(100% - 2*var(--lumo-space-m)); 
+            	height: 100%;
+            }
+            .container-row {
+            	padding: var(--lumo-space-m);
+            	display: block;
+            }
+            .full-width {
+            	width: 100%;
+            }
+            #balance-text {
+            	width: 100%;
+            	font-size: var(--lumo-font-size-s);
+                color: var(--lumo-secondary-text-color);
+    			font-weight: 500;
+            }
+            #status-details {
+            	padding: var(--lumo-space-l) 0 var(--lumo-space-s) 0;
+			    display: flex;
+			    justify-content: space-between;
+            }
+            #status-actions {
+            }
+            #status-info {
+            	align-self: center;
+            }
+            .caption {
+                font-size: var(--lumo-font-size-xs);
+                color: var(--lumo-secondary-text-color);
+    			font-weight: 500;
+            }
+            .small-container {
+            	padding-top: var(--lumo-space-s);
+            }
+            .container-caption {
+    			width: 100%;
+    			margin-bottom:  var(--lumo-space-s);
+            	font-size: var(--lumo-font-size-s);
+                color: var(--lumo-secondary-text-color);
+    			font-weight: 500;
+    			border-bottom: 1px solid var(--lumo-tertiary-text-color);
+            }
+            #form-buttons-bar {
+            	height: max-content;
+            }
+
+            vaadin-form-item {
+              --vaadin-form-item-label-width: 3em;
+            }
+            
+        </style>
+<div id="main">
+ <div id="forms-wrapper">
+  <div id="company-details" class="container-column">
+   <div class="container-caption">
+    <label>[[companyCaption]]</label>
+   </div>
+   <company-form id="company-form" class="form"></company-form>
+  </div>
+  <div class="container-column">
+   <div class="container-caption">
+    <label>[[userCaption]]</label>
+   </div>
+   <div id="user-details">
+    <user-form id="user-form" class="form"></user-form>
+    <vaadin-form-item>
+     <span slot="label">Status:</span>
+     <span id="status">Active</span>
+    </vaadin-form-item>
+   </div>
+   <div id="status-details">
+    <div id="status-info"></div>
+   </div>
+   <div id="status-actions">
+    <vaadin-button id="activate-btn" theme="small primary success">
+      Button 
+    </vaadin-button>
+    <vaadin-button id="reject-btn" theme="small primary error">
+      Button 
+    </vaadin-button>
+    <vaadin-button id="delete-btn" theme="small primary error">
+      Button 
+    </vaadin-button>
+    <vaadin-button id="suspend-btn" theme="small primary error">
+      Button 
+    </vaadin-button>
+    <vaadin-button theme="tertiary small" id="changePass">
+      Change password 
+    </vaadin-button>
+   </div>
+  </div>
+  <div class="container-column">
+   <div class="container-caption">
+    <label>[[subsrciptionCaption]]</label>
+   </div>
+   <subscription-management id="subscriptionManagement"></subscription-management>
+  </div>
+ </div>
+ <form-buttons-bar id="form-buttons-bar"></form-buttons-bar>
+</div>
+</template>
+
+    <script>
+        class ClientProfileCompanyDetails extends Polymer.Element {
+            static get is() {
+                return 'client-profile-company-details';
+            }
+
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(ClientProfileCompanyDetails.is, ClientProfileCompanyDetails);
+    </script>
+</dom-module>

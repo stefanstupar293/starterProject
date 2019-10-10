@@ -1,0 +1,53 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/vaadin-text-field/src/vaadin-text-field.html">
+<link rel="import" href="../../../bower_components/vaadin-text-field/src/vaadin-password-field.html">
+<link rel="import" href="../../../bower_components/vaadin-combo-box/src/vaadin-combo-box.html">
+<link rel="import" href="../../../bower_components/vaadin-form-layout/src/vaadin-form-item.html">
+<link rel="import" href="../../components/label-with-help.html">
+
+<dom-module id="mob-user-profile">
+    <template>
+<style include="shared-styles">
+        :host {
+             display: block;
+        }
+         
+        #lastLogin{
+     		font-size: var(--lumo-font-size-xs);
+     		font-weight: 500;
+     	}
+            
+   </style>
+<div>
+ <span id="lastLogin">Text</span>
+ <vaadin-form-layout id="formAccount">
+  <vaadin-text-field id="email" theme="small">
+    [[appUserMob.email]] 
+  </vaadin-text-field>
+  <vaadin-password-field id="password" theme="small">
+    [[appUserMob.password]] 
+  </vaadin-password-field>
+   <vaadin-text-field id="paymentMethod" theme="small" >
+     [[appUserMob.paymentMethod]] 
+   </vaadin-text-field>
+  <vaadin-text-field id="paymentAddress" theme="small">
+    [[appUserMob.paymentAddress]] 
+  </vaadin-text-field>
+  <vaadin-combo-box id="status" theme="small"></vaadin-combo-box>
+ </vaadin-form-layout>
+</div>
+</template>
+    <script>
+        class MobUserProfile extends Polymer.Element {
+            static get is() {
+                return 'mob-user-profile';
+            }
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(MobUserProfile.is, MobUserProfile);
+    </script>
+</dom-module>

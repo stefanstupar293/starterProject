@@ -1,0 +1,51 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../styles/shared-styles.html">
+<link rel="import" href="../../components/search-bar.html">
+<link rel="import" href="../../../bower_components/vaadin-grid/src/vaadin-grid.html">
+<link rel="import" href="../../components/zero-content.html">
+
+
+
+<dom-module id="clients-suppliers">
+    <template>
+<style include="shared-styles">
+	:host {
+       display: flex;
+       flex-direction: column;
+       height: 100%;
+    }
+      
+    #grid {
+      height: 100%;
+    }
+     
+	#grid-wrapper{
+	  flex: 1;
+	  border-radius: var(--lumo-border-radius);
+	  height: 100%;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}	
+	
+  </style>
+<search-bar id="search"></search-bar>
+<div id="grid-wrapper" style="width: 100%; height: 100%;">
+ <zero-content id="zero-content"></zero-content>
+ <vaadin-grid id="grid" theme="rounded-rows-grid compact small wrap-cell-content"></vaadin-grid>
+</div>
+</template>
+    <script>
+        class ClientsSuppliers extends Polymer.Element {
+            static get is() {
+                return 'clients-suppliers';
+            }
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(ClientsSuppliers.is, ClientsSuppliers);
+    </script>
+</dom-module>

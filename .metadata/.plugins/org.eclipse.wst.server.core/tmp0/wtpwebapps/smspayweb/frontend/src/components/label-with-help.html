@@ -1,0 +1,86 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../../bower_components/vaadin-icons/vaadin-icons.html">
+<link rel="import" href="../../bower_components/vcf-tooltip/src/vcf-tooltip.html">
+
+<dom-module id="label-with-help">
+    <template>
+<style include="shared-styles">
+            :host {
+                display: block;
+                position: relative;
+            }
+
+            #content {
+                display: flex;
+                align-items: center;
+            }
+
+            iron-icon {
+            	height: 14px;
+            }
+            
+            #helpText{
+	            font-size: var(--lumo-font-size-s);
+	            min-width: 140px;
+	            max-width: 350px;
+	            overflow: auto;
+	            max-height: 300px;
+	            /* inset: 32px auto auto 0px !important; */
+	            white-space: normal;
+            }
+            
+            .firefox-grid{
+            	/* inset: 32px auto auto 0px !important; */
+            	position: fixed;
+            	/* top: 36px !important;  */
+            	/* left: auto; */
+            }
+            
+            .safari{
+            	position: absolute;
+            }
+            
+            .safari-grid{
+            	position: fixed;
+            	top: 36px !important; 
+            	left: auto;
+            }
+            
+        </style>
+<div id="content">
+ <label id="label">[[labelText]]</label>
+ <iron-icon id="helpIcon" icon="vaadin:question-circle-o" theme="small"></iron-icon>
+ <vcf-tooltip id="helpText" for="helpIcon" position="[[position]]">
+  [[tooltipContent]] 
+ </vcf-tooltip>
+</div>
+</template>
+    <script>
+        class LabelWithHelp extends Polymer.Element {
+            static get is() {
+                return 'label-with-help';
+            }
+            static get properties() {
+                return {
+                    tooltipContent: {
+			            type: String,
+			            value: 'Tooltip text here',
+			            reflectToAttribute: true
+          			},
+          			labelText: {
+          				type: String,
+			            value: 'Label',
+			            reflectToAttribute: true
+          			},
+          			position: {
+          				type: String,
+          				value: 'bottom',
+          				reflectToAttribute: true
+          			}
+                };
+            }
+        }
+        customElements.define(LabelWithHelp.is, LabelWithHelp);
+    </script>
+</dom-module>

@@ -1,0 +1,741 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../styles/shared-styles.html">
+<link rel="import" href="../../bower_components/vaadin-ordered-layout/src/vaadin-horizontal-layout.html">
+<link rel="import" href="../../bower_components/vaadin-icons/vaadin-icons.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../../bower_components/vaadin-form-layout/src/vaadin-form-layout.html">
+<link rel="import" href="../../bower_components/vaadin-form-layout/src/vaadin-form-item.html">
+<link rel="import" href="../../bower_components/vaadin-dialog/src/vaadin-dialog.html">
+<link rel="import" href="../../bower_components/vaadin-lumo-styles/badge.html">
+
+<dom-module id="handset-box">
+    <template>
+<style include="shared-styles lumo-badge">
+
+   :host{
+	 width: 100%;
+	 height: 100%; 
+	 overflow: hidden;
+	
+   }
+
+   :host([hidden]){
+   	  display: none !important;
+   }
+
+ vaadin-form-item {
+	--vaadin-form-item-label-width: 6em;
+	--vaadin-form-item-label-spacing: 0.5em;
+	--vaadin-form-item-row-spacing: -1.3em;
+ }
+
+ .card{
+	background: white;
+    color: #474747;
+    border-radius: 2px;
+    border: 0px;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+ }
+
+ .bold{
+	font-weight: 600;
+ }
+
+
+ .handset-item-dual {
+	position: relative;
+	width: 310px;
+	margin: 6px ;
+	font-size: 14px;
+ }
+
+ .top-part {
+	padding: 6px 5px;
+	padding-bottom: 0px;
+	/* width: 300px; */
+ }
+
+ .top-part .item-header{
+	height: 70px;
+}
+
+.header-slot-1,
+.header-slot-2,
+.header-slot-single {
+	position: relative;
+	border: 1px solid #c5c5c5;
+	background-color: #f3f4f6;
+	border-radius: 4px;
+	padding-top: 3px;
+	flex: 1;
+	margin: 0 3px;
+	min-height: 65px;
+}
+
+.header-network-country-wrapper {
+	justify-content: center;
+	display: inline;
+}
+
+.header-slot-1,
+.header-slot-2,
+.header-slot-single {
+	margin-bottom: 3px;
+	text-align: center;
+}
+
+.header-slot-1 {
+	padding-left: 3px;
+}
+
+.header-slot-2 {
+	padding-right: 3px;
+}
+
+.top-part  .edit{
+	visibility: hidden;
+	position: absolute;
+	top: -6px;
+	right: -6px;
+	background-color: rgba(0, 130, 230, 0.8);
+	z-index: 1;
+	border-radius: 50%;
+	color: #fff;
+	width: 30px;
+	height: 30px;
+	font-size: 13px;
+	--lumo-button-size: var(--lumo-size-xxs);
+}
+.top-part  .edit iron-icon{
+	height: 14px;
+    padding: 7px 4px;
+}
+
+.top-part:hover {
+	cursor: pointer;
+	background-color: #d8dadc;
+	border-radius: 3px 3px 0px 0px;
+}
+
+.top-part:hover .edit{
+	visibility: visible;
+}
+
+.header-slot-empty {
+    background: #fafafa;
+    color: #464646;
+    -webkit-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05), inset 0 2px 2px 0 rgba(0, 0, 0, 0.14), inset 0 1px 5px 0 rgba(0, 0, 0, 0.12), inset 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05), inset 0 2px 2px 0 rgba(0, 0, 0, 0.14), inset 0 1px 5px 0 rgba(0, 0, 0, 0.12), inset 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    border: 0 solid #b2b2b2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-weight: 600;
+    color: var(--lumo-tertiary-text-color);
+
+}
+
+.handset-slot-archived .v-button {
+	font-size: 13px;
+	font-weight: 600;
+	padding: 1px 3px;
+	height: 22px;
+}
+
+.roaming-allowed {
+	background-color: rgba(175, 230, 180, 0.6);
+}
+
+.item-header .on-off {
+	position: absolute;
+	top: -9px;
+	left: -9px;
+	border-radius: 50%;
+	line-height: 1;
+	height: 30px;
+	width: 30px;
+	padding: 3px;
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 200;
+	--lumo-button-size: var(--lumo-size-xxs);
+
+	display: none;
+}
+
+
+.item-header .slot-header-top > * {
+	margin: 0 2px;
+}
+
+.header-network-country-wrapper {
+	display: flex;
+	width: 100%;
+	height: 22px;
+	text-align: center;
+	padding-bottom: 3px;
+}
+
+.header-network-country-wrapper .v-caption {
+	line-height: 1.2;
+}
+
+.header-network-country-wrapper .v-icon {
+	height: 11px;
+	margin: 5px;
+	margin-right: 4px;
+}
+
+.header-network-country-wrapper .header-network-country {
+	font-size: 12px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	line-height: 1.8;
+	flex: 1;
+	display: inline-block;
+}
+
+.item-header .title-handset {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.item-header .v-button {
+	padding: 0 6px;
+}
+
+
+.item-header .edit {
+	font-size: 16px;
+	padding-right: 2px;
+}
+
+.item-header .sim-card-img {
+	width: 16px;
+	margin: 0px 2px;
+	padding: 1px;
+}
+
+.item-header .roaming-sign {
+	line-height: 1.3;
+	font-size: 16px;
+	padding: 0 2px;
+}
+
+.top-part .wifi-img {
+	padding: 3px;
+}
+
+ .top-part .wifi-img-holder {
+	padding: 0 2px;
+	display: flex;
+	height: 20px;
+} 
+
+.top-part .wifi-img-holder .wifi-img {
+	width: 30px;
+    padding: 3px;
+}
+
+
+.top-part .mcc-mnc-country {
+	line-height: 1.2;
+	height: 18px;
+	display: flex;
+	justify-content: center;
+}
+
+.top-part .mcc-mnc-country .v-caption {
+	line-height: 0.9;
+	padding: 0 4px;
+}
+
+.top-part .mcc-mnc-country .flag-img {
+	height: 12px;
+	padding: 2px 4px;
+}
+
+.top-part .roaming-sign {
+	color: #9423d8;
+	margin-right: 3px;
+}
+
+.top-part .online-status {
+	box-shadow: none !important;
+	position: relative;
+	text-align: center;
+	font-weight: 600;
+	color: #fff;
+	  min-width: 1.3em !important;
+	  width: 1.3em !important;
+	  height: 1.3em !important;
+	  margin-left: 3px;
+	  margin-top: 3px;
+	  border-radius: 50%;
+}
+
+.top-part .offline{
+	background-color: var(--lumo-error-color)
+}
+
+.top-part .online{
+	background-color: var(--lumo-success-color)
+}
+
+.top-part .blocked,
+.top-part .archived{
+  width: auto !important;
+  min-width: auto !important;
+  border-radius: var(--lumo-border-radius-s);
+}
+.top-part .archived{
+    background-color: var(--lumo-contrast-40pct);
+}
+
+.top-part .top-footer {
+	display: flex;
+	border-bottom: 1px solid #dcdbdb;
+	padding: 3px 0;
+	height: 24px;
+}
+
+.top-part .top-footer .sim-card-img {
+	height: 22px;
+	padding: 3px;
+}
+
+.top-part .top-footer .email {
+	padding: 0 6px;
+	font-size: 15px;
+	/* font-weight: 500; */
+	width: 100%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	text-align: center;
+	height: calc(var(--lumo-button-size) /2);
+    line-height: 1;
+    cursor: pointer;
+    color: var(--lumo-primary-color);
+    font-weight: 500;
+    line-height: 1.5;
+}
+.top-part .top-footer .email:hover {
+	cursor:pointer;
+}
+
+#logGet{
+	padding: 0 ;
+	height: 20px;
+    color: var(--lumo-primary-color);
+}
+
+.top-part .model-name {
+	font-size: 15px;
+}
+
+.top-part .handset-notes {
+	color: #737373;
+	font-size: 16px;
+	margin: 0 3px;
+}
+
+.details-form {
+	padding: 6px;
+	padding-top: 0;
+}
+
+/* .details-form .v-formlayout-contentcell .v-label {
+	white-space: normal;
+} */
+
+.details-form .v-formlayout-captioncell {
+	padding-right: 9px;
+	min-width: 100px;
+}
+
+.details-form .v-caption-model-name {
+	height: auto;
+}
+
+.details-form .v-formlayout-errorcell {
+	display: none;
+}
+
+.details-form .section-additional-info {
+	border-bottom: 1px solid #dcdbdb;
+	position: relative;
+}
+
+.details-form .section-additional-info .additional-info-popup {
+	padding: 0;
+	position: absolute;
+	top: -2px;
+	right: -6px;
+	width: 30px;
+	height: 30px;
+	font-size: 16px;
+}
+
+.details-form .section-additional-info .additional-info-popup:hover {
+	background-color: rgba(0, 130, 230, 0.3) !important;
+}
+
+.details-form .section-title-holder {
+	display: flex;
+	border-bottom: 1px solid #dcdbdb;
+	margin-bottom: -3px;
+}
+
+/* .details-form .section-title-holder .v-label {
+	font-size: 14px;
+	font-weight: bold;
+	color: #8f8f8f;
+	padding-right: 9px;
+} */
+
+.details-form .section-title-holder .section-title {
+	flex: 1;
+	font-weight: normal;
+}
+
+.details-form .section-title-holder .section-title-item {
+	font-size: 15px;
+	font-weight: bold;
+	color: #8f8f8f;
+}
+
+.details-form .section-title-holder .v-button {
+	padding: 0 6px;
+	height: 24px;
+	font-size: 14px;
+	color: #a0a0a0;
+}
+
+.details-form  .section-data-title-holder{
+	line-height: 1.35;
+}
+
+.details-form  .section-data-title-holder .archive-counter iron-icon{
+	height: var(--lumo-space-m);
+}
+
+.details-form .section-dual-part-wrapper {
+	display: flex;
+	width:100%;
+	min-height: 20px;
+}
+
+.details-form .section-dual-part-wrapper :nth-child(2) {
+	padding: 0 1px;
+}
+
+.details-form .section-dual-part-wrapper :last-child,
+.details-form .section-dual-part-wrapper :first-child {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	flex: 1;
+}
+
+.details-form .section-dual-part-wrapper :last-child {
+	text-align: right;
+}
+
+.details-form .section-spn {
+	height: 36px;
+	align-items: center;
+}
+
+.details-form .section-spn :last-child,
+.details-form .section-spn :first-child:not(.spn-lab) {
+	white-space: normal;
+	font-weight: 400;
+	color: #4d7273;
+	font-size: 13px;
+	line-height: 1;
+	overflow: hidden;
+	/* display: -webkit-box; */
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	text-align: left;
+	padding-top: 6px;
+}
+
+.details-form .section-spn :nth-child(3) {
+	text-align: right;
+	padding-left: 3px;
+}
+
+.details-form .section-spn-single .spn-2{
+	position: absolute;
+    right: 6px;
+    width: 40%;
+    text-align: right;
+}
+
+.details-form .section-spn-single .spn-1,
+.details-form .section-spn-single .spn-2{
+	flex: unset;
+	width: 40%;
+}
+
+#ip{
+	white-space: nowrap !important;
+}
+
+.details-form .v-caption-section-title {
+	height: 1.5em;
+}
+
+.details-form .v-caption {
+	font-weight: bold;
+	line-height: 1.5;
+}
+
+.details-form .v-formlayout-row {
+	line-height: 1 !important;
+}
+
+.details-form .v-formlayout-captioncell {
+	line-height: 0.5;
+}
+
+.details-form .v-formlayout-contentcell {
+	padding-right: 0;
+}
+
+.details-form .v-formlayout-firstrow .v-formlayout-captioncell {
+	line-height: 1.5 !important;
+}
+
+.details-form .v-formlayout-error-indicator {
+	width: 16px;
+}
+
+.details-form .registered-wrapper {
+	color: #888888;
+	margin-top: 3px;
+	margin-bottom: -3px;
+	border-top: 1px solid #dcdbdb;
+	font-size: 13px;
+}
+
+.details-form .registered-wrapper-single-sim {
+	margin-bottom: -6px;
+}
+
+.details-form .registered-wrapper-single-sim .v-icon {
+	padding-right: 5px;
+}
+
+.roaming {
+	border: 2px solid purple !important;
+	border-radius: 4px;
+}
+
+.ported {
+	color: #1e7dce;
+}
+
+.ported .ported-icon {
+	font-size: 11px;
+	font-weight: 600;
+	color: #44423e;
+	border: 2px solid #1e7dce;
+	margin-right: 1px;
+	border-radius: 50%;
+	padding: 0px 2px;
+	padding-left: 4px;
+}
+
+.handset-offline{
+	background-color: #ffd0d0;
+	position: relative;
+
+}
+
+.handset-offline .details-form{
+	background-color: #ffd0d0;
+}
+
+.handset-offline .top-part .item-header .header-slot-1,
+.handset-offline .top-part .item-header .header-slot-2,
+.handset-offline .top-part .item-header .header-slot-single{
+	background-color: #ffe4e4;
+}
+
+.handset-offline .top-part .item-header .header-slot-1:hover,
+.handset-offline .top-part .item-header .header-slot-2:hover,
+.handset-offline .top-part .item-header .header-slot-single:hover{
+	background-color: #ffe4d5;
+}
+
+.handset-offline .top-part .item-header .roaming-allowed{
+	background-color: rgba(175, 230, 180, 0.65);
+}
+
+.handset-offline .top-part .item-header .header-slot .slot-header-top{
+	border-bottom: 1px solid #ccc;
+}
+
+.handset-offline .top-part  .top-footer{
+	border-bottom: 1px solid #ccc;
+}
+
+.handset-offline  .details-form .section-title-holder{
+	color: #858585;
+	border-bottom: 1px solid #ccc;
+}
+
+
+#lastSms1,
+#lastSms2{
+	color: #4d7273;
+	font-size: 13px;
+}
+
+</style>
+<div class="handset-item-dual card" width-full id="root">
+ <div class="top-part" width-full>
+  <span class="borderless tiny edit" id="edit">
+   <iron-icon icon="vaadin:edit"></iron-icon></span>
+  <vaadin-horizontal-layout class="item-header" width-full id="topHeader" spacing="">
+   <div class="header-slot-1" id="headerSlot1">
+    <div class="msisdn-wrapper" id="msisdnWrapper">
+     <span class="title-handset" id="slot1msisdn">000000000000</span>
+    </div>
+    <div class="mcc-mnc-country" id="mccMncGsmSignal">
+     <img id="flagImg" class="flag-img">
+     <span class="small bold mcc-mnc" id="mccMnc">000000</span>
+    </div>
+    <div class="header-network-country-wrapper" id="headerNetworkCountryWrapper">
+     <img class="sim-card-img" id="simCardImg">
+     <span title="Roaming" class="bold large roaming-sign" id="roaming1"> R </span>
+     <span class="small header-network-country" id="handset1Title">Unknown</span>
+    </div>
+   </div>
+   <div class="header-slot-2" id="headerSlot2">
+    <div class="slot-header-top"></div>
+    <div class="msisdn-wrapper" id="msisdnWrapper2">
+     <span class="title-handset" id="slot2msisdn">000000000000</span>
+    </div>
+    <div class="mcc-mnc-country" id="mccMncGsmSignal2">
+     <img id="flagImg2" class="flag-img">
+     <span class="small bold mcc-mnc" id="mccMnc2">000000</span>
+    </div>
+    <div class="header-network-country-wrapper" id="headerNetworkCountryWrapper2">
+     <img class="sim-card-img" id="simCard2Img">
+     <span title="Roaming" class="bold large roaming-sign" id="roaming2"> R </span>
+     <span class="small header-network-country" id="handset2Title">Unknown </span>
+    </div>
+   </div>
+  </vaadin-horizontal-layout>
+  <div class="top-footer" width-full id="topFooter">
+   <div class="wifi-img-holder" id="wifiBatImgHolder">
+    <img id="wifiImg" class="wifi-img">
+   </div>
+   <span id="email" class="email" theme="tertiary">unknown@email.com</span>
+   <span theme="icon small tertiary" aria-label="Add new" id="logGet">
+    <iron-icon icon="lumo:eye"></iron-icon></span>
+   <span class="online-status offline" theme="badge error" id="statusOnline">-</span>
+  </div>
+ </div>
+ <div class="details-form" width-full id="detailsForm">
+  <div width-full>
+   <div class="section-dual-part-wrapper" width-full id="imeiWrapper">
+    <span class="small light" width-full id="sim1_IMEI">0000000000000000</span>
+    <span class="small bold" id="imeiLab"> IMEI </span>
+    <span class="small light" width-full id="sim2_IMEI">0000000000000000</span>
+   </div>
+   <div class="section-dual-part-wrapper" width-full id="imsiWrapper">
+    <span class="small light" width-full id="sim1_IMSI">0000000000000 </span>
+    <span class="small bold" id="imsiLab"> IMSI </span>
+    <span class="small light" width-full id="sim2_IMSI">0000000000000 </span>
+   </div>
+  </div>
+  <div class="section-title-holder" width-full>
+   <span class="section-title section-title-item"> Network </span>
+  </div>
+  <div width-full>
+   <div class="section-dual-part-wrapper section-spn" width-full id="spnWrapper">
+    <span class="small light spn-1" width-full id="operatorSpn1"> unknown </span>
+    <span description="Operator (SPN)" class="small bold spn-lab" id="spnLab"> SPN </span>
+    <span class="small light spn-2" width-full id="operatorSpn2"> unknown </span>
+   </div>
+  </div>
+  <div class="section-title-holder section-data-title-holder" width-full>
+   <span class="section-title section-title-item"> Data </span>
+   <span class="archive-counter" id="archiveCounter">
+    <iron-icon icon="vaadin:timer"></iron-icon>Archived in N days</span>
+  </div>
+  <div width-full>
+   <vaadin-form-layout class="data-form">
+    <vaadin-form-item>
+     <span slot="label" class="bold">IPv4</span>
+     <span class="small light" id="ip">0.0.0.0, 254.254.254.254</span>
+    </vaadin-form-item>
+    <vaadin-form-item>
+     <span slot="label" class="bold">Last Data </span>
+     <span class="small light" id="lastGSMData"> Unknown </span>
+    </vaadin-form-item>
+    <vaadin-form-item>
+     <span slot="label" class="bold">Last Wifi</span>
+     <span class="small light" id="lastWifi"> Unknown </span>
+    </vaadin-form-item>
+    <div width-full class="section-dual-part-wrapper" style="padding-top: 3px" id="lastSmsWrapper">
+     <span class="tiny orange" width-full id="lastSms1">unknown</span>
+     <span caption-as-html icon="fonticon://Vaadin-Icons/e7dc" class="small bold" id="lastSmsLab"> Last Sms </span>
+     <span class="tiny orange" width-full id="lastSms2">unknown</span>
+    </div>
+   </vaadin-form-layout>
+  </div>
+  <div class="section-title-holder" width-full>
+   <span class="section-title section-title-item"> Device </span>
+  </div>
+  <div width-full>
+   <vaadin-form-layout spacing="false" margin="false">
+    <vaadin-form-item>
+     <span class="colored bold model-name" width-full id="modelName">Unknown</span>
+     <span class="bold" slot="label">Model</span>
+    </vaadin-form-item>
+    <vaadin-form-item>
+     <span class="bold" slot="label">OS ver.</span>
+     <span class="small light" id="versionOS">Android</span>
+    </vaadin-form-item>
+    <vaadin-form-item>
+     <span class="bold" slot="label">Uptime</span>
+     <span class="small light" id="upTime">Unknown</span>
+    </vaadin-form-item>
+    <vaadin-form-item>
+     <span class="bold" slot="label">App ver.</span>
+     <span class="small light" id="appVersion">Unknown</span>
+    </vaadin-form-item>
+   </vaadin-form-layout>
+   <div class="registered-wrapper section-dual-part-wrapper" width-full id="registeredWrapper">
+    <span class="tiny light" width-full id="registered1">99.09.9999 99:99:99</span>
+    <span icon="fonticon://Vaadin-Icons/e7b9" class="tiny" id="registeredLab"> Registered </span>
+    <span class="tiny light" width-full id="registered2">99.09.9999 99:99:99</span>
+   </div>
+  </div>
+ </div>
+</div>
+</template>
+    <script>
+        class HandsetBox extends Polymer.Element {
+            static get is() {
+                return 'handset-box';
+            }
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(HandsetBox.is, HandsetBox);
+    </script>
+</dom-module>

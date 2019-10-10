@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beanio xmlns="http://www.beanio.org/2012/03" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.beanio.org/2012/03 http://www.beanio.org/2012/03/mapping.xsd">
+   
+  <stream name="StatTopMsisdnsSmsReceiverStream" format="csv">
+
+	 <typeHandler  name="handlerLocalDateTime" class="com.mnocompany.smspay.backend.converters.beanio.LocalDateTimeTypeHandler" />
+	 
+	 <record name="header" minOccurs="1" maxOccurs="1" class="com.mnocompany.smspay.backend.model.statistics.StatTopCheckpinMsisdnTries">
+
+	   <field name="msisdn" literal="Msisdn" />
+	   <field name="countAll" literal="All" />
+	   <field name="countSuccessfull" literal="Successfull"  />
+	   <field name="email" literal="Email" />
+	   <field name="imei" literal="Imei" />
+	   <field name="lastAttempt" literal="Last Attempt" typeHandler="handlerLocalDateTime" />
+
+	  </record>
+	  
+	  
+     <record name="details" class="com.mnocompany.smspay.backend.model.statistics.StatTopCheckpinMsisdnTries" minOccurs="0">
+     
+		<field name="msisdn" type="string" />
+	    <field name="countAll" />
+	    <field name="countSuccessfull" />
+	    <field name="email" />
+	    <field name="imei" />
+	    <field name="lastAttempt"  typeHandler="handlerLocalDateTime" />
+	   
+	</record>
+  </stream>
+
+
+</beanio>

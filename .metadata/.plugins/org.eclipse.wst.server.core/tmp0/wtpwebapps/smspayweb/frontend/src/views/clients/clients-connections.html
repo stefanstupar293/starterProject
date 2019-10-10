@@ -1,0 +1,70 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../styles/shared-styles.html">
+<link rel="import" href="../../components/search-bar.html">
+<link rel="import" href="../../../bower_components/vaadin-grid/src/vaadin-grid.html">
+<link rel="import" href="../../components/zero-content.html">
+
+
+<dom-module id="clients-connections">
+    <template>
+<style include="shared-styles">
+	:host {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+	
+	#grid-wrapper{
+		flex: 1;
+		border-radius: var(--lumo-border-radius);
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	#grid {
+		height: 100%;
+	}
+	
+	.suppliers-name{
+		line-clamp: 3;
+		-webkit-line-clamp: 3;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		max-height: 55px;
+		white-space: normal;
+		color: var(--lumo-secondary-text-color);
+		z-index: 10;
+		padding: 0;
+	
+	}
+	
+	.suppliers-name:hover{
+		cursor: pointer;
+		color: var(--lumo-primary-color);
+	}
+		
+		 
+	</style>
+	
+<search-bar id="search"></search-bar>
+<div id="grid-wrapper" style="width: 100%; height: 100%;">
+ <zero-content id="zero-content"></zero-content>
+ <vaadin-grid id="grid" theme="rounded-rows-grid compact small wrap-cell-content"></vaadin-grid>
+</div>
+</template>
+    <script>
+        class ClientsConnections extends Polymer.Element {
+            static get is() {
+                return 'clients-connections';
+            }
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(ClientsConnections.is, ClientsConnections);
+    </script>
+</dom-module>

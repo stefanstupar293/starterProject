@@ -1,0 +1,83 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../../bower_components/vaadin-icons/vaadin-icons.html">
+<link rel="import" href="../../styles/shared-styles.html">
+
+<dom-module id="spinner-with-label">
+    <template>
+<style include="shared-styles">
+            :host {
+                display: flex;
+                padding: 0 var(--lumo-space-xs);
+                justify-content: center;
+            }
+            
+            :host([hidden]) { 
+				display: none !important; 
+			}
+            
+    		#icon-spinner{
+	    		color: var(--lumo-primary-color);
+				width: var(--lumo-size-xs);
+				padding: 8px 6px;
+				display: inline-block;
+				-webkit-animation: spin 3s linear infinite;
+				-moz-animation: spin 3s linear infinite;
+				-ms-animation: spin 3s linear infinite;
+				-o-animation: spin 3s linear infinite;
+				animation: spin 3s linear infinite;
+			    -webkit-transform: translateZ(0);
+			    -ms-transform: translateZ(0);
+			    will-change: transform;
+			    transform: rotateZ(360deg);
+            }
+            
+            #label-text{
+            	align-items: center;
+            	display: flex;
+            	font-size: var(--lumo-font-size-m);
+            	color: var(--lumo-contrast-60pct);
+    			padding: (--lumo-space-m);
+            }
+            
+             /* ROTATE */
+        
+		    @-ms-keyframes spin {
+			    from { -ms-transform: rotate(0deg); }
+			    to { -ms-transform: rotate(360deg); }
+			}
+			@-moz-keyframes spin {
+			    from { -moz-transform: rotate(0deg); }
+			    to { -moz-transform: rotate(360deg); }
+			}
+			@-webkit-keyframes spin {
+			    from { -webkit-transform: rotate(0deg); }
+			    to { -webkit-transform: rotate(360deg); }
+			}
+			@keyframes spin {
+			    from {
+			        transform:rotate(0deg);
+			    }
+			    to {
+			        transform:rotate(360deg);
+			    }
+			}
+            
+        </style>
+<iron-icon id="icon-spinner" icon="vaadin:spinner"></iron-icon>
+<span id="label-text">Text</span>
+</template>
+    <script>
+        class SpinnerWithLabel extends Polymer.Element {
+            static get is() {
+                return 'spinner-with-label';
+            }
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(SpinnerWithLabel.is, SpinnerWithLabel);
+    </script>
+</dom-module>

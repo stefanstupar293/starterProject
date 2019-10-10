@@ -1,0 +1,834 @@
+Id, Name, Operator, PrimaryMNC, CountryId, MNPLookupProvider, Importance, MonitoringThreshold5Minutes, MonitoringThreshold24Hours1, MonitoringThreshold24Hours2, PreRoutingScriptId, InternalComments, MonitoringMethods, MonitoringTemplateNames, MonitoringTemplateLanguages, AlternativePreRoutingScriptId
+1, 'AIS', 'Advanced Info Service PLC', 1, 35, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Google NEW,Telegram,Verify,Viber,WhatsApp]', '[English]', NULL
+3, 'AWCC', 'Afghan Wireless Communication Company', 1, 44, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+4, 'Africell', 'Africell (Gambia) Ltd', 2, 53, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+6, 'Al Madar', 'AL MADAR AL JADID', 1, 52, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+7, 'Alands Mobiltelefon', 'Alands Telekommunikation Ab', 14, 112, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+8, 'Telekom', 'Telekom Albania', 1, 109, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+9, 'Megacom', 'Alfa Telecom Joint Stock Company', 5, 189, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+10, 'TM-Cell', 'Altyn Asyr MC', 2, 186, 'LocalPrefix', 'Normal', 80, 80, 60, 145, 'IMO code extraction</br>Google content change', 'Handset', '[]', '[]', NULL
+11, 'Claro', 'AM Wireless Uruguay S.A.', 10, 150, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+12, 'Claro', 'AMX Argentina S.A.', 310, 24, 'LocalPrefix', 'Normal', 80, 80, 60, 154, 'Google content change to G-<code>', 'MittoMonitoring', '[]', '[]', NULL
+13, 'Claro', 'AMX Paraguay S.A.', 2, 147, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+14, 'Antel', 'ANTEL', 1, 150, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+15, 'APUA', 'Antigua Public Utilities Authority', 30, 194, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+16, 'MTN', 'Areeba Guinea', 4, 57, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+17, 'Beeline', 'ArmenTel', 1, 118, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+18, 'Telia', 'Telia Eesti AS', 1, 116, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Google,Snapchat,Telegram,Viber,WhatsApp]', '[English]', NULL
+19, 'Asia Cell', 'Asiacell Communications LLC', 5, 173, 'LocalPrefix', 'Normal', 80, 80, 60, 139, 'Recipients are checked for validity. If 0 follows CC, it\'s removed.', 'Handset', '[]', '[]', NULL
+20, 'Life', 'Astelit LLC', 6, 123, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Google,Telegram,Viber,WhatsApp]', '[English]', NULL
+21, 'metroPCS', 'metroPCS Communications, Inc.', 660, 215, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+22, 'Zain', 'Atheer Telecom Iraq', 20, 173, 'LocalPrefix', 'Normal', 80, 80, 60, 157, '79: For pagebites1 and twitter1 traffic remove keyword \"code\"</br>157: code extration for google1 and keyword code for twitter1 and pagebites1', '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Twitter,Viber,WhatsApp]', '[]', NULL
+23, 'Etisalat', 'Atlantique Telecom Centrafrique SA', 1, 69, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+24, 'Moov', 'Atlantique Telecom Cote d Ivoire', 2, 58, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+26, 'Mobilis', 'ATM MOBILIS', 1, 50, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+27, 'Turk Telekom', 'Türk Telekom', 3, 41, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+28, 'Robi', 'Axiata (Bangladesh) Limited.', 2, 167, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+29, 'Azercell', 'Azercell Telecom BM', 1, 187, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+30, 'Nar Mobile', 'Azerfon LLC', 4, 187, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+31, 'B-Mobile', 'B-Mobile', 11, 182, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+32, 'B-Mobile', 'B-Mobile Communications Sdn Bhd', 2, 152, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+33, 'Batelco', 'Bahrain Telecommunications Company', 1, 180, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Telegram,Twitter,Viber,WhatsApp]', '[English]', NULL
+34, 'Bakcell', 'Bakcell Ltd', 2, 187, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+35, 'Life', 'Belarusian Telecommunications Network CJSC', 4, 119, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Facebook,Google,Google NEW,Twitter,Viber,WhatsApp]', '[English]', NULL
+36, 'Proximus', 'Belgacom SA NV', 1, 7, 'MittoMNPEnum', 'Normal', 80, 80, 60, 137, 'Google content change', '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+37, 'DigiCell', 'Belize Telemedia Limited', 67, 134, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+38, 'Bell', 'Bell Mobility Inc.', 610, 210, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+39, 'BH Mobile', 'BH Telecom', 90, 128, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Tango,Telegram,Viber,WhatsApp]', '[English]', NULL
+40, 'Airtel', 'Bharti Airtel Lanka (Private) Limited', 5, 45, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+41, 'Bee Mobile', 'BMobile Limited', 1, 154, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+42, 'bemobile', 'BMobile Limited', 2, 214, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+43, 'Bouygues', 'Bouygues Telecom', 20, 8, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Tango,Telegram,WhatsApp]', '[English]', NULL
+44, 'BTC', 'BTC Mobile (PTY) Ltd', 4, 97, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+45, 'Vivacom', 'Bulgarian Telecommunications Company AD', 3, 113, 'MittoMNPEnum', 'Normal', 80, 80, 60, 130, 'Google => content change and validation', '[TestSMS]', '[ChatOn,Facebook,Google,Instagram,Telegram,Tinder,Viber,WhatsApp]', '[English]', NULL
+46, 'LIME', 'Cable & Wireless (Cayman Islands) Limited', 140, 195, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+47, 'C&W', 'Cable & Wireless (Seychelles)', 1, 79, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+48, 'LIME', 'Cable & Wireless (West Indies) Limited', 170, 216, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+49, 'C&W', 'Cable & Wireless (West Indies) Ltd. Anguilla', 840, 193, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+50, 'C&W', 'Cable & Wireless Barbados Ltd.', 600, 192, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+51, 'LIME', 'Cable & Wireless Caribbean Cellular (Antigua) Limi', 920, 194, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+52, 'Cable & Wireless', 'Cable & Wireless Caribbean Cellular', 110, 201, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+53, 'LIME', 'Cable & Wireless Ltd', 110, 203, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+54, 'C&W', 'Cable & Wireless Dominica Ltd.', 110, 202, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+55, 'C&W', 'Cable & Wireless Grenada ltd.', 110, 197, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+57, 'LIME', 'Cable & Wireless Jamaica Limited', 180, 208, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+58, 'Cable & Wireless', 'Cable & Wireless Panama S.A.', 1, 140, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+59, 'LIME', 'Cable & Wireless St. Kitts & Nevis Ltd', 110, 207, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+60, 'C&W', 'Cable & Wireless West Indies Ltd (Montserrat)', 860, 199, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+61, 'Cable & Wireless', 'Cable & Wireless West Indies Ltd', 350, 198, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+62, 'Touch', 'Cable and Wireless Plc', 1, 133, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+63, 'Sure Mobile', 'Cable & Wireless Guernsey / Sure Mobile (Jersey)', 55, 15, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+64, 'qb', 'Cambodia Advance Communications Co. Ltd (CADCOMMS)', 4, 165, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+65, 'Mobitel', 'CamGSM', 1, 165, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+66, 'CCT', 'Caribbean Cellular Telephone', 570, 216, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+67, 'Celcom', 'CELCOM GSM', 19, 29, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[]', NULL
+68, 'Cell C', 'Cell C (Pty) Ltd', 7, 4, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[]', NULL
+69, 'Cellcom', 'Cellcom Guinee S.A.', 5, 57, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+70, 'Orange', 'Orange Liberia', 7, 64, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+71, 'Orange', 'Cellplus Mobile Communications Ltd.', 1, 63, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+72, 'Airtel', 'Bharti Airtel Limited', 1, 65, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+73, 'Airtel', 'CelTel (Zain) Tchad SA', 1, 68, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+74, 'Airtel', 'Celtel Burkina Faso', 2, 59, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+75, 'Airtel', 'Celtel Congo', 2, 76, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+76, 'Airtel Congo', 'CelTel Congo SA', 1, 75, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+77, 'Airtel', 'Celtel Gabon SA', 3, 74, 'LocalPrefix', 'Normal', 80, 80, 60, 129, 'Alt-PRS: replace recipient prefix 2414 to 21404 and 2147 to 21407', 'Handset', '[]', '[]', 129
+78, 'Airtel', 'Celtel Kenya Limited.', 3, 85, 'MittoMNPEnum', 'Normal', 80, 80, 60, 156, 'code extract for google', '[MittoMonitoring]', '[Facebook,Google,Google NEW,IMO only code,Verify,WeChat,WhatsApp]', '[English]', NULL
+79, 'Airtel', 'CelTel Limited', 10, 95, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+80, 'Airtel', 'Celtel Madagascar', 1, 91, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+81, 'Airtel', 'Celtel Niger', 2, 60, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+82, 'Airtel', 'Celtel Nigeria Ltd', 20, 67, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+83, 'Airtel', 'Celtel Tanzania Limited', 5, 86, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+84, 'Airtel', 'Celtel Uganda Limited', 1, 87, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+85, 'Airtel', 'Celtel Zambia Limited', 1, 90, 'LocalPrefix', 'Normal', 80, 80, 60, 159, 'Google content change', 'Handset', '[]', '[]', NULL
+86, 'Tele2', 'Tele2', 20, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, 156, 'code extract for google', 'MittoMonitoring', '[]', '[]', NULL
+87, 'Mobile', 'China Mobile', 0, 40, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[]', NULL
+88, 'China Mobile HK', 'CHINA MOBILE HONG KONG COMPANY LIMITED', 12, 163, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Google,Instagram,SMS,Telegram,Twitter,Viber]', '[English]', NULL
+89, 'Unicom', 'China Unicom', 1, 40, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+90, 'Chungwa', 'Chunghwa Telecom', 92, 168, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+91, 'Babilon-Mobile', 'CJSC Babilon-Mobile', 4, 185, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+93, 'Claro', 'Claro Chile SA', 3, 26, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'MittoMonitoring', '[]', '[]', NULL
+94, 'Claro', 'Claro Panama S.A.', 3, 140, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+95, 'Zong', 'CMPak Limited', 4, 43, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+96, 'Tigo', 'Colombia Movil SA', 103, 27, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[ChatOn,Google,PayPal,Snapchat,Tango,Telegram,Viber,WeChat,WhatsApp]', '[English]', NULL
+97, 'Tigo', 'COMCEL-Communicaciones Celulares Sociedad Anonima', 2, 135, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Google NEW,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+98, 'Comium', 'Comium Gambia Ltd', 3, 53, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+100, 'Novafone', 'Novafone Inc.', 4, 64, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+102, 'Commnet Wireless', 'Commnet Wireless LLC', 40, 215, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+103, 'Claro', 'Compania Dominicana de Telefonos C. por A.', 2, 205, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Facebook,Google,Viber,WhatsApp]', '[English]', NULL
+104, 'Digitel', 'Corporacion Digitel C.A.', 2, 28, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Telegram,Viber,WhatsApp]', '[English]', NULL
+105, 'Ucell', 'Coscom', 5, 190, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+106, 'Telenor', 'Cosmo Bulgaria Mobile EAD', 5, 113, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[ChatOn,Facebook,Google,Instagram,Telegram,Tinder,Viber,WhatsApp]', '[English]', NULL
+107, 'Cosmote', 'Cosmote - Mobile Telecommunications S.A.', 1, 5, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[WeChat]', '[English]', NULL
+108, 'Telekom', 'Telekom Romania', 3, 12, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+110, 'T-Mobile', 'Crnogorski Telekom a.d. Podgorica', 2, 125, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+111, 'T-Mobile', 'Croatian Telecom Inc.', 1, 126, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Tinder,Viber,WhatsApp]', '[English]', NULL
+112, 'CSL', 'CSL Limited', 0, 163, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Telegram,Viber,WhatsApp]', '[English]', NULL
+113, 'Claro', 'CTE Telecom Personal SA de CV', 1, 136, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Tango,Telegram,Viber,WhatsApp]', '[English]', NULL
+114, 'CTM', 'CTM', 1, 164, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+116, 'Digicel', 'Curacao Telecom N.V.', 69, 213, 'LocalPrefix', 'Normal', 80, 80, 60, 131, 'Google1: content removal for Chama SMS', 'Handset', '[]', '[]', NULL
+117, 'CV Movel', 'CVMovel S.A.', 1, 71, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+118, 'Cyfrowy Polsat', 'Cyfrowy Polsat', 12, 19, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+119, 'Cytamobile-Vodafone', 'Cyprus Telecommunications Auth', 1, 111, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+120, 'DSTCom', 'DataStream Technology', 11, 152, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+121, 'DhiMobile', 'Dhivehi Raajjeyge Gulhun Private Ltd', 1, 169, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+122, 'Dialog', 'Dialog Telekom PLC', 2, 45, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+123, 'DigiMobil', 'Digi Mobil', 22, 9, 'MittoMNPEnum', 'Normal', 80, 80, 60, 84, 'Twitter1: 22033 -> Twitter<br>Google1: content removal for Chama SMS', '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+124, 'DiGi', 'DiGi Telecommunications Sdn Bhd', 16, 29, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Facebook,Google,Instagram,Telegram,Twitter,Viber,WeChat]', '[English]', NULL
+125, 'Digicel', 'Digicel (Barbados) Limited', 750, 192, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+126, 'Digicel', 'Digicel (Fiji) Limited', 2, 157, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+127, 'Digicel', 'Digicel (Tonga) Limited', 88, 155, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+128, 'Digicel', 'Digicel (Trinidad & Tobago) Limited', 130, 206, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+129, 'Digicel', 'Digicel (Vanuatu) Ltd', 5, 156, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+130, 'Digicel', 'Digicel Grenada Ltd.', 30, 197, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+131, 'Digicel', 'Digicel Panama', 4, 140, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+132, 'Digicel', 'Digicel PNG Ltd.', 3, 154, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+133, 'Digicel', 'Digicel S.A. de C.V.', 2, 136, 'MittoMNPEnum', 'Normal', 80, 80, 60, 156, 'extract code for google', '[MittoMonitoring]', '[Dynamic,Facebook,Google,Tango,Telegram,Viber,WhatsApp]', '[English]', NULL
+134, 'Digicel', 'Digicel Suriname NV', 3, 149, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+136, 'Sun Cellular', 'Digitel Telecommunications Phils Inc', 5, 32, 'LocalPrefix', 'Normal', 80, 80, 60, 51, 'Senders with + -> German', '[MittoMonitoring]', '[Google,Tango,Telegram,Viber,WeChat,WhatsApp]', '[English]', NULL
+137, 'DNA', 'DNA Ltd', 12, 112, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,Facebook,Google,Tango,Viber,WhatsApp]', '[English]', NULL
+139, 'Eagle Mobile', 'Eagle Mobile sh.a.', 3, 109, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[]', '[]', NULL
+140, 'Mobinil', 'ECMS-MobiNiL', 1, 3, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[ChatOn,Facebook,Google,Instagram,Tango,Telegram,Viber,WeChat,WhatsApp]', '[English]', NULL
+141, 'Econet', 'Econet Wireless (Private) Limited', 4, 93, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+142, 'Econet Leo', 'Econet Wireless Burundi PLC', 1, 88, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+143, 'Elisa', 'Elisa Corporation', 5, 112, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[]', NULL
+144, 'Elisa', 'Elisa Eesti AS', 2, 116, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Telegram,Viber,WhatsApp]', '[English]', NULL
+145, 'Etisalat', 'Emerging Markets Telecommunication Services Ltd', 60, 67, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+146, 'du', 'Emirates Integrated Telecommunications Company PJS', 3, 178, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Telegram,Viber,WhatsApp]', '[English]', NULL
+147, 'Etisalat', 'Emirates Telecom Corp-ETISALAT', 2, 178, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+148, 'Cubacel', 'Empresa de Telecommunicaciones de Cuba SA (ETECSA)', 1, 23, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+149, 'Claro', 'Empresa Nicaraguense de Telecomunicaciones S.A. - ', 21, 138, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Verify,WhatsApp]', '[English]', NULL
+150, 'Emtel', 'Emtel Ltd', 10, 63, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+151, 'Entel', 'Entel SA', 2, 143, 'LocalPrefix', 'Normal', 80, 80, 60, 37, 'Intico: All -> +447400347983', 'Handset', '[]', '[]', NULL
+152, 'Entel PCS', 'Entel Telefonia Movil', 1, 26, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'MittoMonitoring', '[]', '[]', NULL
+153, 'ETL', 'Enterprise of Telecommunications Lao (ETL)', 2, 166, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+155, 'ETMTN', 'Ethiopian Telecommunications Corporation', 1, 82, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+156, 'Mobily', 'Etihad Etisalat Company', 3, 175, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Google,Telegram,Viber,WhatsApp]', '[English]', NULL
+157, 'Etisalat', 'Etisalat Afghanistan', 50, 44, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+158, 'Etisalat', 'Etisalat Benin S.A', 2, 62, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+159, 'Etisalat', 'Etisalat Lanka (Private) Limited', 3, 45, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+160, 'Etisalat', 'Etisalat Misr', 3, 3, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Google,Instagram,SMS,Tango,Telegram,Viber,WeChat,WhatsApp]', '[English]', NULL
+161, 'Euskaltel', 'Euskaltel', 8, 9, 'MittoMNPEnum', 'Normal', 80, 80, 60, 84, 'Twitter1: 22033 -> Twitter<br>Google1: content removal for Chama SMS', '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+163, 'XL', 'Excelcom', 11, 31, 'LocalPrefix', 'Normal', 80, 80, 60, 1, 'pagebites, google telegram - code extracted', '[MittoMonitoring]', '[Google]', '[English]', 16
+164, 'FarEasTone', 'FarEasTone Telecommunications Co Ltd', 1, 168, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+165, 'Faroese Telecom', 'Faroese Telecom', 1, 102, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+166, 'Velcom', 'FE VELCOM', 1, 119, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Google,PayPal,Telegram,Viber,WhatsApp NN]', '[English]', NULL
+167, 'Orange', 'France Telecom Espana SA', 3, 9, 'MittoMNPEnum', 'Normal', 80, 80, 60, 84, 'Twitter1: 22033 -> Twitter<br>Google1: content removal for Chama SMS', '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+168, 'Free Mobile', 'Free Mobile', 15, 8, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,ChatOn,Facebook,Google,Instagram,Tango,Telegram,Viber,WhatsApp]', '[English]', NULL
+169, 'Gamcel', 'Gambia Telecommunications Cellular Company Ltd.', 1, 53, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+170, 'GCI Wireless', 'Alaska Wireless Network LLC', 370, 215, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+171, 'Geocell', 'Geocell Ltd', 1, 188, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Twitter,Viber,WhatsApp]', '[English]', NULL
+172, 'Orange', 'Getesa', 1, 73, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+173, 'Vodafone', 'Ghana Telecommunications Company Ltd', 2, 66, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+174, 'Gibtel', 'Gibtelecom Limited', 1, 104, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+175, 'Glo Mobile', 'Glo Mobile Ghana Limited', 7, 66, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+176, 'Glo Mobile', 'Globacom Ltd.', 50, 67, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+177, 'Globe Telecom', 'Globe Telecom', 2, 32, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+180, 'GrameenPhone', 'GrameenPhone Ltd', 1, 167, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+181, 'Kcell', 'GSM Kazakhstan Ltd', 2, 36, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+182, 'Gmobile', 'GTEL Mobile Joint Stock Company (GTEL Mobile)', 7, 39, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+183, 'GT&T Cellink Plus', 'Guyana Telephone & Telegraph Co.', 2, 144, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+184, '3', 'H3G', 99, 11, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'MittoMonitoring', '[Google,Telegram,Viber,WhatsApp]', '[English]', NULL
+185, 'Vietnamobile', 'Hanoi Telecom Joint Stock Company', 5, 39, 'MittoMNPEnum', 'Normal', 80, 80, 60, 158, 'Google content changed to \"Your verification code is XXXXXX\"', '[MittoMonitoring]', '[]', '[]', NULL
+186, '3', 'Hi3G Access AB', 2, 17, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,Facebook,Google,Telegram,Viber,WhatsApp]', '[English]', NULL
+187, 'Hi3G', 'Hi3G Denmark ApS', 6, 16, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,ChatOn,Facebook,Google,Instagram,Snapchat,Telegram,Viber,WhatsApp]', '[English]', NULL
+188, 'HiTs', 'HiTs EG.SA', 3, 73, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+189, 'Y', 'HiTS-UNITEL', 4, 176, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+190, 'VOX', 'Hola Paraguay S.A.', 1, 147, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+192, '3', 'Hutchison 3G Austria GmbH', 10, 14, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Google,Telegram,Viber,WhatsApp]', '[German]', NULL
+193, '3', 'Hutchison 3G Ireland limited', 5, 107, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+194, '3', 'Hutchison 3G UK Ltd', 20, 15, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Apple,Facebook,Google,Instagram,Telegram,Twitter,Viber,WhatsApp]', '[English]', NULL
+195, '3', 'Hutchison CP Telecommunications', 89, 31, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Apple,Facebook,Google,Instagram,Telegram,Twitter,Viber,WeChat,WhatsApp]', '[English]', NULL
+196, '3', 'Hutchison Telecom (HK) Ltd', 3, 163, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic]', '[English]', NULL
+197, 'Hutch', 'Hutchison Telecommunications Lanka (Pte) Limited', 8, 45, 'LocalPrefix', 'Normal', 80, 80, 60, 1, 'Code extraction of Google, IMO and Telegram content', 'Handset', '[]', '[]', NULL
+198, '3', 'Hutchison Telephone (Macau) Company Ltd', 3, 164, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+199, 'I.C.E.', 'I.C.E. (Instituto Costarricense de Electricidad)', 1, 139, 'MittoMNPEnum', 'Normal', 80, 80, 60, 154, 'Change Google content to G-<code>', '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Telegram,Tinder,WhatsApp]', '[English]', NULL
+200, 'IAM', 'Maroc Telecom', 1, 49, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+201, 'Viking Wireless', 'IMC Island ehf', 4, 108, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+202, 'Tcell', 'Indigo Tajikistan', 1, 185, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+203, 'Telecel', 'Intercel Guinee S.A', 3, 57, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+204, 'Mobitel', 'Telecom Slovenije', 41, 127, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+205, 'Irancell', 'Irancell Telecommunications Services Company', 35, 47, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Google,Telegram,Verify,Viber,WeChat,WhatsApp]', '[English]', NULL
+206, 'Jazztel', 'Jazztel', 21, 9, 'MittoMNPEnum', 'Normal', 80, 80, 60, 84, 'Twitter1: 22033 -> Twitter<br>Google1: content removal for Chama SMS', '[TestSMS]', '[]', '[]', NULL
+207, 'Jersey Airtel', 'Jersey Airtel Limited', 3, 15, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+208, 'Jersey Telecom', 'Jersey Telecom (Wave Telecom)', 50, 15, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+209, 'MTS', 'JLLC Mobile TeleSystems', 2, 119, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Google,Telegram,Viber,WhatsApp]', '[English]', NULL
+210, 'Zain', 'Jordan Mobile Telephone Services (JMTS)', 1, 171, 'LocalPrefix', 'Normal', 80, 80, 60, 65, 'Id: 65 - extract only code for IMO and Google', '[MittoMonitoring]', '[Facebook,Google,Google NEW,Telegram,Viber,WhatsApp]', '[English]', NULL
+211, 'MTS', 'K Telecom CJSC', 5, 118, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+212, 'Vodafone', 'Kall P F', 2, 102, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+213, 'Beeline', 'Kar-Tel LLP', 1, 36, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+214, 'Karabakh Telecom', 'Karabakh Telecom', 4, 118, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+215, 'KDDI', 'KDDI Corporation', 54, 37, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+216, 'TKC', 'KFZO', 14, 47, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+217, 'Korek Telecom', 'Korek Telecom Ltd.', 40, 173, 'LocalPrefix', 'Normal', 80, 80, 60, 139, 'Recipients are checked for validity. If 0 follows CC, it\'s removed.', 'Handset', '[]', '[]', NULL
+218, 'KPN B.V.', 'KPN B.V.', 8, 6, 'MittoMNPEnum', 'Normal', 80, 80, 60, 7, 'Alpha -> UK</br>Short code -> UK</br>National -> UK</br>(except naka1, nexmo3)</br>Google1: content removal for Chama SMS', '[MittoMonitoring]', '[WeChat]', '[English]', NULL
+219, 'Base', 'KPN Group Belgium NV SA', 20, 7, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+220, 'VIVA', 'Kuwait Telecom Company', 4, 174, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Facebook,Google,Twitter,Viber,WhatsApp]', '[English]', NULL
+221, 'Kyivstar', 'Kyivstar GSM JSC', 3, 123, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'MittoMonitoring', '[ChatOn,Google,Tango,WeChat,WhatsApp]', '[English]', NULL
+222, 'Smart Mobile', 'LACELL SU', 7, 88, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+223, 'Lao Telecom', 'Lao Telecommunications', 1, 166, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Twitter,Viber,WhatsApp]', '[English]', NULL
+224, 'Smart', 'Smart Axiata Co. Ltd.', 6, 165, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+225, 'LMT', 'Latvijas Mobilais Telefons', 1, 115, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Tango,Telegram,Viber,WhatsApp]', '[English]', NULL
+226, 'Libercom', 'Libercom', 1, 62, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+227, 'Libertis', 'Libertis S.A.', 1, 74, 'LocalPrefix', 'Normal', 80, 80, 60, 129, 'Alt-PRS: replace recipient prefix 2411 to 24101 and 2416 to 21406', 'Handset', '[]', '[]', 129
+228, 'Libyana', 'Libyana Mobile Phone', 0, 52, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+229, 'Africell', 'Lintel Sierra Leone Limited', 5, 65, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+230, 'Motiv', 'LLC Ekaterinburg-2000', 35, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+231, 'Lonestar Cell', 'Lonestar Communications Corporation', 1, 64, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+232, 'Lycamobile', 'Lycamobile', 25, 9, 'MittoMNPEnum', 'Normal', 80, 80, 60, 84, 'Twitter1: 22033 -> Twitter<br>Google1: content removal for Chama SMS', '[TestSMS]', '[]', '[]', NULL
+233, 'Lycamobile', 'Lycamobile Portugal', 4, 105, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+234, 'MobileOne', 'M1 Limited', 3, 34, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+235, 'CellOne', 'Bermuda Digital Communications Ltd.', 0, 196, 'LocalPrefix', 'Normal', 80, 80, 60, 118, 'All -> +3786671x', 'Handset', '[]', '[]', NULL
+236, 'Magticom', 'Magticom Ltd', 2, 188, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Twitter,Viber,WhatsApp]', '[English]', NULL
+237, 'T-Mobile', 'Magyar Telekom Plc', 30, 10, 'MittoMNPEnum', 'Normal', 80, 80, 60, 116, 'Google: All -> UK', 'Handset', '[]', '[]', NULL
+238, 'Malitel', 'Malitel SA', 1, 56, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+239, 'Manx Telecom', 'Manx Telecom', 58, 15, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+240, 'Mascom', 'Mascom Wireless (Pty) Limited', 1, 97, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+241, 'Mattel', 'Mattel', 1, 55, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+243, 'Maxis', 'Maxis Communications Berhad', 12, 29, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+244, 'MCI', 'MCI', 11, 47, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Google,Telegram,Verify,Viber,WeChat,WhatsApp]', '[English]', NULL
+245, 'Meditel', 'Medi Telecom', 0, 49, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+246, 'MegaFon', 'MegaFon Open Joint Stock Company', 2, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, 141, 'Twitter: All -> \"Twitter\"<br/>Huawai to lower case', 'MittoMonitoring', '[Google]', '[English]', 141
+247, 'Melita', 'Melita Mobile Ltd.', 77, 110, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Google,Telegram,Viber,WeChat,WhatsApp]', '[English]', NULL
+248, 'Meteor', 'Meteor Mobile Telecommunications Limited', 3, 107, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+250, 'Alfa', 'MIC 1', 1, 170, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+251, 'Tigo', 'MIC Tanzania Limited', 2, 86, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+252, 'Tigo', 'Millicom Ghana Limited', 3, 66, 'MittoMNPEnum', 'Normal', 80, 80, 60, 151, 'For cust google1, removal of keywords Google and App ', 'Handset', '[]', '[]', NULL
+253, 'Beeline', 'VimpelCom Lao Ltd', 8, 166, 'LocalPrefix', 'Normal', 80, 80, 60, 71, 'Twitter: All -> Twitter<br>Numeric -> Alpha<br>Shortcode -> Alpha', '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+254, 'Millicom', 'Millicom Tchad S.A.', 3, 68, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+255, 'MobiCom', 'MobiCom', 99, 183, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+256, 'Plus', 'MOBILE 4 AL Sh.a', 4, 109, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+258, 'Tele2', 'Tele2', 77, 36, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+259, 'Zain', 'Mobile Telecommunications Co.', 2, 174, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+260, 'MTS', 'Mobile TeleSystems (MTS)', 1, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'MittoMonitoring', '[Facebook,Google,Instagram,Tango,Telegram,Viber,WhatsApp]', '[English]', NULL
+261, 'Mobilink', 'Mobilink-PMCL', 1, 43, 'MittoMNPEnum', 'Normal', 80, 80, 60, 65, 'Id: 65 code extraction for google1 and pagebites1', 'Handset', '[]', '[]', NULL
+262, 'FL1', 'Telecom Liechtenstein AG', 5, 132, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+263, 'A1 Telekom', 'Telekom Austria AG', 1, 14, 'MittoMNPEnum', 'Normal', 80, 80, 60, 53, '+430570887 -> UK', '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+264, 'M-Tel', 'Mobiltel EAD', 1, 113, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Telegram,Tinder,Viber,WhatsApp]', '[English]', NULL
+265, 'Go Mobile', 'Mobisle Communications Limited', 21, 110, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Twitter,Viber,WhatsApp]', '[English]', NULL
+266, 'Mobistar', 'Mobistar S.A.', 10, 7, 'MittoMNPEnum', 'Normal', 80, 80, 60, 156, 'code extract for google', '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Tinder,Viber,WhatsApp]', '[English]', NULL
+267, 'Zain', 'Mobitel', 1, 80, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+268, 'Mobitel', 'Mobitel (Pvt) Limited', 1, 45, 'LocalPrefix', 'Normal', 80, 80, 60, 65, 'Id:65 - Code extract for IMO and Google', 'Handset', '[]', '[]', NULL
+269, 'Beeline', 'Mobitel LLC', 4, 188, 'MittoMNPEnum', 'Normal', 80, 80, 60, 163, 'google, viber - leaving just the code;\r\nfor all the rest removal of keywords', '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Twitter,Viber,WhatsApp]', '[English]', NULL
+270, 'mCel', 'Mocambique Celular S.A.R.L(mCel)', 1, 89, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+271, 'Moldcell', 'Moldcell SA', 2, 117, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[Dynamic,Google,Telegram,Viber,WhatsApp]', '[English]', NULL
+272, 'Telecom', 'Monaco Telecom', 1, 121, 'MittoMNPHttp', 'Normal', 80, 80, 60, 124, 'OTP => ShortCode and content changes', 'Handset', '[]', '[]', NULL
+273, 'MTC', 'MTC Namibia', 1, 94, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+274, 'Zain', 'MTC Saudi Arabia', 4, 175, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Google,Telegram,Viber,WhatsApp]', '[English]', NULL
+275, 'm-tel CG', 'MTEL D.O.O. Podgorica', 3, 125, 'MittoMNPEnum', 'Normal', 80, 80, 60, 65, 'Id:65 - code extract for IMO and Google', 'Handset', '[]', '[]', NULL
+276, 'MTN', 'MTN (Zambia) Ltd', 2, 90, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+277, 'MTN', 'MTN Afghanistan', 40, 44, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+278, 'MTN', 'MTN Cameroon Ltd', 1, 70, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+279, 'Libertis Congo', 'MTN CONGO S.A', 10, 75, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+280, 'MTN', 'MTN Cyprus Limited', 10, 111, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+281, 'MTN', 'MTN South Sudan', 2, 48, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+282, 'MTN', 'MTN Sudan', 2, 80, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+283, 'MTN', 'MTN Syria (JSC)', 2, 172, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+284, 'MTN', 'MTN Uganda Ltd', 10, 87, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+285, 'Ooredoo', 'National Mobile Telecommunications Co.', 3, 174, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Facebook,Google,Twitter,Viber,WhatsApp]', '[English]', NULL
+286, 'Telecom', 'Nepal Telecom', 1, 184, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+287, 'NetOne', 'Net*One Cellular (Pvt) Ltd', 1, 93, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+288, 'Vivacell', 'Network of The World (Vivacell)', 4, 48, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+289, 'Digicel', 'New Millenium Telecom Services (NMTS) (Digicel)', 2, 101, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+291, 'Entel', 'Entel Perú S.A.', 17, 21, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'MittoMonitoring', '[]', '[]', NULL
+293, 'Norfolk Telecom', 'Norfolk Telecom', 10, 30, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+294, 'Nova', 'Nova ehf.', 11, 108, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+295, 'NRJ Mobile', 'NRJ Mobile', 26, 8, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[]', '[]', NULL
+296, 'NTT DoCoMo Inc', 'NTT DoCoMo Inc', 10, 37, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+297, 'Personal', 'Nucleo S.A', 5, 147, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+298, 'Viva', 'Nuevatel PCS De Bolivia SA', 1, 143, 'LocalPrefix', 'Normal', 80, 80, 60, 37, 'Intico: All -> +447400347983', 'Handset', '[]', '[]', NULL
+299, 'O!', 'NurTelecom LLC', 9, 189, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+301, '3Mob', '3Mob (Ukrtelecom UMTS)', 7, 123, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+302, 'Beeline', 'OJSC VimpelCom', 99, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, 69, 'Twitter: All -> \"Twitter\"', 'MittoMonitoring', '[]', '[]', NULL
+303, 'Omantel', 'Oman Telecommunications Company', 2, 177, 'MittoMNPEnum', 'Normal', 80, 80, 60, 127, 'extract code for pagebites', 'Handset', '[]', '[]', NULL
+304, 'Ooredoo', 'Omani Qatari Telecommunications Company SAOC', 3, 177, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+305, 'Omnitel', 'Omnitel', 1, 114, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+307, 'Mobilis', 'OPT New Caledonia', 1, 160, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+308, '7acht', 'Salt Liechtenstein AG', 2, 132, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+309, 'Ucom', 'Ucom LLC', 10, 118, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+311, 'Orange', 'Orange', 3, 78, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+312, 'Orange', 'Orange Cameroun S.A.', 2, 70, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+313, 'Orange', 'Orange  Cote dIvoire', 3, 58, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+314, 'Salt', 'Orange Communications SA', 3, 13, 'LocalPrefix', 'Normal', 80, 80, 60, 22, 'National -> UK</br>Numeric without + -> UK</br>(except goyya1, Lox2, Infinite7)', '[MittoMonitoring]', '[Dynamic]', '[English,French]', NULL
+315, 'Orange', 'Orange Dominicana S.A.', 1, 205, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic]', '[English]', NULL
+316, 'Orange', 'Orange France', 1, 8, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Facebook,Google,Google NEW,Twitter,WhatsApp]', '[English]', NULL
+317, 'Orange', 'Orange Madagascar S.A.', 2, 91, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+318, 'Orange', 'Orange Mali SA', 2, 56, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+319, 'Orange', 'Orange Moldova S.A.', 1, 117, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+320, 'Orange', 'Orange Niger S.A', 4, 60, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+321, 'Orange', 'Orange PCS Ltd', 33, 15, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[Dynamic]', '[English]', NULL
+322, 'Orange', 'Orange Romania SA', 10, 12, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+323, 'Orange', 'Orange S.A.', 99, 106, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+324, 'Orange', 'Orange Slovensko a.s.', 1, 131, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'MittoMonitoring', '[ChatOn,Google,PayPal,Snapchat,Tango,Telegram,Viber,WeChat,WhatsApp]', '[English]', NULL
+325, 'Orange', 'Orange Tunisie SA', 1, 51, 'MittoMNPEnum', 'Normal', 80, 80, 60, 16, 'Non-alpha -> Alpha', 'Handset', '[]', '[]', 16
+326, 'Africell', 'Africell Uganda', 14, 87, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+327, 'Djezzy', 'Orascom Telecom Algerie Spa', 2, 50, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, 'inactive 105 All -> UK', 'Handset', '[]', '[]', NULL
+328, 'Banglalink', 'Orascom Telecom Bangladesh Limited.', 3, 167, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+329, 'ooredoo', 'Orascom Telecom Tunisie', 3, 51, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+330, 'Outremer Telecom', 'Outremer Telecom', 2, 146, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+331, 'LuxGSM', 'P & T Luxembourg', 1, 106, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+332, 'Play', 'P4 Sp. z o.o', 6, 19, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+333, 'Ufone', 'Pakistan Telecommunciation Mobile Ltd', 3, 43, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, 'Disabled PRS (ID 136) while GMS special rate effective - Change Google content to<br>\"Your verification code XXXXXX\"', 'Handset', '[]', '[]', NULL
+334, 'Telenor', 'Pannon GSM Telecommunications', 1, 10, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+335, 'Movistar', 'Movistar - Telefónica Moviles', 30, 22, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+336, 'Orange', 'Petra Jordanian Mobile Telecommunications Company(', 77, 171, 'LocalPrefix', 'Normal', 80, 80, 60, 74, '+45609910233 -> UK', '[MittoMonitoring]', '[Google,Google NEW,Telegram,Viber,WhatsApp]', '[English]', NULL
+337, 'SMARTS', 'Zao SMARTS', 7, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+338, 'Plus', 'Polkomtel S.A.', 1, 19, 'MittoMNPEnum', 'Normal', 80, 80, 60, 23, 'Numeric -> \"SMS\" (MNO restriction)', '[TestSMS]', '[ChatOn,Google,PayPal,Snapchat,Tango,Telegram,Viber,WeChat,WhatsApp]', '[English]', NULL
+339, 'T-Mobile', 'Polska Telefonia Cyfrowa', 2, 19, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+340, 'TN Mobile', 'Telecom Namibia', 3, 94, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+341, 'Primetel PLC', 'Primetel PLC', 20, 111, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[Google,Telegram,Viber,WhatsApp]', '[English]', NULL
+343, 'Indosat', 'PT Indonesian Satellite Corporation Tbk (INDOSAT)', 1, 31, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Facebook,Google,Viber,WhatsApp]', '[English]', NULL
+345, 'Telkomsel', 'PT Telekomunikasi Selular', 10, 31, 'LocalPrefix', 'Normal', 80, 80, 60, 1, 'pagebites, google, telegram - leaving just the code', '[MittoMonitoring]', '[]', '[]', NULL
+346, 'Orange', 'PTK Centertel', 3, 19, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+347, 'Eronet', 'Public Enterprise Croatian Telecom Ltd.', 3, 128, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Apple,Google,Instagram,Viber,WhatsApp]', '[English]', NULL
+348, 'Claro', 'Puerto Rico Telephone Company Inc.', 110, 204, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+349, 'Ooredoo', 'Qatar Telecom', 1, 181, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+350, 'Qcell', 'QCELL Limited', 4, 53, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+351, 'Telcel', 'América Móvil', 20, 22, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+352, 'Fido', 'Fido Solutions (Rogers Wireless)', 370, 210, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+353, 'mtel', 'RS Telecommunications JSC Banja Luka', 5, 128, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Verify,Viber,WhatsApp]', '[English]', NULL
+354, 'Safaricom', 'Safaricom Limited', 2, 85, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Facebook,Google,Google NEW,IMO only code,Verify,WeChat,WhatsApp]', '[English]', NULL
+355, 'prima', 'San Marino Telecom', 1, 122, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+356, 'MTN', 'Scancom Ltd', 1, 66, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+357, 'Tigo', 'Millicom International Cellular S.A.', 2, 54, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+358, 'Mobiland', 'Servei De Tele. DAndorra', 3, 120, 'LocalPrefix', 'Normal', 80, 80, 60, 140, 'WeChat content and SID change', 'Handset', '[]', '[]', 140
+359, 'SETAR', 'SETAR (Servicio di Telecomunicacion di Aruba)', 1, 101, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+360, 'UTS Wireless Curacao', 'Setel NV', 91, 213, 'LocalPrefix', 'Normal', 80, 80, 60, 131, 'Google1: content removal for Chama SMS', 'Handset', '[]', '[]', NULL
+361, 'SFR', 'SFR', 10, 8, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Tinder,Viber,WhatsApp]', '[English]', NULL
+362, 'SIMobil', 'SI.MOBIL d.d.', 40, 127, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WeChat]', '[English]', NULL
+363, 'Bite', 'SIA Bite Latvija', 5, 115, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+364, 'Siminn', 'Siminn hf', 1, 108, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+365, 'Simyo', 'simyo', 19, 9, 'MittoMNPEnum', 'Normal', 80, 80, 60, 84, 'Twitter1: 22033 -> Twitter<br>Google1: content removal for Chama SMS', '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+366, 'SingTel', 'Singapore Telecom Mobile Pte Ltd', 1, 34, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+367, 'Optus', 'Singtel Optus Limited', 2, 30, 'MittoMNPEnum', 'Normal', 80, 80, 60, 148, 'Google word \"code\"  remove from content', '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Twitter,Viber,WhatsApp]', '[English]', NULL
+368, 'SK Telecom', 'SK Telecom', 5, 38, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+369, 'Beeline', 'Sky Mobile LLC', 1, 189, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+370, 'Smart', 'Smart Communications Inc', 3, 32, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+371, 'SmarTone Macau', 'SmarTone Mobile Communications (Macau) Ltd', 0, 164, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+372, 'SmarTone', 'SmarTone Mobile Communications Limited', 6, 163, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+373, 'Softbank', 'SOFTBANK MOBILE Corp.', 20, 37, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+374, 'Breeze', 'Solomon Telekom Co Ltd', 1, 214, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+375, 'NOS', 'NOS Comunicações, S.A.', 3, 105, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,Facebook,Google,Telegram,Viber,WhatsApp]', '[English]', NULL
+376, 'Orange', 'Sonatel', 1, 54, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+378, 'MTN', 'Spacetel - Yemen', 2, 176, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+379, 'MTN', 'Spacetel Guinee-Bissau SA', 2, 78, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+380, 'Ncell', 'Nepal Ncell', 2, 184, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+381, 'Unitel', 'Star Telecom company Limited (STL)', 3, 166, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Twitter,Viber,WhatsApp]', '[English]', NULL
+382, 'StarHub', 'StarHub Mobile Pte Ltd', 5, 34, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+383, 'Viva', 'STC Bahrain B.S.C', 4, 180, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+384, 'Expresso', 'Sudan Telecom Company Ltd', 3, 54, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+385, 'Sunrise', 'Sunrise Communications AG', 2, 13, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic]', '[German,French]', NULL
+386, 'Swisscom', 'Swisscom (Switzerland) Ltd', 1, 13, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic]', '[German,French]', NULL
+387, 'Swisscom', 'Swisscom (Switzerland) Ltd (Liechtenstein)', 1, 132, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+388, 'Syriatel', 'Syriatel Mobile Telecom SA', 1, 172, 'LocalPrefix', 'Normal', 80, 80, 60, 65, 'Id: 65 - code extract for google1 and pagebites1', 'Handset', '[]', '[]', NULL
+389, 'T+ Telecomunicacoes', 'T Plus Telecomunicacoes S.A.', 2, 71, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+390, 'T-2', 'T-2 d.o.o.', 64, 127, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+391, 'T-Mobile', 'T-Mobile (UK) Limited', 30, 15, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Apple,Facebook,Google,Instagram,Snapchat,Telegram,Viber,WhatsApp]', '[English]', NULL
+392, 'T-Mobile', 'T-Mobile Austria GmbH', 3, 14, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+393, 'T-Mobile', 'T-Mobile Czech Republic a.s.', 1, 130, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[ChatOn,Google,PayPal,Snapchat,Tango,Telegram,Viber,WeChat,WhatsApp]', '[English]', NULL
+394, 'T-Mobile', 'Telekom Deutschland GmbH', 1, 20, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'MittoMonitoring', '[Google,Snapchat,Telegram,Viber,WhatsApp]', '[German]', NULL
+395, 'T-Mobile', 'T-Mobile Macedonia', 1, 129, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Facebook,Google,Google NEW,Viber,WhatsApp]', '[English]', NULL
+396, 'T-Mobile', 'T-Mobile Netherlands B.V', 16, 6, 'MittoMNPEnum', 'Normal', 80, 80, 60, 131, 'Google1: content removal for Chama SMS', '[MittoMonitoring]', '[WeChat]', '[English]', NULL
+397, 'T-Mobile', 'T-Mobile Slovensko a.s.', 2, 131, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'MittoMonitoring', '[ChatOn,Google,PayPal,Snapchat,Tango,Telegram,Viber,WeChat,WhatsApp]', '[English]', NULL
+398, 'Beeline', 'Tacom LLC', 5, 185, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+399, 'Mobile', 'Taiwan Mobile Co.Ltd', 97, 168, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+401, 'Tango', 'TANGO Mobile SA', 77, 106, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+402, 'TashiCell', 'Tashi InfoComm Limited', 77, 182, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+403, 'TDC', 'TDC AS', 1, 16, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+404, 'Movistar', 'Telcel C.A.', 4, 28, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+405, 'Telcell St Maarten', 'Telcell N.V.', 51, 213, 'LocalPrefix', 'Normal', 80, 80, 60, 131, 'Google1: content removal for Chama SMS', 'Handset', '[]', '[]', NULL
+406, 'Tele2', 'Tele 2 AB', 7, 17, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+407, 'TELE', 'TELE Greenland A S', 1, 103, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+408, 'Tele2', 'TELE2', 2, 115, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+409, 'Tele.ring', 'Tele.ring', 7, 14, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+410, 'Tele2', 'Tele2 d.o.o za telekomunikacijske uluge', 2, 126, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Tango,Telegram,Tinder,Viber,WhatsApp]', '[English]', NULL
+411, 'Tele2', 'Tele2 Eesti AS', 3, 116, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,ChatOn,Facebook,Google,Instagram,Tango,Telegram,Viber,WhatsApp]', '[English]', NULL
+412, 'Tele2', 'Tele2 Netherlands', 2, 6, 'MittoMNPEnum', 'Normal', 80, 80, 60, 131, 'Google1: content removal for Chama SMS', 'Handset', '[]', '[]', NULL
+415, 'TeleCable', 'Telecable', 16, 9, 'MittoMNPEnum', 'Normal', 80, 80, 60, 84, 'Twitter1: 22033 -> Twitter<br>Google1: content removal for Chama SMS', '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Telegram,WhatsApp]', '[English]', NULL
+416, 'Telecel', 'Telecel Faso S.A', 3, 59, 'LocalPrefix', 'Normal', 80, 80, 60, 160, 'Removing keyword WhatsApp (clickatell acc)', 'Handset', '[]', '[]', NULL
+417, 'Telecel', 'Telecel Niger SA', 3, 60, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+418, 'Moov', 'Moov Togo', 3, 61, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+419, 'Telecel', 'Telecel Zimbabwe (PVT) Ltd', 3, 93, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+421, 'AirTel', 'Telecom (Seychelles) Ltd', 10, 79, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+422, 'Telecom', 'Telecom Cook Islands', 1, 158, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+423, 'Roshan', 'Telecom Development Company Afghanistan Ltd.', 20, 44, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[ChatOn,Google,Snapchat,Tango,Telegram,Viber,WeChat,WhatsApp]', '[English]', NULL
+424, 'TIM', 'Telecom Italia SpA', 1, 11, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Google,Telegram,Viber,WhatsApp]', '[English]', NULL
+425, 'Spark', 'Spark New Zealand', 5, 33, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+426, 'Personal', 'Telecom Personal SA', 34, 24, 'LocalPrefix', 'Normal', 80, 80, 60, 154, 'Google content change to G-<code>', 'MittoMonitoring', '[Facebook,Google,Telegram,Viber,WhatsApp]', '[English]', NULL
+428, 'Digicel', 'Telecommunications (Bermuda & West Indies) Ltd', 1, 196, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+429, 'bmobile', 'Telecommunications Services of Trinidad and Tobago', 12, 206, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+430, 'Movistar', 'Telefonia Celular de Nicaragua S.A.', 30, 138, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Twitter,Viber,WhatsApp]', '[English]', NULL
+431, 'Tigo', 'Telefonica Celular Del Paraguay S.A. (Telecel S.A.', 4, 147, 'MittoMNPEnum', 'Normal', 80, 80, 60, 2, 'Alpha -> UK (MNO fake on Alpha)', '[MittoMonitoring]', '[]', '[]', NULL
+432, 'Tigo', 'Telefonica Celular S.A (CELTEL)', 2, 137, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Facebook,Google,Google NEW,Google only code,SMS,Twitter,Viber,WeChat,WhatsApp]', '[English]', NULL
+433, 'Movistar', 'Telefonica de Costa Rica TC S.A.', 4, 139, 'MittoMNPEnum', 'Normal', 80, 80, 60, 154, 'Change Google content to G-<code>', '[TestSMS]', '[Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+434, 'Movistar', 'Telefonica Moviles Argentina S.A', 70, 24, 'LocalPrefix', 'Normal', 80, 80, 60, 154, 'Google content change to G-<code>', 'MittoMonitoring', '[Google,Telegram,Viber,WhatsApp]', '[English]', NULL
+435, 'Movistar', 'Telefonica Moviles Del Uruguay S.A.', 7, 150, 'LocalPrefix', 'Normal', 80, 80, 60, 156, 'extract code for google', 'Handset', '[]', '[]', NULL
+436, 'Movistar', 'Telefonica Moviles El Salvador S.A de c.v', 4, 136, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,WhatsApp]', '[English]', NULL
+437, 'Movistar', 'Telefonica Moviles Espana S.A.', 7, 9, 'MittoMNPEnum', 'Normal', 80, 80, 60, 84, 'Twitter1: 22033 -> Twitter<br>Google1: content removal for Chama SMS', '[MittoMonitoring]', '[Dynamic,Facebook,Google,Telegram,Viber,WhatsApp]', '[English]', NULL
+438, 'Movistar', 'Telefonica Moviles Guatemala SA', 3, 135, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Google NEW,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+439, 'Movistar', 'Telefonica Moviles Panama S.A.', 2, 140, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+440, 'O2', 'Telefonica O2 Czech Republic a.s.', 2, 130, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Google,Telegram,Viber,WhatsApp]', '[English]', NULL
+441, 'O2', 'Telefonica o2 Germany GmbH & Co.OHG', 7, 20, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'MittoMonitoring', '[Google,Snapchat,Telegram,Viber,WhatsApp]', '[German]', NULL
+442, 'O2', 'Telefonica O2 Slovakia s.r.o.', 6, 131, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'MittoMonitoring', '[ChatOn,Google,PayPal,Snapchat,Tango,Telegram,Viber,WeChat,WhatsApp]', '[English]', NULL
+443, 'O2', 'Telefonica O2 UK Limited', 10, 15, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Apple,Facebook,Google,Instagram,Telegram,Twitter,Viber,WhatsApp]', '[English]', NULL
+444, 'TNML', 'Telekom Networks Malawi Ltd', 1, 95, 'LocalPrefix', 'Normal', 80, 80, 60, 152, 'Removal of keyword Google for cust. google1', 'Handset', '[]', '[]', NULL
+445, 'Telekom Srbija', 'Telekom Srbija', 3, 124, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+446, 'Tigo', 'Telemovil EL Salvador S.A', 3, 136, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[ChatOn,Facebook,Google,Instagram,Tango,Telegram,Viber,Viettel,WhatsApp]', '[English]', NULL
+449, 'Telenor', 'Telenor', 1, 125, 'MittoMNPEnum', 'Normal', 80, 80, 60, 127, 'pagebites1 acc - code extracted', 'Handset', '[]', '[]', NULL
+450, 'Telenor', 'Telenor A S', 2, 16, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,ChatOn,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+451, 'Telenor', 'Telenor d.o.o.', 1, 124, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Google,Telegram,Viber,WhatsApp]', '[English]', NULL
+452, 'Telenor', 'Telenor Norge AS.', 1, 18, 'MittoMNPEnum', 'Normal', 80, 80, 60, 70, 'Pagebites: All -> IMO', '[TestSMS]', '[Dynamic,Facebook,Google,Telegram,Viber,WhatsApp]', '[English]', NULL
+453, 'Telenor', 'Telenor Pakistan (Pvt) Ltd.', 6, 43, 'MittoMNPEnum', 'Normal', 80, 80, 60, 165, 'Id: 165 code extraction for google1, pagebites1 and clickatell7_wa', 'Handset', '[]', '[]', NULL
+454, 'Telenor', 'Telenor Sverige AB', 8, 17, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[]', '[]', NULL
+455, 'Telesur', 'Telesur', 2, 149, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+456, 'Telfort', 'Telfort B.V.', 12, 6, 'MittoMNPEnum', 'Normal', 80, 80, 60, 7, 'Alpha -> UK</br>Short code -> UK</br>National -> UK</br>(except naka1, nexmo3)</br>Google1: content removal for Chama SMS', '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+457, 'Telia', 'Telia Nattjanster Norden AB', 20, 16, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,ChatOn,Facebook,Google,Instagram,Tango,Telegram,Tinder,Viber,WhatsApp]', '[English]', NULL
+458, 'Sonera', 'TeliaSonera Finland Oyj', 91, 112, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,ChatOn,Facebook,Google,Telegram,Viber,WhatsApp]', '[English]', NULL
+459, 'Telia', 'TeliaSonera Mobile Networks AB Sweden', 1, 17, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+460, 'Telia', 'TeliaSonera Norge AS', 2, 18, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,Facebook,Google,Telegram,Viber,WhatsApp]', '[English]', NULL
+461, 'Orange', 'Telkom Kenya Limited', 7, 85, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Facebook,Google,Google NEW,IMO only code,Verify,WeChat,WhatsApp]', '[English]', NULL
+462, 'Telma Mobile', 'Telma Mobile SA', 4, 91, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+463, 'Telmob', 'Telmob(Onatel)', 1, 59, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+464, 'Telstra', 'Telstra Corporation Limited', 1, 30, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Twitter,Viber,WhatsApp]', '[English]', NULL
+466, 'BTC', 'The Bahamas Telecommunications Company Ltd', 39, 191, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+467, 'Tigo', 'TIGO RWANDA S.A', 13, 81, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+468, 'Vini', 'Tikiphone SA', 20, 161, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+469, 'TIM', 'TIM Celular S.A.', 2, 25, 'MittoMNPEnum', 'Normal', 80, 80, 60, 102, 'All -> 0119x', '[MittoMonitoring]', '[Google BRA,Telegram,Viber,WhatsApp]', '[Brazil]', NULL
+470, 'Timor Telecom', 'Timor Telecom', 2, 151, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+471, 'MEO', 'MEO - Serviços de Comunicações e Multimédia, S.A.', 6, 105, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+472, 'Togocel', 'Togo Telecom', 1, 61, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+473, 'DTAC', 'Total Access Communications Co', 5, 35, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Google,Google NEW,Telegram,Viber,WhatsApp]', '[English]', NULL
+474, 'Viva', 'Trilogy Dominican Republic', 4, 205, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Facebook,Google,Viber,WhatsApp]', '[English]', NULL
+476, 'Truphone', 'Truphone', 25, 15, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+477, 'Megafon', 'TT Mobile Closed joint-stock company', 3, 185, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+478, 'Tunicell', 'Tunisie Telecom', 2, 51, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+479, 'Turkcell', 'Turkcell Iletisim Hizmetleri A.S.', 1, 41, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+480, 'Telemach', 'Telemach Mobil', 70, 127, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Tango,Telegram,Viber,WhatsApp]', '[]', NULL
+481, '2degrees', 'Two Degrees Mobile Limited', 24, 33, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+482, 'U Mobile', 'U Mobile Sdn. Bhd.', 18, 29, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+483, 'Digicel', 'U-Mobile (Cellular) Inc.', 1, 144, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+484, 'Bite', 'UAB Bite Lietuva', 2, 114, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+485, 'Tele2', 'UAB TELE2', 3, 114, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+486, 'Telecom', 'Uganda Telecom Ltd', 11, 87, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+487, 'Vodafone', 'MTS Ukraine', 1, 123, 'MittoMNPEnum', 'Normal', 80, 80, 60, 23, 'Numeric to \"SMS\" (MNO restriction)</br>(except: Infinite3)', '[MittoMonitoring]', '[ChatOn,Google,Tango,WeChat,WhatsApp]', '[English]', NULL
+489, 'Umniah', 'Umniah Mobile Company', 3, 171, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Google,Google NEW,Telegram,Viber,WhatsApp]', '[English]', NULL
+490, 'Beeline', 'Unitel LLC', 4, 190, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+491, 'Unitel', 'Unitel LLC Mongolia', 88, 183, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+492, 'Unitel', 'UNITEL S.a.r.l.', 2, 77, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+494, 'Taiwan Star Telecom', 'VIBO Telecom Inc', 89, 168, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+495, 'Mobifone', 'Vietnam Mobile Telecom Services Company (VMS)', 1, 39, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+496, 'Vinaphone', 'Vietnam Telecom Services Company (GPC)', 2, 39, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Google,Telegram,Viber,WhatsApp]', '[English]', NULL
+497, 'Metfone', 'VIETTEL (CAMBODIA) PTE. LTD', 8, 165, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+498, 'VIP Mobile', 'Vip mobile d.o.o.', 5, 124, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+499, 'VIP', 'VIP OPERATOR DOOEL Skopje', 3, 129, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Google,Telegram,Viber,WhatsApp]', '[English]', NULL
+500, 'VIPnet', 'VIPnet d.o.o.', 10, 126, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Facebook,Google,Instagram,Tango,Telegram,Viber,WhatsApp]', '[English]', NULL
+501, 'Vodacom', 'VM S.A.R.L.', 4, 89, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+502, 'Vodacom', 'Vodacom Congo (RDC) sprl', 1, 76, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+503, 'Vodacom', 'Vodacom Group Pty Ltd.', 1, 4, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+504, 'Vodacom', 'Vodacom Lesotho (Pty) Ltd', 1, 96, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+505, 'Vodacom', 'Vodacom Tanzania Limited', 4, 86, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+506, 'Vodafone', 'Vodafone Albania', 2, 109, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+507, 'Vodafone', 'Vodafone Czech Republic a.s.', 3, 130, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[ChatOn,Google,PayPal,Snapchat,Tango,Telegram,Viber,WeChat,WhatsApp]', '[English]', NULL
+508, 'Vodafone', 'Vodafone D2 GmbH', 2, 20, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'MittoMonitoring', '[Google,Snapchat,Telegram,Viber,WhatsApp]', '[German]', NULL
+509, 'Vodafone', 'Vodafone Egypt Telecommunications S.A.E', 2, 3, 'MittoMNPEnum', 'Normal', 80, 80, 60, 156, 'code extract from google', '[MittoMonitoring]', '[Google,Instagram,Tango,Telegram,Viber,WeChat,WhatsApp]', '[English]', NULL
+510, 'Vodafone', 'Vodafone Espana S.A.U.', 1, 9, 'MittoMNPEnum', 'Normal', 80, 80, 60, 84, 'Twitter1: 22033 -> Twitter<br>Google1: content removal for Chama SMS', '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+511, 'Vodafone', 'Vodafone Fiji Ltd', 1, 157, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+512, 'Vodafone', 'Vodafone Hungary Ltd', 70, 10, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+513, 'Vodafone', 'Vodafone Ireland Ltd.', 1, 107, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+514, 'Vodafone', 'Vodafone Libertel B.V.', 4, 6, 'MittoMNPEnum', 'Normal', 80, 80, 60, 131, 'Google1: content removal for Chama SMS', '[TestSMS]', '[Dynamic]', '[English]', NULL
+515, 'Vodafone', 'VODAFONE Ltd', 15, 15, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Apple,Facebook,Google,Instagram,Telegram,Twitter,Viber,WhatsApp]', '[English]', NULL
+516, 'Vodafone', 'Vodafone Malta Limited', 1, 110, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WeChat,WhatsApp]', '[English]', NULL
+517, 'Vodafone', 'Vodafone Mobile NZ Limited', 1, 33, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+518, 'Vodafone', 'Vodafone Omnitel N.V.', 10, 11, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Google,Telegram,Viber,WhatsApp]', '[English]', NULL
+519, 'Vodafone', 'Vodafone Pacific Limited', 3, 30, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+520, 'Vodafone', 'Vodafone Portugal', 1, 105, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+521, 'Vodafone', 'Vodafone Qatar Q.S.C.', 2, 181, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+522, 'Vodafone', 'Vodafone Romania S.A.', 1, 12, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+523, 'Vodafone', 'Vodafone Telekomunikasyon A.S', 2, 41, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+524, 'Vodafone', 'Vodafone-Panafon', 5, 5, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Tango,Telegram,Viber,WhatsApp]', '[English]', NULL
+525, 'INWI', 'Wana', 2, 49, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+526, 'Warid Telecom', 'Warid Telecom (PVT) Ltd', 7, 43, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+529, 'Ooredoo', 'Wataniya Telecom Algerie', 3, 50, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+530, 'Ooredoo', 'Wataniya Telecom Maldives Pvt. Ltd', 2, 169, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+531, 'Wind', 'Wind Hellas Telecommunications S.A.', 10, 5, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+532, 'Wind', 'Wind Telecomunicazioni SpA', 88, 11, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+533, 'Wireless Ventures', 'Wireless Ventures (Anguilla) Ltd', 930, 193, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+534, 'Digicel', 'Antigua Wireless Ventures Limited', 930, 194, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+535, 'Digicel', 'Wireless Ventures (Dominica) Ltd.', 20, 202, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+536, 'Yoigo', 'Xfera Moviles SA', 4, 9, 'MittoMNPEnum', 'Normal', 80, 80, 60, 84, 'Twitter1: 22033 -> Twitter<br>Google1: content removal for Chama SMS', '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+537, 'Sabafon', 'Yemen Mobile Phone Company - Sabafon', 1, 176, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+539, 'Airtel', 'Zain Communications (Ghana) Limited', 6, 66, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+540, 'Zamtel', 'ZAMTEL', 3, 90, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+541, 'Zantel', 'Zanzibar Telecom Ltd', 3, 86, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1024, 'AT&T Mobility', 'AT&T Mobility', 410, 1, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1025, 'Immix Wireless', 'Keystone Wireless LLC', 690, 1, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1026, 'T-Mobile USA', 'T-Mobile USA', 260, 1, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Apple Verify,Facebook,Google,Instagram,Telegram,Tinder,WhatsApp]', '[English]', NULL
+1027, 'Docomo', 'NTT Docomo Pacific', 470, 225, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1028, 'Dauphin', 'Dauphin Telecom', 8, 142, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1030, 'Outremer', 'Outremer Telecom', 2, 142, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1031, 'Cellcom', 'Cellcom Israel Ltd', 2, 179, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+1032, 'Golan Telecom', 'Golan Telecom', 8, 179, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1033, 'Hot Mobile', 'MIRS', 7, 179, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1034, 'Jawwal', 'Palestine Cellular Communications, Ltd.', 5, 226, 'MittoMNPEnum', 'Normal', 80, 80, 60, 110, 'OTP replace Sender => UK & Content replace => code', 'Handset', '[Google,Telegram,Viber,WhatsApp]', '[English]', NULL
+1035, 'Partner', 'Partner Communications Company Ltd', 1, 179, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Google,Instagram,Tango,Telegram,Viber,WhatsApp]', '[English]', NULL
+1036, 'Pelephone', 'Pelephone Communications Ltd.', 3, 179, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic]', '[English]', NULL
+1038, 'Outremer', 'Outremer Telecom', 2, 227, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1039, 'SFR', 'Societe Reunionnaise de Radiotelephone', 10, 227, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1041, 'Aircel', 'Aircel', 17, 42, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1042, 'Aircel', 'Aircel', 800, 212, 'MittoMNPEnum', 'Normal', 80, 80, 60, 119, 'Alpha -> UK</br>Short code -> UK</br>ifree3: special', 'Handset', '[]', '[]', NULL
+1043, 'Cloud9', 'Wire9 Telecom Plc', 18, 15, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1044, 'Intercity Zakelijk', 'Intercity Mobile Communications B.V.', 17, 6, 'MittoMNPEnum', 'Normal', 80, 80, 60, 131, 'Google1: content removal for Chama SMS', 'Handset', '[]', '[]', NULL
+1046, 'Vectone', 'A1 Telekom Austria', 15, 14, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Facebook,Google,Instagram,Viber,WhatsApp]', '[English]', NULL
+1047, 'Digi Mobil', 'RCS & RDS', 5, 12, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+1048, 'Teleena', 'Teleena', 7, 6, 'MittoMNPEnum', 'Normal', 80, 80, 60, 131, 'Google1: content removal for Chama SMS', 'Handset', '[]', '[]', NULL
+1049, 'Lycamobile', 'Lyca mobile Netherlands Ltd.', 9, 6, 'MittoMNPEnum', 'Normal', 80, 80, 60, 131, 'Google1: content removal for Chama SMS', '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Telegram,WhatsApp]', '[English]', NULL
+1050, 'Vectone Mobile', 'Mundio Mobile Ltd', 6, 6, 'MittoMNPEnum', 'Normal', 80, 80, 60, 131, 'Google1: content removal for Chama SMS', 'Handset', '[]', '[]', NULL
+1051, 'Claro', 'Claro', 5, 25, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Google,Telegram,Viber,WhatsApp]', '[Brazil]', NULL
+1052, 'Vivo', 'Vivo S.A.', 6, 25, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Google,PayPal,Tango,Telegram,Viber,WhatsApp]', '[English]', NULL
+1053, 'Oi', 'TNL PCS', 31, 25, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Google,Telegram,Viber,WhatsApp]', '[Brazil]', NULL
+1054, '3', 'Hutchison 3G UK Ltd', 94, 228, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1055, 'Vodafone', 'Vodafone United Kingdom', 91, 228, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1056, 'Cable & Wireless', 'Cable & Wireless UK', 92, 228, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1057, 'ONO', 'Cableuropa S.A.U.', 18, 9, 'MittoMNPEnum', 'Normal', 80, 80, 60, 84, 'Twitter1: 22033 -> Twitter<br>Google1: content removal for Chama SMS', '[TestSMS]', '[]', '[]', NULL
+1058, 'Barablu', 'Barablu Móvil España', 23, 9, 'MittoMNPEnum', 'Normal', 80, 80, 60, 84, 'Twitter1: 22033 -> Twitter<br>Google1: content removal for Chama SMS', '[TestSMS]', '[]', '[]', NULL
+1059, 'MTN', 'MTN Nigeria Communications Limited', 30, 67, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Twitter,Viber,WhatsApp]', '[English]', NULL
+1060, 'Telkom', 'Telkom SA Ltd', 2, 4, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+1061, 'MTN', 'MTN Group', 10, 4, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Telegram,Viber,WhatsApp]', '[English]', NULL
+1062, 'mtc touch', 'MIC 2', 3, 170, 'LocalPrefix', 'Normal', 80, 80, 60, 65, 'google and imo code extraction', '[MittoMonitoring]', '[]', '[]', NULL
+1063, 'MTCE', 'Mobile Telecommunications Company of Esfahan', 19, 47, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1064, 'Taliya', 'Rafsanjan Industrial Complex', 32, 47, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1065, 'Movistar', 'Otecel S.A.', 0, 145, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Google,Google NEW,Google only code,Telegram,Twitter,WhatsApp]', '[English]', NULL
+1066, 'Claro', 'Conecel S.A.', 1, 145, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Google,Google NEW,WhatsApp]', '[English]', NULL
+1067, 'CNT', 'Corporacion Nacional de Telecomunicaciones', 2, 145, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Facebook,Google,Google NEW,WhatsApp]', '[English]', NULL
+1068, 'STC', 'Saudi Telecom Company', 1, 175, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+1069, 'Telesom', 'Telesom', 1, 83, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1070, 'Sure', 'Sure South Atlantic Ltd.', 1, 229, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1072, 'Mobil R', 'R Cable y Telecomunicaciones Galicia S.A.', 17, 9, 'MittoMNPEnum', 'Normal', 80, 80, 60, 84, 'Twitter1: 22033 -> Twitter<br>Google1: content removal for Chama SMS', '[TestSMS]', '[Dynamic,Facebook,Google,Telegram,Viber,WhatsApp]', '[English]', NULL
+1073, 'Evatis', 'Djibouti Telecom SA', 1, 84, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1074, 'Lycamobile', 'Lycamobile', 26, 15, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Apple,Facebook,Google,Instagram,Telegram,Twitter,Viber,WhatsApp]', '[]', NULL
+1076, 'Vodafone', 'Vodafone', 2, 108, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1077, 'SahelCom', 'La Société Sahélienne de Télécommunications', 1, 60, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1078, 'Voila', 'Communication Cellulaire d\'Haiti S.A.', 1, 141, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1079, 'Digicel', 'Unigestion Holding S.A.', 2, 141, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1080, 'Voiceworks', 'Voiceworks B.V', 3, 6, 'MittoMNPEnum', 'Normal', 80, 80, 60, 131, 'Google1: content removal for Chama SMS', 'Handset', '[]', '[]', NULL
+1081, 'Lancelot', 'Lancelot', 28, 6, 'MittoMNPEnum', 'Normal', 80, 80, 60, 131, 'Google1: content removal for Chama SMS', 'Handset', '[]', '[]', NULL
+1082, 'Viettel', 'Viettel Telecom', 4, 39, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1084, 'Telecom', 'China Telecom', 3, 40, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1085, 'AT&T', 'AT&T Mexico', 50, 22, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1086, 'Chinguitel', 'Chinguitel', 2, 55, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1087, 'Mauritel', 'Mauritel Mobiles', 10, 55, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1088, 'Claro', 'Claro (Comcel)', 101, 27, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[ChatOn,Google,PayPal,Snapchat,Tango,Telegram,Viber,WeChat,WhatsApp]', '[English]', NULL
+1089, 'Movistar', 'Telefónica Móviles Colombia', 123, 27, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'MittoMonitoring', '[ChatOn,Google,PayPal,Snapchat,Tango,Tango BRA,Telegram,Viber,WeChat,WhatsApp]', '[English]', NULL
+1090, 'Claro', 'Claro CR Telecomunicaciones', 3, 139, 'MittoMNPEnum', 'Normal', 80, 80, 60, 154, 'Change Google content to G-<code>', '[TestSMS]', '[]', '[]', NULL
+1091, 'Orange', 'Orange La Réunion', 0, 227, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1092, 'Movistar', 'Telefónica Móvil de Chile', 2, 26, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'MittoMonitoring', '[]', '[]', NULL
+1093, 'WOM', 'Novator Partners', 9, 26, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'MittoMonitoring', '[]', '[]', NULL
+1094, 'Movilnet', 'Telecomunicaciones Movilnet', 6, 28, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+1095, 'KT Freetel', 'KT Corporation', 2, 38, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+1096, 'LG U+', 'LG Telecom', 6, 38, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1097, 'Movistar', 'Telefónica Móviles Perú', 6, 21, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'MittoMonitoring', '[]', '[]', NULL
+1098, 'Claro', 'América Móvil Perú', 10, 21, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'MittoMonitoring', '[]', '[]', NULL
+1100, 'Elephant Talk', 'Elephant Talk Communications Premium Rate Services', 5, 6, 'MittoMNPEnum', 'Normal', 80, 80, 60, 131, 'Google1: content removal for Chama SMS', 'Handset', '[]', '[]', NULL
+1103, 'Tricom', 'Tricom S.A.', 3, 205, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1104, 'MTN', 'MTN Cote dIvoire', 5, 58, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1105, 'Tigo', 'Millicom', 89, 76, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1106, 'Vectone Mobile', 'Mundio Mobile Limited', 1, 15, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1107, 'BT', 'BT Group', 0, 15, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1108, 'Claro', 'Telecomunicaciones de Guatemala, S.A.', 1, 135, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Google NEW,Telegram,Viber,WhatsApp]', '[English]', NULL
+1111, 'Onatel', 'Onatel', 3, 88, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1112, 'Movicel', 'MOVICEL Telecommunications S.A.', 4, 77, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1113, 'Orange', 'Orange Caraïbe Mobiles', 1, 142, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1114, 'Telcell', 'Saint Martin et Saint Barthelemy Telcell Sarl', 3, 142, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1115, 'Digicel', 'DIGICEL Antilles Française Guyane', 20, 142, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1116, 'Claro', 'Servicios de Comunicaciones de Honduras S.A. de C.', 1, 137, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Facebook,Google,Google NEW,Google only code,Twitter,Viber,WhatsApp]', '[English]', NULL
+1117, 'Hondutel', 'Empresa Hondureña de Telecomunicaciones', 30, 137, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1119, 'Zain', 'Zain Bahrain', 2, 180, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1120, 'Sprint', 'Sprint Corporation', 120, 1, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1121, 'Big Sky Mobile', 'iSmart Mobile LLC', 300, 1, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1122, 'Cellular One', 'Smith Bagley, Inc.', 320, 1, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1123, 'Westlink', 'WestLink Communications LLC', 340, 1, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1124, 'Airadigm', 'Airadigm Communications', 640, 1, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1125, 'Epic Touch', 'Epic Touch', 610, 1, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1127, 'Tigo', 'Telefónica Celular De Bolivia S.A', 3, 143, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1128, 'Orange', 'Orange S.A.', 1, 57, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1129, 'Sotelgui', 'Sotelgui Lagui', 2, 57, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1130, 'Lycamobile', 'Lycamobile Austria Ltd', 8, 14, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1131, 'Orange', 'Orange (Botswana) Pty Limited', 2, 97, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1132, 'U-Call', 'Tonga Communications Corporation', 1, 155, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1133, 'Bluesky', 'Bluesky', 11, 231, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1134, 'Digicel', 'Digicel Pacific Ltd.', 1, 159, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1135, 'Bluesky', 'Bluesky Samoa Ltd.', 27, 159, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1136, 'Digicel', 'Digicel (Nauru) Corporation', 2, 153, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1137, 'Orange', 'Orange RDC Sarl', 86, 76, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1138, 'MTN', 'Spacetel Benin', 3, 62, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1139, 'Yemen Mobile', 'Yemen Mobile', 3, 176, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1140, 'FONEX', 'Caspian American Telecom (CATEL)', 3, 187, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1141, 'Visafone', 'Visafone Communications Ltd.', 25, 67, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1142, 'Shine', 'Eazitelecom', 9, 104, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1143, 'MTML', 'Mahanagar Telephone (Mauritius) Ltd.', 3, 63, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1144, 'Airtel', 'Airtel Rwanda', 14, 81, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1145, 'MTN', 'MTN Rwandacell SARL', 10, 81, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1146, 'Natcom', 'Telecommunication S.A.', 3, 141, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1148, 'Eritel', 'Eritrea Telecommunications Services Corporation', 1, 100, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1149, 'mybyCAT', 'CAT Telecom', 0, 35, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Google,Google NEW,Telegram,Viber,WeChat,WhatsApp]', '[English]', NULL
+1150, 'TOT 3G', 'Telephone Organization of Thailand ', 15, 35, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1151, 'Digicel', 'Digicel (BVI) Limited', 770, 216, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1153, 'eMobile', 'EMOBILE Limited', 0, 37, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1154, 'Telecom', 'HURI - SNPT', 1, 99, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1155, 'Nextel', 'NII Holdings, Inc.', 39, 25, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1156, 'CTBC Celular', 'CTBC Celular S.A.', 15, 25, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1157, 'Nextel', 'NII Holdings', 20, 24, 'LocalPrefix', 'Normal', 80, 80, 60, 154, 'Google content change to G-<code>', 'MittoMonitoring', '[]', '[]', NULL
+1158, 'Warid', 'Warid Telecom', 7, 75, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1159, 'EE', 'Everything Everywhere Ltd', 1, 228, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1160, 'EastLink', 'EastLink', 270, 210, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1161, 'Wightman Telecom', 'Wightman Telecom Ltd', 940, 210, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1162, 'ICE Wireless', 'Ice Wireless Inc', 620, 210, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1163, 'Videotron', 'Videotron General Partnership', 500, 210, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1165, 'Telus', 'TELUS Communications Inc.', 220, 210, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1166, 'TBay', 'Thunder Bay Telephone Mobility', 656, 210, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1167, 'WIND Mobile', 'Globalive Communications', 490, 210, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1168, 'MTS', 'MTS Mobility', 660, 210, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1169, 'SaskTel', 'SaskTel Mobility', 680, 210, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1170, 'Unité', 'Moldtelecom', 5, 117, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1171, 'Expresso', 'Kasapa / Hutchison Telecom', 4, 66, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1173, 'APTG', 'Asia Pacific Telecom', 5, 168, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1174, 'Rogers Wireless', 'Rogers Communications', 720, 210, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1175, 'Smile', 'Telecom Vanuatu Ltd', 1, 156, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1176, 'Sudani One', 'Sudatel Group', 7, 80, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1177, 'Islandcom', 'Islandcom Telecommunications', 360, 198, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1178, 'TeleTalk', 'Teletalk Bangladesh Limited', 4, 167, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1181, 'China Telecom', 'China Telecom', 2, 164, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1182, 'Altel', 'Altel', 7, 36, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[Google,Telegram,Viber,WhatsApp]', '[English]', NULL
+1183, 'Somafone', 'Somafone FZLLC', 4, 83, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1184, 'Nationlink', 'NationLink Telecom', 10, 83, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1185, 'Hormuud', 'Hormuud Telecom Somalia Inc', 50, 83, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1186, 'Golis', 'Golis Telecom Somalia', 30, 83, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1189, 'Telcom', 'Telcom Somalia', 82, 83, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1191, 'Smartfren', 'PT Smart Telecom', 9, 31, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Facebook,Google,Google NEW,Twitter,Viber,WhatsApp]', '[English]', NULL
+1192, 'Skytel', 'Skytel LLC', 1, 183, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1193, 'G-Mobile', 'G-Mobile LLC', 6, 183, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1194, 'Econet', 'Econet Ezi-cel', 2, 96, 'LocalPrefix', 'Normal', 80, 80, 60, 153, 'remove word \"Google\" from content', 'Handset', '[]', '[]', NULL
+1195, 'Verizon', 'Verizon Wireless', 12, 1, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Apple Verify,Facebook,Google,Instagram,Telegram,Tinder,WhatsApp]', '[English]', NULL
+1196, 'Lycamobile', 'Lyca Technology Solutions', 960, 215, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1197, 'Uniqa', 'Intelsur N.V. / UTS N.V.', 4, 149, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1198, 'MTN', 'Swazi MTN Limited', 10, 98, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1199, 'UMS', 'Universal Mobile Systems', 7, 190, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1200, 'Perfectum Mobile', 'RUBICON WIRELESS COMMUNICATION', 6, 190, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1201, 'Wataniya', 'Wataniya Palestine Mobile Telecommunications Compa', 6, 226, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1202, 'VTR Móvil', 'VTR S.A.', 8, 26, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'MittoMonitoring', '[]', '[]', NULL
+1203, 'Vodafone', 'Vodafone IN', 84, 42, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1204, 'Vodafone', 'Vodafone IN', 66, 212, 'MittoMNPEnum', 'Normal', 80, 80, 60, 119, 'Alpha -> UK</br>Short code -> UK</br>ifree3: special', 'Handset', '[]', '[]', NULL
+1205, 'Airtel', 'Bharti Airtel Limited', 40, 42, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1206, 'Airtel', 'Bharti Airtel Limited', 51, 212, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1207, 'Idea', 'Idea Cellular', 4, 42, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1208, 'Idea', 'Idea Cellular', 852, 212, 'MittoMNPEnum', 'Normal', 80, 80, 60, 119, 'Alpha -> UK</br>Short code -> UK</br>ifree3: special', 'Handset', '[]', '[]', NULL
+1209, 'Reliance', 'Reliance Communications Ltd', 9, 42, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1210, 'Reliance', 'Reliance Communications Ltd', 15, 212, 'MittoMNPEnum', 'Normal', 80, 80, 60, 119, 'Alpha -> UK</br>Short code -> UK</br>ifree3: special', 'Handset', '[]', '[]', NULL
+1211, 'BSNL Mobile', 'BSNL Mobile', 34, 42, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1212, 'Tata DoCoMo', 'Tata DoCoMo', 25, 212, 'MittoMNPEnum', 'Normal', 80, 80, 60, 119, 'Alpha -> UK</br>Short code -> UK</br>ifree3: special', 'Handset', '[]', '[]', NULL
+1213, 'Uninor', 'Telewings Communications', 818, 212, 'MittoMNPEnum', 'Normal', 80, 80, 60, 119, 'Alpha -> UK</br>Short code -> UK</br>ifree3: special', 'Handset', '[]', '[]', NULL
+1214, 'Videocon', 'Videocon Datacom', 827, 212, 'MittoMNPEnum', 'Normal', 80, 80, 60, 119, 'Alpha -> UK</br>Short code -> UK</br>ifree3: special', 'Handset', '[]', '[]', NULL
+1215, 'Dolphin', 'Mahanagar Telephone Nigam Limited', 68, 42, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1216, 'Tempo', 'Africell PLC', 2, 88, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1217, 'Gemtel', 'Gemtel', 3, 48, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1218, 'Zain', 'Zain South Sudan', 6, 48, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1220, 'Africell', 'Africell RDC sprl', 90, 76, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1221, 'Movitel', 'Movitel S.A.', 3, 89, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1222, 'BOL', 'Benson Informatics Limited', 8, 86, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1223, 'Supercell', 'Supercell SPRL', 5, 76, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1224, 'FSMTC', 'FSM Telecommunications Corporation', 1, 232, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1226, 'MPT', 'Myanmar Post and Telecommunication', 1, 46, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+1227, 'Digicel', 'Wireless Ventures (St Kitts-Nevis) Limited	', 50, 207, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1230, 'Digicel', 'Digicel (St. Vincent and the Grenadines) Limited', 50, 203, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1231, 'Telecel', 'Telecel Centrafrique', 2, 69, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1232, 'Digicel', 'Digicel (Jamaica) Limited', 50, 208, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1234, 'SCO Mobile', 'SCO Mobile Ltd', 5, 43, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1235, 'CSTmovel', 'Companhia Santomese de Telecomunicaçôe', 1, 72, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1236, 'Ooredoo', 'Ooredoo Myanmar', 5, 46, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1237, 'Vivacell', 'Network of the World (NOW)', 5, 80, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1238, 'RighTel', 'RighTel', 20, 47, 'LocalPrefix', 'Normal', 80, 80, 60, 95, 'Numeric -> \"SMS\"', '[MittoMonitoring]', '[Google,Telegram,Verify,Viber,WeChat,WhatsApp]', '[English]', NULL
+1239, 'lemontel mobile', 'Lemontel Ltd', 22, 111, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1240, 'Smart', 'SpeedNet Communications Limited', 99, 134, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1241, 'Bitel', 'Viettel Peru S.A.C.', 15, 21, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'MittoMonitoring', '[]', '[]', NULL
+1242, 'Azur', 'USAN Gabon S.A.', 4, 74, 'LocalPrefix', 'Normal', 80, 80, 60, 129, 'Alt-PRS: replace recipient prefix 2413 to 21403', 'Handset', '[]', '[]', 129
+1243, 'Mediatech', 'Mediatech International', 2, 79, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1244, 'Mobitel', 'Mobitel Co. Ltd.', 45, 173, 'LocalPrefix', 'Normal', 80, 80, 60, 139, 'Recipients are checked for validity. If 0 follows CC, it\'s removed.', 'Handset', '[]', '[]', NULL
+1245, 'Vodafone', 'Pacific Mobile Telecom', 15, 161, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1246, 'Nationlink', 'Nationlink Telecom RCA', 4, 69, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1247, 'Orange', 'Orange RCA', 3, 69, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1249, 'MTS', 'Sistema Shyam TeleServices Limited', 890, 212, 'MittoMNPEnum', 'Normal', 80, 80, 60, 119, 'Alpha -> UK</br>Short code -> UK</br>ifree3: special', 'Handset', '[]', '[]', NULL
+1250, 'Silknet', 'JSC Silknet', 5, 188, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1253, 'Aero2', 'Aero 2 Sp. z o.o.', 15, 19, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1254, 'Telenor', 'Telenor Myanmar', 6, 46, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+1256, 'Intertelecom', 'Intertelecom', 4, 123, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1257, 'PEOPLEnet', 'Telesystems of Ukraine', 21, 123, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1258, 'Open Mobile', 'PRWireless', 120, 204, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1259, 'PNCC', 'Palau National Communications Corporation', 1, 234, 'LocalPrefix', 'Normal', 80, 80, 60, 3, 'Alpha -> UK</br>Short code -> UK', 'Handset', '[]', '[]', NULL
+1260, 'PMC', 'Palau Mobile Corporation', 80, 234, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1261, 'Frigate Net', 'Telecom Services Kiribati Ltd', 9, 233, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1262, 'TTC', 'Tuvalu Telecom', 1, 235, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1263, 'Greenfone', 'Stour Marine Ltd.', 24, 15, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1264, 'Private Mobility', 'Private Mobility Nederland B.V.', 24, 6, 'MittoMNPEnum', 'Normal', 80, 80, 60, 131, 'Google1: content removal for Chama SMS', 'Handset', '[]', '[]', NULL
+1265, 'Default', 'Default', 999, 1, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1266, 'Digicel', 'Digicel', 50, 201, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1267, 'U:fon', 'Air Telecom a. s.', 4, 130, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1268, 'Telecom', 'Telecom Niue', 1, 236, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1269, 'Salaam', 'Afghan Telecom', 80, 44, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1271, 'SmartCell', 'Smart Telecom Pvt. Ltd.', 4, 184, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1272, 'Telkomcel', 'PT Telekomunikasi Indonesia International', 1, 151, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1273, 'Telemor', 'Viettel Timor-Leste', 3, 151, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1274, 'Digicel', 'Digicel Cayman Ltd.', 50, 195, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1275, 'Nexttel', 'Nexttel', 4, 70, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1276, 'Aircomm', 'Aircomm', 7, 58, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1277, 'HFCL', 'HFCL Infotel Ltd.', 24, 212, 'MittoMNPEnum', 'Normal', 80, 80, 60, 119, 'Alpha -> UK</br>Short code -> UK</br>ifree3: special', 'Handset', '[]', '[]', NULL
+1278, 'MINTA', 'Marshall Islands National Telecommunications Autho', 1, 237, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1279, 'Telenet', 'Telenet', 5, 7, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, '', '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Telegram,Verify,Viber,WhatsApp]', '[English]', NULL
+1280, 'LycaMobile', 'LycaMobile', 25, 8, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[]', '[]', NULL
+1281, 'Lumitel', 'Viettel Burundi', 8, 88, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1282, 'Aquafon', 'Aquafon JSC', 67, 238, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1283, 'A-Mobile', 'A-Mobile LLSC', 88, 238, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1284, 'Ameris', 'SPM Telecom', 1, 239, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1287, 'GTA Wireless', 'Teleguam Holdings, LLC', 140, 225, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1288, 'IT&E Wireless', 'IT&E Overseas, Inc', 32, 225, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1289, 'U.S. Cellular', 'U.S. Cellular', 580, 215, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1290, 'C Spire Wireless', 'Cellular South Inc.', 230, 215, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1291, 'Default', 'Default', 999, 215, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1292, 'Default', 'Default', 999, 240, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1293, 'Default', 'Default', 999, 241, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1294, 'Execulink', 'Execulink Telecom', 340, 210, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1295, 'Quadro', 'Quadro Communications Co-op', 590, 210, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1296, 'Shaw Telecom', 'Shaw Communications', 740, 210, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1297, 'SSi Connexions', 'SSi Connexions', 480, 210, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1298, 'SWAN', 'SWAN, a.s', 3, 131, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'MittoMonitoring', '[ChatOn,Google,PayPal,Snapchat,Tango,Telegram,Viber,WeChat,WhatsApp]', '[English]', NULL
+1299, 'Smart', 'Suretelcom Uganda Limited', 18, 87, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1300, 'Lleida', 'Lleida Networks Serveis Telematics', 26, 9, 'MittoMNPEnum', 'Normal', 80, 80, 60, 84, 'Twitter1: 22033 -> Twitter<br>Google1: content removal for Chama SMS', '[TestSMS]', '[]', '[]', NULL
+1301, 'Avantel', 'Avantel S.A.S', 130, 27, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Google]', '[English]', NULL
+1302, 'Ntel', 'Nigerian Mobile Telecommunications Limited', 40, 67, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1303, 'Yes', 'YTL Communications Sdn Bhd', 152, 29, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[0]', '[]', '[]', NULL
+1304, 'UzMobile', 'Uzbektelekom', 8, 190, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1305, 'Manuia', 'Manuia', 1, 242, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1306, 'Lycamobile', 'Lycamobile AG', 54, 13, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic]', '[German,French]', NULL
+1307, 'Lycamobile', 'Lycamobile', 43, 20, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Google,Snapchat,Telegram,Viber,WhatsApp]', '[German]', NULL
+1308, 'Halotel', 'Viettel Tanzania Limited', 9, 86, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1309, 'Truphone', 'Truphone (Hong Kong) Ltd', 8, 163, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1310, 'Unitel STP', 'Unitel STP S.a.r.l.', 2, 72, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1311, 'NewCo2015', 'NewCo2015 Limited', 49, 191, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1312, 'Webe', 'Packet One Networks Sdn B', 153, 29, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1313, 'ICE', 'ICE Communication Norge AS', 14, 18, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Viber,WhatsApp]', '[English]', NULL
+1314, 'One', 'One', 2, 129, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Google,Telegram,Viber,WhatsApp]', '[English]', NULL
+1315, 'Yota', 'Scartel', 11, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, 69, 'Twitter: All -> \"Twitter\"', '[MittoMonitoring]', '[Google]', '[English]', NULL
+1316, 'Shatel', 'Shatel Mobile', 8, 47, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1317, 'Telco Comores', 'Telco Comores', 2, 99, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1318, 'Fastlink', 'Fastlink', 66, 173, 'LocalPrefix', 'Normal', 80, 80, 60, 139, 'Recipients are checked for validity. If 0 follows CC, it\'s removed.', 'Handset', '[]', '[]', NULL
+1319, 'Swazi Mobile', 'Swazi Mobile', 2, 98, 'LocalPrefix', 'Normal', 0, 0, 0, NULL, NULL, 'Handset', '[]', '[]', NULL
+1320, 'Faiba', 'Jamii Telecommunications Limite', 10, 85, 'MittoMNPEnum', 'Normal', 0, 0, 0, NULL, NULL, 'Handset', '[]', '[]', NULL
+1321, 'Telecom Egypt', 'Telecom Egypt', 4, 3, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Facebook,Google,Viber]', '[English]', NULL
+1322, 'SeaTel', 'South East Asia Telecom (Cambodia) Co., Ltd', 11, 165, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1323, 'Somtel', 'SOMTEL International LTD', 71, 83, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1324, 'MTX Connect', 'MTX Connect S.a.r.l.', 2, 106, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1325, 'Sky', 'Sky UK Limited', 57, 15, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1326, 'Lycamobile', 'Lycamobile Romania', 16, 12, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1327, 'Iliad', 'Iliad Italia', 50, 11, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1328, 'K-Telecom', 'K-Telecom', 32, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, 'Twitter: All -> \"Twitter\"<br/>Google -> change some texts<br/>All -> change and check texts for Telegram, Viber, WhatsApp', 'Handset', '[Facebook,Google,Instagram,Tango,Telegram,Viber,WhatsApp]', '[English]', NULL
+1329, 'Sberbank Telecom', 'Sberbank-Telecom LLC.', 50, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, 'Twitter: All -> \"Twitter\"<br/>Google -> change some texts<br/>All -> change and check texts for Telegram, Viber, WhatsApp', 'Handset', '[Facebook,Google,Instagram,Tango,Telegram,Viber,WhatsApp]', '[English]', NULL
+1330, 'SIM TELECOM', 'SIM TELECOM', 47, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, 'Twitter: All -> \"Twitter\"', 'Handset', '[]', '[]', NULL
+1331, 'SMARTS-Ufa', 'SMARTS-Ufa', 15, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1332, 'SMARTS-Kazan (TMT)', 'SMARTS-Kazan (TMT)', 27, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1333, 'TTK', 'TTK Tattelecom', 54, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1334, 'NCC', 'Nizhegorodskaya Cellular Communications', 3, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, 'Twitter: All -> \"Twitter\"', 'Handset', '[]', '[]', NULL
+1335, 'Yeniseytelecom', 'ETK Yeniseytelecom', 5, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, 'Twitter: All -> \"Twitter\"', 'Handset', '[]', '[]', NULL
+1336, 'Skylink-CJSC', 'CJSC Saratov System of Cellular Communications', 6, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, 'Twitter: All -> \"Twitter\"', 'Handset', '[]', '[]', NULL
+1337, 'Skylink-Khabarovsky', 'Khabarovsky Cellular Phone', 9, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, 'Twitter: All -> \"Twitter\"', 'Handset', '[]', '[]', NULL
+1338, 'DTC', 'DTC Dontelekom', 10, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, 'Twitter: All -> \"Twitter\"', 'Handset', '[]', '[]', NULL
+1339, 'Baykal Westcom', 'Baykal Westcom', 12, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, 'Twitter: All -> \"Twitter\"', 'Handset', '[]', '[]', NULL
+1340, 'NTC', 'NTC New Telephone Company', 16, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, 'Twitter: All -> \"Twitter\"', 'Handset', '[]', '[]', NULL
+1341, 'Utel', 'JSC Uralsvyazinform', 17, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, 'Twitter: All -> \"Twitter\"', 'Handset', '[]', '[]', NULL
+1342, 'Indigo', 'Indigo', 19, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, 'Twitter: All -> \"Twitter\"', 'Handset', '[]', '[]', NULL
+1343, 'Tambov GSM', 'Central Telecommunication Company', 38, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, 'Twitter: All -> \"Twitter\"', 'Handset', '[]', '[]', NULL
+1344, 'Rostelecom', 'Rostelecom', 39, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, 'Twitter: All -> \"Twitter\"', 'Handset', '[]', '[]', NULL
+1345, 'Lycamobile', 'Lycamobile Russia Ltd.', 13, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, '', 'Handset', '[]', '[]', NULL
+1346, 'Antares', 'Antares', 28, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, '', 'Handset', '[]', '[]', NULL
+1347, 'Sevmobile', 'Sevtelekom', 33, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, '', 'Handset', '[]', '[]', NULL
+1348, 'Gazprom Telecom', 'Gazprom Telecom', 41, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, '', 'Handset', '[]', '[]', NULL
+1349, 'MTT', 'MTT', 42, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, '', 'Handset', '[]', '[]', NULL
+1350, 'Stuvtelesot', 'Stuvtelesot', 44, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, '', 'Handset', '[]', '[]', NULL
+1351, 'Volna mobile', 'Volna mobile - KTK Telecom', 60, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, '', 'Handset', '[]', '[]', NULL
+1352, 'Russia - Proper', 'Russia - Proper', 779, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, '', 'Handset', '[]', '[]', NULL
+1353, 'Virgin Mobile', 'Virgin Mobile', 38, 15, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1354, 'MobiquiThings', 'MobiquiThings', 24, 8, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[]', '[]', NULL
+1355, 'Loop Mobile', 'Loop Mobile', 21, 42, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1356, 'Telekomi i Kosovës SH.A.', 'Telekomi i Kosovës SH.A.', 1, 243, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1357, 'IPKO Telecommunications LLC', 'IPKO Telecommunications LLC', 2, 243, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1358, 'Dardafon.Net LLC', 'Dardafon.Net LLC', 6, 243, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1359, 'Tinkoff Mobile', 'Tinkoff Mobile', 62, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1360, 'Phoenix', 'DPR Phoenix', 99, 123, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1361, 'Bulsatcom', 'Bulsatcom', 11, 113, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Telegram,Tinder,Viber,WhatsApp]', '[English]', NULL
+1362, 'Aire Networks', 'Aire Networks del Mediterráneo, S.L.U.', 34, 9, 'MittoMNPEnum', 'Normal', 80, 80, 60, 84, 'Twitter1: 22033 -> Twitter<br>Google1: content removal for Chama SMS', '[TestSMS]', '[]', '[]', NULL
+1363, 'Grid', 'GRID Communications Pte Ltd', 12, 34, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1364, 'Unleashed', 'Unleashed NV', 30, 7, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, '', '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Telegram,Tinder,Viber,WhatsApp]', '[English]', NULL
+1365, 'Mytel', 'Telecom International Myanmar Company Ltd', 9, 46, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1366, 'Telikom', 'Telikom PNG Limited.', 2, 154, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1367, 'TTCL', 'Tanzania Telecommunication Company LTD', 7, 86, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1368, 'WELCOME ITALIA', 'WELCOME ITALIA', 49, 11, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1369, 'BT ITALIA', 'BT ITALIA', 34, 11, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1370, 'MASS Response', 'MASS Response', 17, 14, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'MittoMonitoring', '[]', '[]', NULL
+1371, 'M:tel', 'M:tel', 20, 14, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1372, 'E-Lux Mobile', 'E-Lux Mobile', 81, 106, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1373, 'Marathon 018 Xphone', 'Marathon 018 Xphone', 9, 179, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+1374, 'Azur', 'Azur', 2, 75, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1375, 'Fastweb', 'Fastweb', 8, 11, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1376, 'Poste Mobile', 'Poste Mobile', 33, 11, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[]', '[]', NULL
+1377, 'Lycamobile (Pty) Ltd', 'Lycamobile (Pty) Ltd', 53, 4, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1378, 'Vainah', 'Vainah Telecom', 8, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1379, 'Telecom', 'Telecom Mali', 3, 56, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1380, 'Virgin Mobile', 'Virgin Mobile Polska Sp. z.o.o', 45, 19, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1381, 'Pivotel', 'Pivotel Satellite Pty Limited', 88, 30, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Telegram,Viber,WhatsApp]', '[English]', NULL
+1383, 'Internod', 'Internod Ltd.', 49, 2, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1384, 'Intelfon', 'Intelfon S.A. de C.V.', 5, 136, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[ChatOn,Facebook,Google,Instagram,Tango,Telegram,Viber,Viettel,WhatsApp]', '[English]', NULL
+1385, 'Smile', 'Smile Communications Nigeria', 27, 67, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1386, 'Somnet', 'Somnet', 20, 83, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1387, 'Nethys', 'Nethys SA', 8, 7, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[Dynamic,Facebook,Google,Instagram,Telegram,Tinder,Viber,WhatsApp]', '[English]', NULL
+1388, 'TPG Telecom', 'TPG Telecom Pte Ltd', 10, 34, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1389, 'QCell', 'QCell (SL) Ltd', 7, 65, 'LocalPrefix', 'Normal', 80, 80, 60, NULL, NULL, 'Handset', '[]', '[]', NULL
+1390, 'I-Telecom', 'Indochina Telecom', 8, 39, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[MittoMonitoring]', '[Google,Telegram,Viber,WhatsApp]', '[English]', NULL
+1391, 'Lycamobile', 'Lycamobile Sweden Ltd.', 12, 17, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, 'MittoMonitoring', '[]', '[]', NULL
+1392, 'Lycamobile', 'Lycamobile', 35, 11, 'MittoMNPEnum', 'Normal', 80, 80, 60, NULL, NULL, '[TestSMS]', '[]', '[]', NULL

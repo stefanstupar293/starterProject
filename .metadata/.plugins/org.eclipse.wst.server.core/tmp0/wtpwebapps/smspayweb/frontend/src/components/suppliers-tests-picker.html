@@ -1,0 +1,79 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/vaadin-text-field/src/vaadin-text-area.html">
+<link rel="import" href="../../bower_components/vaadin-button/src/vaadin-button.html">
+<link rel="import" href="../../bower_components/vaadin-grid/src/vaadin-grid.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../../bower_components/vaadin-ordered-layout/src/vaadin-vertical-layout.html">
+
+
+
+<dom-module id="suppliers-tests-picker">
+    <template>
+<style include="shared-styles lumo-badge">
+        	:host {
+                height: auto;
+                width: 100%;
+                display: flex;
+            } 
+            
+            .main {
+				padding: 0px;
+		    	margin: 0px;
+		    	flex: 1;
+    			height: auto;
+		    	width: 100%;
+			}
+            
+            vaadin-text-field{
+				width: 100%;
+			}
+			
+			.caption{
+				font-family: var(--lumo-font-family);
+				font-size: 14px;
+				font-weight: 500;
+				position: relative;
+			}
+			
+			#supplierGrid{
+				margin-bottom: var(--lumo-space-s);
+				flex: 1;
+				/* overflow: hidden; */
+			} 
+			
+			.error-text{
+				font-size: var(--lumo-font-size-xs);
+		    	line-height: var(--lumo-line-height-xs);
+		    	color: var(--lumo-error-text-color);
+			}
+			
+			#zero-label {
+				font-size: var(--lumo-font-size-xs);
+		    	line-height: var(--lumo-line-height-xs);
+		    	padding: var(--lumo-space-s);
+			}
+			
+        </style>
+<vaadin-vertical-layout class="main" id="suppliers-wrapper">
+ <label-with-help id="suppliersLabel" class="caption"></label-with-help>
+ <vaadin-grid id="supplierGrid" theme="no-border no-row-borders compact wrap-cell-content small"></vaadin-grid>
+ <span id="zero-label">Text</span>
+ <span id="suppliers-error-text" class="error-text">Text</span>
+</vaadin-vertical-layout>
+</template>
+
+    <script>
+        class SuppliersTestsPicker extends Polymer.Element {
+            static get is() {
+                return 'suppliers-tests-picker';
+            }
+
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(SuppliersTestsPicker.is, SuppliersTestsPicker);
+    </script>
+</dom-module>

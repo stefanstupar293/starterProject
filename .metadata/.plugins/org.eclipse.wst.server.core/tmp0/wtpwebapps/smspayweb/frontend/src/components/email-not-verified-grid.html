@@ -1,0 +1,54 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/vaadin-text-field/src/vaadin-text-field.html">
+<link rel="import" href="zero-content.html">
+
+
+
+
+<dom-module id="email-not-verified-grid">
+    <template>
+<style include="shared-styles">
+          :host {
+     	       width: 100%;
+               height: 100%;
+               text-align: -webkit-right;
+
+           }
+           #search-filter{
+                width: calc(100% - var(--lumo-space-s));
+            
+            }
+           #grid{
+      	       height: 213px;
+      	       flex: 1;
+      	    }
+      	  .email-column {
+      	      font-weight: 500;
+      	      cursor: pointer;
+      	    }
+      	      
+</style>
+<div id="content">
+ <vaadin-text-field id="search-filter" placeholder="Email not verified in last 7 days"  theme="small"></vaadin-text-field>
+</div>
+<div>
+ <vaadin-grid id="grid" theme="small rounded-rows-grid compact no-header rows-height-medium"></vaadin-grid>
+ <zero-content id="zeroContent"></zero-content>
+</div>
+</template>
+
+    <script>
+        class EmailNotVerifiedGrid extends Polymer.Element {
+            static get is() {
+                return 'email-not-verified-grid';
+            }
+
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(EmailNotVerifiedGrid.is, EmailNotVerifiedGrid);
+    </script>
+</dom-module>

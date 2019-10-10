@@ -1,0 +1,314 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+
+<dom-module id="invoice-form-template">
+    <template>
+<style include="shared-styles bootstrap">
+:host {
+	display: block;
+	background: white;
+}
+.invoice-title {
+	display: flex;
+}
+.invoice-title h2, .invoice-title h3 {
+	display: inline-block;
+}
+
+.table>tbody>tr>.no-line {
+	border-top: none;
+}
+
+.table>thead>tr>.no-line {
+	border-bottom: none;
+}
+
+.table>tbody>tr>.thick-line {
+	border-top: 2px solid;
+}
+
+.container{
+    padding-right:15px;
+    padding-left:15px;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top: 10px;
+    box-shadow: var(--lumo-box-shadow-s);
+}
+@media (min-width:768px){
+    .container{
+        width:750px;
+    }
+}
+@media (min-width:992px){
+    .container{
+        width:850px;
+    }
+}
+@media (min-width:1200px){
+    .container{
+   	 	width:850px;
+        /* width:1170px; */
+    }
+}
+.container-fluid{
+    padding-right:15px;
+    padding-left:15px;
+    margin-right:auto;
+    margin-left:auto;
+}
+.row{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+}
+.col-xs-1,.col-sm-1,.col-md-1,.col-lg-1,.col-xs-2,.col-sm-2,.col-md-2,.col-lg-2,.col-xs-3,.col-sm-3,.col-md-3,.col-lg-3,.col-xs-4,.col-sm-4,.col-md-4,.col-lg-4,.col-xs-5,.col-sm-5,.col-md-5,.col-lg-5,.col-xs-6,.col-sm-6,.col-md-6,.col-lg-6,.col-xs-7,.col-sm-7,.col-md-7,.col-lg-7,.col-xs-8,.col-sm-8,.col-md-8,.col-lg-8,.col-xs-9,.col-sm-9,.col-md-9,.col-lg-9,.col-xs-10,.col-sm-10,.col-md-10,.col-lg-10,.col-xs-11,.col-sm-11,.col-md-11,.col-lg-11,.col-xs-12,.col-sm-12,.col-md-12,.col-lg-12{
+    position:relative;
+    min-height:1px;
+    padding-right:15px;
+    padding-left:15px;
+    margin-bottom: 20px;
+}
+.col-xs-1,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.col-xs-10,.col-xs-11,.col-xs-12{
+    float:left;
+}
+.col-xs-12{
+    width:100%;
+}
+.col-md-12{
+	flex: 1;
+}
+/* .blockquote-reverse,blockquote.pull-right{
+    padding-right:15px;
+    padding-left:0;
+    text-align:right;
+    border-right:5px solid #eee;
+    border-left:0
+}
+.blockquote-reverse footer:before,blockquote.pull-right footer:before,.blockquote-reverse small:before,blockquote.pull-right small:before,.blockquote-reverse .small:before,blockquote.pull-right .small:before{
+    content:''
+}
+.blockquote-reverse footer:after,blockquote.pull-right footer:after,.blockquote-reverse small:after,blockquote.pull-right small:after,.blockquote-reverse .small:after,blockquote.pull-right .small:after{
+    content:'\00A0 \2014'
+} */
+.text-left{
+	text-align:left;
+    flex: 1;
+}
+.text-right{
+    text-align:right;
+    flex: 1;
+}
+.text-center{
+    text-align:center;
+}
+.panel{
+    margin-bottom:20px;
+    background-color:#fff;
+    border:1px solid transparent;
+    border-radius:4px;
+    -webkit-box-shadow:0 1px 1px rgba(0,0,0,.05);
+    box-shadow:0 1px 1px rgba(0,0,0,.05)
+}
+.panel-body{
+    padding:15px
+}
+.panel-heading{
+    padding:10px 15px;
+    border-bottom:1px solid transparent;
+    border-top-left-radius:3px;
+    border-top-right-radius:3px
+}
+.panel-title{
+    margin-top:0;
+    margin-bottom:0;
+    font-size:16px;
+    color:inherit
+}
+.panel-title>a{
+    color:inherit
+}
+.panel-default{
+    border-color:#ddd
+}
+.panel-default>.panel-heading{
+    color:#333;
+    background-color:#f5f5f5;
+    border-color:#ddd
+}
+/*
+@media screen and (max-width:767px){
+    .table-responsive{
+        width:100%;
+        margin-bottom:15px;
+        overflow-x:auto;
+        overflow-y:hidden;
+        -webkit-overflow-scrolling:touch;
+        -ms-overflow-style:-ms-autohiding-scrollbar;
+        border:1px solid #ddd
+    }
+    .table-responsive>.table{
+        margin-bottom:0
+    }
+    .table-responsive>.table>thead>tr>th,.table-responsive>.table>tbody>tr>th,.table-responsive>.table>tfoot>tr>th,.table-responsive>.table>thead>tr>td,.table-responsive>.table>tbody>tr>td,.table-responsive>.table>tfoot>tr>td{
+        white-space:nowrap
+    }
+    .table-responsive>.table-bordered{
+        border:0
+    }
+    .table-responsive>.table-bordered>thead>tr>th:first-child,.table-responsive>.table-bordered>tbody>tr>th:first-child,.table-responsive>.table-bordered>tfoot>tr>th:first-child,.table-responsive>.table-bordered>thead>tr>td:first-child,.table-responsive>.table-bordered>tbody>tr>td:first-child,.table-responsive>.table-bordered>tfoot>tr>td:first-child{
+        border-left:0
+    }
+    .table-responsive>.table-bordered>thead>tr>th:last-child,.table-responsive>.table-bordered>tbody>tr>th:last-child,.table-responsive>.table-bordered>tfoot>tr>th:last-child,.table-responsive>.table-bordered>thead>tr>td:last-child,.table-responsive>.table-bordered>tbody>tr>td:last-child,.table-responsive>.table-bordered>tfoot>tr>td:last-child{
+        border-right:0
+    }
+    .table-responsive>.table-bordered>tbody>tr:last-child>th,.table-responsive>.table-bordered>tfoot>tr:last-child>th,.table-responsive>.table-bordered>tbody>tr:last-child>td,.table-responsive>.table-bordered>tfoot>tr:last-child>td{
+        border-bottom:0
+    }
+}
+.table-condensed>thead>tr>th,.table-condensed>tbody>tr>th,.table-condensed>tfoot>tr>th,.table-condensed>thead>tr>td,.table-condensed>tbody>tr>td,.table-condensed>tfoot>tr>td{
+    padding:5px
+} */
+
+
+.table-condensed{
+	width: 100%;
+    margin-bottom:15px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    -webkit-overflow-scrolling:touch;
+    -ms-overflow-style:-ms-autohiding-scrollbar;
+}
+/* 
+.panel-heading {
+	color: rgb(51, 51, 51);
+    background-color: rgb(245, 245, 245);
+    border-color: rgb(221, 221, 221);
+    padding: 10px 15px;
+}
+.panel.panel-default {
+    border-color: rgb(221, 221, 221);
+}
+.panel {
+    margin-bottom: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 1px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    border-image: initial;
+    border-radius: 4px;
+}
+.panel-title {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 16px;
+    color: inherit;
+}
+.panel-body {
+    padding: 15px;
+}
+tr > td, .table > tfoot > tr > td {
+    line-height: 1.42857;
+    vertical-align: top;
+    padding: 8px;
+    border-top: 1px solid rgb(221, 221, 221);
+} */
+</style>
+<div class="container">
+ <div class="row">
+  <div class="col-xs-12">
+   <div class="invoice-title">
+    <h2>Invoice</h2>
+    <h3 class="text-right pull-right">Order # [[invoiceId]]</h3>
+   </div>
+   <hr>
+   <div class="row">
+    <div class="col-xs-6 text-left" id="billed-to">
+     <address><strong>Billed To:</strong><br>[[fullName]]<br>[[companyName]]<br>[[address]]<br>[[email]] </address>
+    </div>
+    <div class="col-xs-6 text-right" id="shipped-to">
+     <address><strong>Shipped To:</strong><br> Jane Smith<br> 1234 Main<br> Apt. 4B<br> Springfield, ST 54321 </address>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-xs-6 text-right">
+     <address><strong>Order Date:</strong><br>[[createdOn]]<br><br></address>
+    </div>
+   </div>
+  </div>
+ </div>
+ <div class="row">
+  <div class="col-md-12">
+   <div class="panel panel-default">
+    <div class="panel-heading">
+     <h3 class="panel-title"><strong>Order summary</strong></h3>
+    </div>
+    <div class="panel-body">
+     <div class="table-responsive">
+      <table class="table table-condensed">
+       <thead>
+        <tr>
+         <td><strong>Item</strong></td>
+         <td class="text-center"><strong>Price per credit</strong></td>
+         <td class="text-center"><strong>Credits</strong></td>
+         <td class="text-right"><strong>Totals</strong></td>
+        </tr>
+       </thead>
+       <tbody>
+        <!-- foreach ($order->lineItems as $line) or some such thing here -->
+        <tr>
+         <td>[[creditType]]</td>
+         <td class="text-center">[[purchase.currency]] [[purchase.priceOneCredit]]</td>
+         <td class="text-center">[[purchase.credit]]</td>
+         <td class="text-right">[[purchase.currency]] [[purchase.priceTotal]]</td>
+        </tr>
+        <tr>
+         <td class="thick-line"></td>
+         <td class="thick-line"></td>
+         <td class="thick-line text-center"><strong>Subtotal</strong></td>
+         <td class="thick-line text-right">[[purchase.currency]] [[purchase.priceTotal]]</td>
+        </tr>
+        <tr>
+         <td class="no-line"></td>
+         <td class="no-line"></td>
+         <td class="no-line text-center"><strong>Other</strong></td>
+         <td class="no-line text-right">[[purchase.currency]] 0</td>
+        </tr>
+        <tr>
+         <td class="no-line"></td>
+         <td class="no-line"></td>
+         <td class="no-line text-center"><strong>Total</strong></td>
+         <td class="no-line text-right">[[purchase.currency]] [[purchase.priceTotal]]</td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+ <div class="row">
+  <div class="col-xs-6" style="width: 100%;">
+   <address><strong>Payment instruction:</strong><br>[[paymentCard]]<br>[[adminEmail]]</address>
+  </div>
+ </div>
+</div>
+</template>
+    
+    <script>
+        class InvoiceFormTemplate extends Polymer.Element {
+            static get is() {
+                return 'invoice-form-template';
+            }
+
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(InvoiceFormTemplate.is, InvoiceFormTemplate);
+    </script>
+</dom-module>

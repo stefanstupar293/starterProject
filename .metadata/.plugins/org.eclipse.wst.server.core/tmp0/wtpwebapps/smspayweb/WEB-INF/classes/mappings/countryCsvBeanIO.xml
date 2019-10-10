@@ -1,0 +1,32 @@
+<beanio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.beanio.org/2012/03"
+        xsi:schemaLocation="http://www.beanio.org/2012/03 http://www.beanio.org/2012/03/mapping.xsd">
+
+    <stream name="countryStream" format="csv">
+        <parser>
+            <property name="delimiter" value=";"/>
+            <property name="alwaysQuote" value="true"/>
+            <property name="unquotedQuotesAllowed" value="false"/>
+        </parser>
+        <record name="country_header" order="1" class="com.mnocompany.smspay.backend.model.mccmnc.Country" minOccurs="1" maxOccurs="1">
+            <field name="id" ignore="true" literal="Id"/>
+            <field name="isoAlpha2" ignore="true" literal="IsoAlpha2"/>
+            <field name="isoAlpha3" ignore="true" literal="IsoAlpha3"/>
+            <field name="name" ignore="true" literal="Name"/>
+            <field name="region" ignore="true" literal="Region"/>
+            <field name="countryCode" ignore="true" literal="CountryCode"/>
+            <field name="mcc" ignore="true" literal="MCC"/>
+        </record>
+        <record name="country" order="2" class="com.mnocompany.smspay.backend.model.mccmnc.Country" minOccurs="0" maxOccurs="unbounded">
+            <field name="id" />
+            <field name="isoAlpha2" rid="true" regex="^[A-z]{2}$" />
+            <field name="isoAlpha3"  rid="true" regex="^[A-z]{3}$" />
+            <field name="name" />
+            <field name="region"/>
+            <field name="countryCode"/>
+            <field name="mcc" rid="true" regex="^[0-9]{3}$"/>
+        </record>
+
+    </stream>
+
+</beanio>

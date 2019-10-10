@@ -1,0 +1,32 @@
+package com.gmail.stefan.backend.dbservices;
+
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.sql.Connection;
+import javax.sql.DataSource;
+import com.mysql.jdbc.Driver;
+
+
+public class TestDBConnection {
+	 
+	public static void main (String[] args) throws Exception {
+		System.out.println("Connected");
+		
+			Connection con = ;
+			ResultSet rs;
+			Statement st;
+//			Class.forName("com.mysql.jdbc.Driver");
+			con = DriverManager.getConnection("java:/comp/env/jdbc/todo", "root", "komkom");
+			System.out.println("Connected");
+			st = con.createStatement();
+			System.out.println("Connection succsessful!");
+		
+		
+		
+	}
+	
+	
+}
+
+

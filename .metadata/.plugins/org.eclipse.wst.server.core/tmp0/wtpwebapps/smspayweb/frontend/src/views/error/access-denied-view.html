@@ -1,0 +1,30 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+
+<dom-module id="access-denied-view">
+    <template>
+<style include="shared-styles">
+            :host {
+                display: block;
+                padding: var(--lumo-size-xs);
+                text-align: center;
+                overflow: hidden;
+            }
+            
+        </style>
+<h3 style="text-align: center" id="message"> Access denied </h3>
+<a href="https://vaadin.com" id="homePage">Go to Home page</a>
+</template>
+    <script>
+        class AccessDeniedView extends Polymer.Element {
+            static get is() {
+                return 'access-denied-view';
+            }
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(AccessDeniedView.is, AccessDeniedView);
+    </script>
+</dom-module>

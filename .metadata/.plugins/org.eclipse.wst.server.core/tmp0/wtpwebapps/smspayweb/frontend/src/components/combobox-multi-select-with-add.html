@@ -1,0 +1,90 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/vaadin-text-field/src/vaadin-text-field.html">
+<link rel="import" href="../../bower_components/vaadin-button/src/vaadin-button.html">
+<link rel="import" href="../../bower_components/vaadin-grid/src/vaadin-grid.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../../bower_components/vaadin-lumo-styles/badge.html">
+
+
+<dom-module id="combobox-multi-select-with-add">
+    <template>
+<style include="lumo-badge">
+	.main {
+		width: 100%;
+		position: relative; 
+		/* height: 100%; */
+	}
+	
+	.filter-field	{
+		width: 100%;
+	}
+	
+	.add-btn {
+		background-color: transparent;
+		margin: 0px;
+	}
+	
+	.arrow-btn {
+		min-width: var(--lumo-button-size);
+   		padding-left: calc(var(--lumo-button-size) / 4);
+    	padding-right: calc(var(--lumo-button-size) / 4);
+    	background-color: transparent;
+    	margin: 0px;
+    	margin-right: -4px;
+	}
+	
+	.popup {
+		width: 100%;
+		position: absolute;
+		left: 0px;
+		max-height: 300px;
+		overflow: auto;
+		box-shadow: 1px 1px 3px 0px #e1e1e1;
+		border-radius: 8px;
+		border: 1px solid #e1e1e1;
+		z-index: 111100;
+	}
+	
+	.popup:focus{
+	
+		outline: none;
+	}
+	
+	.popup-grid {
+		width: 100%;
+		height: 100%;
+	}
+	.small-button{
+		width: 1em;
+	}
+	
+	
+</style>
+<div class="main">
+ <vaadin-text-field id="filter-field" class="filter-field" theme="small">
+  <vaadin-button id="add-btn" class="add-btn" slot="suffix" theme="tertiary success">
+   <iron-icon icon="lumo:plus" theme="small"></iron-icon>
+  </vaadin-button>
+  <vaadin-button id="arrow-btn" class="arrow-btn" slot="suffix" theme="tertiary"></vaadin-button>
+ </vaadin-text-field>
+ <div id="popup" contenteditable class="popup">
+  <vaadin-grid id="popup-grid" class="popup-grid" theme="no-row-borders no-border compact"></vaadin-grid>
+ </div>
+</div>
+</template>
+    <script>
+        class ComboboxMultiSelectWithAdd extends Polymer.Element {
+            static get is() {
+                return 'combobox-multi-select-with-add';
+            }
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+            
+           
+        }
+        customElements.define(ComboboxMultiSelectWithAdd.is, ComboboxMultiSelectWithAdd);
+    </script>
+</dom-module>

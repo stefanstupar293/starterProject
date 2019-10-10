@@ -1,0 +1,106 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/vaadin-grid/src/vaadin-grid.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../../bower_components/vaadin-icons/vaadin-icons.html">
+<link rel="import" href="../../bower_components/vaadin-button/src/vaadin-button.html">
+<link rel="import" href="zero-content.html">
+
+
+
+
+<dom-module id="msisdns-not-verified-grid">
+    <template>
+<style include="shared-styles">
+
+      :host {
+         width: 100%;
+         height: 100%;
+         text-align: -webkit-right;
+         }
+
+     #grid {
+           height: 213px;
+      	   display: flex; 
+      }
+      	    
+     #content{
+        display: flex;
+        min-width: 100%;
+        max-width: 100%;
+		font-weight: 500;
+	 }
+      
+    #title {
+	    font-weight: 500;
+	    color: var(- -lumo-secondary-text-color);
+	    margin-left: var(- -lumo-space-s);
+	    display: flex;
+	    align-items: center;
+	    display: none;
+    }
+    
+      #search-filter {
+          flex-grow: 2;
+      }
+      
+      #download{
+          flex-grow: 0;
+      
+      }
+     
+     a {
+        
+     	min-width: calc(var(--lumo-button-size) * 2);
+	    height: var(--lumo-button-size);
+	    box-sizing: border-box;
+	    font-family: var(--lumo-font-family);
+	    font-weight: 500;
+	   
+	    background-color: var(--_lumo-button-background-color, var(--lumo-contrast-5pct));
+	    border-radius: var(--lumo-border-radius);
+	    color: var(--_lumo-button-color, var(--lumo-primary-text-color));
+	    
+	    min-width: 32px;
+        padding: 0px var(--lumo-space-xs);
+        margin: var(--lumo-space-xs);
+     }
+  
+   
+     #title iron-icon {
+	   width: var(- -lumo-font-size-m);
+	   margin-right: var(- -lumo-space-s);
+	   line-height: 1;
+      }
+
+     .email-column {
+	   font-weight: 500;
+	   color: var(- -lumo-primary-text-color);
+	   cursor: pointer;
+	  }
+</style>
+<div id="content">
+ <span id="title">
+  <iron-icon icon="" id="ironIcon"></iron-icon></span>
+ <vaadin-text-field placeholder="Msisdns not verified in last 24h" id="search-filter" theme="small"></vaadin-text-field>
+ <a id="exportLink">
+  <iron-icon icon="lumo:download"></iron-icon></a>
+</div>
+<div>
+ <vaadin-grid id="grid" theme="small rounded-rows-grid compact no-header rows-height-medium"></vaadin-grid>
+ <zero-content id="zeroContent"></zero-content>
+</div>
+</template>
+    <script>
+        class MsisdnsNotVerifiedGrid extends Polymer.Element {
+            static get is() {
+                return 'msisdns-not-verified-grid';
+            }
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(MsisdnsNotVerifiedGrid.is, MsisdnsNotVerifiedGrid);
+    </script>
+</dom-module>

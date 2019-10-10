@@ -1,0 +1,90 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="senders-tests-picker.html">
+<link rel="import" href="text-tests-picker.html">
+<link rel="import" href="suppliers-tests-picker.html">
+<link rel="import" href="../../bower_components/vaadin-button/src/vaadin-button.html">
+<link rel="import" href="specific-phone-picker.html">
+
+
+
+
+<dom-module id="specific-sms-form">
+    <template>
+		<style include="shared-styles">
+            :host {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 100%;
+            }
+            
+            #main {
+            	overflow-y: auto;
+            	flex: 1;
+            	display: flex;
+				flex-direction: column;
+            	width: 100%;
+            }
+            
+            .full-width {
+            	width: 100%;
+            	margin-top:	var(--lumo-space-m);
+            }
+            
+            .big-item {
+            	flex: 1;
+            	min-height: 120px;
+            	/* overflow: auto; */
+            	/* height: auto; */
+            	margin-top:	var(--lumo-space-m);
+            }
+            
+            #actions {
+            	display: flex;
+            	width: 100%;
+            }
+            
+            .expanded {
+            	flex: 1;
+            }
+            .caption{
+				font-family: var(--lumo-font-family);
+				font-size: 14px;
+				font-weight: 500;
+			}
+			.error-text{
+				font-size: var(--lumo-font-size-xs);
+		    	line-height: var(--lumo-line-height-xs);
+		    	color: var(--lumo-error-text-color);
+			}
+        </style>
+<h3 id="main-caption">Heading 3</h3>
+<div id="main">
+ <specific-phone-picker id="phones" class="full-width"></specific-phone-picker>
+ <senders-tests-picker id="senders" class="full-width big-item"></senders-tests-picker>
+ <text-tests-picker id="text" class="full-width"></text-tests-picker>
+ <suppliers-tests-picker id="suppliers" class="full-width big-item"></suppliers-tests-picker>
+</div>
+<div id="actions">
+ <div class="expanded">
+  <vaadin-button id="close-btn"></vaadin-button>
+ </div>
+ <vaadin-button id="send-btn" theme="primary"></vaadin-button>
+</div>
+</template>
+
+    <script>
+        class SpecificSmsForm extends Polymer.Element {
+            static get is() {
+                return 'specific-sms-form';
+            }
+
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(SpecificSmsForm.is, SpecificSmsForm);
+    </script>
+</dom-module>

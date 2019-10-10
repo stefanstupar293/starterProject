@@ -1,0 +1,51 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../styles/shared-styles.html">
+<link rel="import" href="../../components/header-filtering-component.html">
+<link rel="import" href="../../../bower_components/vaadin-grid/src/vaadin-grid.html">
+<link rel="import" href="../../../bower_components/vaadin-grid/src/vaadin-grid-column.html">
+
+<dom-module id="client-management-log-history">
+    <template>
+<style include="shared-styles">
+
+    :host {
+		overflow: hidden;
+        width: 100%;
+	}
+	
+
+	
+	#content{
+		
+		width: 100%;
+	    flex: 1; 
+	}
+	
+	vaadin-grid{
+		height: calc(100vh - 110px);
+		/* margin: var(--lumo-space-s) var(--lumo-space-m); */
+	}
+          
+        </style>
+<div id="content">
+ <header-filtering-component id="header"></header-filtering-component>
+ <div class="content" id="gridWrapper">
+ 	<vaadin-grid id="grid" theme="small rounded-rows-grid grid-side-padding-wide compact"></vaadin-grid>
+ </div>
+ 
+</div>
+</template>
+    <script>
+        class ClientManagementLogHistory extends Polymer.Element {
+            static get is() {
+                return 'client-management-log-history';
+            }
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(ClientManagementLogHistory.is, ClientManagementLogHistory);
+    </script>
+</dom-module>

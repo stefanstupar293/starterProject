@@ -1,0 +1,84 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/vaadin-form-layout/src/vaadin-form-layout.html">
+<link rel="import" href="../../../bower_components/vaadin-text-field/src/vaadin-text-field.html">
+<link rel="import" href="../../components/form-buttons-bar.html">
+<link rel="import" href="../../../bower_components/vaadin-combo-box/src/vaadin-combo-box.html">
+<link rel="import" href="../../../bower_components/vaadin-ordered-layout/src/vaadin-vertical-layout.html">
+<link rel="import" href="../../../bower_components/vaadin-ordered-layout/src/vaadin-horizontal-layout.html">
+<link rel="import" href="../../../bower_components/vaadin-form-layout/src/vaadin-form-item.html">
+<link rel="import" href="../../components/label-with-help.html">
+
+<dom-module id="supplier-form">
+    <template>
+<style>
+    
+      :host {
+        display: flex;
+        flex-direction: column;
+        flex: auto;
+        height: 100%;
+        
+      }
+      
+      h3{
+      	margin: 0;
+      }
+
+      vaadin-form-layout {
+        flex: auto;
+        overflow: auto;
+
+        width: 50vw;
+      
+        
+      }
+      
+      vaadin-form-item {
+         flex-flow:column; 
+        
+      }
+      
+      vaadin-text-field{
+      
+      
+      }
+      
+      
+     </style>
+<vaadin-form-layout id="form">
+ <h3 id="title" colspan="2">Heading 3</h3>
+ <vaadin-form-item label-position="top">
+   <label-with-help id="titleLabel" slot="label"></label-with-help>
+  <div>
+   <vaadin-text-field id="titleField" hide-label ></vaadin-text-field>
+  </div>
+ </vaadin-form-item>
+ <vaadin-form-item label-position="top">
+  <label-with-help id="serviceTypeLabel" slot="label" label-text="Service type"></label-with-help>
+  <vaadin-text-field id="serviceType" label=""></vaadin-text-field>
+ </vaadin-form-item>
+ <vaadin-form-item label-position="top">
+  <label-with-help id="routerTypeLabel" slot="label" label-text="Service type"></label-with-help>
+  <vaadin-text-field id="routerType" label=""></vaadin-text-field>
+ </vaadin-form-item>
+ <vaadin-form-item label-position="top">
+  <label-with-help id="internalIdLabel" slot="label" label-text="Service type"></label-with-help>
+  <vaadin-text-field id="internalId" label=""></vaadin-text-field>
+ </vaadin-form-item>
+</vaadin-form-layout>
+<form-buttons-bar id="buttons"></form-buttons-bar>
+</template>
+    <script>
+        class SupplierForm extends Polymer.Element {
+            static get is() {
+                return 'supplier-form';
+            }
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(SupplierForm.is, SupplierForm);
+    </script>
+</dom-module>

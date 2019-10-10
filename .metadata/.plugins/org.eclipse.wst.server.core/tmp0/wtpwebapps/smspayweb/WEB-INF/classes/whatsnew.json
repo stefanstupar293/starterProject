@@ -1,0 +1,291 @@
+{
+	"entries":[
+
+		{
+			"date": "2019-08-22_01:00",
+			"byDateChanges":[
+				{
+					"title": "Test cases",
+					"changes":[
+						{
+							"change":"Multi word search for choose networks. Example: Telenor Denmark."
+						},
+						{
+							"change":"Filter for ported scenarios available"
+						},
+						{
+							"change":"External phone numbers available to add in Live test. "
+						}
+
+					]
+				},
+				{
+					"title": "Scheduler",
+					"changes":[
+						{
+							"change":"Available to schedule external phone numbers."
+						}
+
+					]
+				}
+			]
+		},
+		{
+			"date": "2019-07-25_16:09",
+			"byDateChanges":[
+				{
+					"title": "Test cases",
+					"changes":[
+						{
+							"change":"Better options for search SMS test cases. Added RECEIVE status to display both POSITIVE and TEXT_SENDER_CHANGED."
+						}
+
+					]
+				},
+				{
+					"title": "Scheduler",
+					"changes":[
+						{
+							"change":"Fixed offset for initial period from for new created scheduler."
+						}
+
+					]
+				},
+				{
+					"title": "Connections",
+					"changes":[
+						{
+							"change":"Improvements in SMPP connection logging for debug purpose. "
+						},
+						{
+							"change":"Improvements in handling DLR from server. "
+						}
+
+					]
+				}
+			]
+		},
+		{
+			"date": "2019-07-05_12:50",
+			"byDateChanges":[
+				{
+					"title": "Networks ",
+					"changes":[
+						{
+							"change":"Added new feature to download network coverage and test scenarios"
+						}
+
+					]
+				}
+			]
+		},
+		{
+			"date": "2019-06-30_12:00",
+			"byDateChanges":[
+				{
+					"title": "API documentation",
+					"changes":[
+						{
+							"change":"Redesigned and updated API reference"
+						}
+
+					]
+				},
+				{
+					"title": "General",
+					"changes":[
+						{
+							"change":"Improved performance"
+						},
+						{
+							"change":"Improved web responsive design and better support for mobile devices and small screens"
+						}
+					]
+				}
+			]
+		},
+		{
+			"date": "2019-06-14_16:40",
+			"byDateChanges":[
+				{
+					"title": "Test cases",
+					"changes":[
+						{
+							"change":"Improved performance for selecting and getting available test cases"
+						},
+						{
+							"change":"Client API for creating services improved. Added alternative names for mccmnc and originalMccmnc, e.g. mccmnc and MccMnc will treat equal"
+						},
+						{
+							"change":"Alternative field names for property mccmnc are : \"mccMnc\", \"MccMnc\", \"Mccmnc\" "
+						},
+						{
+							"change":"Alternative field names for property mccmncOriginal are : \"mccmncoriginal\", \"MccmncOriginal\", \"mccMncOriginal\",\"MccMncOriginal\" "
+						},
+						{
+							"change":"Sms test results grid now display ported scenario more visible to user"
+						},
+						{
+							"change":"Fixed MCCMNC networks where exists non digit chars, e.g. 603٠١ or 427٠٢"
+						}
+					]
+				},
+				{
+					"title": "Connections",
+					"changes":[
+						{
+							"change":"Better log for SMPP Connection"
+						}
+					]
+				}
+			]
+		},
+		{
+			"date": "2019-06-12_23:00",
+			"byDateChanges":[
+				{
+					"title": "Available networks",
+					"changes":[
+						{
+							"change":"Handsets with virtual network operators and ported numbers have better availability"
+						}
+
+					]
+				},
+				{
+					"title": "Connections",
+					"changes":[
+						{
+							"change":"Better log for SMPP Connection"
+						}
+					]
+				}
+			]
+		},
+		{
+			"date": "2019-06-06_17:00",
+			"byDateChanges":[
+				{
+					"title": "Test cases",
+					"changes":[
+						{
+							"change":"Download test results in CSV format available for any filtered test up to 10k rows"
+						},
+						{
+							"change":"Separate view for Manual and API test results "
+						},
+						{
+							"change":"More ported numbers scenarios included "
+						}
+					]
+				},
+				{
+					"title": "SMPP Connections",
+					"changes":[
+						{
+							"change":"Better log for SMPP Connection"
+						},
+						{
+							"change":"Display current or last active SMPP Session ID for connections"
+						}
+					]
+				}
+			]
+		},
+		{
+			"date": "2019-04-30_18:00",
+			"byDateChanges":[
+				{
+					"title": "General optimizations and fixes",
+					"changes":[
+						{
+							"change":"Sms test running smoothly on UI "
+						},
+						{
+							"change":"Extended timeout on submit SMS "
+						}
+					]
+				}
+			]
+		},
+		{
+			"date": "2019-04-28_00:10",
+			"byDateChanges":[
+				{
+					"title": "Live test",
+					"changes":[
+						{
+							"change":"Better user experience when live tests running. "
+						},
+						{
+							"change":"Test batch organized by names (without date of start)."
+						},
+						{
+							"change":"Test batch organized by names (without date of start)."
+						},
+						{
+							"change":"Previous tests available on page load. "
+						}
+					]
+				}
+			]
+		},
+		{
+			"date": "2019-04-22_10:30",
+			"byDateChanges":[
+				{
+					"title": "Responsive design",
+					"changes":[
+						{
+							"change":"Clients pages responsive design"
+						}
+					]
+				}
+			]
+		},
+		{
+			"date": "2019-03-28_16:07",
+			"byDateChanges":[
+				{
+					"title": "General optimizations and fixes",
+					"changes":[
+						{
+							"change":"New actions"
+						},
+						{
+							"change":"Corrections on networks available"
+						}
+					]
+				},
+				
+				{
+					"title": "Additional performance upgrade",
+					"changes":[
+						{
+							"change":"Tests improvement"
+						},
+						{
+							"change":"More help info"
+						}
+					]
+				} 
+			]
+		},
+		{
+			"date": "2019-03-26_13:20",
+			"byDateChanges":[
+				{
+					"title": "Client UX performance and fixes",
+					"changes":[
+						{
+							"change":"Minor fixes"
+						},
+						{
+							"change":"Corrections on handsets"
+						}
+					]
+				}
+			]
+		}
+	]
+}

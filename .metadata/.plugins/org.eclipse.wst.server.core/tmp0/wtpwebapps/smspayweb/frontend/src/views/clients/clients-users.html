@@ -1,0 +1,56 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../styles/shared-styles.html">
+<link rel="import" href="../../components/search-bar.html">
+<link rel="import" href="../../../bower_components/vaadin-grid/src/vaadin-grid.html">
+<link rel="import" href="../../components/zero-content.html">
+
+<dom-module id="clients-users">
+    <template>
+<style include="shared-styles">
+	:host {
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+	}
+	#search {
+		background-color: transparent;
+   		background-image: none;
+    	box-shadow: none;
+	}
+	#grid {
+		width: calc(100% - 2*var(--lumo-space-s));
+		height: auto;
+		margin: 0px var(--lumo-space-s);
+		flex: 1;
+	}
+	#grid-wrapper{
+		flex: 1;
+		border-radius: var(--lumo-border-radius);
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}	
+</style>
+<search-bar id="search"></search-bar>
+<div id="grid-wrapper">
+ <vaadin-grid items="[[items]]" id="grid" theme="rounded-rows-grid compact small wrap-cell-content"></vaadin-grid>
+ <zero-content id="zero-content"></zero-content>
+</div>
+</template>
+
+    <script>
+        class ClientsUsers extends Polymer.Element {
+            static get is() {
+                return 'clients-users';
+            }
+
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(ClientsUsers.is, ClientsUsers);
+    </script>
+</dom-module>

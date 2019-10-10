@@ -1,0 +1,100 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/vaadin-grid/src/vaadin-grid.html">
+<link rel="import" href="../../components/header-filtering-component.html">
+<link rel="import" href="../../../bower_components/vaadin-button/src/vaadin-button.html">
+<link rel="import" href="../../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../../../styles/shared-styles.html">
+<link rel="import" href="../../../bower_components/vaadin-lumo-styles/badge.html">
+<link rel="import" href="../../components/tests-with-scheduler-form.html">
+<link rel="import" href="../../components/zero-content.html">
+
+<dom-module id="clients-api-testing">
+    <template>
+<style include="shared-styles">
+    :host {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .main{
+		display: flex;
+		flex-wrap: wrap;
+    	align-items: flex-start;
+    	flex-direction: column;
+    	
+    	justify-content: space-around;
+    	
+		width: 100%; 
+		height: calc(100vh - 64px);
+		
+	}
+	
+	.grid-header-wrapper {
+   		border-radius: 4px 4px 0 0 ;
+   		border-bottom: 1px solid var(--lumo-contrast-10pct);
+	} 
+	
+	.header{
+		width: 100%;
+	}
+	
+	.tests-container{
+		position: relative;
+		flex: 2; 
+   	    margin: var(--lumo-space-m);
+   	    margin-bottom: var(--lumo-space-s);
+   		border-radius: 4px;
+    	box-shadow: var(--lumo-box-shadow-s);
+    	display: flex;
+   	    flex-direction: column;
+   	    overflow: hidden;
+		width: calc(100vw - 2 * var(--lumo-space-m));
+   	    height: 100%;
+   	    
+	}
+	
+	.grid-tests{
+		height: calc(100vh - 96px);
+	}
+	
+	@media (max-width: 1000px) {
+	  .main{
+		  height: calc(100vh - 54px);
+	  }
+	}
+	
+    @media (max-width: 800px) {
+	  .main{
+		  height: calc(100vh - 64px);
+	  }
+	}
+    
+</style>
+
+<div class="main">
+ <div id="tests-container" class="tests-container">
+  <div id="grid-header-wrapper" class="grid-header-wrapper">
+   <header-filtering-component id="header" class="header"></header-filtering-component>
+  </div>
+  <div id="grid-wrapper">
+   <vaadin-grid items="[[items]]" id="grid-tests" theme="rounded-rows-grid compact small wrap-cell-content" class="grid-tests"></vaadin-grid>
+   <zero-content id="zero-content"></zero-content>
+  </div>
+ </div>
+</div>
+</template>
+    <script>
+        class ClientsApiTesting extends Polymer.Element {
+            static get is() {
+                return 'clients-api-testing';
+            }
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(ClientsApiTesting.is, ClientsApiTesting);
+    </script>
+</dom-module>

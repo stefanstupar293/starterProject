@@ -1,0 +1,51 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../styles/shared-styles.html">
+<link rel="import" href="../../components/header-filtering-component.html">
+<link rel="import" href="../../../bower_components/vaadin-grid/src/vaadin-grid.html">
+<link rel="import" href="../../../bower_components/vaadin-grid/src/vaadin-grid-column.html">
+
+<dom-module id="clients-management-companies">
+    <template>
+<style include="shared-styles">
+
+	:host {
+	}
+	
+	.main{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+	}
+	
+	#content{
+		height: 100%;
+	}
+	
+	#grid-users{
+		height: 100%; 
+		height: calc(100vh - 110px);
+	}
+	
+	
+</style>
+<div id="content">
+ <header-filtering-component id="header"></header-filtering-component>
+ <vaadin-grid items="[[items]]" id="grid-users" theme="small rounded-rows-grid grid-side-padding-wide wrap-cell-content"></vaadin-grid>
+</div>
+<div id="details-container"></div>
+</template>
+    <script>
+        class ClientsManagementCompanies extends Polymer.Element {
+            static get is() {
+                return 'clients-management-companies';
+            }
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(ClientsManagementCompanies.is, ClientsManagementCompanies);
+    </script>
+</dom-module>

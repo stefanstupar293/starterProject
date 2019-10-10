@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beanio xmlns="http://www.beanio.org/2012/03"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.beanio.org/2012/03 http://www.beanio.org/2012/03/mapping.xsd">
+
+	<stream name="HandsetStream" format="csv">
+	
+		<typeHandler name="handlerLocalDateTime" class="com.mnocompany.smspay.backend.converters.beanio.LocalDateTimeTypeHandler" />
+
+		<record name="header" minOccurs="1" maxOccurs="1" class="com.mnocompany.smspay.backend.model.Handset">
+
+           <field name="id" literal="Id" />
+			<field name="appUserMobId" literal="App User Mob Id" />
+			<segment name="handsetSlot1" class="com.mnocompany.smspay.backend.model.HandsetSlot">
+				<field name="msisdn" literal="Msisdn1" />
+				<segment name="mccMnc" class="com.mnocompany.smspay.backend.model.mccmnc.MccMnc">
+				<field name="mccMnc" literal="Mcc Mnc1" />
+				 </segment>
+				</segment>
+				
+				
+			<segment name="handsetSlot2" class="com.mnocompany.smspay.backend.model.HandsetSlot">
+				<field name="msisdn" literal="Msisdn2" />
+				<segment name="mccMnc" class="com.mnocompany.smspay.backend.model.mccmnc.MccMnc">
+				<field name="mccMnc" literal="Mnc Mnc2" /> </segment>
+			</segment>
+			
+			
+
+
+
+		</record>
+
+
+		<record name="detailsSlotNumbers" class="com.mnocompany.smspay.backend.model.Handset" minOccurs="0">
+
+			<field name="id" />
+			<field name="appUserMobId" />
+			<segment name="handsetSlot1" class="com.mnocompany.smspay.backend.model.HandsetSlot">
+				<field name="msisdn" />
+				<segment name="mccMnc" class="com.mnocompany.smspay.backend.model.mccmnc.MccMnc">
+				<field name="mccMnc" />
+			</segment>
+			</segment>
+		
+			<segment name="handsetSlot2" class="com.mnocompany.smspay.backend.model.HandsetSlot">
+				<field name="msisdn" />
+				<segment name="mccMnc" class="com.mnocompany.smspay.backend.model.mccmnc.MccMnc">
+				<field name="mccMnc" />
+			</segment>
+			</segment>
+			
+
+		</record>
+		</stream>
+		
+		  <stream name="HandsetArchivedStream" format="csv">
+
+  <typeHandler  name="handlerLocalDateTime" class="com.mnocompany.smspay.backend.converters.beanio.LocalDateTimeTypeHandler" />
+ 
+	 <record name="header" minOccurs="1" maxOccurs="1" class="com.mnocompany.smspay.backend.model.Handset">
+
+	   
+	    <field name="userEmail" literal="User Email" />
+	    <field name="lastAvailableWifi" literal="Last Available Wifi" typeHandler="handlerLocalDateTime"/>
+	    <field name="lastAvailableData" literal="Last Available Data" typeHandler="handlerLocalDateTime"/>
+			 
+	  </record>
+	  
+	  
+     <record name="details" class="com.mnocompany.smspay.backend.model.Handset" minOccurs="0">
+     
+	   <field name="userEmail"  />
+	   <field name="lastAvailableWifi" typeHandler="handlerLocalDateTime" />
+	   <field name="lastAvailableData" typeHandler="handlerLocalDateTime"/>
+	 
+	</record>
+  </stream>
+</beanio>

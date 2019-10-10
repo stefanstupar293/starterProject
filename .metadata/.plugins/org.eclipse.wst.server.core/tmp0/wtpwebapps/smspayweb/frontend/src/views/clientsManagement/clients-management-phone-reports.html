@@ -1,0 +1,41 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../components/header-filtering-component.html">
+<link rel="import" href="../../../bower_components/vaadin-grid/src/vaadin-grid.html">
+<link rel="import" href="../../../styles/shared-styles.html">
+<link rel="import" href="../../../bower_components/vaadin-lumo-styles/badge.html">
+
+
+<dom-module id="clients-management-phone-reports">
+    <template>
+<style include="shared-styles lumo-badge">
+       :host {
+			overflow-y: auto;
+		}
+		
+		.main{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+		}
+       
+</style>
+<div id="main">
+ <header-filtering-component id="header"></header-filtering-component>
+ <vaadin-grid items="[[items]]" id="grid" theme="rounded-rows-grid grid-side-padding-wide small"></vaadin-grid>
+</div>
+</template>
+    <script>
+        class ClientsManagementPhoneReports extends Polymer.Element {
+            static get is() {
+                return 'clients-management-phone-reports';
+            }
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(ClientsManagementPhoneReports.is, ClientsManagementPhoneReports);
+    </script>
+</dom-module>
