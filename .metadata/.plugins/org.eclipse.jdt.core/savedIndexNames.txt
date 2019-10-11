@@ -53,7 +53,6 @@ INDEX VERSION 1.131+C:\Users\Stefan\Desktop\my-starter-project2\.metadata\.plugi
 409917354.index
 2000788652.index
 526019975.index
-3819345697.index
 3606979227.index
 480691596.index
 3193403561.index
