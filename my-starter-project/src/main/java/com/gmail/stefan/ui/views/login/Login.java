@@ -29,10 +29,4 @@ public class Login implements Serializable {
 		this.password = password;
 	}
 	
-	public boolean Login (String email, String password) {
-		if (email.equals("admin@mno.com") && password.equals("admin")) {
-			return true;
-		}
-		return false;
-	}
 }

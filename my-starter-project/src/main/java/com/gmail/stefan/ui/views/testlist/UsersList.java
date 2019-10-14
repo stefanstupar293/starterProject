@@ -17,34 +17,30 @@ package com.gmail.stefan.ui.views.testlist;
 
 import java.util.List;
 
+import com.gmail.stefan.backend.User;
+import com.gmail.stefan.backend.UserService;
+import com.gmail.stefan.ui.MainLayout;
+import com.gmail.stefan.ui.common.AbstractEditorDialog;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.KeyModifier;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
+import com.vaadin.flow.component.combobox.ComboBox;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.grid.Grid.SelectionMode;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.notification.Notification;
-import com.vaadin.flow.component.notification.NotificationVariant;
 import com.vaadin.flow.component.notification.Notification.Position;
+import com.vaadin.flow.component.notification.NotificationVariant;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.renderer.ComponentRenderer;
 import com.vaadin.flow.data.value.ValueChangeMode;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-import com.gmail.stefan.backend.Category;
-import com.gmail.stefan.backend.CategoryService;
-import com.gmail.stefan.backend.Review;
-import com.gmail.stefan.backend.ReviewService;
-import com.gmail.stefan.backend.UserService;
-import com.gmail.stefan.backend.User;
-import com.gmail.stefan.ui.MainLayout;
-import com.gmail.stefan.ui.common.AbstractEditorDialog;
-import com.gmail.stefan.ui.common.AbstractEditorDialog.Operation;
-import com.gmail.stefan.ui.views.categorieslist.CategoryEditorDialog;
+import com.gmail.stefan.ui.views.testlist.AuthorComboBox;
 
 /**
  * Displays the list of available categories, with a search filter as well as
@@ -89,7 +85,7 @@ public class UsersList extends VerticalLayout {
         Button addUser = new Button("New user", new Icon("lumo", "plus"));
         addUser.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
         addUser.addClassName("view-toolbar__button");	
-        addUser.addClickListener(clickEvent -> form.open(new User(),						//lambda 
+        addUser.addClickListener(clickEvent -> form.open(new User(),						
         		AbstractEditorDialog.Operation.ADD));
 
         
@@ -106,13 +102,13 @@ public class UsersList extends VerticalLayout {
         add(viewToolbar);
     }
 
-
-
+  
 	private void addContent() {
         VerticalLayout container = new VerticalLayout();
         container.setClassName("view-container");
         container.setAlignItems(Alignment.STRETCH);
-
+        
+        
         grid.addColumn(User::getId).setHeader("ID").setWidth("8em")
                 .setResizable(true);
         grid.addColumn(User::getEmail).setHeader("email")

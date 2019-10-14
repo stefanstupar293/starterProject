@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.gmail.stefan.backend.Users"/>
-<fullyQualifiedTypeName name="com.gmail.stefan.backend.StaticData"/>
-<fullyQualifiedTypeName name="com.gmail.stefan.ui.common.AbstractEditorDialog.Operation"/>
-<fullyQualifiedTypeName name="com.gmail.stefan.backend.UserService"/>
-<fullyQualifiedTypeName name="com.gmail.stefan.ui.views.beveragelist.BeverageList"/>
-<fullyQualifiedTypeName name="com.gmail.stefan.backend.BeverageService"/>
-<fullyQualifiedTypeName name="com.gmail.stefan.backend.User"/>
-<fullyQualifiedTypeName name="java.util.Objects"/>
-<fullyQualifiedTypeName name="com.gmail.stefan.backend.Beverage"/>
-<fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.AppUser"/>
-<fullyQualifiedTypeName name="java.nio.file.AccessDeniedException"/>
-<fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.Pages"/>
-<fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.Pages.Title"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
-<fullyQualifiedTypeName name="com.helger.commons.string.util.StringScanner"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.server.DependencyFilter"/>
 <fullyQualifiedTypeName name="com.mnocompany.smspay.ui.utils.constants.Pages.Link"/>
 <fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.Pages.Link"/>
@@ -22,7 +7,6 @@
 <fullyQualifiedTypeName name="com.vaadin.flow.component.dependency.JavaScript"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.VerticalLayout"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.textfield.TextField"/>
-<fullyQualifiedTypeName name="com.vaadin.flow.component.polymertemplate.Id"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.textfield.PasswordField"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.button.Button"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.HorizontalLayout"/>
@@ -43,7 +27,6 @@
 <fullyQualifiedTypeName name="com.vaadin.flow.server.VaadinSession"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.UI"/>
 <fullyQualifiedTypeName name="java.util.Optional"/>
-<fullyQualifiedTypeName name="com.vaadin.flow.router.Route"/>
 <fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.LogoutTest"/>
 <fullyQualifiedTypeName name="java.awt.Event"/>
 <fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.AppUserServices"/>
@@ -60,4 +43,21 @@
 <fullyQualifiedTypeName name="javax.naming.InitialContext"/>
 <fullyQualifiedTypeName name="java.sql.DriverManager"/>
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="java.sql.Timestamp"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.backend.dbservices.TestDBConnection"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.backend.Authors"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.component.combobox.ComboBox"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.component.grid.Grid"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.backend.Author"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.dom.Element"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.component.polymertemplate.Id"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.router.Route"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.ui.views.testlist.AuthorComboBox"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.router.PageTitle"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.ui.common.AbstractEditorDialog.Operation"/>
 </qualifiedTypeNameHistroy>

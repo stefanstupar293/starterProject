@@ -1,0 +1,19 @@
+package com.gmail.stefan.ui.views.testlist;
+
+import com.vaadin.flow.templatemodel.TemplateModel;
+import com.vaadin.flow.component.Tag;
+import com.vaadin.flow.component.dependency.JsModule;
+import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
+
+@Tag("my-design")
+@JsModule("./src/views/my-design.js")
+public class AuthorComboBox extends PolymerTemplate<AuthorComboBox.AuthorComboBoxModel> {
+
+    public AuthorComboBox() {
+        // You can initialise any data required for the connected UI components here.
+    }
+
+    public interface AuthorComboBoxModel extends TemplateModel {
+        // Add setters and getters for template properties here.
+    }
+}

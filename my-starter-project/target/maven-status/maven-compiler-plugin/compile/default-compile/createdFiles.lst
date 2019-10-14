@@ -4,9 +4,9 @@ com\gmail\stefan\ui\views\beveragelist\BeverageList.class
 com\gmail\stefan\ui\views\testlist\UsersList.class
 com\gmail\stefan\ui\views\login\LoginTest.class
 com\gmail\stefan\ui\views\login\LogoutTest$LogoutTestModel.class
+com\gmail\stefan\backend\Author.class
 com\gmail\stefan\backend\UserService.class
 com\gmail\stefan\ui\views\login\LoginTest$LoginTestModel.class
-com\gmail\stefan\backend\dbservices\LocalDateTimeConverter.class
 com\gmail\stefan\backend\ReviewService.class
 com\gmail\stefan\backend\UserService$SingletonHolder.class
 com\gmail\stefan\ui\views\login\LoginTest$DISPLAY_VIEW.class
@@ -28,7 +28,6 @@ com\gmail\stefan\backend\StaticData.class
 com\gmail\stefan\backend\BeverageService$SingletonHolder.class
 com\gmail\stefan\ui\common\AbstractEditorDialog.class
 com\gmail\stefan\ui\views\beveragelist\BeverageEditorDialog.class
-com\gmail\stefan\backend\dbservices\LocalDateConverter.class
 com\gmail\stefan\ui\views\login\Login.class
 com\gmail\stefan\backend\Category.class
 com\gmail\stefan\backend\CategoryService$SingletonHolder.class

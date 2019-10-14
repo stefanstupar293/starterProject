@@ -116,7 +116,8 @@ public class ReviewsList extends PolymerTemplate<ReviewsModel> {
     public void deleteUpdate(Review review) {
         ReviewService.getInstance().deleteReview(review);
         updateList();
-        Notification.show("Beverage successfully deleted.", 3000,
+        Notification.show(
+        		"Beverage successfully deleted.", 3000,
                 Position.BOTTOM_START)
             .addThemeVariants(NotificationVariant.LUMO_CONTRAST);
     }

@@ -88,14 +88,18 @@ public class MainLayout extends Div implements RouterLayout, PageConfigurator, B
 //        RouterLink login = new RouterLink(null, LoginTest.class);						// logout
 //        login.add(new Icon(VaadinIcon.SIGN_OUT), new Text("Logout"));					// make new form for logout
 //        login.addClassName("main-layout__nav-item");
-
+        
+//        RouterLink box = new RouterLink(null, AuthorComboBox.class);
+//        box.add(new Icon (VaadinIcon.CHEVRON_CIRCLE_DOWN), new Text("AuthorComboBox"));
+//        box.addClassName("main-layout__nav-item");
+        
         RouterLink logout = new RouterLink(null, LogoutTest.class);
         logout.add(new Icon(VaadinIcon.SIGN_OUT), new Text("Logout"));
         logout.addClassName("main-layout__nav-item");
         
         
 
-        Div navigation = new Div(reviews, categories, users, beverages, logout);   		//TODO "login" is temporary, should be changed to logout 
+        Div navigation = new Div(reviews, categories, users, beverages, logout);   		
         navigation.addClassName("main-layout__nav");
 
         Div header = new Div(title, navigation);
@@ -131,26 +135,6 @@ public class MainLayout extends Div implements RouterLayout, PageConfigurator, B
 		
 		
 		System.out.println("BeforeEnterEvent main");
-		//close all opened dialogs
-//		for (Component c : UI.getCurrent().getChildren().collect(Collectors.toList())) {
-//			if (c instanceof Dialog)
-//				((Dialog) (c)).close();
-//		}
-//		AppUtils.getRouterLayout().checkIsLoggedInAsUserOperator(event);
-//		AppUser user = SecurityUtils.getLoggedInUser();
-//		
-//		navigationTarget = href;
-//		
-//		if(user == null) {
-//			AppUtils.setNavigationHref(fullPath);
-//			event.rerouteTo(LoginView.class);
-//		} else {
-//			if(Strings.isNullOrEmpty(href)) {
-//				AppUtils.goToPage(getFirstPageForLoggedInUser().getLink(), getUI().orElse(null));
-//			}else if(!SecurityUtils.isPageAllowedForLoggedinUser(href)){
-//				//check if user is allowed to visit this page
-//				AppUtils.setNavigationHref(null);
-//				event.rerouteToError(AccessDeniedException.class);
-//			}
+
 		}
 }
