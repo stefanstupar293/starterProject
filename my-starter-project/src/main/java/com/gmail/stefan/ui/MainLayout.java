@@ -90,7 +90,7 @@ public class MainLayout extends Div implements RouterLayout, PageConfigurator, B
 //        login.addClassName("main-layout__nav-item");
         
 //        RouterLink box = new RouterLink(null, AuthorComboBox.class);
-//        box.add(new Icon (VaadinIcon.CHEVRON_CIRCLE_DOWN), new Text("AuthorComboBox"));
+//        box.add(new Icon (VaadinIcon.CHEVRON_CIRCLE_DOWN), new Text("Box"));
 //        box.addClassName("main-layout__nav-item");
         
         RouterLink logout = new RouterLink(null, LogoutTest.class);

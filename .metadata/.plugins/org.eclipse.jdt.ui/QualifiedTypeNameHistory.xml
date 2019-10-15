@@ -47,17 +47,17 @@
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="java.sql.Timestamp"/>
-<fullyQualifiedTypeName name="com.gmail.stefan.backend.dbservices.TestDBConnection"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.gmail.stefan.backend.Authors"/>
-<fullyQualifiedTypeName name="com.vaadin.flow.component.combobox.ComboBox"/>
-<fullyQualifiedTypeName name="com.vaadin.flow.component.grid.Grid"/>
-<fullyQualifiedTypeName name="com.gmail.stefan.backend.Author"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.dom.Element"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.polymertemplate.Id"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.router.Route"/>
-<fullyQualifiedTypeName name="com.gmail.stefan.ui.views.testlist.AuthorComboBox"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.router.PageTitle"/>
 <fullyQualifiedTypeName name="com.gmail.stefan.ui.common.AbstractEditorDialog.Operation"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.ui.views.testlist.AuthorComboBox"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.component.combobox.ComboBox"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.component.grid.Grid"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.backend.Author"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.backend.dbservices.TestDBConnection"/>
 </qualifiedTypeNameHistroy>

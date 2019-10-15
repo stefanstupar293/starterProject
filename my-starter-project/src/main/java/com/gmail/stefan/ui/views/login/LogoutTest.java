@@ -1,12 +1,18 @@
 package com.gmail.stefan.ui.views.login;
 import com.vaadin.flow.templatemodel.TemplateModel;
 
-
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.List;
 import java.util.Optional;
 
+import com.gmail.stefan.backend.Author;
+import com.gmail.stefan.backend.dbservices.TestDBConnection;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.dependency.JsModule;
+import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.polymertemplate.Id;
@@ -16,6 +22,7 @@ import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.VaadinSession;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.combobox.ComboBox;
 
 /**
  * A Designer generated component for the logout-test template.
@@ -49,6 +56,12 @@ public class LogoutTest extends PolymerTemplate<LogoutTest.LogoutTestModel> {
 
 	@Id("div")
 	private Element div;
+	
+	@Id ("btnAddAuthors")
+	private Button btnAddAuthors;
+	
+//	@Id("comboBox")
+//	private ComboBox<?> comboBox;
 
 	/**
      * Creates a new LogoutTest.
@@ -66,12 +79,25 @@ public class LogoutTest extends PolymerTemplate<LogoutTest.LogoutTestModel> {
     		UI.getCurrent().navigate(Optional.ofNullable(intendedPath).map(Object::toString).orElse(""));
     		System.out.println("Returned to the app");
     	});
+    	ComboBox<Author> comboBox = new ComboBox<>("test");
+    	comboBox.setItemLabelGenerator(Author::getName);
+    	comboBox.getPlaceholder();
+    	comboBox.addFocusListener( e -> {
+    		
+    	});
     	
     }
     
-    																		//TODO add return button which returns to Main View
+   
+    																		
+    private List<Author> createListOfAuthors() {
+	// TODO Auto-generated method stub
+	return null;
+}
 
-    /**
+
+
+	/**
      * This model binds properties between LogoutTest and logout-test
      */
     public interface LogoutTestModel extends TemplateModel {

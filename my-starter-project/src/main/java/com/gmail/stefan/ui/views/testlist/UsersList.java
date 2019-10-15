@@ -40,7 +40,6 @@ import com.vaadin.flow.data.renderer.ComponentRenderer;
 import com.vaadin.flow.data.value.ValueChangeMode;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-import com.gmail.stefan.ui.views.testlist.AuthorComboBox;
 
 /**
  * Displays the list of available categories, with a search filter as well as

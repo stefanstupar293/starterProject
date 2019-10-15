@@ -20,8 +20,7 @@ public class TestDBConnection {
 		String query = "select * from author";
 //		 	String query = "insert into author values (32, 'Abraham', '2019-01-14 10:45:51')";
 
-		Connection con = DriverManager.getConnection("jdbc:mysql://46.4.55.195:3306/todo?serverTimezone=UTC#", "root",
-				"komkom");
+		Connection con = DriverManager.getConnection("jdbc:mysql://46.4.55.195:3306/todo?serverTimezone=UTC#", "root", "komkom");
 		System.out.println("Connection succsessful!");
 		Statement st = con.createStatement();
 

@@ -8,6 +8,8 @@ import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.html.H2;
+import com.vaadin.flow.component.notification.Notification;
+import com.vaadin.flow.component.notification.Notification.Position;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.polymertemplate.Id;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
@@ -103,6 +105,9 @@ public class LoginTest extends PolymerTemplate<LoginTest.LoginTestModel> impleme
 			}
 			else {
 				System.out.println("Login error");
+				Notification notification = Notification.show(
+				        "Login error!");
+				notification.setPosition(Position.MIDDLE);
 			}
 			
 		});
