@@ -16,7 +16,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
 
-		<vaadin.version>14.0.0</vaadin.version>
+		<vaadin.version>14.0.9</vaadin.version>
 
 		<drivers.dir>${project.basedir}/drivers</drivers.dir>
 		<drivers.downloader.phase>pre-integration-test</drivers.downloader.phase>
@@ -106,10 +106,10 @@
 	</dependencyManagement>
 
 	<dependencies>
-		<dependency>
+		<!-- <dependency>
 			<groupId>com.vaadin</groupId>
 			<artifactId>flow-server-compatibility-mode</artifactId>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>com.vaadin</groupId>
 			<!-- Replace artifactId with vaadin-core to use only free components -->
@@ -176,17 +176,18 @@
 			<scope>test</scope>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.sql2o/sql2o -->
-		<dependency>
+	<!-- 	<dependency>
 		    <groupId>org.sql2o</groupId>
 		    <artifactId>sql2o</artifactId>
 		    <version>1.6.0</version>
-		</dependency>
+		</dependency> -->
 		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
 		    <groupId>mysql</groupId>
 		    <artifactId>mysql-connector-java</artifactId>
-		    <version>8.0.17</version>
+		    <version>5.1.48</version>
 		</dependency>
+
 		
 	</dependencies>
 

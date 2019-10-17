@@ -6,6 +6,7 @@ com\gmail\stefan\ui\views\login\LoginTest.class
 com\gmail\stefan\ui\views\login\LogoutTest$LogoutTestModel.class
 com\gmail\stefan\backend\Author.class
 com\gmail\stefan\backend\UserService.class
+com\gmail\stefan\ui\views\login\Service.class
 com\gmail\stefan\ui\views\login\LoginTest$LoginTestModel.class
 com\gmail\stefan\backend\ReviewService.class
 com\gmail\stefan\backend\UserService$SingletonHolder.class

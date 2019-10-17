@@ -1,28 +1,23 @@
 package com.gmail.stefan.ui.views.login;
-import com.vaadin.flow.templatemodel.TemplateModel;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
 import com.gmail.stefan.backend.Author;
-import com.gmail.stefan.backend.dbservices.TestDBConnection;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.UI;
+import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.combobox.ComboBox;
 import com.vaadin.flow.component.dependency.JsModule;
-import com.vaadin.flow.component.grid.Grid;
-import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
+import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.polymertemplate.Id;
+import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
 import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.VaadinSession;
-import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
-import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.combobox.ComboBox;
+import com.vaadin.flow.templatemodel.TemplateModel;
 
 /**
  * A Designer generated component for the logout-test template.
@@ -57,16 +52,14 @@ public class LogoutTest extends PolymerTemplate<LogoutTest.LogoutTestModel> {
 	@Id("div")
 	private Element div;
 	
-	@Id ("btnAddAuthors")
-	private Button btnAddAuthors;
-	
 //	@Id("comboBox")
 //	private ComboBox<?> comboBox;
 
 	/**
      * Creates a new LogoutTest.
+	 * @throws SQLException 
      */
-    public LogoutTest() { 
+    public LogoutTest() throws SQLException { 
         // You can initialise any data required for the connected UI components here.
     	btnLogout.addClickListener(e -> { 
 			VaadinSession.getCurrent().setAttribute("userLoggedIn", null);
@@ -79,12 +72,15 @@ public class LogoutTest extends PolymerTemplate<LogoutTest.LogoutTestModel> {
     		UI.getCurrent().navigate(Optional.ofNullable(intendedPath).map(Object::toString).orElse(""));
     		System.out.println("Returned to the app");
     	});
+    	
     	ComboBox<Author> comboBox = new ComboBox<>("test");
     	comboBox.setItemLabelGenerator(Author::getName);
-    	comboBox.getPlaceholder();
-    	comboBox.addFocusListener( e -> {
-    		
-    	});
+    	List<Author> items = Service.selectAllAuthors();
+		comboBox.setItems(items);																					// Exception 
+		
+//    	comboBox.addFocusListener( e -> {
+//    		
+//    	});
     	
     }
     

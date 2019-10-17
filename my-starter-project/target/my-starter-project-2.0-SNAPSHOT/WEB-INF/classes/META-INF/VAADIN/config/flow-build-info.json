@@ -2,5 +2,6 @@
   "compatibilityMode": false,
   "productionMode": false,
   "npmFolder": "C:\\Users\\Stefan\\Desktop\\my-starter-project2\\my-starter-project",
-  "generatedFolder": "C:\\Users\\Stefan\\Desktop\\my-starter-project2\\my-starter-project\\target\\frontend"
+  "generatedFolder": "C:\\Users\\Stefan\\Desktop\\my-starter-project2\\my-starter-project\\target\\frontend",
+  "frontendFolder": "C:\\Users\\Stefan\\Desktop\\my-starter-project2\\my-starter-project\\frontend"
 }

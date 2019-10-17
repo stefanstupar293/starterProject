@@ -90,6 +90,7 @@
 	</section>
 	<section name="OptionalMessageDialog.hide.">
 		<item key="SortMembersMessageDialog.optionalDialog.id" value="false"/>
+		<item key="org.eclipse.jdt.ui.typecomment.deprecated" value="true"/>
 	</section>
 	<section name="SearchInDialog">
 		<item key="SearchInSources" value="true"/>
@@ -114,5 +115,26 @@
 		<item key="DIALOG_WIDTH" value="519"/>
 		<item key="DIALOG_HEIGHT" value="678"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="NewClassWizardPage">
+		<item key="create_constructor" value="false"/>
+		<item key="create_unimplemented" value="true"/>
+	</section>
+	<section name="JavaSearchPage">
+		<item key="CASE_SENSITIVE" value="false"/>
+		<item key="INCLUDE_MASK" value="15"/>
+		<item key="HISTORY_SIZE" value="1"/>
+		<section name="HISTORY0">
+			<item key="searchFor" value="0"/>
+			<item key="scope" value="0"/>
+			<item key="pattern" value="login-test"/>
+			<item key="limitTo" value="2"/>
+			<item key="matchLocations" value="0"/>
+			<item key="javaElement" value=""/>
+			<item key="isCaseSensitive" value="false"/>
+			<item key="includeMask" value="15"/>
+			<list key="workingSets">
+			</list>
+		</section>
 	</section>
 </section>

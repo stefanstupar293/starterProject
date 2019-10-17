@@ -31,7 +31,7 @@ import com.vaadin.flow.templatemodel.TemplateModel;
  */
 
 @Route(value = "")
-@RouteAlias("login")
+//@RouteAlias("login")
 @PageTitle("Login")
 @Tag("login-test")
 @JsModule("./src/views/login/login-test.js")
@@ -99,7 +99,7 @@ public class LoginTest extends PolymerTemplate<LoginTest.LoginTestModel> impleme
 		btnLogin.addClickListener(e -> {  
 			if (emailInput.getValue().equals("admin@mno.com") && passInput.getValue().equals("admin"))  {				//get value from text field
 				VaadinSession.getCurrent().setAttribute("userLoggedIn", true);
-				Object intendedPath = VaadinSession.getCurrent().getAttribute("intendedPath");
+				Object intendedPath = (VaadinSession.getCurrent().getAttribute("intendedPath"));
 				UI.getCurrent().navigate(Optional.ofNullable(intendedPath).map(Object::toString).orElse(""));
 				System.out.println("Login successful");
 			}
@@ -115,7 +115,7 @@ public class LoginTest extends PolymerTemplate<LoginTest.LoginTestModel> impleme
 		
 		
 		btnCancel.addClickListener(e -> {
-			UI.getCurrent().getPage().open("http://www.mnocompany.com/");
+			UI.getCurrent().getPage().open("https://www.youtube.com/watch?v=MfwMDyIgi2g");
 		});
 	}
 

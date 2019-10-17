@@ -20,7 +20,6 @@ public class Author implements Serializable {
 	public Author () {}
 	
 	
-	
 	public Author(Long id, String name, Date date) {
 		super();
 		this.uId = id;

@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.vaadin.flow.server.DependencyFilter"/>
-<fullyQualifiedTypeName name="com.mnocompany.smspay.ui.utils.constants.Pages.Link"/>
-<fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.Pages.Link"/>
-<fullyQualifiedTypeName name="com.vaadin.flow.component.dependency.JsModule"/>
-<fullyQualifiedTypeName name="com.vaadin.flow.component.dependency.JavaScript"/>
-<fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.VerticalLayout"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.textfield.TextField"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.textfield.PasswordField"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.button.Button"/>
@@ -34,9 +28,7 @@
 <fullyQualifiedTypeName name="org.apache.commons.beanutils.converters.BooleanConverter"/>
 <fullyQualifiedTypeName name="org.apache.commons.beanutils.Converter"/>
 <fullyQualifiedTypeName name="java.util.function.Supplier"/>
-<fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="java.sql.Statement"/>
-<fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.dependency.HtmlImport"/>
 <fullyQualifiedTypeName name="com.mysql.jdbc.Driver"/>
 <fullyQualifiedTypeName name="javax.naming.Context"/>
@@ -47,7 +39,6 @@
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="java.sql.Timestamp"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.gmail.stefan.backend.Authors"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.dom.Element"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.polymertemplate.Id"/>
@@ -58,6 +49,15 @@
 <fullyQualifiedTypeName name="com.vaadin.flow.component.combobox.ComboBox"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.grid.Grid"/>
 <fullyQualifiedTypeName name="com.gmail.stefan.backend.Author"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.component.notification.Notification"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.component.notification.Notification.Position"/>
 <fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.data.provider.Query"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.function.SerializablePredicate"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.Service"/>
 <fullyQualifiedTypeName name="com.gmail.stefan.backend.dbservices.TestDBConnection"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

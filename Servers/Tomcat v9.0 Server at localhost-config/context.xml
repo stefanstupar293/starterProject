@@ -27,6 +27,6 @@
     <Manager pathname="" />
     
     <ResourceLink global="jdbc/smspay" name="jdbc/smspay" type="javax.sql.DataSource"/>
-    <ResourceLink global="jdbc/todo" name="jdbc/todo" type="javax.sql.DataSource"/>
+   
    
 </Context>
