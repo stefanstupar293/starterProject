@@ -31,7 +31,7 @@ import com.vaadin.flow.templatemodel.TemplateModel;
  */
 
 @Route(value = "")
-//@RouteAlias("login")
+@RouteAlias("login")
 @PageTitle("Login")
 @Tag("login-test")
 @JsModule("./src/views/login/login-test.js")

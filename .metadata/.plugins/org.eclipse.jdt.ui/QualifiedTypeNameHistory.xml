@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.vaadin.flow.component.textfield.TextField"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.textfield.PasswordField"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.button.Button"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.HorizontalLayout"/>
@@ -60,4 +59,5 @@
 <fullyQualifiedTypeName name="com.gmail.stefan.backend.dbservices.TestDBConnection"/>
 <fullyQualifiedTypeName name="java.util.Properties"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.sql.JDBCType"/>
 </qualifiedTypeNameHistroy>

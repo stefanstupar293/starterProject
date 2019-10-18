@@ -3,12 +3,16 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
+import org.atmosphere.config.service.Message;
+
 import com.gmail.stefan.backend.Author;
+import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.combobox.ComboBox;
 import com.vaadin.flow.component.dependency.JsModule;
+import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.polymertemplate.Id;
@@ -50,10 +54,9 @@ public class LogoutTest extends PolymerTemplate<LogoutTest.LogoutTestModel> {
 	private VerticalLayout vaadinVerticalLayout;
 
 	@Id("div")
-	private Element div;
-	
-//	@Id("comboBox")
-//	private ComboBox<?> comboBox;
+	private Div div;
+
+
 
 	/**
      * Creates a new LogoutTest.
@@ -73,10 +76,16 @@ public class LogoutTest extends PolymerTemplate<LogoutTest.LogoutTestModel> {
     		System.out.println("Returned to the app");
     	});
     	
-    	ComboBox<Author> comboBox = new ComboBox<>("test");
-    	comboBox.setItemLabelGenerator(Author::getName);
+    	
+    	ComboBox<Author> comboBox = new ComboBox<Author>();
+		comboBox .setItemLabelGenerator(Author::getName);
     	List<Author> items = Service.selectAllAuthors();
-		comboBox.setItems(items);																					// Exception 
+    	comboBox.setItems(items);		
+    	
+    	// Exception 
+    	
+    	div.add(comboBox);
+    	
 		
 //    	comboBox.addFocusListener( e -> {
 //    		
