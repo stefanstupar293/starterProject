@@ -100,7 +100,8 @@ public class LoginTest extends PolymerTemplate<LoginTest.LoginTestModel> impleme
 			if (emailInput.getValue().equals("admin@mno.com") && passInput.getValue().equals("admin"))  {				//get value from text field
 				VaadinSession.getCurrent().setAttribute("userLoggedIn", true);
 				Object intendedPath = (VaadinSession.getCurrent().getAttribute("intendedPath"));
-				UI.getCurrent().navigate(Optional.ofNullable(intendedPath).map(Object::toString).orElse(""));
+				UI.getCurrent().navigate(Optional.ofNullable(intendedPath).map(Object::toString).orElse("reviews-list"));
+//				btnLogin.getUI().ifPresent(ui -> ui.navigate("reviews-list"));
 				System.out.println("Login successful");
 			}
 			else {

@@ -12,7 +12,10 @@ import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.combobox.ComboBox;
 import com.vaadin.flow.component.dependency.JsModule;
+import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.Div;
+import com.vaadin.flow.component.notification.Notification;
+import com.vaadin.flow.component.notification.Notification.Position;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.polymertemplate.Id;
@@ -77,30 +80,41 @@ public class LogoutTest extends PolymerTemplate<LogoutTest.LogoutTestModel> {
     	});
     	
     	
-    	ComboBox<Author> comboBox = new ComboBox<Author>();
+    	ComboBox<Author> comboBox = new ComboBox<Author>("Select an author:");
 		comboBox .setItemLabelGenerator(Author::getName);
     	List<Author> items = Service.selectAllAuthors();
-    	comboBox.setItems(items);		
+    	comboBox.setItems(items);
     	
-    	// Exception 
+    	if (comboBox.getValue() != null) {
+			comboBox.addValueChangeListener(e -> {System.out.println("ComboBox null");
+			Notification notification = Notification.show("Choose an author");
+			notification.setPosition(Position.MIDDLE);
+			notification.setDuration(1500);
+			});
+				
+    	} else {
+    		System.out.println("Example text");
+    		comboBox.addValueChangeListener(e -> {System.out.println("ComboBox selected");
+    		Notification notification = Notification.show("Hello " +comboBox.getValue().getName()+ ", here is your data.");
+			notification.setPosition(Position.MIDDLE);
+			notification.setDuration(1500);
+    		});
+    	}
     	
+    	Grid<Message> grid = new Grid<>();													//TOOD create Data Provider for Grid
+    	grid.setWidth("100%");
+//    	Grid<Message> gridRes = Service.selectAllMessages();
+    	
+    	
+    	
+    	
+//    	String AuthorName =("select * from message where authorname = "+ comboBox.getValue().getName());
     	div.add(comboBox);
-    	
+    	div.add(grid); 	
 		
-//    	comboBox.addFocusListener( e -> {
-//    		
-//    	});
     	
     }
     
-   
-    																		
-    private List<Author> createListOfAuthors() {
-	// TODO Auto-generated method stub
-	return null;
-}
-
-
 
 	/**
      * This model binds properties between LogoutTest and logout-test

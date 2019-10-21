@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.vaadin.flow.component.textfield.PasswordField"/>
-<fullyQualifiedTypeName name="com.vaadin.flow.component.button.Button"/>
-<fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.HorizontalLayout"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.formlayout.FormLayout"/>
 <fullyQualifiedTypeName name="java.awt.Panel"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.textfield.EmailField"/>
 <fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.Credencials"/>
 <fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.Credentials"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.textfield.Autocomplete"/>
-<fullyQualifiedTypeName name="java.io.Serializable"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.router.BeforeEnterObserver"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.router.BeforeEnterEvent"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.login.LoginForm"/>
@@ -20,7 +16,6 @@
 <fullyQualifiedTypeName name="com.vaadin.flow.server.VaadinSession"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.UI"/>
 <fullyQualifiedTypeName name="java.util.Optional"/>
-<fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.LogoutTest"/>
 <fullyQualifiedTypeName name="java.awt.Event"/>
 <fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.AppUserServices"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.data.converter.Converter"/>
@@ -36,7 +31,6 @@
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
-<fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="java.sql.Timestamp"/>
 <fullyQualifiedTypeName name="com.gmail.stefan.backend.Authors"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.dom.Element"/>
@@ -45,12 +39,8 @@
 <fullyQualifiedTypeName name="com.vaadin.flow.router.PageTitle"/>
 <fullyQualifiedTypeName name="com.gmail.stefan.ui.common.AbstractEditorDialog.Operation"/>
 <fullyQualifiedTypeName name="com.gmail.stefan.ui.views.testlist.AuthorComboBox"/>
-<fullyQualifiedTypeName name="com.vaadin.flow.component.combobox.ComboBox"/>
-<fullyQualifiedTypeName name="com.vaadin.flow.component.grid.Grid"/>
-<fullyQualifiedTypeName name="com.gmail.stefan.backend.Author"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.notification.Notification"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.notification.Notification.Position"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.data.provider.Query"/>
@@ -58,6 +48,16 @@
 <fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.Service"/>
 <fullyQualifiedTypeName name="com.gmail.stefan.backend.dbservices.TestDBConnection"/>
 <fullyQualifiedTypeName name="java.util.Properties"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.sql.JDBCType"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.component.html.Div"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.backend.Author"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.component.combobox.ComboBox"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.backend.Message"/>
+<fullyQualifiedTypeName name="org.atmosphere.config.service.Message"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.LogoutTest"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.component.grid.Grid"/>
 </qualifiedTypeNameHistroy>

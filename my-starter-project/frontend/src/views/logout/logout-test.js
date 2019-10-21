@@ -2,7 +2,6 @@ import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
-import '@vaadin/vaadin-grid/src/vaadin-grid.js';
 
 class LogoutTest extends PolymerElement {
 
@@ -26,7 +25,6 @@ class LogoutTest extends PolymerElement {
    </vaadin-button>
   </vaadin-horizontal-layout>
  </div>
- <vaadin-grid id="msggrid"></vaadin-grid>
 </vaadin-vertical-layout>
 `;
     }
