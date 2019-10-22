@@ -14,6 +14,7 @@ import com.gmail.stefan.backend.Message;
 import com.gmail.stefan.backend.dbservices.TestDBConnection;
 import com.gmail.stefan.ui.views.login.LogoutTest;
 import com.vaadin.flow.component.grid.Grid;
+import com.vaadin.flow.data.provider.DataProvider;
 
 public class Service extends TestDBConnection{																
 																											// TODO should assemble and return list of authors 
@@ -40,22 +41,7 @@ public class Service extends TestDBConnection{
 
 				System.out.println(name);
 				list.add(x);
-//				int id;
-//				String name = "";
-//				Timestamp createdon = null;
-//				
-//
-//				id = rs.getInt(1);
-//				long uId = (long) id;
-//
-//				name = rs.getString("firstname");
-//
-//				createdon = rs.getTimestamp(3);
-//				Date date = new Date(createdon.getTime());
-//
-//				Author a = new Author(uId, name, date);
-//				list.add(a);
-//				System.out.println(uId + " " + name + "   " + createdon);
+
 			}
 
 			st.close();
@@ -74,53 +60,68 @@ public class Service extends TestDBConnection{
 
 	}
 	
-	public static Grid<Message> selectAllMessages() throws SQLException { 							//TODO caller for grid
 
+	
+	public static List<Author> selectFromAuthors() throws SQLException {
 		try {
 			Connection con = TestDBConnection.getConnection();
-			String query2 = "select * from message where authorname = comboBox"; 
-			Statement st2 = null;
-			st2 = con.createStatement();
-			ResultSet rs2 = st2.executeQuery(query2);
-
-//			int id2; 
-//			String content; 
-//			Timestamp addedon;
-//			int aId; 
-//			String aname;
-
-			Grid<Message> grid = new Grid<>();
-
-			while (rs2.next()) {
-
-				int id2 = rs2.getInt(0); // conversions
-				long mId = (long) id2;
-
-				String content = rs2.getString("content");
-
-				Timestamp addedon = rs2.getTimestamp(2); // check sql table
-				Date date = new Date(addedon.getTime());
-
-				int aId = rs2.getInt(3);
-				long authorid = (long) aId;
-
-				String authorname = rs2.getString("authorname");
-
-				Message c = new Message(mId, content, date, authorid, authorname);
+			String authorQuery = "select * from author"; 
+			Statement ast = null;
+			ast = con.createStatement();
+			ResultSet ars = ast.executeQuery(authorQuery);
+			List<Author> aList = new ArrayList<>();
+			while (ars.next()) {
+				int id; 
+				String name = "";
+				Timestamp createdon = null;
 				
-				System.out.println(mId + ' ' + content + ' ' + date + ' ' + authorid + ' ' + authorname);
+				id = ars.getInt(1);
+				long uId = (long) id;
+				name = ars.getString(2);
+				createdon = ars.getTimestamp(3);
+				Date date = new Date(createdon.getTime());
+				
+				Author b = new Author (uId, name, date);
+				System.out.println(uId+" "+name+" "+createdon);
+				aList.add(b);
 			}
-			st2.close();
+			ast.close();
 			con.close();
-			return grid;
-
-		} catch (SQLException s) {
+			System.out.println("Second connection closed");
+			
+			return aList;
+			}
+		catch (SQLException s) {
 			s.printStackTrace();
+
 		}
+		System.out.println("Yup, a fuckup!");
 
-		return new Grid<Message>();
-
+		return null;
+		
+		
 	}
+	
+//	int id;
+//	String name = "";
+//	Timestamp createdon = null;
+//	
+//
+//	id = rs.getInt(1);
+//	long uId = (long) id;
+//
+//	name = rs.getString("firstname");
+//
+//	createdon = rs.getTimestamp(3);
+//	Date date = new Date(createdon.getTime());
+//
+//	Author a = new Author(uId, name, date);
+//	list.add(a);
+//	System.out.println(uId + " " + name + "   " + createdon);
+	
+	
+	
+	
 }
 
 
