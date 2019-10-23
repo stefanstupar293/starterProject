@@ -49,119 +49,107 @@ import com.gmail.stefan.ui.common.AbstractEditorDialog;
 @PageTitle("Beverage List")
 public class BeverageList extends VerticalLayout {
 
-    private final TextField searchField = new TextField("",
-            "Search beverages");
-    private final H2 header = new H2("Beverages");
-    private final Grid<Beverage> grid = new Grid<>();
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3283609818088347724L;
+	
+	private final TextField searchField = new TextField("", "Search beverages");
+	private final H2 header = new H2("Beverages");
+	private final Grid<Beverage> grid = new Grid<>();
 
-    private final BeverageEditorDialog form = new BeverageEditorDialog(
-            this::saveBeverage, this::deleteBeverage);
+	private final BeverageEditorDialog form = new BeverageEditorDialog(this::saveBeverage, this::deleteBeverage);
 
-    public BeverageList() {
-    
-    	initView();
-        addSearchBar();
-        addContent();
-        updateView();
-    }
+	public BeverageList() {
 
-    private void initView() {
-        addClassName("beverages-list");
-        setDefaultHorizontalComponentAlignment(Alignment.STRETCH);
-    }
+		initView();
+		addSearchBar();
+		addContent();
+		updateView();
+	}
 
-    private void addSearchBar() {
-        Div viewToolbar = new Div();
-        viewToolbar.addClassName("view-toolbar");
+	private void initView() {
+		addClassName("beverages-list");
+		setDefaultHorizontalComponentAlignment(Alignment.STRETCH);
+	}
 
-        searchField.setPrefixComponent(new Icon("lumo", "search"));
-        searchField.addClassName("view-toolbar__search-field");
-        searchField.addValueChangeListener(e -> updateView());
-        searchField.setValueChangeMode(ValueChangeMode.EAGER);
-        searchField.addFocusShortcut(Key.KEY_F, KeyModifier.CONTROL);
+	private void addSearchBar() {
+		Div viewToolbar = new Div();
+		viewToolbar.addClassName("view-toolbar");
 
-        Button newButton = new Button("New beverage", new Icon("lumo", "plus"));
-        newButton.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
-        newButton.addClassName("view-toolbar__button");
-        newButton.addClickListener(e -> form.open(new Beverage(),
-                AbstractEditorDialog.Operation.ADD));
-        /*
-            This is a fall-back method:
-            '+' is not a event.code (DOM events), so as a fall-back shortcuts
-            will perform a character-based comparison. Since Key.ADD changes
-            locations frequently based on the keyboard language, we opted to use
-            a character instead.
-         */
-        newButton.addClickShortcut(Key.of("+"));
+		searchField.setPrefixComponent(new Icon("lumo", "search"));
+		searchField.addClassName("view-toolbar__search-field");
+		searchField.addValueChangeListener(e -> updateView());
+		searchField.setValueChangeMode(ValueChangeMode.EAGER);
+		searchField.addFocusShortcut(Key.KEY_F, KeyModifier.CONTROL);
 
-        viewToolbar.add(searchField, newButton);
-        add(viewToolbar);
-    }
+		Button newButton = new Button("New beverage", new Icon("lumo", "plus"));
+		newButton.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
+		newButton.addClassName("view-toolbar__button");
+		newButton.addClickListener(e -> form.open(new Beverage(), AbstractEditorDialog.Operation.ADD));
+		/*
+		 * This is a fall-back method: '+' is not a event.code (DOM events), so as a
+		 * fall-back shortcuts will perform a character-based comparison. Since Key.ADD
+		 * changes locations frequently based on the keyboard language, we opted to use
+		 * a character instead.
+		 */
+		newButton.addClickShortcut(Key.of("+"));
 
-    private void addContent() {
-        VerticalLayout container = new VerticalLayout();
-        container.setClassName("view-container");
-        container.setAlignItems(Alignment.STRETCH);
-        
-        grid.addColumn(Beverage::getId).setHeader("ID").setWidth("8em")
-        		.setResizable(true);									
-        grid.addColumn(Beverage::getBeverage).setHeader("Beverage").setWidth("6em");
-        grid.addColumn(Beverage::getAlc).setHeader("Alcohol content").setWidth("6em");
-        grid.addColumn(new ComponentRenderer<>(this::createEditButton))
-                .setFlexGrow(0);
-        grid.setSelectionMode(SelectionMode.NONE);
+		viewToolbar.add(searchField, newButton);
+		add(viewToolbar);
+	}
 
-        container.add(header, grid);
-        add(container);
-    }
+	private void addContent() {
+		VerticalLayout container = new VerticalLayout();
+		container.setClassName("view-container");
+		container.setAlignItems(Alignment.STRETCH);
 
-    private Button createEditButton(Beverage beverage) {
-        Button edit = new Button("Edit", event -> form.open(beverage,
-                AbstractEditorDialog.Operation.EDIT));
-        edit.setIcon(new Icon("lumo", "edit"));
-        edit.addClassName("review__edit");
-        edit.addThemeVariants(ButtonVariant.LUMO_TERTIARY);
-        
-        return edit;
-    }
+		grid.addColumn(Beverage::getId).setHeader("ID").setWidth("8em").setResizable(true);
+		grid.addColumn(Beverage::getBeverage).setHeader("Beverage").setWidth("6em");
+		grid.addColumn(Beverage::getAlc).setHeader("Alcohol content").setWidth("6em");
+		grid.addColumn(new ComponentRenderer<>(this::createEditButton)).setFlexGrow(0);
+		grid.setSelectionMode(SelectionMode.NONE);
 
-  
+		container.add(header, grid);
+		add(container);
+	}
 
-    private void updateView() {
-        List<Beverage> beverages = BeverageService.getInstance()
-                .findBeverage(searchField.getValue());
-        grid.setItems(beverages);
+	private Button createEditButton(Beverage beverage) {
+		Button edit = new Button("Edit", event -> form.open(beverage, AbstractEditorDialog.Operation.EDIT));
+		edit.setIcon(new Icon("lumo", "edit"));
+		edit.addClassName("review__edit");
+		edit.addThemeVariants(ButtonVariant.LUMO_TERTIARY);
 
-        if (searchField.getValue().length() > 0) {
-            header.setText("Search for “" + searchField.getValue() + "”");
-        } else {
-            header.setText("Beverages");
-        }
-    }
+		return edit;
+	}
 
-    private void saveBeverage(Beverage beverage,													
-            AbstractEditorDialog.Operation operation) {
-        BeverageService.getInstance().doSaveBeverage(beverage);
+	private void updateView() {
+		List<Beverage> beverages = BeverageService.getInstance().findBeverage(searchField.getValue());
+		grid.setItems(beverages);
 
-        Notification.show(
-                "User successfully " + operation.getNameInText() + "ed.",
-                3000, Position.BOTTOM_START)
-            .addThemeVariants(NotificationVariant.LUMO_SUCCESS);
-        updateView();
-    }		
+		if (searchField.getValue().length() > 0) {
+			header.setText("Search for “" + searchField.getValue() + "”");
+		} else {
+			header.setText("Beverages");
+		}
+	}
+
+	private void saveBeverage(Beverage beverage, AbstractEditorDialog.Operation operation) {
+		BeverageService.getInstance().doSaveBeverage(beverage);
+
+		Notification.show("User successfully " + operation.getNameInText() + "ed.", 3000, Position.BOTTOM_START)
+				.addThemeVariants(NotificationVariant.LUMO_SUCCESS);
+		updateView();
+	}
 
 //////////////////////////////////////////DELETE////////////////////////////////////
-    private void deleteBeverage(Beverage beverage) {
-        List<Beverage> beverageInCategory = BeverageService.getInstance()
-                .findBeverage(beverage.getBeverage());
-        
-      
-        
-     BeverageService.getInstance().deleteBeverage(beverage);
+	private void deleteBeverage(Beverage beverage) {
+		List<Beverage> beverageInCategory = BeverageService.getInstance().findBeverage(beverage.getBeverage());
 
-        Notification.show("Beverage successfully deleted.", 3000,
-                Position.BOTTOM_START)
-            .addThemeVariants(NotificationVariant.LUMO_CONTRAST);
-        updateView();
-    }
+		BeverageService.getInstance().deleteBeverage(beverage);
+
+		Notification.show("Beverage successfully deleted.", 3000, Position.BOTTOM_START)
+				.addThemeVariants(NotificationVariant.LUMO_CONTRAST);
+		updateView();
+	}
 }

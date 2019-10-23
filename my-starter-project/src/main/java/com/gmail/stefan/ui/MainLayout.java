@@ -19,6 +19,7 @@ import com.gmail.stefan.ui.views.beveragelist.BeverageList;
 import com.gmail.stefan.ui.views.categorieslist.CategoriesList;
 import com.gmail.stefan.ui.views.login.LoginTest;
 import com.gmail.stefan.ui.views.login.LogoutTest;
+import com.gmail.stefan.ui.views.login.AuthorList;
 import com.gmail.stefan.ui.views.reviewslist.ReviewsList;
 import com.gmail.stefan.ui.views.testlist.UsersList;
 import com.vaadin.flow.component.Text;
@@ -62,10 +63,6 @@ public class MainLayout extends Div implements RouterLayout, PageConfigurator, B
     public MainLayout() {
         H2 title = new H2("Beverage Buddy");
         title.addClassName("main-layout__title");
-        
-//        RouterLink login = new RouterLink();
-//        login.add(new Icon(VaadinIcon.LOCK), new Text("Login"));
-//        login.addClassName("main-layout__nav-item");
 
         RouterLink reviews = new RouterLink(null, ReviewsList.class);
         reviews.add(new Icon(VaadinIcon.LIST), new Text("Reviews"));
@@ -89,9 +86,10 @@ public class MainLayout extends Div implements RouterLayout, PageConfigurator, B
 //        login.add(new Icon(VaadinIcon.SIGN_OUT), new Text("Logout"));					// make new form for logout
 //        login.addClassName("main-layout__nav-item");
         
-//        RouterLink box = new RouterLink(null, AuthorComboBox.class);
-//        box.add(new Icon (VaadinIcon.CHEVRON_CIRCLE_DOWN), new Text("Box"));
-//        box.addClassName("main-layout__nav-item");
+        RouterLink author = new RouterLink(null, AuthorList.class);
+        author.add(new Icon(VaadinIcon.INFO_CIRCLE), new Text("Author"));					// make new form for logout
+        author.addClassName("main-layout__nav-item");
+        
         
         RouterLink logout = new RouterLink(null, LogoutTest.class);
         logout.add(new Icon(VaadinIcon.SIGN_OUT), new Text("Logout"));
@@ -99,7 +97,7 @@ public class MainLayout extends Div implements RouterLayout, PageConfigurator, B
         
         
 
-        Div navigation = new Div(reviews, categories, users, beverages, logout);   		
+        Div navigation = new Div(reviews, categories, users, beverages, author, logout);   		
         navigation.addClassName("main-layout__nav");
 
         Div header = new Div(title, navigation);
@@ -131,9 +129,6 @@ public class MainLayout extends Div implements RouterLayout, PageConfigurator, B
 			VaadinSession.getCurrent().setAttribute("intendedPath", event.getLocation().getPath());
 			event.rerouteTo(LoginTest.class);
 		}
-			
-		
-		
 		System.out.println("BeforeEnterEvent main");
 
 		}
