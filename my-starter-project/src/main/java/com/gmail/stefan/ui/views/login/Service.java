@@ -10,11 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.gmail.stefan.backend.Author;
-import com.gmail.stefan.backend.Message;
 import com.gmail.stefan.backend.dbservices.TestDBConnection;
-import com.gmail.stefan.ui.views.login.LogoutTest;
-import com.vaadin.flow.component.grid.Grid;
-import com.vaadin.flow.data.provider.DataProvider;
 
 public class Service extends TestDBConnection{																
 																											// TODO should assemble and return list of authors 
@@ -46,7 +42,7 @@ public class Service extends TestDBConnection{
 
 			st.close();
 			con.close();
-			System.out.println("Connection closed!");
+			System.out.println("First connection closed!");
 
 			return list;
 
@@ -95,9 +91,9 @@ public class Service extends TestDBConnection{
 			s.printStackTrace();
 
 		}
-		System.out.println("Yup, a fuckup!");
+		System.out.println("DB unavailable");
 
-		return null;
+		return new ArrayList<Author>();
 		
 		
 	}

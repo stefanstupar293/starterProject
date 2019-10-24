@@ -106,8 +106,8 @@ public class AuthorList extends VerticalLayout {
 		grid.addComponentColumn(c->{
 			Button d = new Button ("Hello");
 			d.addClickListener(f -> {
-				Notification.show(c.getName());
-			});
+				Notification.show(c.getName()).setPosition(Position.MIDDLE);;
+				});
 			return d;
 		});
 		

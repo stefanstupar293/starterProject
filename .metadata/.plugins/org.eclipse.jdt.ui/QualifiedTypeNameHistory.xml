@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.vaadin.flow.router.BeforeEnterObserver"/>
-<fullyQualifiedTypeName name="com.vaadin.flow.router.BeforeEnterEvent"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.login.LoginForm"/>
 <fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.LoginTest"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.menubar.MenuBar"/>
@@ -21,7 +19,6 @@
 <fullyQualifiedTypeName name="javax.naming.Context"/>
 <fullyQualifiedTypeName name="javax.naming.InitialContext"/>
 <fullyQualifiedTypeName name="java.sql.DriverManager"/>
-<fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.sql.Timestamp"/>
@@ -60,4 +57,7 @@
 <fullyQualifiedTypeName name="com.vaadin.flow.router.RouteAlias"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.html.Label"/>
 <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment"/>
+<fullyQualifiedTypeName name="com.gmail.stefan.ui.views.login.Test123"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="com.vaadin.flow.component.charts.model.Label"/>
 </qualifiedTypeNameHistroy>

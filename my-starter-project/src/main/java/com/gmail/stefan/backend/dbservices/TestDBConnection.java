@@ -3,6 +3,7 @@ package com.gmail.stefan.backend.dbservices;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import javax.sql.DataSource;
 
 public class TestDBConnection {
 
